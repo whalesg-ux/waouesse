@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ============================================
+   RESET
+============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* ============================================
+   HEADER
+============================================ */
+
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* ============================================
+   LOGO
+============================================ */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  flex-wrap: wrap; /* pour que ça passe en dessous sur mobile */
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Responsive : empile en dessous sur petit écran */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+.profile {
+  flex: 1 1 300px;
+  max-width: 600px;
+}
+.intro {
+  flex: 1 1 300px;
+  max-width: 600px;
+}
+.texte{
+    align-items: center;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: scale(1);
+}
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: scale(1);
+}
+.gallery-container:hover {
+  transform: scale(1.05);
+}
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}

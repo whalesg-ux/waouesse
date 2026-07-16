@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- ============================================================
+         HEAD unifié — même structure que les autres pages du site.
+         ============================================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvrir Ouessè : Patrimoine, Marbre Bleu et Traditions au Bénin</title>
+    <meta name="description" content="Explorez la commune de Ouessè : deuxième réserve mondiale de marbre bleu, sept rivières, forêts classées et sacrées, patrimoine royal Shabè et Mahi, au cœur du département des Collines au Bénin.">
+    <meta name="keywords" content="Ouessè, Collines, Bénin, marbre bleu, Idadjo, Shabè, Mahi, tourisme, patrimoine, découvrir">
+    <meta name="theme-color" content="#0b6b44">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Découvrir Ouessè : Patrimoine, Marbre Bleu et Traditions">
+    <meta property="og:description" content="Deuxième réserve mondiale de marbre bleu, sept rivières, forêts sacrées et patrimoine royal : partez à la découverte de Ouessè.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://waouesse.netlify.app/decouvert">
+    <meta property="og:image" content="marbre-bleu-idadjo.webp">
+    <meta property="og:locale" content="fr_FR">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Preload de l'image critique du hero (LCP) -->
+    <link rel="preload" as="image" href="marbre-bleu-idadjo.webp" fetchpriority="high">
+    <link rel="icon" href="logo.webp" type="image/webp">
+
+    <!-- CSS critique inliné (header + hero) pour un rendu immédiat -->
+    <style>
+:root{
+    --cream:#fff;
+    --ink:#16261e;
+    --forest:#0b6b44;
+    --forest-dark:#084d31;
+    --forest-soft:#e7f3ec;
+    --line:#e1e6e3;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif}
+body{background-color:var(--cream);color:var(--ink);font-family:"Poppins",sans-serif}
+h1,h2,h3{font-family:"Fraunces",serif;font-weight:600}
+
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background-color:var(--cream);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:34px;width:auto;cursor:pointer;transition:transform .3s ease}
+.logo img:hover{transform:scale(1.1)}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-title{font-family:"Fraunces",serif;font-weight:600;font-size:1.1rem;color:var(--ink)}
+.logo-subtitle{font-size:.6rem;letter-spacing:2px;color:var(--forest)}
+.main-nav ul{display:flex;list-style:none;gap:32px;margin:0;padding:0;flex-wrap:wrap}
+.main-nav a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem;padding-bottom:4px;border-bottom:2px solid transparent;transition:color .3s ease,border-color .3s ease}
+.main-nav a:hover,.main-nav a.active{color:var(--forest);border-bottom-color:var(--forest)}
+.btn-explorer{background-color:var(--forest);color:#fff;text-decoration:none;font-weight:600;font-size:.9rem;padding:10px 26px;border-radius:999px;transition:background-color .3s ease,transform .3s ease}
+.btn-explorer:hover{background-color:var(--forest-dark);transform:translateY(-1px)}
+.menu-toggle{display:none;background:none;border:none;font-size:24px;color:var(--ink);cursor:pointer}
+
+@media (max-width:768px){
+    .site-header{padding:16px 20px}
+    .main-nav{display:none;width:100%;order:3}
+    .main-nav.active{display:block}
+    .main-nav ul{flex-direction:column;align-items:center;gap:16px;padding:20px 0}
+    .menu-toggle{display:block}
+    .search{display:none}
+}
+    </style>
+
+    <!-- CSS complet (non critique) chargé sans bloquer le rendu -->
+    <link rel="preload" as="style" href="luc.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="luc.css"></noscript>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap">
+
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="logo">
+        <img src="logo.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager">
+        <div class="logo-text">
+            <span class="logo-title">Ouessè</span>
+            <span class="logo-subtitle">TOURISME</span>
+        </div>
+    </div>
+
+    <button class="menu-toggle" aria-label="Ouvrir le menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="decouvert.html" class="active">Découvrir</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <a href="decouvert.html" class="btn-explorer">Explorer</a>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Ouessè, entre <em>marbre bleu</em> et traditions royales</h1>
+            <div class="hero-text">
+                <p>Deuxième réserve mondiale de marbre bleu, sept rivières, forêts classées et sacrées : partez à la découverte d'une commune méconnue mais riche d'un patrimoine naturel et culturel exceptionnel.</p>
+            </div>
+            <form class="search" role="search" action="#" method="get">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" name="q" placeholder="Rechercher un lieu, un site, un village...">
+                <button type="submit">Rechercher</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CATÉGORIES -->
+    <section class="categories">
+        <h2>Que découvrir à Ouessè ?</h2>
+        <p class="categories-subtitle">Neuf arrondissements, un patrimoine à explorer sous toutes ses formes</p>
+
+        <div class="category-grid">
+            <a href="#patrimoine" class="category-card">
+                <img src="statue-faka-foukou.webp" alt="Patrimoine royal de Ouessè" width="300" height="400" loading="lazy">
+                <span class="category-label">Patrimoine royal</span>
+            </a>
+            <a href="#marbre" class="category-card">
+                <img src="marbre-bleu-idadjo.webp" alt="Gisement de marbre bleu à Idadjo" width="300" height="400" loading="lazy">
+                <span class="category-label">Marbre bleu</span>
+            </a>
+            <a href="#nature" class="category-card">
+                <img src="foret-classee-kemon.webp" alt="Collines et forêts classées de Kèmon" width="300" height="400" loading="lazy">
+                <span class="category-label">Collines & forêts</span>
+            </a>
+            <a href="#rivieres" class="category-card">
+                <img src="riviere-ouesse.webp" alt="Rivières de la commune de Ouessè" width="300" height="400" loading="lazy">
+                <span class="category-label">Rivières</span>
+            </a>
+            <a href="#artisanat" class="category-card">
+                <img src="artisanat-local.webp" alt="Artisanat et agriculture locale" width="300" height="400" loading="lazy">
+                <span class="category-label">Artisanat & agriculture</span>
+            </a>
+            <a href="#culture" class="category-card">
+                <img src="culture-shabe-mahi.webp" alt="Culture Shabè et Mahi de Ouessè" width="300" height="400" loading="lazy">
+                <span class="category-label">Culture & traditions</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- PRÉSENTATION -->
+    <section class="wrapper">
+        <div class="profile">
+            <div class="profile-image">
+                <img src="statue-faka-foukou.webp" alt="Statue de Sa Majesté Faka Foukou, premier souverain de Ouessè" width="500" height="400" loading="lazy">
+            </div>
+            <div class="intro">
+                <h1>Une commune au cœur du Bénin</h1>
+                <p class="nouveaugraph">Située au nord du département des Collines, à environ 327 km de Cotonou et 112 km de Parakou, Ouessè est la plus vaste commune de la région avec près de 3 200 km². Elle est frontalière du Nigeria à l'est et regroupe neuf arrondissements : Challa-Ogoi, Djègbè, Gbanlin, Ikèmon, Kilibo, Laminou, Odougba, Ouèssè-Centre et Toui.
+
+Sa population, estimée à plus de 150 000 habitants, est composée principalement des Shabè, venus d'Ilé Ifè au Nigeria, et des Mahis, originaires de Savalou et du plateau d'Agonlin, aux côtés d'autres communautés Adja, Fon, Otamari, Yom, Lokpa et d'éleveurs peuls.
+
+Le sol de la commune abrite la deuxième réserve mondiale de marbre bleu après l'Italie, notamment à Idadjo. Ouessè compte aussi sept rivières, des forêts classées et sacrées, les galeries souterraines de Yaoui, les collines de Kèmon et les mares à caïmans de Gbongui. Sa Majesté Djahlin Djanta, dit Faka Foukou, premier souverain des terres de Ouessè Wogoudo (1690-1720), est honoré par une statue érigée par l'association culturelle Mahi Ouindo.
+
+En 2019, la commune a été distinguée comme meilleure commune du Bénin en matière de budget participatif. Son économie repose principalement sur l'agriculture vivrière : maïs, manioc, arachide, riz, haricot et soja.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section class="gallery">
+        <h2>Galerie</h2>
+        <div class="gallery-container">
+            <img src="marbre-bleu-idadjo.webp" alt="Gisement de marbre bleu à Idadjo" width="300" height="220" loading="lazy">
+            <img src="riviere-ouesse.webp" alt="L'une des sept rivières de Ouessè" width="300" height="220" loading="lazy">
+            <img src="foret-classee-kemon.webp" alt="Forêt classée des collines de Kèmon" width="300" height="220" loading="lazy">
+            <img src="statue-faka-foukou.webp" alt="Statue du premier souverain de Ouessè" width="300" height="220" loading="lazy">
+            <img src="artisanat-local.webp" alt="Artisanat local à Ouessè" width="300" height="220" loading="lazy">
+            <img src="culture-shabe-mahi.webp" alt="Célébration culturelle Shabè et Mahi" width="300" height="220" loading="lazy">
+        </div>
+    </section>
+
+    <!-- VIDÉO -->
+    <section class="video-section">
+        <h2>Ouessè en images</h2>
+        <div class="video-container">
+            <!-- Remplacer VIDEO_ID par l'identifiant YouTube réel de la vidéo de présentation -->
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Découvrir Ouessè" loading="lazy" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- ÉVÉNEMENTS -->
+    <section class="fa-calendar-check">
+        <h2>Agenda de la commune</h2>
+        <ul>
+            <li><i class="fa-solid fa-calendar-days"></i> Cérémonies traditionnelles Shabè et Mahi — dates à confirmer</li>
+            <li><i class="fa-solid fa-calendar-days"></i> Forum du budget participatif de la commune</li>
+            <li><i class="fa-solid fa-calendar-days"></i> Marché hebdomadaire et foires agricoles locales</li>
+        </ul>
+        <div class="btn1">
+            <a href="contact.html">Signaler ou proposer un événement</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="pied">
+    <div class="logo-text">
+        <span class="logo-title" style="color:#fff;">Ouessè Tourisme</span>
+        <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>
+    </div>
+    <input type="email" placeholder="Votre email pour les actualités">
+</footer>
+
+<script>
+document.querySelector('.menu-toggle')?.addEventListener('click', function () {
+    document.querySelector('.main-nav')?.classList.toggle('active');
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUÈSSÈ</title>
+    <meta name="description"
+content="Découvrez Ouèssè, commune touristique du Bénin, ses paysages, sa culture, ses traditions et ses sites incontournables.">
+    <meta name="theme-color" content="#0b6b44">
+    <meta property="og:title" content="Ouèssè Tourisme">
+    <meta property="og:image" content="logo.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="google-site-verification" content="VOR9gQVoSw2v7YGsETFk_Vuqz0vDQyQ0HO1o94jUjKQ" />
+
+    <!-- Preconnect aux domaines externes utilisés -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Preload de la véritable image LCP : fond du .hero -->
+    <link rel="preload" as="image" href="ouesse.jpeg" fetchpriority="high">
+
+    <!-- CSS critique (header + hero + search + tokens) inliné -->
+    <style>
+:root{--cream:#fff;--ink:#682df1b2;--terracotta:#682df1b2;--terracotta-dark:#682df1b2;--forest:#c3cf13c0;--line:#ffffff7a}*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif}body{background-color:var(--cream);color:var(--ink);font-family:"Poppins",sans-serif}h1,h2,h3{font-family:"Poppins",serif;font-weight:600}.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background-color:var(--cream);border-bottom:1px solid var(--line);flex-wrap:wrap}.logo{display:flex;align-items:center;gap:10px}.logo img{height:34px;width:auto;cursor:pointer;transition:transform .3s ease}.logo img:hover{transform:scale(1.1)}.logo-text{display:flex;flex-direction:column;line-height:1.1}.logo-title{font-family:"Fraunces",serif;font-weight:600;font-size:1.1rem;color:var(--ink)}.logo-subtitle{font-size:.6rem;letter-spacing:2px;color:var(--forest)}.main-nav ul{display:flex;list-style:none;gap:32px;margin:0;padding:0;flex-wrap:wrap}.main-nav a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem;padding-bottom:4px;border-bottom:2px solid transparent;transition:color .3s ease,border-color .3s ease}.main-nav a:hover,.main-nav a.active{color:var(--terracotta);border-bottom-color:var(--terracotta)}.btn-explorer{background-color:var(--terracotta);color:#fff;text-decoration:none;font-weight:600;font-size:.9rem;padding:10px 26px;border-radius:999px;transition:background-color .3s ease,transform .3s ease}.btn-explorer:hover{background-color:var(--terracotta-dark);transform:translateY(-1px)}.menu-toggle{display:none;background:none;border:none;font-size:24px;color:var(--ink);cursor:pointer}.hero{position:relative;min-height:560px;margin:20px 40px;border-radius:24px;overflow:hidden;background-image:url("ouesse.jpeg");background-size:cover;background-position:center;display:flex;align-items:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,15,8,.75) 0%,rgba(20,15,8,.35) 55%,rgba(20,15,8,.15) 100%)}.hero-content{position:relative;z-index:1;max-width:620px;padding:60px;color:#fff}.hero-title{font-size:2.6rem;line-height:1.25;color:#fff}.hero-title em{font-style:italic;color:#F0D8B8}.hero-text{margin-top:18px;font-size:.95rem;line-height:1.6;color:#F1EBDD;max-width:480px}.search{margin-top:32px;display:flex;align-items:center;gap:12px;background-color:#fff;border-radius:999px;padding:8px 8px 8px 22px;max-width:460px;box-shadow:0 10px 30px rgba(0,0,0,.2)}.search i{color:var(--terracotta)}.search input{flex:1;border:none;outline:none;font-size:.9rem;color:var(--ink);background:transparent}.search input::placeholder{color:#d8e9ee}.search button{background-color:var(--terracotta);color:#fff;border:none;border-radius:999px;padding:10px 22px;font-weight:600;font-size:.85rem;cursor:pointer;transition:background-color .3s ease}.search button:hover{background-color:var(--terracotta-dark)}@media (max-width:768px){.site-header{padding:16px 20px}.main-nav{display:none;width:100%;order:3}.main-nav.active{display:block}.main-nav ul{flex-direction:column;align-items:center;gap:16px;padding:20px 0}.menu-toggle{display:block}.hero{margin:12px;min-height:480px}.hero-content{padding:32px 24px}.hero-title{font-size:1.9rem}}
+    </style>
+
+    <!-- CSS complet (non critique) chargé sans bloquer le rendu -->
+    <link rel="preload" as="style" href="index.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="index.css"></noscript>
+
+    <!-- Police Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap">
+
+    <!-- Font Awesome asynchrone -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <link rel="icon" href="logo.webp" type="image/webp">
+    <style>
+    /* ===== CORRECTION POUR LA SECTION TEXTE / PROFIL ===== */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 16px;
+}
+
+.profile {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    flex: 0 0 auto;
+    max-width: 100%;
+}
+
+.profile-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.intro {
+    flex: 1;
+    min-width: 280px;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-image {
+        width: 100%;
+        max-width: 500px;
+    }
+    .intro h1 {
+        text-align: center;
+    }
+} </style>
+</head>
+<meta name="google-site-verification" content="VOR9gQVoSw2v7YGsETFk_Vuqz0vDQyQ0HO1o94jUjKQ" />
+<body>
+
+<header class="site-header">
+    <div class="logo">
+        <img src="logo.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager">
+        <div class="logo-text">
+            <span class="logo-title">Ouessè</span>
+            <span class="logo-subtitle">TOURISME</span>
+        </div>
+    </div>
+
+    <button class="menu-toggle" aria-label="Ouvrir le menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="decouvert.html">Découvrir</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <a href="decouvert.html" class="btn-explorer">Explorer</a>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Ouèssè, l&rsquo;<em>âme</em> du<br>Bénin authentique</h1>
+            <p class="hero-text">
+                Découvrez les trésors culturels, naturels et artisanaux de notre<br>
+                commune — entre forêts sacrées, marchés traditionnels et hospitalité<br>
+                légendaire.
+            </p>
+
+            <form class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Rechercher un lieu, une expérience...">
+                <button type="submit">Rechercher</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2>Explorer par catégorie</h2>
+        <p class="categories-subtitle">Six univers pour vivre Ouèssè pleinement</p>
+
+        <div class="category-grid">
+            <!-- Chaque image de catégorie est cliquable et ouvre la lightbox -->
+            <a href="#" class="category-card" onclick="return false;">
+                <img src="eze (1).webp"
+                     srcset="eze (1)-400.webp 400w, eze (1)-800.webp 800w, eze (1).webp 1200w"
+                     sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
+                     loading="lazy" decoding="async" width="300" height="200"
+                     alt="Nature à Ouèssè"
+                     data-lightbox="true">
+                <span class="category-label">Nature</span>
+            </a>
+            <a href="#" class="category-card" onclick="return false;">
+                <img src="eze (2).webp"
+                     srcset="eze (2)-400.webp 400w, eze (2)-800.webp 800w, eze (2).webp 1200w"
+                     sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
+                     loading="lazy" decoding="async" width="300" height="200"
+                     alt="Culture et patrimoine de Ouèssè"
+                     data-lightbox="true">
+                <span class="category-label">Culture &amp; Patrimoine</span>
+            </a>
+            <a href="#" class="category-card" onclick="return false;">
+                <img src="eze (3).webp"
+                     srcset="eze (3)-400.webp 400w, eze (3)-800.webp 800w, eze (3).webp 1200w"
+                     sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
+                     loading="lazy" decoding="async" width="300" height="200"
+                     alt="Hébergement à Ouèssè"
+                     data-lightbox="true">
+                <span class="category-label">Hébergement</span>
+            </a>
+            <a href="#" class="category-card" onclick="return false;">
+                <img src="eze (4).webp"
+                     srcset="eze (4)-400.webp 400w, eze (4)-800.webp 800w, eze (4).webp 1200w"
+                     sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
+                     loading="lazy" decoding="async" width="300" height="200"
+                     alt="Gastronomie de Ouèssè"
+                     data-lightbox="true">
+                <span class="category-label">Gastronomie</span>
+            </a>
+            <a href="#" class="category-card" onclick="return false;">
+                <img src="eze (5).webp"
+                     srcset="eze (5)-400.webp 400w, eze (5)-800.webp 800w, eze (5).webp 1200w"
+                     sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
+                     loading="lazy" decoding="async" width="300" height="200"
+                     alt="Artisanat de Ouèssè"
+                     data-lightbox="true">
+                <span class="category-label">Artisanat</span>
+            </a>
+            <a href="#" class="category-card" onclick="return false;">
+                <img src="eze (6).webp"
+                     srcset="eze (6)-400.webp 400w, eze (6)-800.webp 800w, eze (6).webp 1200w"
+                     sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
+                     loading="lazy" decoding="async" width="300" height="200"
+                     alt="Événements à Ouèssè"
+                     data-lightbox="true">
+                <span class="category-label">Événements</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="texte">
+        <div class="wrapper">
+            <div class="profile">
+                <div class="profile-image">
+                   <img src="weills-800.webp"
+     srcset="weills-800.webp 800w, weills.webp 1200w"
+     sizes="(max-width: 768px) 90vw, 600px"
+     loading="lazy" decoding="async" width="600" height="400"
+     alt="Image de Jeune fille de Ouèssè"
+     data-lightbox="true">
+                </div>
+                <div class="intro">
+                    <h1>Présentation de la Commune de Ouèssè</h1>
+                    <p class="nouveaugraph">
+                        La Commune de Ouèssè, vaste territoire situé au cœur du Bénin, est une destination dont le sous-sol regorge de la deuxième réserve mondiale de marbre bleu, derrière celle de l'Italie, notamment à Idadjo. Elle est également reconnue pour ses forêts classées, ses forêts sacrées, ses collines et ses forêts-galeries.
+
+                        Située au nord du département des Collines, à 327 km de Cotonou, elle couvre environ 3 200 km², soit 2,5 % de la superficie nationale.
+
+                        Elle est administrée par le Maire Ibidon Firmin Akpo et comprend neuf arrondissements : Challa-Ogoï, Djègbè, Gbanlin, Ikèmon, Kilibo, Laminou, Odougba, Ouèssè-Centre et Toui.
+
+                        La commune est limitée au nord par Tchaourou, au sud par Savè et Glazoué, à l'ouest par Bantè et Bassila, et à l'est par le Nigeria.
+
+                        Sa population est estimée à plus de 150 000 habitants, composée principalement des Shabè et des Mahis, auxquels s'ajoutent plusieurs autres groupes socioculturels.
+
+                        Son relief est peu accidenté et ses terres sont favorables à l'agriculture. Les principales cultures sont le maïs, le manioc, l'arachide, le riz, le haricot, le soja, le vouandzou et l'acajou.
+
+                        Grâce à une pluviométrie abondante, sept cours d'eau traversent la commune : l'Ouémé, l'Okpara, la Gbéffa, la Kilibo, la Liga, la Nonomi et la Toumi.
+
+                        Le premier souverain des terres de Ouèssè fut Sa Majesté Djahlin Djanta, alias Faka Foukou, qui régna de 1690 à 1720. Une imposante statue a été érigée en son honneur.
+
+                        Parmi les autres sites touristiques figurent les galeries souterraines (Odi) de Yaoui, les collines de Kèmon et les mares aux caïmans de Gbongui.
+
+                        La commune bénéficie également de plusieurs infrastructures modernes, notamment un stade omnisports de 3 000 places et l'Hôpital de Zone Savè-Ouèssè.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="gallery">
+        <h2>OUESSEXWE 2025</h2>
+        <div class="gallery-container">
+            <!-- Chaque image de la galerie est cliquable pour agrandissement -->
+            <img src="eze (1).webp"
+                 srcset="eze (1)-400.webp 400w, eze (1)-800.webp 800w, eze (1).webp 1200w"
+                 sizes="(max-width: 600px) 45vw, 300px"
+                 loading="lazy" decoding="async" width="300" height="200"
+                 alt="Image 1"
+                 data-lightbox="true">
+            <img src="eze (2).webp"
+                 srcset="eze (2)-400.webp 400w, eze (2)-800.webp 800w, eze (2).webp 1200w"
+                 sizes="(max-width: 600px) 45vw, 300px"
+                 loading="lazy" decoding="async" width="300" height="200"
+                 alt="Image 2"
+                 data-lightbox="true">
+            <img src="eze (3).webp"
+                 srcset="eze (3)-400.webp 400w, eze (3)-800.webp 800w, eze (3).webp 1200w"
+                 sizes="(max-width: 600px) 45vw, 300px"
+                 loading="lazy" decoding="async" width="300" height="200"
+                 alt="Image 3"
+                 data-lightbox="true">
+            <img src="eze (4).webp"
+                 srcset="eze (4)-400.webp 400w, eze (4)-800.webp 800w, eze (4).webp 1200w"
+                 sizes="(max-width: 600px) 45vw, 300px"
+                 loading="lazy" decoding="async" width="300" height="200"
+                 alt="Image 4"
+                 data-lightbox="true">
+            <img src="eze (5).webp"
+                 srcset="eze (5)-400.webp 400w, eze (5)-800.webp 800w, eze (5).webp 1200w"
+                 sizes="(max-width: 600px) 45vw, 300px"
+                 loading="lazy" decoding="async" width="300" height="200"
+                 alt="Image 5"
+                 data-lightbox="true">
+            <img src="eze (6).webp"
+                 srcset="eze (6)-400.webp 400w, eze (6)-800.webp 800w, eze (6).webp 1200w"
+                 sizes="(max-width: 600px) 45vw, 300px"
+                 loading="lazy" decoding="async" width="300" height="200"
+                 alt="Image 6"
+                 data-lightbox="true">
+        </div>
+    </div>
+
+    <!-- Facade YouTube -->
+    <div class="video-section">
+        <h2>Découvrez Ouèssè en vidéo</h2>
+        <div class="video-container">
+            <div class="yt-facade" id="ytFacade" data-video-id="VIDEO_ID"
+                 style="position:relative;width:560px;max-width:100%;aspect-ratio:16/9;background:#000;cursor:pointer;">
+                <img src="https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg"
+                     alt="Aperçu vidéo Ouèssè" loading="lazy" decoding="async"
+                     style="width:100%;height:100%;object-fit:cover;">
+                <i class="fa-solid fa-circle-play"
+                   style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:64px;color:#fff;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="fa-calendar-check">
+        <h2>Événements à venir</h2>
+        <ul>
+            <li>Festival culturel de Ouèssè - 15 juillet 2025</li>
+            <li>Marché artisanal - 20 août 2025</li>
+            <li>Fête des rivières - 10 septembre 2025</li>
+        </ul>
+        <div class="btn1">
+            <a href="decouvert.html" class="btn1">Découvrir plus</a>
+        </div>
+    </div>
+
+</main>
+
+<footer class="pied">
+    <label for="email">Abonnez-vous à notre newsletter :</label>
+    <input type="email" id="email" name="email" placeholder="Entrez votre email">
+    <a href="index.html">Réalisé par PROPPESE</a>
+</footer>
+
+<!-- Script principal différé -->
+<script src="script.js" defer></script>
+
+<!-- Script pour la lightbox (très léger, sans dépendance) -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Sélectionner toutes les images avec l'attribut data-lightbox="true"
+    var images = document.querySelectorAll('img[data-lightbox="true"]');
+    
+    images.forEach(function(img) {
+        img.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Créer l'overlay
+            var overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100vw';
+            overlay.style.height = '100vh';
+            overlay.style.backgroundColor = 'rgba(0,0,0,0.85)';
+            overlay.style.display = 'flex';
+            overlay.style.alignItems = 'center';
+            overlay.style.justifyContent = 'center';
+            overlay.style.zIndex = '9999';
+            overlay.style.cursor = 'pointer';
+            overlay.style.padding = '20px';
+            overlay.style.boxSizing = 'border-box';
+            
+            // Créer l'image agrandie
+            var enlarged = document.createElement('img');
+            // Utiliser la même source que l'image cliquée (mais on peut forcer la plus grande)
+            // On prend le srcset le plus grand ou le src
+            var src = img.getAttribute('src');
+            // Si l'image a un srcset, on peut essayer d'extraire la plus grande
+            var srcset = img.getAttribute('srcset');
+            if (srcset) {
+                // On prend la dernière valeur (normalement la plus grande)
+                var parts = srcset.split(',');
+                var last = parts[parts.length-1].trim();
+                var lastSrc = last.split(' ')[0];
+                if (lastSrc) src = lastSrc;
+            }
+            enlarged.src = src;
+            enlarged.style.maxWidth = '90%';
+            enlarged.style.maxHeight = '90%';
+            enlarged.style.objectFit = 'contain';
+            enlarged.style.borderRadius = '8px';
+            enlarged.style.boxShadow = '0 20px 60px rgba(0,0,0,0.6)';
+            
+            overlay.appendChild(enlarged);
+            document.body.appendChild(overlay);
+            
+            // Fermer au clic sur l'overlay
+            overlay.addEventListener('click', function() {
+                overlay.remove();
+            });
+            
+            // Fermer avec la touche Echap
+            document.addEventListener('keydown', function escHandler(e) {
+                if (e.key === 'Escape') {
+                    if (document.body.contains(overlay)) {
+                        overlay.remove();
+                        document.removeEventListener('keydown', escHandler);
+                    }
+                }
+            });
+        });
+    });
+});
+</script>
+
+<!-- Script pour la facade YouTube (inchangé) -->
+<script>
+document.getElementById('ytFacade')?.addEventListener('click', function () {
+  var id = this.dataset.videoId;
+  var iframe = document.createElement('iframe');
+  iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1';
+  iframe.width = '560';
+  iframe.height = '315';
+  iframe.title = 'YouTube video player';
+  iframe.frameBorder = '0';
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+  iframe.allowFullscreen = true;
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  this.replaceWith(iframe);
+}, { once: true });
+</script>
+
+</body>
+</html>

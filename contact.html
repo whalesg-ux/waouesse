@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- ============================================================
+         HEAD unifié — même structure que les autres pages du site
+         (index, actualités), adaptée au contenu Contact.
+         ============================================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Ouessè Tourisme | NarroQ & EzegLabs</title>
+    <meta name="description" content="Contactez le propriétaire du site et les structures NarroQ et EzegLabs, qui conçoivent des sites web pour des communes et des sites touristiques que beaucoup pensaient hors de portée du numérique.">
+    <meta name="keywords" content="Contact, Ouessè, NarroQ, EzegLabs, sites communaux, sites touristiques, développement web Bénin">
+    <meta name="theme-color" content="#0b6b44">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Contact — Ouessè Tourisme | NarroQ & EzegLabs">
+    <meta property="og:description" content="L'équipe derrière la création de sites pour des communes et sites touristiques qu'on n'attendait pas en ligne.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://waouesse.netlify.app/contact">
+    <meta property="og:locale" content="fr_FR">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" as="style" href="contact.css" onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="icon" href="logo.webp" type="image/webp">
+
+    <!-- CSS critique inliné (header) pour un rendu immédiat -->
+    <style>
+:root{
+    --cream:#fff;
+    --ink:#16261e;
+    --forest:#1f9e05;
+    --forest-dark:#084d31;
+    --forest-soft:#ffffff;
+    --line:#e1e6e3;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif}
+body{background-color:var(--cream);color:var(--ink);font-family:"Poppins",sans-serif}
+h1,h2,h3{font-family:"Poppins",serif;font-weight:600}
+
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background-color:var(--cream);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:34px;width:auto;cursor:pointer;transition:transform .3s ease}
+.logo img:hover{transform:scale(1.1)}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-title{font-family:"Poppins",serif;font-weight:600;font-size:1.1rem;color:var(--ink)}
+.logo-subtitle{font-size:.6rem;letter-spacing:2px;color:var(--forest)}
+.main-nav ul{display:flex;list-style:none;gap:32px;margin:0;padding:0;flex-wrap:wrap}
+.main-nav a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem;padding-bottom:4px;border-bottom:2px solid transparent;transition:color .3s ease,border-color .3s ease}
+.main-nav a:hover,.main-nav a.active{color:var(--forest);border-bottom-color:var(--forest)}
+.btn-explorer{background-color:var(--forest);color:#fff;text-decoration:none;font-weight:600;font-size:.9rem;padding:10px 26px;border-radius:999px;transition:background-color .3s ease,transform .3s ease}
+.btn-explorer:hover{background-color:var(--forest-dark);transform:translateY(-1px)}
+.menu-toggle{display:none;background:none;border:none;font-size:24px;color:var(--ink);cursor:pointer}
+
+.main-content{max-width:1200px;margin:40px auto;padding:0 20px}
+
+@media (max-width:768px){
+    .site-header{padding:16px 20px}
+    .main-nav{display:none;width:100%;order:3}
+    .main-nav.active{display:block}
+    .main-nav ul{flex-direction:column;align-items:center;gap:16px;padding:20px 0}
+    .menu-toggle{display:block}
+}
+    </style>
+
+    <!-- CSS complet (non critique) chargé sans bloquer le rendu -->
+    <link rel="preload" as="style" href="luc.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="luc.css"></noscript>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap">
+
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="logo">
+        <img src="logo.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager">
+        <div class="logo-text">
+            <span class="logo-title">Ouessè</span>
+            <span class="logo-subtitle">TOURISME</span>
+        </div>
+    </div>
+
+    <button class="menu-toggle" aria-label="Ouvrir le menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="decouvert.html">Découvrir</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <a href="decouvert.html" class="btn-explorer">Explorer</a>
+</header>
+
+<main class="main-content">
+
+    <!-- BANNIÈRE INTERNE -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1>Contactez-nous</h1>
+            <p>Le site que vous consultez est porté par une même équipe qui construit la présence numérique de communes et de sites touristiques que beaucoup imaginaient trop modestes — ou trop oubliés — pour exister en ligne.</p>
+        </div>
+    </div>
+
+    <!-- MISSION -->
+    <section class="mission">
+        <h2>Notre mission</h2>
+        <p>Beaucoup de communes et de sites touristiques au Bénin n'ont jamais eu de vitrine numérique — soit parce qu'on pensait qu'ils n'en avaient pas les moyens, soit parce que personne n'imaginait qu'ils méritaient d'être vus au-delà de leur région. Nous concevons des sites web pour ces territoires : Ouessè en est un exemple concret. Notre objectif est de donner une existence en ligne digne à des lieux, des cultures et des institutions locales qu'on croyait invisibles pour le numérique.</p>
+    </section>
+
+    <!-- QUI SOMMES-NOUS -->
+    <section>
+        <h2 style="text-align:center;margin-bottom:10px;">Qui est derrière ce site</h2>
+        <p style="text-align:center;max-width:700px;margin:0 auto 10px;color:var(--ink);line-height:1.7;">
+            Ce site a été conçu par <strong>Bigb (Ezechiel Tchokponhoue)</strong>, fondateur, designer et développeur web basé au Bénin, à travers deux structures complémentaires :
+        </p>
+
+        <div class="org-grid">
+            <div class="org-card">
+                <h3>NarroQ</h3>
+                <p>Organisation technologique qui structure la partie développement et infrastructure des projets : conception des sites, choix techniques, hébergement et suivi technique dans la durée.</p>
+            </div>
+            <div class="org-card">
+                <h3>EzegLabs</h3>
+                <p>Collectif technologie & design qui pense l'identité visuelle et l'expérience de chaque site : direction artistique, mise en page, cohérence de marque pour chaque commune ou site touristique accompagné.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+        <h2 style="text-align:center;margin-bottom:30px;">Une commune ou un site touristique à faire connaître ?</h2>
+
+        <div class="contact-wrap">
+            <ul class="contact-info">
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong>
+                        contact@narroq.com
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Zone d'intervention</strong>
+                        Commune de Ouessè et communes voisines, Bénin
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <strong>Délai de réponse</strong>
+                        Sous 48h ouvrées
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <div>
+                        <strong>Réseaux</strong>
+                        NarroQ · EzegLabs
+                    </div>
+                </li>
+            </ul>
+
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-row">
+                    <div>
+                        <label for="nom">Nom complet</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="structure">Commune / site touristique concerné</label>
+                    <input type="text" id="structure" name="structure">
+                </div>
+                <div>
+                    <label for="message">Votre message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Envoyer le message</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<footer class="pied">
+    <div class="logo-text">
+        <span class="logo-title" style="color:#fff;">Ouessè Tourisme</span>
+        <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>
+    </div>
+    <input type="email" placeholder="Votre email pour les actualités">
+    <div>
+        <a href="index.html">Accueil</a> ·
+        <a href="decouvert.html">Découvrir</a> ·
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
+
+<script>
+document.querySelector('.menu-toggle')?.addEventListener('click', function () {
+    document.querySelector('.main-nav')?.classList.toggle('active');
+});
+</script>
+
+</body>
+</html>

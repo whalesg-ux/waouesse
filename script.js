@@ -115,38 +115,20 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 /* ============================================
-   6. GALERIE PHOTO — ouverture en grand (lightbox simple)
+   6. GALERIE PHOTO — SUPPRIMÉ
+   Cette section créait un <div class="lightbox"> ajouté à la fin de
+   <body> (donc après le footer) sans AUCUNE règle CSS associée
+   (pas de display:none, pas de position:fixed/overlay). Résultat :
+   le bloc s'affichait en plein dans le flux de la page, tout en bas,
+   avec l'image en pleine largeur dès qu'on cliquait une photo de la
+   galerie — c'était le bug de "l'image qui s'affiche en bas de page".
+
+   Elle faisait aussi doublon avec le script inline présent dans
+   index.html, qui gère déjà proprement (en overlay plein écran,
+   créé et détruit à chaque clic/fermeture) TOUTES les images marquées
+   data-lightbox="true" — galerie, catégories et profil compris.
+   Pas besoin de la recréer ici.
 ============================================ */
-const galleryImages = document.querySelectorAll('.gallery-container img');
-
-if (galleryImages.length > 0) {
-  // Création de la boîte lightbox une seule fois
-  const lightbox = document.createElement('div');
-  lightbox.classList.add('lightbox');
-  lightbox.innerHTML = '<span class="lightbox-close">&times;</span><img src="" alt="">';
-  document.body.appendChild(lightbox);
-
-  const lightboxImg = lightbox.querySelector('img');
-  const lightboxClose = lightbox.querySelector('.lightbox-close');
-
-  galleryImages.forEach((img) => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      lightbox.classList.add('active');
-    });
-  });
-
-  const closeLightbox = () => lightbox.classList.remove('active');
-
-  lightboxClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
-  });
-}
 
 /* ============================================
    7. CARTES DE CATÉGORIE — retour console (debug)

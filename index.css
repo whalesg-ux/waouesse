@@ -28,8 +28,13 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* CORRECTION CLS : "serif" remplacé par "sans-serif" — Poppins est une police
+   sans-serif, le mauvais fallback faisait changer la largeur des caractères
+   au chargement de la police, ce qui recalculait le retour à la ligne des
+   titres (notamment .hero-title sur plusieurs lignes) et déclenchait un
+   décalage de mise en page important (CLS). */
 h1, h2, h3 {
-  font-family: "Poppins", serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
 
@@ -345,6 +350,7 @@ h1, h2, h3 {
 .profile-image {
   flex: 1 1 300px;
   max-width: 500px;
+  aspect-ratio: 600 / 400;
 }
 .profile-image img {
   width: 100%;
@@ -387,6 +393,7 @@ h1, h2, h3 {
 .gallery-container img {
   width: 100%;
   max-width: 300px;
+  aspect-ratio: 300 / 200;
   height: auto;
   border-radius: 10px;
   cursor: pointer;

@@ -1,100 +1,123 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- ============================================================
-         HEAD unifié — même structure que les autres pages du site.
-         ============================================================ -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Découvrir Ouessè : Patrimoine, Marbre Bleu et Traditions au Bénin</title>
-    <meta name="description" content="Explorez la commune de Ouessè : deuxième réserve mondiale de marbre bleu, sept rivières, forêts classées et sacrées, patrimoine royal Shabè et Mahi, au cœur du département des Collines au Bénin.">
-    <meta name="keywords" content="Ouessè, Collines, Bénin, marbre bleu, Idadjo, Shabè, Mahi, tourisme, patrimoine, découvrir">
-    <meta name="theme-color" content="#0b6b44">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TITRE OPTIMISÉ -->
+    <title>Découvrir Ouèssè : jeunes, football, art, musique, technologie et défis routiers</title>
+
+    <!-- META DESCRIPTION -->
+    <meta name="description" content="Ouèssè : une commune dynamique entre marbre bleu et traditions, où les jeunes s'illustrent dans le football, l'art, la musique, la technologie et la photographie. Découvrez les événements, les réalisations et les défis (routes, ressources) de cette terre du Bénin." />
+
+    <meta name="keywords" content="Ouèssè, jeunes Ouèssè, football Ouèssè, art Ouèssè, musique Ouèssè, technologie Ouèssè, photographie Ouèssè, événements Ouèssè, routes Ouèssè, développement Ouèssè" />
+
+    <meta name="theme-color" content="#0b6b44" />
 
     <!-- OPEN GRAPH -->
-    <meta property="og:title" content="Découvrir Ouessè : Patrimoine, Marbre Bleu et Traditions">
-    <meta property="og:description" content="Deuxième réserve mondiale de marbre bleu, sept rivières, forêts sacrées et patrimoine royal : partez à la découverte de Ouessè.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://waouesse.netlify.app/decouvert">
-    <meta property="og:image" content="marbre-bleu-idadjo.webp">
-    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Découvrir Ouèssè : jeunesse, culture et défis" />
+    <meta property="og:description" content="Football, art, musique, technologie, photographie : la jeunesse de Ouèssè bouge, malgré les défis routiers et politiques." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://waouesse.vercel.app/decouvert" />
+    <meta property="og:image" content="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" />
+    <meta property="og:locale" content="fr_FR" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- Préconnexions -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
 
-    <!-- Preload de l'image critique du hero (LCP) -->
-    <link rel="preload" as="image" href="marbre-bleu-idadjo.webp" fetchpriority="high">
-    <link rel="icon" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" type="image/webp">
+    <!-- Préchargement image hero -->
+    <link rel="preload" as="image" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784326466/ouesse_n5pdyh.webp" fetchpriority="high" />
 
-    <!-- CSS critique inliné (header + hero) pour un rendu immédiat -->
-    <style>
-:root{
-    --cream:#fff;
-    --ink:#16261e;
-    --forest:#0b6b44;
-    --forest-dark:#084d31;
-    --forest-soft:#e7f3ec;
-    --line:#e1e6e3;
-}
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif}
-body{background-color:var(--cream);color:var(--ink);font-family:"Poppins",sans-serif}
-h1,h2,h3{font-family:"Fraunces",serif;font-weight:600}
+    <link rel="icon" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" type="image/webp" />
 
-.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background-color:var(--cream);border-bottom:1px solid var(--line);flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:10px}
-.logo img{height:34px;width:auto;cursor:pointer;transition:transform .3s ease}
-.logo img:hover{transform:scale(1.1)}
-.logo-text{display:flex;flex-direction:column;line-height:1.1}
-.logo-title{font-family:"Fraunces",serif;font-weight:600;font-size:1.1rem;color:var(--ink)}
-.logo-subtitle{font-size:.6rem;letter-spacing:2px;color:var(--forest)}
-.main-nav ul{display:flex;list-style:none;gap:32px;margin:0;padding:0;flex-wrap:wrap}
-.main-nav a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem;padding-bottom:4px;border-bottom:2px solid transparent;transition:color .3s ease,border-color .3s ease}
-.main-nav a:hover,.main-nav a.active{color:var(--forest);border-bottom-color:var(--forest)}
-.btn-explorer{background-color:var(--forest);color:#fff;text-decoration:none;font-weight:600;font-size:.9rem;padding:10px 26px;border-radius:999px;transition:background-color .3s ease,transform .3s ease}
-.btn-explorer:hover{background-color:var(--forest-dark);transform:translateY(-1px)}
-.menu-toggle{display:none;background:none;border:none;font-size:24px;color:var(--ink);cursor:pointer}
+    <!-- FEUILLE DE STYLE EXTERNE -->
+    <link rel="stylesheet" href="style-decouvert.css" />
 
-@media (max-width:768px){
-    .site-header{padding:16px 20px}
-    .main-nav{display:none;width:100%;order:3}
-    .main-nav.active{display:block}
-    .main-nav ul{flex-direction:column;align-items:center;gap:16px;padding:20px 0}
-    .menu-toggle{display:block}
-    .search{display:none}
-}
-    </style>
+    <!-- GOOGLE FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap" />
 
-    <!-- CSS complet (non critique) chargé sans bloquer le rendu -->
-    <link rel="preload" as="style" href="luc.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="luc.css"></noscript>
+    <!-- FONT AWESOME -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- DONNÉES STRUCTURÉES JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ouèssè : entre jeunesse créative et défis de développement",
+      "description": "Portrait d'une commune béninoise où le football, l'art, la musique, la technologie et la photographie font bouger la jeunesse, malgré les problèmes de routes et de ressources.",
+      "image": "https://res.cloudinary.com/nyke7lhc/image/upload/v1784326466/ouesse_n5pdyh.webp",
+      "datePublished": "2025-07-20",
+      "author": {
+        "@type": "Organization",
+        "name": "Ouèssè Tourisme"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ouèssè Tourisme"
+      }
+    }
+    </script>
 
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <!-- FAQ STRUCTURÉE -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quels sont les principaux défis de Ouèssè ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les routes sont en mauvais état, les ressources politiques insuffisantes, et la commune manque d'investissements pour structurer le football, l'art et la musique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles activités animent la jeunesse de Ouèssè ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La jeunesse s'investit dans le football (tournois locaux), l'art (peinture, sculpture), la musique (concerts de rue), la photographie (reportages) et des événements festifs (parties, soirées)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Y a-t-il des événements culturels à Ouèssè ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, des festivals de musique, des expositions d'art, des matchs de football, et des soirées photographiques sont organisés régulièrement par les jeunes."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
 
 <header class="site-header">
     <div class="logo">
-        <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager">
+        <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager" />
         <div class="logo-text">
             <span class="logo-title">Ouessè</span>
             <span class="logo-subtitle">TOURISME</span>
         </div>
     </div>
 
-    <button class="menu-toggle" aria-label="Ouvrir le menu">
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
         <i class="fa-solid fa-bars"></i>
     </button>
 
-    <nav class="main-nav">
+    <nav class="main-nav" id="mainNav" role="navigation">
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="decouvert.html" class="active">Découvrir</a></li>
-            <li><a href="#">À propos</a></li>
+            <li><a href="luc.html">Luc Atrokpo</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -104,130 +127,146 @@ h1,h2,h3{font-family:"Fraunces",serif;font-weight:600}
 
 <main>
 
-    <!-- HERO -->
+    <!-- ===== HERO ===== -->
     <div class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Ouessè, entre <em>marbre bleu</em> et traditions royales</h1>
-            <div class="hero-text">
-                <p>Deuxième réserve mondiale de marbre bleu, sept rivières, forêts classées et sacrées : partez à la découverte d'une commune méconnue mais riche d'un patrimoine naturel et culturel exceptionnel.</p>
+            <h1 class="hero-title">Ouèssè : <em>jeunesse, culture et défis</em></h1>
+            <p class="hero-text">
+                Football, art, musique, technologie, photographie : la jeunesse de Ouèssè bouge, innove et crée, 
+                malgré des routes dégradées et un manque criant de ressources politiques.
+            </p>
+            <div class="hero-buttons">
+                <a href="#jeunesse" class="btn-hero">Jeunesse & événements</a>
+                <a href="#defis" class="btn-hero btn-outline">Défis & solutions</a>
             </div>
-            <a href="luc.html" class="btn-luc">  Luc ATROKPO à Ouessè</a>
-            
-    <style> .btn-luc {
-    display: inline-block;
-    padding: 12px 28px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    color: #ffffff;
-    background-color: rgba(15, 221, 15, 0.925);
-    border: 2px solid rgba(15, 221, 15, 0.925);
-    border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(0, 100, 0, 0.4);
-    transition: all 0.25s ease-in-out;
-    cursor: pointer;
-}
-
-.btn-luc:hover {
-    background-color: rgba(15, 221, 15, 0.925);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 12px rgba(15, 221, 15, 0.925);
-}
-</style>
-            <form class="search" role="search" action="#" method="get">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" name="q" placeholder="Rechercher un lieu, un site, un village...">
-                <button type="submit">Rechercher</button>
-            </form>
         </div>
     </div>
- 
-    <!-- CATÉGORIES -->
-    <section class="categories">
-        <h2>Que découvrir à Ouessè ?</h2>
-        <p class="categories-subtitle">Neuf arrondissements, un patrimoine à explorer sous toutes ses formes</p>
 
-        <div class="category-grid">
-            <a href="#patrimoine" class="category-card">
-                <img src="statue-faka-foukou.webp" alt="Patrimoine royal de Ouessè" width="300" height="400" loading="lazy">
-                <span class="category-label">Patrimoine royal</span>
-            </a>
-            <a href="#marbre" class="category-card">
-                <img src="marbre-bleu-idadjo.webp" alt="Gisement de marbre bleu à Idadjo" width="300" height="400" loading="lazy">
-                <span class="category-label">Marbre bleu</span>
-            </a>
-            <a href="#nature" class="category-card">
-                <img src="foret-classee-kemon.webp" alt="Collines et forêts classées de Kèmon" width="300" height="400" loading="lazy">
-                <span class="category-label">Collines & forêts</span>
-            </a>
-            <a href="#rivieres" class="category-card">
-                <img src="riviere-ouesse.webp" alt="Rivières de la commune de Ouessè" width="300" height="400" loading="lazy">
-                <span class="category-label">Rivières</span>
-            </a>
-            <a href="#artisanat" class="category-card">
-                <img src="artisanat-local.webp" alt="Artisanat et agriculture locale" width="300" height="400" loading="lazy">
-                <span class="category-label">Artisanat & agriculture</span>
-            </a>
-            <a href="#culture" class="category-card">
-                <img src="culture-shabe-mahi.webp" alt="Culture Shabè et Mahi de Ouessè" width="300" height="400" loading="lazy">
-                <span class="category-label">Culture & traditions</span>
-            </a>
+    <!-- ===== PRÉSENTATION GÉNÉRALE ===== -->
+    <section class="intro-section">
+        <div class="container">
+            <h2>Bienvenue à Ouèssè</h2>
+            <p>
+                Située au nord du département des Collines, à 327 km de Cotonou, la commune de Ouèssè s'étend sur plus de 3 200 km². 
+                Elle partage une frontière avec le Nigeria à l'est et compte neuf arrondissements. 
+                Sa population de plus de 150 000 habitants est un creuset de cultures Shabè, Mahi, Adja, Fon, Peul et bien d'autres.
+            </p>
+            <p>
+                Cependant, Ouèssè demeure un territoire de contrastes. D'un côté, la commune dispose de richesses naturelles exceptionnelles — incluant la deuxième réserve mondiale de marbre bleu, des forêts sacrées et sept cours d'eau — portées par une jeunesse dynamique qui s'illustre dans le football, les arts visuels, la musique et le numérique. De l'autre, la dégradation du réseau routier et les défis liés à la mobilisation des ressources financières locales freinent encore son plein essor.</p>
         </div>
     </section>
 
-    <!-- PRÉSENTATION -->
-    <section class="wrapper">
-        <div class="profile">
-            <div class="profile-image">
-                <img src="statue-faka-foukou.webp" alt="Statue de Sa Majesté Faka Foukou, premier souverain de Ouessè" width="500" height="400" loading="lazy">
+    <!-- ===== SECTION JEUNESSE, ÉVÉNEMENTS, RÉALISATIONS ===== -->
+    <section class="jeunesse-section" id="jeunesse">
+        <div class="container">
+            <h2>La jeunesse de Ouèssè : créativité et dynamisme</h2>
+            <p class="sous-titre">Entre foot, art, musique, technologie et photographie, les jeunes transforment leur quotidien.</p>
+
+            <!-- Événements récents -->
+            <div class="grid-evenements">
+                <div class="card-evenement">
+                    <i class="fa-solid fa-futbol"></i>
+                    <h3>Football & tournois</h3>
+                    <p>Des compétitions inter‑quartiers rythment l'année. Malgré un terrain vétuste, l'engouement est immense. Des jeunes talents rêvent de rejoindre des clubs professionnels.</p>
+                </div>
+                <div class="card-evenement">
+                    <i class="fa-solid fa-palette"></i>
+                    <h3>Art & peinture</h3>
+                    <p>Des ateliers informels voient naître des fresques murales qui racontent l'histoire de la commune. Les artistes locaux exposent leurs œuvres lors de marchés culturels.</p>
+                </div>
+                <div class="card-evenement">
+                    <i class="fa-solid fa-music"></i>
+                    <h3>Musique & concerts</h3>
+                    <p>Des soirées « open mic » et des concerts de rue sont organisés, mêlant rythmes traditionnels et influences modernes (afrobeat, hip‑hop).</p>
+                </div>
+                <div class="card-evenement">
+                    <i class="fa-solid fa-camera"></i>
+                    <h3>Photographie & vidéo</h3>
+                    <p>Des jeunes reporters documentent la vie locale. Des concours photos sont lancés pour valoriser le patrimoine et les moments festifs.</p>
+                </div>
+                <div class="card-evenement">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Technologie & innovation</h3>
+                    <p>Des ateliers de codage et de montage vidéo émergent, portés par des associations. La jeunesse s'initie au numérique malgré un accès limité à Internet.</p>
+                </div>
+                <div class="card-evenement">
+                    <i class="fa-solid fa-party-horn"></i>
+                    <h3>Parties & événements festifs</h3>
+                    <p>Les « bal populaires » et les soirées dansantes sont des moments de rassemblement intergénérationnel, où la joie de vivre de Ouèssè s'exprime pleinement.</p>
+                </div>
             </div>
-            <div class="intro">
-                <h1>Une commune au cœur du Bénin</h1>
-                <p class="nouveaugraph">Située au nord du département des Collines, à environ 327 km de Cotonou et 112 km de Parakou, Ouessè est la plus vaste commune de la région avec près de 3 200 km². Elle est frontalière du Nigeria à l'est et regroupe neuf arrondissements : Challa-Ogoi, Djègbè, Gbanlin, Ikèmon, Kilibo, Laminou, Odougba, Ouèssè-Centre et Toui.
 
-Sa population, estimée à plus de 150 000 habitants, est composée principalement des Shabè, venus d'Ilé Ifè au Nigeria, et des Mahis, originaires de Savalou et du plateau d'Agonlin, aux côtés d'autres communautés Adja, Fon, Otamari, Yom, Lokpa et d'éleveurs peuls.
-
-Le sol de la commune abrite la deuxième réserve mondiale de marbre bleu après l'Italie, notamment à Idadjo. Ouessè compte aussi sept rivières, des forêts classées et sacrées, les galeries souterraines de Yaoui, les collines de Kèmon et les mares à caïmans de Gbongui. Sa Majesté Djahlin Djanta, dit Faka Foukou, premier souverain des terres de Ouessè Wogoudo (1690-1720), est honoré par une statue érigée par l'association culturelle Mahi Ouindo.
-
-En 2019, la commune a été distinguée comme meilleure commune du Bénin en matière de budget participatif. Son économie repose principalement sur l'agriculture vivrière : maïs, manioc, arachide, riz, haricot et soja.</p>
+            <!-- Réalisations -->
+            <div class="realisations">
+                <h3>Quelques réalisations marquantes</h3>
+                <ul>
+                    <li><strong>Développement du football :</strong> création d'une académie de football de rue et participation à des tournois régionaux par : <b> MOMOTO SONO; etc</b>.</li>
+<li><strong>Essor des arts visuels :</strong> réalisation d'une fresque murale collective par les jeunes artistes de la commune <b>ECAO; JIJ; EPACO; PRO</b>.</li>
+<li><strong>Dynamisation de la scène musicale :</strong> organisation de la première édition du « Festival des Rythmes de Ouèssè » en 2024.</li>
+<li><strong>Promotion de la photographie par les jeunes : <b> NOE MAHUGNON STUDIO; TERMINATOR PHOTOGRAPHY; HADIROU SHOOT</b></strong> organisation de l'exposition « Regards sur Ouèssè », ayant attiré des visiteurs des communes voisines.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- GALERIE -->
-    <section class="gallery">
-        <h2>Galerie</h2>
-        <div class="gallery-container">
-            <img src="marbre-bleu-idadjo.webp" alt="Gisement de marbre bleu à Idadjo" width="300" height="220" loading="lazy">
-            <img src="riviere-ouesse.webp" alt="L'une des sept rivières de Ouessè" width="300" height="220" loading="lazy">
-            <img src="foret-classee-kemon.webp" alt="Forêt classée des collines de Kèmon" width="300" height="220" loading="lazy">
-            <img src="statue-faka-foukou.webp" alt="Statue du premier souverain de Ouessè" width="300" height="220" loading="lazy">
-            <img src="artisanat-local.webp" alt="Artisanat local à Ouessè" width="300" height="220" loading="lazy">
-            <img src="culture-shabe-mahi.webp" alt="Célébration culturelle Shabè et Mahi" width="300" height="220" loading="lazy">
+    <!-- ===== SECTION DÉFIS (routes, ressources, politiques) ===== -->
+    <section class="defis-section" id="defis">
+        <div class="container">
+            <h2>Les défis de Ouèssè : routes, ressources et politiques</h2>
+            <p class="sous-titre">Malgré son potentiel, la commune est confrontée à des obstacles majeurs.</p>
+
+            <div class="grid-defis">
+                <div class="defi-item">
+                    <i class="fa-solid fa-road"></i>
+                     <h3>État du réseau routier et enclavement territorial</h3>
+    <p>L'extrême dégradation des axes de transport et des pistes rurales ralentit fortement les échanges, en particulier durant la saison des pluies où de nombreuses localités se retrouvent isolées. Ce déficit de connectivité pénalise l'écoulement des productions agricoles vers les marchés nationaux et restreint l'accès des populations aux services de santé et d'éducation de base.</p>
+</div>
+                <div class="defi-item">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+        <h3>Insuffisance des ressources financières et fiscales</h3>
+    <p>La commune fait face à d'importants défis dans la mobilisation de ses recettes propres, ce qui freine son autonomie de développement. Par conséquent, les projets d'infrastructures hautement structurants, notamment l'extension du réseau électrique et l'accès à l'eau potable, accusent des retards majeurs dans leur déploiement.</p>
+</div>
+
+                <div class="defi-item">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>Exode rural et dynamiques migratoires des jeunes</h3>
+    <p>Face à l'insuffisance des opportunités d'insertion professionnelle locale, une part importante de la jeunesse quitte la commune de Ouèssè pour rejoindre les grands pôles économiques comme Cotonou, ou s'oriente vers l'émigration transfrontalière, notamment vers le Nigeria. Ce flux migratoire continu prive le territoire d'une force vive essentielle à son développement socio-économique.</p>
+</div>
+                <div class="defi-item">
+                    <i class="fa-solid fa-school"></i>
+                    <h3>Équipements sportifs et culturels</h3>
+                    <p> Le manque d'instruction sportive et d'éducation culturelle freine l'épanouissement des jeunes, tandis que les ateliers d'art manquent cruellement de matériel. La créativité et le talent des jeunes sont ainsi bridés par ce déficit d'encadrement pédagogique et d'infrastructures de base..</p>
+                </div>
+            </div>
+
+            <div class="appel-action">
+                <p><strong>Un appel aux autorités :</strong>Ouèssè a besoin de centres culturels, de programmes de soutien à la jeunesse et d'un élan d'amour favorisant l'innovation et le développement profond. Le potentiel est là, il ne demande qu'à être valorisé.</p>
+                <a href="contact.html" class="btn-action">Nous contacter pour des propositions</a>
+            </div>
         </div>
     </section>
 
-    <!-- VIDÉO -->
-    <section class="video-section">
-        <h2>Ouessè en images</h2>
-        <div class="video-container">
-            <!-- Remplacer VIDEO_ID par l'identifiant YouTube réel de la vidéo de présentation -->
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Découvrir Ouessè" loading="lazy" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <!-- ÉVÉNEMENTS -->
-    <section class="fa-calendar-check">
-        <h2>Agenda de la commune</h2>
-        <ul>
-            <li><i class="fa-solid fa-calendar-days"></i> Cérémonies traditionnelles Shabè et Mahi — dates à confirmer</li>
-            <li><i class="fa-solid fa-calendar-days"></i> Forum du budget participatif de la commune</li>
-            <li><i class="fa-solid fa-calendar-days"></i> Marché hebdomadaire et foires agricoles locales</li>
-        </ul>
-        <div class="btn1">
-            <a href="contact.html">Signaler ou proposer un événement</a>
+    <!-- ===== FOIRE AUX QUESTIONS (FAQ) ===== -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2>Questions fréquentes sur Ouèssè</h2>
+            <div class="faq-item">
+                <h3>Quels sont les principaux défis de Ouèssè ?</h3>
+                <p><b>Les routes sont en mauvais état dans des zones comme "LAMINOU AGBALOKOUGOUDO; la route allant à N'GBEHOUEDO de l'ECOLE PRIMAIRE PRIVEE SEWE" et d'autres, les ressources politiques insuffisantes que nous pouvons abordées ?, et la commune manque de..... pour structurer le football, l'art et la musique, Le recul de la progression scolaire</b>.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Quelles activités animent la jeunesse de Ouèssè ?</h3>
+                <p>La jeunesse s'investit dans le football (tournois locaux), l'art (peinture, sculpture), la musique (concerts de rue), la photographie (reportages) et des événements festifs (parties, soirées).</p>
+            </div>
+            <div class="faq-item">
+                <h3>Y a-t-il des événements culturels à Ouèssè ?</h3>
+                <p>Oui, des festivals de musique, des expositions d'art, des matchs de football, et des soirées photographiques sont organisés régulièrement par les jeunes "LTNDR <b>LE TEMPS NOUS DONNERA RAISON une initiative de GONZARIO SETONDJI ADJAHOUNGBO, WINNER EVENT'S de ABRAHAM BLOH, ECAO, JIJ et les GALA etc</b>".</p>
+            </div>
+            <div class="faq-item">
+                <h3>Comment soutenir le développement de Ouèssè ?</h3>
+                <p>En participant aux initiatives locales, en investissant dans des projets d'infrastructures, et en faisant connaître les potentialités de la commune auprès des décideurs.</p>
+            </div>
         </div>
     </section>
 
@@ -235,15 +274,36 @@ En 2019, la commune a été distinguée comme meilleure commune du Bénin en mat
 
 <footer class="pied">
     <div class="logo-text">
-        <span class="logo-title" style="color:#fff;">Ouessè Tourisme</span>
+        <span class="logo-title">Ouessè Tourisme</span>
         <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>
     </div>
-    <input type="email" placeholder="Votre email pour les actualités">
+    <input type="email" placeholder="Votre email pour les actualités" />
+    <div>
+        <a href="index.html">Accueil</a> ·
+        <a href="decouvert.html">Découvrir</a> ·
+        <a href="luc.html">Luc Atrokpo</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="#faq">FAQ</a>
+    </div>
+    <p class="footer-credit">&copy; 2025 Ouèssè Tourisme – Découverte et défis de la commune</p>
 </footer>
 
+<!-- SCRIPTS -->
 <script>
-document.querySelector('.menu-toggle')?.addEventListener('click', function () {
-    document.querySelector('.main-nav')?.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Menu mobile
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+            const isOpen = nav.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', isOpen);
+            toggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+            toggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+        });
+    }
+
 });
 </script>
 

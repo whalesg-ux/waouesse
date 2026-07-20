@@ -1,146 +1,214 @@
-/* ============================================
-   1. MENU HAMBURGER (mobile)
-============================================ */
-const menuToggle = document.querySelector('.menu-toggle');
-const mainNav = document.querySelector('.main-nav');
+document.addEventListener('DOMContentLoaded', function() {
 
-if (menuToggle && mainNav) {
-  menuToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('active');
-  });
+    // ===== MENU MOBILE =====
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+            const isOpen = nav.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', isOpen);
+            toggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+            toggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+        });
+    }
 
-  // Ferme le menu automatiquement quand on clique sur un lien (mobile)
-  const navLinks = mainNav.querySelectorAll('a');
-  navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      mainNav.classList.remove('active');
+    // ===== LIGHTBOX =====
+    var images = document.querySelectorAll('img[data-lightbox="true"]');
+    images.forEach(function(img) {
+        img.addEventListener('click', function(e) {
+            e.preventDefault();
+            var overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100vw';
+            overlay.style.height = '100vh';
+            overlay.style.backgroundColor = 'rgba(0,0,0,0.85)';
+            overlay.style.display = 'flex';
+            overlay.style.alignItems = 'center';
+            overlay.style.justifyContent = 'center';
+            overlay.style.zIndex = '9999';
+            overlay.style.cursor = 'pointer';
+            overlay.style.padding = '20px';
+            overlay.style.boxSizing = 'border-box';
+
+            var enlarged = document.createElement('img');
+            var src = img.getAttribute('src');
+            var srcset = img.getAttribute('srcset');
+            if (srcset) {
+                var parts = srcset.split(',');
+                var last = parts[parts.length-1].trim();
+                var lastSrc = last.split(' ')[0];
+                if (lastSrc) src = lastSrc;
+            }
+            enlarged.src = src;
+            enlarged.style.maxWidth = '90%';
+            enlarged.style.maxHeight = '90%';
+            enlarged.style.objectFit = 'contain';
+            enlarged.style.borderRadius = '8px';
+            enlarged.style.boxShadow = '0 20px 60px rgba(0,0,0,0.6)';
+
+            overlay.appendChild(enlarged);
+            document.body.appendChild(overlay);
+
+            overlay.addEventListener('click', function() {
+                overlay.remove();
+            });
+            document.addEventListener('keydown', function escHandler(e) {
+                if (e.key === 'Escape') {
+                    if (document.body.contains(overlay)) {
+                        overlay.remove();
+                        document.removeEventListener('keydown', escHandler);
+                    }
+                }
+            });
+        });
     });
-  });
-}
 
-/* ============================================
-   2. LIEN ACTIF DANS LA NAVIGATION
-   Ajoute la classe "active" sur le lien cliqué
-   et l'enlève des autres
-============================================ */
-const allNavLinks = document.querySelectorAll('.main-nav a');
-
-allNavLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    allNavLinks.forEach((l) => l.classList.remove('active'));
-    link.classList.add('active');
-  });
-});
-
-/* ============================================
-   3. BARRE DE RECHERCHE (hero)
-============================================ */
-const searchForm = document.querySelector('.search');
-
-if (searchForm) {
-  searchForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // empêche le rechargement de la page
-
-    const input = searchForm.querySelector('input');
-    const query = input.value.trim();
-
-    if (query === '') {
-      alert('Veuillez entrer un lieu ou une expérience à rechercher.');
-      return;
+    // ===== YOUTUBE FACADE =====
+    var facade = document.getElementById('ytFacade');
+    if (facade) {
+        facade.addEventListener('click', function() {
+            var id = this.dataset.videoId;
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1';
+            iframe.width = '560';
+            iframe.height = '315';
+            iframe.title = 'WAOUESSE – Découvrez Ouèssè en vidéo';
+            iframe.frameBorder = '0';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.borderRadius = '12px';
+            this.replaceWith(iframe);
+        }, { once: true });
     }
 
-    // Ici tu pourras plus tard rediriger vers une page de résultats, par exemple :
-    // window.location.href = `recherche.html?q=${encodeURIComponent(query)}`;
+    // ===== CARROUSEL =====
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('carouselDots');
 
-    console.log('Recherche effectuée :', query);
-    alert(`Recherche en cours pour : "${query}"`);
-    input.value = '';
-  });
-}
+    if (track) {
+        const cards = track.querySelectorAll('.category-card');
+        const total = cards.length;
+        let currentIndex = 0;
+        let autoplayInterval = null;
+        let visibleCount = window.innerWidth <= 768 ? 1 : 3;
 
-/* ============================================
-   4. FORMULAIRE NEWSLETTER (footer)
-============================================ */
-const newsletterInput = document.querySelector('.pied input[type="email"]');
+        // Créer les points
+        const dots = [];
+        for (let i = 0; i < Math.ceil(total / visibleCount); i++) {
+            const dot = document.createElement('button');
+            dot.setAttribute('role', 'tab');
+            dot.setAttribute('aria-label', 'Aller à la diapositive ' + (i + 1));
+            dot.addEventListener('click', function() {
+                goToSlide(i);
+                resetAutoplay();
+            });
+            dotsContainer.appendChild(dot);
+            dots.push(dot);
+        }
 
-if (newsletterInput) {
-  // On écoute le formulaire parent s'il existe, sinon on gère le champ directement
-  const newsletterParent = newsletterInput.closest('form') || newsletterInput.parentElement;
+        function updateVisibleCount() {
+            visibleCount = window.innerWidth <= 768 ? 1 : 3;
+            const newDotCount = Math.ceil(total / visibleCount);
+            while (dotsContainer.firstChild) {
+                dotsContainer.removeChild(dotsContainer.firstChild);
+            }
+            dots.length = 0;
+            for (let i = 0; i < newDotCount; i++) {
+                const dot = document.createElement('button');
+                dot.setAttribute('role', 'tab');
+                dot.setAttribute('aria-label', 'Aller à la diapositive ' + (i + 1));
+                dot.addEventListener('click', function() {
+                    goToSlide(i);
+                    resetAutoplay();
+                });
+                dotsContainer.appendChild(dot);
+                dots.push(dot);
+            }
+            if (currentIndex >= dots.length) {
+                currentIndex = 0;
+            }
+            updateCarousel();
+            updateDots();
+        }
 
-  newsletterParent.addEventListener('submit', (e) => {
-    e.preventDefault();
-    handleNewsletterSubmit();
-  });
+        function updateCarousel() {
+            const slideWidth = 100 / visibleCount;
+            const offset = -currentIndex * slideWidth * visibleCount;
+            track.style.transform = 'translateX(' + offset + '%)';
+        }
 
-  // Sécurité : permet aussi de valider avec la touche Entrée si ce n'est pas un <form>
-  newsletterInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && newsletterParent.tagName !== 'FORM') {
-      e.preventDefault();
-      handleNewsletterSubmit();
+        function updateDots() {
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        function goToSlide(index) {
+            if (index < 0) index = dots.length - 1;
+            if (index >= dots.length) index = 0;
+            currentIndex = index;
+            updateCarousel();
+            updateDots();
+        }
+
+        function nextSlide() {
+            goToSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentIndex - 1);
+        }
+
+        function startAutoplay() {
+            if (autoplayInterval) clearInterval(autoplayInterval);
+            autoplayInterval = setInterval(nextSlide, 4000);
+        }
+
+        function resetAutoplay() {
+            if (autoplayInterval) {
+                clearInterval(autoplayInterval);
+                startAutoplay();
+            }
+        }
+
+        function stopAutoplay() {
+            if (autoplayInterval) {
+                clearInterval(autoplayInterval);
+                autoplayInterval = null;
+            }
+        }
+
+        // Événements
+        prevBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            prevSlide();
+            resetAutoplay();
+        });
+
+        nextBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            nextSlide();
+            resetAutoplay();
+        });
+
+        const wrapper = track.closest('.carousel-wrapper');
+        wrapper.addEventListener('mouseenter', stopAutoplay);
+        wrapper.addEventListener('mouseleave', startAutoplay);
+
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(updateVisibleCount, 250);
+        });
+
+        updateVisibleCount();
+        startAutoplay();
     }
-  });
 
-  function handleNewsletterSubmit() {
-    const email = newsletterInput.value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailRegex.test(email)) {
-      alert('Merci d\'entrer une adresse email valide.');
-      return;
-    }
-
-    console.log('Inscription newsletter :', email);
-    alert('Merci pour votre inscription à la newsletter !');
-    newsletterInput.value = '';
-  }
-}
-
-/* ============================================
-   5. DÉFILEMENT FLUIDE (smooth scroll)
-   Pour tous les liens internes commençant par #
-============================================ */
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener('click', function (e) {
-    const targetId = this.getAttribute('href');
-
-    // On ignore les liens vides "#"
-    if (targetId.length > 1) {
-      const target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
-});
-
-/* ============================================
-   6. GALERIE PHOTO — SUPPRIMÉ
-   Cette section créait un <div class="lightbox"> ajouté à la fin de
-   <body> (donc après le footer) sans AUCUNE règle CSS associée
-   (pas de display:none, pas de position:fixed/overlay). Résultat :
-   le bloc s'affichait en plein dans le flux de la page, tout en bas,
-   avec l'image en pleine largeur dès qu'on cliquait une photo de la
-   galerie — c'était le bug de "l'image qui s'affiche en bas de page".
-
-   Elle faisait aussi doublon avec le script inline présent dans
-   index.html, qui gère déjà proprement (en overlay plein écran,
-   créé et détruit à chaque clic/fermeture) TOUTES les images marquées
-   data-lightbox="true" — galerie, catégories et profil compris.
-   Pas besoin de la recréer ici.
-============================================ */
-
-/* ============================================
-   7. CARTES DE CATÉGORIE — retour console (debug)
-   Utile en attendant d'avoir de vraies pages de destination
-============================================ */
-document.querySelectorAll('.category-card').forEach((card) => {
-  card.addEventListener('click', (e) => {
-    const label = card.querySelector('.category-label')?.textContent;
-    console.log('Catégorie sélectionnée :', label);
-    // Si le href est encore "#", on évite un saut de page vide
-    if (card.getAttribute('href') === '#') {
-      e.preventDefault();
-    }
-  });
 });

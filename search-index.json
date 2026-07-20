@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Accueil – Ouèssè Tourisme",
+    "desc": "Découvrez Ouèssè, ses trésors naturels, culturels, et l'invitation WAOUESSE.",
+    "summary": "Ouèssè est une commune du Bénin riche en marbre bleu, forêts sacrées et traditions Shabè et Mahi. WAOUESSE signifie 'Viens à Ouèssè' en langue Fon.",
+    "url": "/index.html",
+    "icon": "fa-house",
+    "keywords": ["Ouèssè", "WAOUESSE", "marbre bleu", "forêts sacrées"]
+  },
+  {
+    "title": "Découvrir Ouèssè",
+    "desc": "Jeunesse, football, art, musique, technologie, photographie, défis et réalisations.",
+    "summary": "La jeunesse de Ouèssè s'illustre dans le football, l'art, la musique et la photographie. Malgré des routes dégradées et un manque de ressources, des événements festifs et des académies voient le jour.",
+    "url": "/decouvert.html",
+    "icon": "fa-compass",
+    "keywords": ["jeunesse", "football", "art", "musique", "technologie", "photographie", "routes"]
+  },
+  {
+    "title": "Contact – NarroQ & EzegLabs",
+    "desc": "Contactez les créateurs du site pour vos projets de site communal ou touristique.",
+    "summary": "NarroQ (développement) et EzegLabs (design) créent des sites web pour des communes et sites touristiques. Contactez-les pour un devis gratuit.",
+    "url": "/contact.html",
+    "icon": "fa-envelope",
+    "keywords": ["contact", "NarroQ", "EzegLabs", "développement web"]
+  },
+  {
+    "title": "Luc S. Atrokpo à Ouèssè",
+    "desc": "Visite officielle du Maire de Cotonou au palais royal de Ouèssè le 16 août 2024.",
+    "summary": "Le 16 août 2024, Luc S. Atrokpo, Maire de Cotonou, s'est rendu au palais royal de Ouèssè. Il a été accueilli par le nouveau Roi et le Maire Firmin Akpo IBIDON. Une rencontre historique entre modernité et tradition.",
+    "url": "/luc.html",
+    "icon": "fa-user",
+    "keywords": ["Luc Atrokpo", "Roi de Ouèssè", "Firmin Akpo", "visite", "16 août 2024"]
+  }
+]

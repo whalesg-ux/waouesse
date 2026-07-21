@@ -1,133 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- ============================================================
-         HEAD unifié — repris de la structure du header principal
-         du site (index), adapté au contenu propre à cette page.
-         ============================================================ -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualité Ouessè : Visite officielle de Luc S. Atrokpo au Roi de Ouessè le 16/08/2024</title>
-    <meta name="description" content="Le 16 août 2024, le Maire de Cotonou Luc S. Atrokpo a rendu visite au nouveau Roi de Ouessè, en compagnie du maire Firmin Akpo IBIDON. Découvrez en images cette rencontre historique entre tradition et gouvernance locale au Bénin.">
-    <meta name="keywords" content="Ouessè, Roi de Ouessè, Luc S. Atrokpo, Maire de Cotonou, Firmin Akpo IBIDON, tradition, Bénin, palais royal, août 2024, commune de Ouessè">
-    <meta name="theme-color" content="#0b6b44">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TITRE PRINCIPAL : inclut les 4 mots‑clés majeurs -->
+    <title>Luc S. Atrokpo à Ouèssè : Visite au Roi et au Maire Firmin Akpo (16 août 2024)</title>
+
+    <!-- META DESCRIPTION : réponse directe aux intentions de recherche -->
+    <meta name="description" content="Le 16 août 2024, Luc S. Atrokpo (Maire de Cotonou) était en visite officielle à Ouèssè. Il a rencontré le nouveau Roi de Ouèssè et le Maire Firmin Akpo IBIDON au palais royal. Découvrez les photos exclusives et les détails de cet événement historique." />
+
+    <!-- META KEYWORDS (pour les moteurs qui les utilisent encore) -->
+    <meta name="keywords" content="Luc S. Atrokpo, Luc Atrokpo à Ouessè, Luc Atrokpo chez le roi de Ouessè, Luc Atrokpo avec Ibidon Firmin Akpo, palais royal de Ouessè, visite historique Ouessè, 16 août 2024 Ouessè, Maire de Cotonou Ouessè, Firmin Akpo IBIDON" />
+
+    <meta name="theme-color" content="#0b6b44" />
 
     <!-- OPEN GRAPH -->
-    <meta property="og:title" content="Visite de Luc S. Atrokpo chez le nouveau Roi de Ouessè">
-    <meta property="og:description" content="Le Maire de Cotonou en visite au palais royal de Ouessè le 16 août 2024. Une rencontre entre modernité et tradition.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://waouesse.netlify.app/ouesse-visite-atrokpo">
-    <meta property="og:image" content="lucatro/lucatroe.webp">
-    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Luc S. Atrokpo à Ouèssè : Visite au Roi et à Firmin Akpo" />
+    <meta property="og:description" content="Découvrez la visite officielle de Luc S. Atrokpo à Ouèssè le 16 août 2024. Rencontre avec le nouveau Roi et le Maire Firmin Akpo IBIDON au palais royal." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://waouesse.vercel.app/luc" />
+    <meta property="og:image" content="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318005/lucatro/lucatroe_ey1ldx.webp" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="article:published_time" content="2024-08-16" />
+    <meta property="article:modified_time" content="2024-08-16" />
 
-    <!-- Preconnect aux domaines externes utilisés -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- Préconnexions -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
 
-    <!-- Preload de l'image critique (LCP) : c'est l'image de fond du hero,
-         définie en CSS (background-image), donc "as=image" avec le bon href
-         permet au navigateur de la charger sans attendre le CSS. -->
-    <link rel="preload" as="image" href="lucatro/lucatroe.webp" fetchpriority="high">
-    <link rel="icon" href="logo.webp" type="image/webp">
+    <!-- Préchargement image critique (hero) -->
+    <link rel="preload" as="image" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318004/lucatro/ibidionlluc_trlbax.webp" fetchpriority="high" />
 
-    <!-- CSS critique (header + article + galerie + lightbox) inliné pour un rendu
-         immédiat sans requête bloquante. Le reste du CSS (luc.css) est chargé
-         en asynchrone juste après. -->
-    <style>
-:root{
-    --cream:#fff;
-    --ink:#16261e;
-    --forest:#0b6b44;
-    --forest-dark:#084d31;
-    --forest-soft:#e7f3ec;
-    --line:#e1e6e3;
-}
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif}
-body{background-color:var(--cream);color:var(--ink);font-family:"Poppins",sans-serif}
-h1,h2,h3{font-family:"Fraunces",serif;font-weight:600}
+    <link rel="icon" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" type="image/webp" />
 
-/* ---------- HEADER ---------- */
-.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background-color:var(--cream);border-bottom:1px solid var(--line);flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:10px}
-.logo img{height:34px;width:auto;cursor:pointer;transition:transform .3s ease}
-.logo img:hover{transform:scale(1.1)}
-.logo-text{display:flex;flex-direction:column;line-height:1.1}
-.logo-title{font-family:"Fraunces",serif;font-weight:600;font-size:1.1rem;color:var(--ink)}
-.logo-subtitle{font-size:.6rem;letter-spacing:2px;color:var(--forest)}
-.main-nav ul{display:flex;list-style:none;gap:32px;margin:0;padding:0;flex-wrap:wrap}
-.main-nav a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem;padding-bottom:4px;border-bottom:2px solid transparent;transition:color .3s ease,border-color .3s ease}
-.main-nav a:hover,.main-nav a.active{color:var(--forest);border-bottom-color:var(--forest)}
-.btn-explorer{background-color:var(--forest);color:#fff;text-decoration:none;font-weight:600;font-size:.9rem;padding:10px 26px;border-radius:999px;transition:background-color .3s ease,transform .3s ease}
-.btn-explorer:hover{background-color:var(--forest-dark);transform:translateY(-1px)}
-.menu-toggle{display:none;background:none;border:none;font-size:24px;color:var(--ink);cursor:pointer}
-.search{display:flex;gap:6px}
-.search input{padding:8px 12px;border:1px solid var(--line);border-radius:999px;outline:none;font-size:.85rem}
-.search button{padding:8px 14px;background:var(--forest);color:#fff;border:none;border-radius:999px;cursor:pointer;transition:background-color .3s ease}
-.search button:hover{background-color:var(--forest-dark)}
+    <!-- FEUILLE DE STYLE EXTERNE (tous les styles sont ici) -->
+    <link rel="stylesheet" href="luc.css" />
 
-/* ---------- ARTICLE ---------- */
-.main-content{max-width:1200px;margin:40px auto;padding:0 20px}
-.main-content h2{color:var(--forest-dark);margin-top:30px;font-size:1.3rem}
-.main-content p{line-height:1.7}
-.disclaimer{background:var(--forest-soft);padding:15px;border-left:5px solid var(--forest);margin:20px 0;font-weight:600;font-size:.9em;border-radius:4px}
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap" />
 
-/* ---------- GALERIE + LIGHTBOX ---------- */
-.image-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:40px 0}
-.image-gallery figure{margin:0}
-.image-gallery img{width:100%;height:auto;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,.1);object-fit:cover;aspect-ratio:4/3;cursor:zoom-in;transition:transform .25s ease}
-.image-gallery img:hover{transform:scale(1.02)}
-.image-caption{font-size:.85em;color:#5a6b62;text-align:center;margin-top:5px}
+    <!-- Font Awesome -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
 
-.lightbox-overlay{position:fixed;inset:0;background:rgba(10,20,15,.9);display:none;align-items:center;justify-content:center;z-index:999;padding:24px;cursor:zoom-out}
-.lightbox-overlay.is-open{display:flex}
-.lightbox-overlay img{max-width:90vw;max-height:85vh;border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,.4);cursor:default}
-.lightbox-close{position:absolute;top:20px;right:28px;background:none;border:none;color:#fff;font-size:32px;line-height:1;cursor:pointer}
-.lightbox-caption{position:absolute;bottom:28px;left:0;right:0;text-align:center;color:#f1f1f1;font-size:.9rem;padding:0 20px}
+    <!-- DONNÉES STRUCTURÉES JSON-LD (Article + FAQ) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "Luc S. Atrokpo à Ouèssè : Visite au Roi et au Maire Firmin Akpo IBIDON",
+      "description": "Le 16 août 2024, Luc S. Atrokpo, Maire de Cotonou, s'est rendu au palais royal de Ouèssè pour rencontrer le nouveau Roi et le Maire Firmin Akpo IBIDON.",
+      "image": "https://res.cloudinary.com/nyke7lhc/image/upload/v1784318005/lucatro/lucatroe_ey1ldx.webp",
+      "datePublished": "2024-08-16",
+      "dateModified": "2024-08-16",
+      "author": {
+        "@type": "Organization",
+        "name": "Ouèssè Tourisme"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ouèssè Tourisme",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://waouesse.vercel.app/luc"
+      }
+    }
+    </script>
 
-@media (max-width:768px){
-    .site-header{padding:16px 20px}
-    .main-nav{display:none;width:100%;order:3}
-    .main-nav.active{display:block}
-    .main-nav ul{flex-direction:column;align-items:center;gap:16px;padding:20px 0}
-    .menu-toggle{display:block}
-    .search{display:none}
-}
-    </style>
+    <!-- Données structurées pour la FAQ (Question & Réponse) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quand est-ce que Luc S. Atrokpo est venu à Ouèssè ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Luc S. Atrokpo est venu à Ouèssè le 16 août 2024."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qui a accueilli Luc Atrokpo à Ouèssè ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Luc S. Atrokpo a été accueilli par le nouveau Roi de Ouèssè et par le Maire de la commune, Firmin Akpo IBIDON."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Où se trouve le palais royal de Ouèssè ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le palais royal de Ouèssè se situe au cœur de la commune de Ouèssè arrondissement Ouesse Centre devant la station centrale quittant le marché, dans le département des Collines au Bénin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Luc Atrokpo s'est-il prosterné devant le Roi de Ouèssè ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, les images exclusives montrent Luc S. Atrokpo dans une posture de profond respect, se prosternant devant le nouveau Roi de Ouèssè, marquant ainsi sa reconnaissance de l'autorité traditionnelle."
+          }
+        }
+      ]
+    }
+    </script>
 
-    <!-- CSS complet (non critique) chargé sans bloquer le rendu -->
-    <link rel="preload" as="style" href="luc.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="luc.css"></noscript>
-
-    <!-- Police Google Fonts : display=swap déjà actif (évite le FOIT) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap">
-
-    <!-- Font Awesome : non critique -> chargé de façon asynchrone -->
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
-
 <body>
 
 <header class="site-header">
     <div class="logo">
-        <img src="logo.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager">
+        <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager" />
         <div class="logo-text">
             <span class="logo-title">Ouessè</span>
             <span class="logo-subtitle">TOURISME</span>
         </div>
     </div>
 
-    <button class="menu-toggle" aria-label="Ouvrir le menu">
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
         <i class="fa-solid fa-bars"></i>
     </button>
 
-    <nav class="main-nav">
+    <nav class="main-nav" id="mainNav" role="navigation">
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="decouvert.html">Découvrir</a></li>
-            <li><a href="#">À propos</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#faq">FAQ</a></li>
         </ul>
     </nav>
 
@@ -136,98 +148,195 @@ h1,h2,h3{font-family:"Fraunces",serif;font-weight:600}
 
 <main class="main-content">
 
+    <!-- ===== HERO AVEC TITRE FORT ===== -->
     <div class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Ouessè : Une Rencontre Royale <em>Tradition et Modernité</em></h1>
+            <h1 class="hero-title">Luc S. Atrokpo à Ouèssè : <em>Tradition et Modernité</em></h1>
             <div class="hero-text">
-                <h2>16 août 2024 : Luc S. Atrokpo au Palais royal de Ouessè</h2>
-                <p>Découvrez les images exclusives de cette visite historique.</p>
+                <p class="hero-date"><i class="fa-regular fa-calendar"></i> 16 août 2024 – Palais royal de Ouèssè</p>
+                <h2 class="hero-subtitle">Le Maire de Cotonou rencontre le nouveau Roi de Ouèssè et le Maire Firmin Akpo IBIDON</h2>
+                <p>Découvrez les images exclusives de cette visite historique qui a scellé les liens entre la capitale économique et la royauté de Ouèssè.</p>
             </div>
         </div>
     </div>
 
-    <!-- TEXTE 1 -->
+    <!-- ===== INTRODUCTION ===== -->
     <section>
-        <h2>Arrivée officielle de Luc S. Atrokpo au Palais royal de Ouessè : Une rencontre historique le 16 août 2024</h2>
-        <p>Le 16 août 2024, le Maire de Cotonou, M. Luc S. Atrokpo, a effectué une visite de marque au Palais royal de Ouessè. Accueilli par le nouveau Roi de Ouessè et entouré du Maire de la commune, Firmin Akpo IBIDON, cette visite a scellé les liens entre la capitale économique du Bénin et la royauté de Ouessè. Un événement majeur pour le développement local et le renforcement des relations institutionnelles et traditionnelles. Découvrez les images exclusives de cette visite historique.</p>
+        <h2>Arrivée officielle de Luc S. Atrokpo au Palais royal de Ouèssè : Une rencontre historique</h2>
+        <p><strong>Le 16 août 2024, Luc S. Atrokpo, Maire de Cotonou, a effectué une visite de marque au Palais royal de Ouèssè.</strong> Accueilli par le nouveau Roi de Ouèssè et entouré du Maire de la commune, <strong>Firmin Akpo IBIDON</strong>, cette visite a scellé les liens entre la capitale économique du Bénin et la royauté de Ouèssè. Un événement majeur pour le développement local et le renforcement des relations institutionnelles et traditionnelles. Découvrez les images exclusives de cette rencontre historique.</p>
     </section>
 
-    <!-- TEXTE 2 -->
+    <!-- ===== DÉTAILS DE LA VISITE ===== -->
     <section>
-        <h2>Luc S. Atrokpo (Maire de Cotonou) : Une immersion au cœur de la tradition à Ouessè</h2>
-        <p>Figure emblématique de la gestion locale au Bénin, Luc S. Atrokpo, Maire de Cotonou, est reconnu pour son engagement en faveur de la modernisation des infrastructures et de la cohésion sociale. Soucieux de tisser des liens entre la capitale et les communes de l'intérieur du pays, il a posé ses valises à Ouessè le 16 août 2024.</p>
-        <p>L'illustration de son passage est frappante sur les images. On le voit, dans une posture de profond respect, se prosternant devant le nouveau Roi de Ouessè, marquant ainsi sa reconnaissance de l'autorité traditionnelle et spirituelle du lieu. Cette visite protocolaire s'est déroulée sous la bienveillance du Maire de Ouessè, M. Firmin Akpo IBIDON (dont le mandat s'achèvera en 2026). Les images montrent les deux élus marchant côte à côte, accompagnés d'une délégation et de forces de sécurité, créant un tableau solennel où la modernité administrative et la tradition séculaire se rencontrent pour le bien-être des populations.</p>
+        <h2>Luc S. Atrokpo (Maire de Cotonou) : Une immersion au cœur de la tradition à Ouèssè</h2>
+        <p>Figure emblématique de la gestion locale au Bénin, <strong>Luc S. Atrokpo</strong>, Maire de Cotonou, est reconnu pour son engagement en faveur de la modernisation des infrastructures et de la cohésion sociale. Soucieux de tisser des liens entre la capitale et les communes de l'intérieur du pays, il a posé ses valises à Ouèssè le <strong>16 août 2024</strong>.</p>
+        <p>L'illustration de son passage est frappante sur les images. On le voit, dans une posture de profond respect, <strong>se prosternant devant le nouveau Roi de Ouèssè</strong>, marquant ainsi sa reconnaissance de l'autorité traditionnelle et spirituelle du lieu. Cette visite protocolaire s'est déroulée sous la bienveillance du Maire de Ouèssè, <strong>M. Firmin Akpo IBIDON</strong> (dont le mandat s'achèvera en 2026). Les images montrent les deux élus marchant côte à côte, accompagnés d'une délégation et de forces de sécurité, créant un tableau solennel où la modernité administrative et la tradition séculaire se rencontrent pour le bien-être des populations.</p>
     </section>
 
-    <!-- TEXTE 3 -->
+    <!-- ===== RENCONTRE ROYALE ===== -->
     <section>
-        <h2>Texte-titre</h2>
-        <p><strong>La rencontre royale : Luc S. Atrokpo chez le nouveau Roi de Ouessè, aux côtés du Maire Firmin Akpo Ibidon</strong></p>
+        <h2>La rencontre royale : Luc S. Atrokpo chez le nouveau Roi de Ouessè, aux côtés du Maire Firmin Akpo IBIDON</h2>
+        <p>Au cœur du palais royal de Ouèssè, <strong>Luc S. Atrokpo</strong> a été reçu en audience par Sa Majesté le Roi de Ouèssè. Les échanges ont porté sur le développement de la commune, la préservation des traditions et les synergies possibles avec Cotonou. Le Maire Firmin Akpo IBIDON a salué cette initiative, témoignant de l'importance de la coopération entre les collectivités locales et les chefferies traditionnelles.</p>
     </section>
 
-    <!-- TEXTE 4 -->
+    <!-- ===== DÉCOUVERTE ET PROMESSES ===== -->
     <section>
-        <h2>Découverte et promesses : Les enseignements de Luc Atrokpo à Ouessè</h2>
-        <p>Au terme de cette visite remarquée du 16 août 2024, M. Luc S. Atrokpo a pu découvrir une Ouessè riche de son héritage culturel et de sa gouvernance locale. Les échanges au sein du palais royal, illustrés par les clichés de la rencontre, ont mis en lumière l'importance de la symbiose entre les institutions municipales dirigées par Firmin Akpo IBIDON et l'autorité royale. Le Maire de Cotonou a pu constater la vitalité d'une tradition qui continue de structurer la vie de la commune, tout en s'ouvrant aux enjeux du développement. Cette immersion lui aura permis de jeter les bases de futures synergies entre Cotonou et Ouessè, respectant l'histoire de la localité tout en envisageant son avenir.</p>
+        <h2>Découverte et promesses : Les enseignements de Luc Atrokpo à Ouèssè</h2>
+        <p>Au terme de cette visite remarquée du <strong>16 août 2024</strong>, M. Luc S. Atrokpo a pu découvrir une Ouèssè riche de son héritage culturel et de sa gouvernance locale. Les échanges au sein du palais royal, illustrés par les clichés de la rencontre, ont mis en lumière l'importance de la symbiose entre les institutions municipales dirigées par <strong>Firmin Akpo IBIDON</strong> et l'autorité royale. Le Maire de Cotonou a pu constater la vitalité d'une tradition qui continue de structurer la vie de la commune, tout en s'ouvrant aux enjeux du développement. Cette immersion lui aura permis de jeter les bases de futures synergies entre Cotonou et Ouèssè, respectant l'histoire de la localité tout en envisageant son avenir.</p>
     </section>
 
-    <!-- DISCLAIMER DROITS D'AUTEUR -->
+    <!-- ===== DISCLAIMER DROITS D'AUTEUR ===== -->
     <div class="disclaimer">
-        ⚠️ Avis important : Conformément à votre précision, nous attestons que les images (prises par le photographe Noé Mahugnon Photography) utilisées pour illustrer cet article ne nous appartiennent pas. Nous ne détenons aucun droit d'auteur sur ces clichés. Ils sont utilisés ici uniquement à des fins de description et de narration de l'événement, et les droits reviennent entièrement à leurs propriétaires légitimes.
+        <i class="fa-solid fa-triangle-exclamation"></i> Avis important : Conformément à votre précision, nous attestons que les images (prises par le photographe Noé Mahugnon Photography) utilisées pour illustrer cet article ne nous appartiennent pas. Nous ne détenons aucun droit d'auteur sur ces clichés. Ils sont utilisés ici uniquement à des fins de description et de narration de l'événement, et les droits reviennent entièrement à leurs propriétaires légitimes.
     </div>
 
-    <!-- GALERIE D'IMAGES (cliquables — ouverture/fermeture en lightbox) -->
+    <!-- ===== GALERIE D'IMAGES ===== -->
     <div class="image-gallery">
         <figure>
-            <img src="lucpoe.webp" srcset="lucpoe.webp 400w, lucpoe.webp 800w" sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300" loading="eager" fetchpriority="high" alt="Luc S. Atrokpo se prosternant devant le Roi de Ouessè" data-full="lucpoe.webp" data-caption="Un geste de profond respect envers la royauté : Luc S. Atrokpo en prosternation devant le nouveau Roi de Ouessè">
-            <figcaption class="image-caption">Un geste de profond respect envers la royauté : Luc S. Atrokpo en prosternation devant le nouveau Roi de Ouessè</figcaption>
+            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318011/lucatro/lucpoe_gcpmml.webp"
+                 srcset="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318011/lucatro/lucpoe_gcpmml.webp 400w, https://res.cloudinary.com/nyke7lhc/image/upload/v1784318011/lucatro/lucpoe_gcpmml.webp 800w"
+                 sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300"
+                 loading="eager" fetchpriority="high"
+                 alt="Luc S. Atrokpo se prosternant devant le Roi de Ouessè"
+                 data-full="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318011/lucatro/lucpoe_gcpmml.webp"
+                 data-caption="Un geste de profond respect : Luc S. Atrokpo en prosternation devant le nouveau Roi de Ouessè" />
+            <figcaption class="image-caption">Un geste de profond respect : Luc S. Atrokpo en prosternation devant le nouveau Roi de Ouessè</figcaption>
         </figure>
         <figure>
-            <img src="lucatroe.webp" srcset="lucatroe.webp 400w, lucatroe.webp 800w" sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300" loading="lazy" alt="Défilé des personnalités à Ouessè" data-full="lucatroe.webp" data-caption="Les personnalités se rendant au palais royal">
-            <figcaption class="image-caption">Les personnalités se rendant au palais royal</figcaption>
+            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318004/lucatro/ibidionlluc_trlbax.webp"
+                 srcset="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318004/lucatro/ibidionlluc_trlbax.webp 400w, https://res.cloudinary.com/nyke7lhc/image/upload/v1784318004/lucatro/ibidionlluc_trlbax.webp 800w"
+                 sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300"
+                 loading="lazy"
+                 alt="Luc Atrokpo et Firmin Akpo IBIDON se rendant au palais royal de Ouessè"
+                 data-full="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318004/lucatro/ibidionlluc_trlbax.webp"
+                 data-caption="Les personnalités se rendant au palais royal" />
+            <figcaption class="image-caption">Luc Atrokpo et le Maire Firmin Akpo IBIDON se rendant au palais royal</figcaption>
         </figure>
         <figure>
-            <img src="benedc.webp" srcset="benedc.webp 400w, benedc.webp 800w" sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300" loading="lazy" alt="Cérémonie traditionnelle au sol à Ouessè" data-full="benedc.webp" data-caption="Moment spirituel et traditionnel au cœur du palais">
+            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318002/lucatro/benedc_cwct3r.webp"
+                 srcset="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318002/lucatro/benedc_cwct3r.webp 400w, https://res.cloudinary.com/nyke7lhc/image/upload/v1784318002/lucatro/benedc_cwct3r.webp 800w"
+                 sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300"
+                 loading="lazy"
+                 alt="Moment spirituel et traditionnel au palais royal de Ouessè"
+                 data-full="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318002/lucatro/benedc_cwct3r.webp"
+                 data-caption="Moment spirituel et traditionnel au cœur du palais" />
             <figcaption class="image-caption">Moment spirituel et traditionnel au cœur du palais</figcaption>
         </figure>
         <figure>
-            <img src="lucaroi.webp" srcset="lucaroi.webp 400w, lucaroi.webp 800w" sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300" loading="lazy" alt="Le Roi de Ouessè sur son trône" data-full="lucaroi.webp" data-caption="Sa Majesté le Roi de Ouessè sur son trône">
+            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318001/lucatro/lucaroi_ajyke1.webp"
+                 srcset="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318001/lucatro/lucaroi_ajyke1.webp 400w, https://res.cloudinary.com/nyke7lhc/image/upload/v1784318001/lucatro/lucaroi_ajyke1.webp 800w"
+                 sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300"
+                 loading="lazy"
+                 alt="Sa Majesté le Roi de Ouessè sur son trône"
+                 data-full="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318001/lucatro/lucaroi_ajyke1.webp"
+                 data-caption="Sa Majesté le Roi de Ouessè sur son trône" />
             <figcaption class="image-caption">Sa Majesté le Roi de Ouessè sur son trône</figcaption>
         </figure>
         <figure>
-            <img src="lucat.webp" srcset="lucat.webp 400w, lucat.webp 800w" sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300" loading="lazy" alt="Réunion des autorités à Ouessè" data-full="lucat.webp" data-caption="Réunion des autorités dans la salle du palais">
+            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318003/lucatro/lucat_fhojuz.webp"
+                 srcset="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318003/lucatro/lucat_fhojuz.webp 400w, https://res.cloudinary.com/nyke7lhc/image/upload/v1784318003/lucatro/lucat_fhojuz.webp 800w"
+                 sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300"
+                 loading="lazy"
+                 alt="Réunion des autorités dans la salle du palais royal de Ouessè"
+                 data-full="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318003/lucatro/lucat_fhojuz.webp"
+                 data-caption="Réunion des autorités dans la salle du palais" />
             <figcaption class="image-caption">Réunion des autorités dans la salle du palais</figcaption>
         </figure>
         <figure>
-            <img src="lucatrr.webp" srcset="lucatrr.webp 400w, lucatrr.webp 800w" sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300" loading="lazy" alt="Luc Atrokpo s'adressant à l'assemblée" data-full="lucatrr.webp" data-caption="M. Luc S. Atrokpo, prise de parole">
+            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318000/lucatro/lucatrr_hgdkdo.webp"
+                 srcset="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318000/lucatro/lucatrr_hgdkdo.webp 400w, https://res.cloudinary.com/nyke7lhc/image/upload/v1784318000/lucatro/lucatrr_hgdkdo.webp 800w"
+                 sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300"
+                 loading="lazy"
+                 alt="Luc S. Atrokpo prenant la parole au palais royal de Ouessè"
+                 data-full="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318000/lucatro/lucatrr_hgdkdo.webp"
+                 data-caption="M. Luc S. Atrokpo, prise de parole" />
             <figcaption class="image-caption">M. Luc S. Atrokpo, prise de parole</figcaption>
         </figure>
         <figure>
-            <img src="ibidionlluc.webp" srcset="ibidionlluc.webp 400w, ibidionlluc.webp 800w" sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300" loading="lazy" alt="Déambulation devant la résidence royale" data-full="ibidionlluc.webp" data-caption="Le groupe en marche devant la résidence royale">
-            <figcaption class="image-caption">Le groupe en marche devant la résidence royale</figcaption>
+            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318005/lucatro/lucatroe_ey1ldx.webp"
+                 srcset="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318005/lucatro/lucatroe_ey1ldx.webp 400w, https://res.cloudinary.com/nyke7lhc/image/upload/v1784318005/lucatro/lucatroe_ey1ldx.webp 800w"
+                 sizes="(max-width: 600px) 100vw, 50vw" width="400" height="300"
+                 loading="lazy"
+                 alt="Luc Atrokpo et Firmin Akpo IBIDON devant la résidence royale de Ouessè"
+                 data-full="https://res.cloudinary.com/nyke7lhc/image/upload/v1784318005/lucatro/lucatroe_ey1ldx.webp"
+                 data-caption="Le groupe en marche devant la résidence royale" />
+            <figcaption class="image-caption">Luc Atrokpo et Firmin Akpo IBIDON devant la résidence royale</figcaption>
         </figure>
     </div>
 
+    <!-- ===== SECTION FAQ (QUESTIONNAIRE SEO) ===== -->
+    <section class="faq-section" id="faq">
+        <h2>Questions fréquentes sur la visite de Luc S. Atrokpo à Ouèssè</h2>
+        <p>Retrouvez ci-dessous les réponses aux questions que vous vous posez sur cet événement historique.</p>
+
+        <div class="faq-item">
+            <h3>Quand est-ce que Luc S. Atrokpo est venu à Ouèssè ?</h3>
+            <p><strong>Luc S. Atrokpo est venu à Ouèssè le <span class="highlight-date">16 août 2024</span>.</strong> Cette date marque une visite officielle majeure au palais royal de la commune.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Qui a accueilli Luc Atrokpo à Ouèssè ?</h3>
+            <p><strong>Luc S. Atrokpo a été accueilli par le nouveau Roi de Ouèssè</strong> et par le <strong>Maire de la commune, Firmin Akpo IBIDON</strong>. Les deux autorités ont accompagné le Maire de Cotonou tout au long de sa visite protocolaire.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Luc Atrokpo s'est-il prosterné devant le Roi de Ouèssè ?</h3>
+            <p><strong>Oui.</strong> Les images exclusives montrent Luc S. Atrokpo dans une posture de profond respect, <strong>se prosternant devant le nouveau Roi de Ouèssè</strong>, marquant ainsi sa reconnaissance de l'autorité traditionnelle et spirituelle.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Où se trouve le palais royal de Ouèssè ?</h3>
+            <p>Le <strong>palais royal de Ouèssè</strong> se situe au cœur l'arrondissement de Ouesse Centre devant la station centrale quittant le marché <strong>département des Collines</strong> au Bénin. C'est le siège de l'autorité traditionnelle et un lieu emblématique de la culture shabè et mahi.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Quel est le lien entre Luc Atrokpo et Firmin Akpo IBIDON ?</h3>
+            <p><strong>Luc S. Atrokpo</strong> est le Maire de Cotonou et <strong>Firmin Akpo IBIDON</strong> est le Maire de Ouèssè. Ils ont collaboré lors de cette visite du 16 août 2024 pour renforcer les liens institutionnels entre la capitale économique et la commune de Ouèssè.</p>
+        </div>
+    </section>
+
 </main>
 
-<!-- LIGHTBOX (une seule instance, réutilisée pour toutes les photos) -->
+<!-- LIGHTBOX -->
 <div class="lightbox-overlay" id="lightbox">
     <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
-    <img id="lightboxImg" src="" alt="">
+    <img id="lightboxImg" src="" alt="" />
     <p class="lightbox-caption" id="lightboxCaption"></p>
 </div>
 
-<script>
-// Menu mobile
-document.querySelector('.menu-toggle')?.addEventListener('click', function () {
-    document.querySelector('.main-nav')?.classList.toggle('active');
-});
+<footer class="pied">
+    <div class="logo-text">
+        <span class="logo-title" style="color:#fff;">Ouessè Tourisme</span>
+        <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>
+    </div>
+    <input type="email" placeholder="Votre email pour les actualités" />
+    <div>
+        <a href="index.html">Accueil</a> ·
+        <a href="decouvert.html">Découvrir</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="#faq">FAQ</a>
+    </div>
+    <p class="footer-credit">&copy; 2025 Ouèssè Tourisme – Visite de Luc S. Atrokpo à Ouèssè</p>
+</footer>
 
-// Lightbox : cliquer sur une photo l'ouvre ; cliquer sur l'overlay, la croix
-// ou la photo déjà ouverte la ferme ; cliquer sur une autre photo pendant
-// qu'une lightbox est ouverte remplace directement l'image affichée.
-(function () {
+<!-- Scripts (fonctionnalités) -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // ===== MENU MOBILE =====
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+            const isOpen = nav.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', isOpen);
+            toggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+            toggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+        });
+    }
+
+    // ===== LIGHTBOX =====
     const overlay = document.getElementById('lightbox');
     const overlayImg = document.getElementById('lightboxImg');
     const overlayCaption = document.getElementById('lightboxCaption');
@@ -239,23 +348,24 @@ document.querySelector('.menu-toggle')?.addEventListener('click', function () {
         overlayImg.alt = alt || '';
         overlayCaption.textContent = caption || '';
         overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
     }
 
     function closeLightbox() {
         overlay.classList.remove('is-open');
         overlayImg.src = '';
+        document.body.style.overflow = '';
     }
 
-    thumbs.forEach(function (img) {
-        img.addEventListener('click', function () {
+    thumbs.forEach(function(img) {
+        img.addEventListener('click', function() {
             const full = img.getAttribute('data-full') || img.src;
             const caption = img.getAttribute('data-caption') || img.alt;
             openLightbox(full, img.alt, caption);
         });
     });
 
-    // Clic sur l'overlay (fond) ou sur l'image déjà ouverte -> fermer
-    overlay.addEventListener('click', function (e) {
+    overlay.addEventListener('click', function(e) {
         if (e.target === overlay || e.target === overlayImg) {
             closeLightbox();
         }
@@ -263,13 +373,13 @@ document.querySelector('.menu-toggle')?.addEventListener('click', function () {
 
     closeBtn.addEventListener('click', closeLightbox);
 
-    // Touche Échap pour fermer
-    document.addEventListener('keydown', function (e) {
+    document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
             closeLightbox();
         }
     });
-})();
+
+});
 </script>
 
 </body>

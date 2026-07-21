@@ -25,10 +25,10 @@ BRANCH = os.getenv('GITHUB_BRANCH', 'main')
 SITE_URL = os.getenv('SITE_URL', 'https://votredomaine.com')
 REPO_PATH = os.getenv('GITHUB_PATH', '').strip()
 
-# Vérification des variables essentielles
+# Vérification des variables essentielles (sans lever d'erreur)
 if not all([GITHUB_TOKEN, OWNER, REPO]):
-    raise RuntimeError("Variables d'environnement manquantes : GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO")
-
+    print("⚠️ Variables d'environnement manquantes. Le serveur continuera mais la publication échouera.")
+    
 # =============================================
 # ROUTE : Site officiel (page d'accueil)
 # =============================================

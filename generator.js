@@ -107,12 +107,6 @@
     `;
 
     // ---- Utilitaires ----
-    // BUG CORRIGÉ (XSS) : cette fonction n'échappait auparavant que & < >,
-    // pas les guillemets. Or son résultat est injecté dans des attributs
-    // HTML entre guillemets doubles (alt="...", src="...", style="...").
-    // Un simple " dans un champ (légende, titre, citation...) permettait
-    // de sortir de l'attribut et d'injecter du HTML/JS arbitraire dans la
-    // page publiée. On échappe maintenant aussi " et '.
     function esc(str) {
         return (str || '')
             .replace(/&/g, '&amp;')
@@ -176,13 +170,13 @@
     function header(menuPagesStr, menuLabelsStr) {
         var pages = menuPagesStr ? menuPagesStr.split(',').map(function(s) { return s.trim(); }) : ['index.html', 'decouvert.html', 'luc.html', 'contact.html'];
         var labels = menuLabelsStr ? menuLabelsStr.split(',').map(function(s) { return s.trim(); }) : ['Accueil', 'Découvrir', 'Luc Atrokpo', 'Contact'];
-        
+
         var navItems = '';
         for (var i = 0; i < pages.length; i++) {
             var active = (pages[i] === 'index.html') ? ' class="active"' : '';
             navItems += '<li><a href="' + esc(pages[i]) + '"' + active + '>' + esc(labels[i]) + '</a></li>\n';
         }
-        
+
         return '<header class="site-header">\n' +
             '    <div class="logo">\n' +
             '        <img src="' + LOGO + '" alt="Logo de Ouèssè" width="48" height="48" loading="eager" />\n' +
@@ -256,11 +250,6 @@
     }
 
     function heroBlock(opts) {
-        // BUG CORRIGÉ (XSS) : seules les apostrophes étaient retirées de
-        // l'URL d'image, pas les guillemets doubles ni les parenthèses.
-        // Une URL contenant un " permettait de sortir de l'attribut
-        // style="..." et d'injecter du HTML/JS. On retire maintenant tous
-        // les caractères dangereux ET on passe le résultat dans esc().
         var safeImg = opts.img ? opts.img.replace(/['"()\\]/g, '') : '';
         var bg = safeImg ? ' style="background-image:url(&quot;' + esc(safeImg) + '&quot;);"' : '';
         var out = '<div class="hero"' + bg + '>\n<div class="hero-overlay"></div>\n<div class="hero-content">\n';
@@ -278,19 +267,14 @@
         var url = root.querySelector('.f-video-url') ? root.querySelector('.f-video-url').value : '';
         var caption = root.querySelector('.f-video-caption') ? root.querySelector('.f-video-caption').value : '';
         var autoplay = root.querySelector('.f-video-autoplay') ? root.querySelector('.f-video-autoplay').checked : false;
-        
+
         if (!url) return '';
 
         var embedUrl = url;
         var isYoutube = url.includes('youtube.com/watch') || url.includes('youtu.be');
         var isVimeo = url.includes('vimeo.com');
-        
+
         if (isYoutube) {
-            // BUG CORRIGÉ : url.split('v=')[1] ne fonctionne que pour les
-            // liens "youtube.com/watch?v=ID". Pour un lien court
-            // "youtu.be/ID" (pourtant détecté juste au-dessus), il n'y a
-            // pas de "v=" : videoId valait undefined et l'iframe pointait
-            // vers ".../embed/undefined" (vidéo cassée).
             var videoId = '';
             if (url.includes('youtu.be/')) {
                 videoId = url.split('youtu.be/')[1];
@@ -306,7 +290,6 @@
             embedUrl = 'https://player.vimeo.com/video/' + videoId;
             if (autoplay) embedUrl += '?autoplay=1&muted=1';
         }
-        // Si c'est un fichier direct, on le laisse tel quel (pas d'autoplay sans controls)
 
         var html = '<section class="video-section">\n';
         if (title) html += '<h2>' + esc(title) + '</h2>\n';
@@ -435,13 +418,6 @@
         }
         main += '</main>';
 
-        // BUG CORRIGÉ : le <main> qui survit réellement dans le HTML final
-        // est celui ajouté ci-dessous, pas la variable `main` (dont les
-        // balises <main>/</main> sont retirées par le .replace() juste après).
-        // Il lui manquait la classe "main-content" utilisée par le CSS
-        // (.main-content { max-width:1200px; margin:0 auto; padding:0 20px; }),
-        // ce qui faisait que le contenu du modèle "à propos" s'affichait
-        // pleine largeur, non aligné avec les autres modèles.
         return baseHead(meta.title, meta.desc) + '\n<body>\n' + header(menuPages, menuLabels) + '\n<main class="main-content">\n' + hero.replace('<div class="hero"', '<div class="hero" style="min-height:420px;"') + '\n' + main.replace(/^<main>|<\/main>$/g, '') + '\n</main>\n' + footer(footerText) + '\n' + scripts(false) + '\n</body>\n</html>';
     }
 
@@ -514,15 +490,42 @@
     });
 
     // ---- Bouton Publier via Flask ----
+    // CORRECTION : Fonction utilitaire pour récupérer le token admin
+    function getAdminToken() {
+        var tokenInput = document.getElementById('adminToken');
+        if (tokenInput && tokenInput.value.trim()) {
+            return tokenInput.value.trim();
+        }
+        // Fallback : chercher dans localStorage
+        try {
+            var stored = localStorage.getItem('ouesse_admin_token');
+            if (stored) return stored;
+        } catch(e) {}
+        return '';
+    }
+
+    // CORRECTION : Fonction pour sauvegarder le token
+    function saveAdminToken(token) {
+        try {
+            localStorage.setItem('ouesse_admin_token', token);
+        } catch(e) {}
+    }
+
     document.getElementById('btnPublish').addEventListener('click', function() {
         var html = generate();
         var titre = document.getElementById('pageTitle').value.trim() || 'Sans titre';
         var fileName = document.getElementById('fileName').value.trim() || '';
-        
+
+        // CORRECTION : Récupérer le token admin
+        var adminToken = getAdminToken();
+        if (!adminToken) {
+            status.innerHTML = '❌ <strong>Token admin requis</strong><br>Veuillez entrer votre token d\'administration dans le champ prévu.';
+            var tokenInput = document.getElementById('adminToken');
+            if (tokenInput) tokenInput.focus();
+            return;
+        }
+
         if (!fileName) {
-            // BUG CORRIGÉ : la translittération ignorait ç, ù, û, ï, î, œ, ñ...
-            // ce qui produisait des slugs mal formés (tirets doublés) pour
-            // les titres contenant ces caractères.
             fileName = titre.toLowerCase()
                 .replace(/[éèêë]/g, 'e').replace(/[àâä]/g, 'a').replace(/[ôö]/g, 'o')
                 .replace(/[ùûü]/g, 'u').replace(/[îï]/g, 'i').replace(/ç/g, 'c')
@@ -532,37 +535,50 @@
         if (!fileName.endsWith('.html')) fileName += '.html';
         var slug = fileName.replace('.html', '');
 
-        // BUG CORRIGÉ : `status` était redéclaré ici avec `var` alors qu'une
-        // variable de même nom existe déjà en haut du fichier — redondant
-        // et source de confusion (on réutilise directement celle du module).
         var btn = this;
         btn.disabled = true;
         status.textContent = '⏳ Publication en cours via Flask...';
 
+        // CORRECTION : Envoyer le token dans le corps JSON + header Authorization
         fetch('/api/publier', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + adminToken
+            },
             body: JSON.stringify({
                 html: html,
                 slug: slug,
-                titre: titre
+                titre: titre,
+                token: adminToken  // Backup au cas où le header ne passerait pas
             })
         })
         .then(function(response) {
-            if (!response.ok) {
-                return response.json().then(function(err) { throw new Error(err.message); });
+            // CORRECTION : Vérifier d'abord si la réponse est du JSON
+            var contentType = response.headers.get('content-type');
+            if (contentType && contentType.includes('application/json')) {
+                return response.json().then(function(data) {
+                    if (!response.ok) {
+                        throw new Error(data.message || 'Erreur ' + response.status);
+                    }
+                    return data;
+                });
+            } else {
+                // Le serveur a retourné du HTML (erreur 401, 404, 500...)
+                throw new Error('Erreur ' + response.status + ' — Le serveur a retourné une page HTML au lieu de JSON. Vérifiez que le serveur Flask est bien accessible et que l\'URL /api/publier existe.');
             }
-            return response.json();
         })
         .then(function(data) {
             if (data.status === 'success') {
                 status.innerHTML = '✅ ' + data.message + '<br>🔗 <a href="' + data.url + '" target="_blank">' + data.url + '</a>';
+                saveAdminToken(adminToken);
             } else {
-                throw new Error(data.message);
+                throw new Error(data.message || 'Erreur inconnue du serveur');
             }
         })
         .catch(function(error) {
-            status.textContent = '❌ Erreur : ' + error.message;
+            status.innerHTML = '❌ <strong>Erreur :</strong> ' + esc(error.message);
+            console.error('Erreur publication:', error);
         })
         .finally(function() {
             btn.disabled = false;

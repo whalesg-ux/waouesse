@@ -12,7 +12,7 @@ from datetime import datetime
 from functools import wraps
 from urllib.parse import urlparse
 import requests
-from flask import Flask, request, jsonify, render_template, redirect, send_from_directory
+from flask import Flask, request, jsonify, render_template, redirect, send_from_directory, make_response
 from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -60,9 +60,20 @@ REPO_PATH = os.getenv('GITHUB_PATH', '').strip()
 # Clé d'accès à l'administration
 ADMIN_TOKEN = os.getenv('ADMIN_TOKEN')
 
-# Validation des origines CORS
+# Validation des origines CORS — autoriser le domaine Vercel + local
 ALLOWED_ORIGINS = [o.strip() for o in os.getenv('ALLOWED_ORIGINS', SITE_URL).split(',') if o.strip()]
-CORS(app, resources={r"/api/*": {"origins": ALLOWED_ORIGINS, "supports_credentials": False}})
+# Toujours ajouter localhost pour le développement
+if 'http://localhost:5000' not in ALLOWED_ORIGINS and 'http://127.0.0.1:5000' not in ALLOWED_ORIGINS:
+    ALLOWED_ORIGINS.extend(['http://localhost:5000', 'http://127.0.0.1:5000'])
+
+CORS(app, resources={
+    r"/api/*": {
+        "origins": ALLOWED_ORIGINS,
+        "supports_credentials": False,
+        "allow_headers": ["Content-Type", "Authorization"],
+        "methods": ["GET", "POST", "OPTIONS"]
+    }
+})
 
 # =============================================
 # CONSTANTES DE SÉCURITÉ
@@ -113,13 +124,14 @@ def require_admin(view):
     Le jeton doit être fourni soit :
       - dans l'en-tête HTTP : Authorization: Bearer <ADMIN_TOKEN>
       - soit en paramètre GET : ?token=<ADMIN_TOKEN>
+      - soit dans le corps JSON : { "token": "<ADMIN_TOKEN>" }
     """
     @wraps(view)
     def wrapped(*args, **kwargs):
         if not ADMIN_TOKEN:
             logger.warning("Tentative d'accès admin alors que ADMIN_TOKEN n'est pas configuré")
             return jsonify({
-                'status': 'error', 
+                'status': 'error',
                 'message': "Accès admin désactivé : configuration incomplète."
             }), 503
 
@@ -127,6 +139,10 @@ def require_admin(view):
         auth_header = request.headers.get('Authorization', '')
         if auth_header.startswith('Bearer '):
             supplied = auth_header[len('Bearer '):]
+
+        # CORRECTION : aussi accepter le token dans le corps JSON
+        if not supplied and request.is_json:
+            supplied = request.get_json(silent=True).get('token', '')
 
         if not supplied:
             logger.warning(f"Tentative d'accès admin sans token depuis {request.remote_addr}")
@@ -143,12 +159,14 @@ def require_admin(view):
 
 def validate_site_url(url):
     """Valide qu'une URL est externe (pas localhost, pas IP privée)."""
+    if not url:
+        return False
     parsed = urlparse(url)
     hostname = parsed.hostname or ''
 
     # Bloquer les URLs locales/privées
     blocked_hosts = ['localhost', '127.0.0.1', '0.0.0.0', '::1']
-    blocked_prefixes = ('10.', '172.16.', '172.17.', '172.18.', '172.19.', 
+    blocked_prefixes = ('10.', '172.16.', '172.17.', '172.18.', '172.19.',
                         '172.20.', '172.21.', '172.22.', '172.23.', '172.24.',
                         '172.25.', '172.26.', '172.27.', '172.28.', '172.29.',
                         '172.30.', '172.31.', '192.168.')
@@ -284,7 +302,7 @@ def admin():
     return render_template('admin.html')
 
 
-@app.route('/api/publier', methods=['POST'])
+@app.route('/api/publier', methods=['POST', 'OPTIONS'])
 @require_admin
 @limiter.limit("10 per minute")  # Rate limiting strict pour la publication
 def publier():
@@ -297,10 +315,18 @@ def publier():
     - Sanitization anti-XSS
     - Protection path traversal
     """
+    # CORRECTION : Gérer les requêtes OPTIONS (preflight CORS)
+    if request.method == 'OPTIONS':
+        response = make_response()
+        response.headers.add('Access-Control-Allow-Origin', request.headers.get('Origin', '*'))
+        response.headers.add('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+        response.headers.add('Access-Control-Allow-Methods', 'POST, OPTIONS')
+        return response
+
     if not all([GITHUB_TOKEN, OWNER, REPO]):
         logger.error("Configuration GitHub incomplète")
         return jsonify({
-            'status': 'error', 
+            'status': 'error',
             'message': 'Configuration GitHub incomplète côté serveur.'
         }), 500
 
@@ -318,7 +344,7 @@ def publier():
     html_content = data.get('html')
     if not html_content:
         return jsonify({
-            'status': 'error', 
+            'status': 'error',
             'message': 'Contenu HTML manquant'
         }), 400
 
@@ -363,8 +389,8 @@ def publier():
     sha = None
     try:
         resp = requests.get(
-            f"{api_url}?ref={BRANCH}", 
-            headers=headers, 
+            f"{api_url}?ref={BRANCH}",
+            headers=headers,
             timeout=10
         )
         if resp.status_code == 200:
@@ -421,7 +447,6 @@ def publier():
 
     # Régénération de l'index de recherche (erreurs non bloquantes)
     try:
-        import sys
         safe_subprocess_call('generate_index.py')
     except Exception as e:
         logger.warning(f"Erreur génération index (non bloquant): {e}")
@@ -493,9 +518,11 @@ def generer_sitemap():
             logger.info("Sitemap: aucune page HTML trouvée")
             return
 
+        # CORRECTION : Utiliser une variable intermédiaire pour éviter le backslash dans f-string
+        urls_joined = '\n'.join(urls)
         sitemap_content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{'\n'.join(urls)}
+{urls_joined}
 </urlset>"""
 
         sitemap_b64 = base64.b64encode(sitemap_content.encode('utf-8')).decode('utf-8')

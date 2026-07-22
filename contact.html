@@ -14,13 +14,24 @@
 
     <meta name="theme-color" content="#0b6b44" />
 
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://waouesse.vercel.app/contact" />
+
     <!-- OPEN GRAPH -->
     <meta property="og:title" content="Contact — NarroQ & EzegLabs | Sites pour communes et sites touristiques" />
     <meta property="og:description" content="Donnez une présence en ligne à votre commune ou site touristique. Contactez l'équipe de NarroQ et EzegLabs." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://waouesse.vercel.app/contact" />
     <meta property="og:image" content="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="fr_FR" />
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact — NarroQ & EzegLabs | Sites pour communes et sites touristiques" />
+    <meta name="twitter:description" content="Donnez une présence en ligne à votre commune ou site touristique. Contactez l'équipe." />
+    <meta name="twitter:image" content="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" />
 
     <!-- Préconnexions -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +48,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap" />
 
     <!-- Font Awesome -->
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
 
     <!-- DONNÉES STRUCTURÉES JSON-LD -->
@@ -98,13 +109,17 @@
       ]
     }
     </script>
+<base target="_blank">
 </head>
 
 <body>
 
+<!-- Skip to content -->
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
 <header class="site-header">
     <div class="logo">
-        <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager" />
+        <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" alt="Logo de Ouèssè Tourisme" width="48" height="48" loading="eager" />
         <div class="logo-text">
             <span class="logo-title">Ouessè</span>
             <span class="logo-subtitle">TOURISME</span>
@@ -112,25 +127,25 @@
     </div>
 
     <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
     </button>
 
-    <nav class="main-nav" id="mainNav" role="navigation">
+    <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navigation principale">
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="decouvert.html">Découvrir</a></li>
             <li><a href="luc.html">Luc Atrokpo</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
         </ul>
     </nav>
 
     <a href="decouvert.html" class="btn-explorer">Explorer</a>
 </header>
 
-<main class="main-content">
+<main class="main-content" id="main-content">
 
     <!-- ===== BANNIÈRE INTERNE ===== -->
-    <div class="page-header">
+    <div class="page-header" role="banner">
         <div class="page-header-content">
             <h1>Contactez-nous</h1>
             <p>Le site que vous consultez est porté par une même équipe qui construit la présence numérique de communes et de sites touristiques que beaucoup imaginaient trop modestes — ou trop oubliés — pour exister en ligne.</p>
@@ -138,89 +153,89 @@
     </div>
 
     <!-- ===== MISSION ===== -->
-    <section class="mission">
-        <h2>Notre mission</h2>
+    <section class="mission" aria-labelledby="mission-heading">
+        <h2 id="mission-heading">Notre mission</h2>
         <p>Beaucoup de communes et de sites touristiques au Bénin n'ont jamais eu de vitrine numérique — soit parce qu'on pensait qu'ils n'en avaient pas les moyens, soit parce que personne n'imaginait qu'ils méritaient d'être vus au-delà de leur région. Nous concevons des sites web pour ces territoires : Ouessè en est un exemple concret. Notre objectif est de donner une existence en ligne digne à des lieux, des cultures et des institutions locales qu'on croyait invisibles pour le numérique.</p>
     </section>
 
     <!-- ===== QUI SOMMES-NOUS ===== -->
-    <section>
-        <h2>Qui sont derrières ces plateformes</h2>
+    <section aria-labelledby="equipe-heading">
+        <h2 id="equipe-heading">Qui sont derrières ces plateformes</h2>
         <p>Ces plateformes ont été conçues par <strong>une fusion de deux boîtes technologiques</strong>, portée par une équipe de fondateurs, designers et développeurs web répartie entre le Congo, le Cameroun, la France, la Côte d'Ivoire et le Bénin, à travers deux structures complémentaires :</p>
 
         <div class="org-grid">
-            <div class="org-card">
-                <h3><i class="fa-solid fa-microchip"></i> NarroQ</h3>
+            <article class="org-card">
+                <h3><i class="fa-solid fa-microchip" aria-hidden="true"></i> NarroQ</h3>
                 <p>Organisation technologique qui structure la partie développement et infrastructure des projets : conception des sites, choix techniques, hébergement et suivi technique dans la durée.</p>
                 <ul class="org-services">
-                    <li><i class="fa-solid fa-check-circle"></i> Développement sur mesure</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Hébergement sécurisé</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Maintenance et évolutions</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Développement sur mesure</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Hébergement sécurisé</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Maintenance et évolutions</li>
                 </ul>
-            </div>
-            <div class="org-card">
-                <h3><i class="fa-solid fa-palette"></i> EzegLabs</h3>
+            </article>
+            <article class="org-card">
+                <h3><i class="fa-solid fa-palette" aria-hidden="true"></i> EzegLabs</h3>
                 <p>Collectif technologie & design qui pense l'identité visuelle et l'expérience de chaque site : direction artistique, mise en page, cohérence de marque pour chaque commune ou site touristique accompagné.</p>
                 <ul class="org-services">
-                    <li><i class="fa-solid fa-check-circle"></i> Identité visuelle unique</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Expérience utilisateur optimisée</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Design responsive</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Identité visuelle unique</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Expérience utilisateur optimisée</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Design responsive</li>
                 </ul>
-            </div>
+            </article>
         </div>
     </section>
 
     <!-- ===== NOS RÉALISATIONS (EXEMPLES) ===== -->
-    <section class="realisations">
-        <h2>Quelques exemples de projets</h2>
+    <section class="realisations" aria-labelledby="realisations-heading">
+        <h2 id="realisations-heading">Quelques exemples de projets</h2>
         <div class="projets-grid">
-            <div class="projet-item">
-                <i class="fa-solid fa-flag"></i>
+            <article class="projet-item">
+                <i class="fa-solid fa-flag" aria-hidden="true"></i>
                 <h3>Ouèssè Tourisme</h3>
                 <p>Vitrine complète de la commune : présentation, patrimoine, actualités, événements, contacts.</p>
-            </div>
-            <div class="projet-item">
-                <i class="fa-solid fa-tree"></i>
+            </article>
+            <article class="projet-item">
+                <i class="fa-solid fa-tree" aria-hidden="true"></i>
                 <h3>Parc de la Pendjari</h3>
                 <p>Site promotionnel pour une réserve naturelle, avec galerie photo et informations pratiques.</p>
-            </div>
-            <div class="projet-item">
-                <i class="fa-solid fa-landmark"></i>
+            </article>
+            <article class="projet-item">
+                <i class="fa-solid fa-landmark" aria-hidden="true"></i>
                 <h3>Palais royal de Ouessè</h3>
                 <p>Présentation du patrimoine royal et de ses événements culturels.</p>
-            </div>
+            </article>
         </div>
     </section>
 
     <!-- ===== CONTACT / FORMULAIRE ===== -->
-    <section>
-        <h2>Une commune ou un site touristique à faire connaître ?</h2>
+    <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Une commune ou un site touristique à faire connaître ?</h2>
 
         <div class="contact-wrap">
             <ul class="contact-info">
                 <li>
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                     <div>
                         <strong>Email</strong>
                         <a href="mailto:contact@narroq.com">contact@narroq.com</a>
                     </div>
                 </li>
                 <li>
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
                     <div>
                         <strong>Zone d'intervention</strong>
                         Bénin, Afrique de l'Ouest, et au-delà
                     </div>
                 </li>
                 <li>
-                    <i class="fa-solid fa-clock"></i>
+                    <i class="fa-solid fa-clock" aria-hidden="true"></i>
                     <div>
                         <strong>Délai de réponse</strong>
                         Sous 48h ouvrées
                     </div>
                 </li>
                 <li>
-                    <i class="fa-solid fa-share-nodes"></i>
+                    <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
                     <div>
                         <strong>Réseaux</strong>
                         <span>NarroQ · EzegLabs</span>
@@ -228,23 +243,23 @@
                 </li>
             </ul>
 
-            <form class="contact-form" action="#" method="POST">
+            <form class="contact-form" action="#" method="POST" novalidate>
                 <div class="form-row">
                     <div>
-                        <label for="nom">Nom complet *</label>
-                        <input type="text" id="nom" name="nom" required />
+                        <label for="nom">Nom complet <span aria-label="obligatoire">*</span></label>
+                        <input type="text" id="nom" name="nom" required autocomplete="name" />
                     </div>
                     <div>
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required />
+                        <label for="email">Email <span aria-label="obligatoire">*</span></label>
+                        <input type="email" id="email" name="email" required autocomplete="email" />
                     </div>
                 </div>
                 <div>
                     <label for="structure">Commune / site touristique concerné</label>
-                    <input type="text" id="structure" name="structure" />
+                    <input type="text" id="structure" name="structure" autocomplete="organization" />
                 </div>
                 <div>
-                    <label for="message">Votre message *</label>
+                    <label for="message">Votre message <span aria-label="obligatoire">*</span></label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
                 <button type="submit">Envoyer le message</button>
@@ -253,25 +268,29 @@
     </section>
 
     <!-- ===== FOIRE AUX QUESTIONS (FAQ) ===== -->
-    <section class="faq-section">
-    <h2>Questions fréquentes</h2>
-    <div class="faq-item">
-        <h3>Qui sont NarroQ et EzegLabs ?</h3>
-        <p>NarroQ est une organisation technologique spécialisée dans le développement web technique, la cybersécurité et les technologies profondes. C'est aussi un pôle de recherche en tech et innovation, explorant notamment l'apport de l'intelligence artificielle quantique, pour concevoir des solutions hybrides tournées vers l'arrivée de la NextGen Alpha, ancrées dans des usages réels. EzegLabs est le studio partenaire qui prend en charge le design et le flux de travail de chaque projet, assurant une identité visuelle forte et une exécution fluide de bout en bout.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Quels types de solutions réalisez-vous ?</h3>
-        <p>Nous concevons différentes solutions hybrides sur mesure : plateformes e-commerce, applications mobiles, sites et outils web techniques intégrant des briques d'intelligence artificielle avancée. Chaque projet allie robustesse technique, sécurité et expérience utilisateur pensée pour un usage concret.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Combien coûte la création d'une solution ?</h3>
-        <p>Chaque projet est sur mesure, selon sa complexité technique et l'ampleur du design. Contactez-nous pour un devis gratuit adapté à votre besoin.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Comment puis-je contacter NarroQ ou EzegLabs ?</h3>
-        <p>Vous pouvez nous écrire à <a href="mailto:contact@narroq.com">contact@narroq.com</a> ou utiliser le formulaire de contact ci-dessus. Nous répondons sous 48 heures.</p>
-    </div>
-</section>
+    <section class="faq-section" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Questions fréquentes</h2>
+
+        <details class="faq-item">
+            <summary><h3>Qui sont NarroQ et EzegLabs ?</h3></summary>
+            <p>NarroQ est une organisation technologique spécialisée dans le développement web technique, la cybersécurité et les technologies profondes. C'est aussi un pôle de recherche en tech et innovation, explorant notamment l'apport de l'intelligence artificielle quantique, pour concevoir des solutions hybrides tournées vers l'arrivée de la NextGen Alpha, ancrées dans des usages réels. EzegLabs est le studio partenaire qui prend en charge le design et le flux de travail de chaque projet, assurant une identité visuelle forte et une exécution fluide de bout en bout.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary><h3>Quels types de solutions réalisez-vous ?</h3></summary>
+            <p>Nous concevons différentes solutions hybrides sur mesure : plateformes e-commerce, applications mobiles, sites et outils web techniques intégrant des briques d'intelligence artificielle avancée. Chaque projet allie robustesse technique, sécurité et expérience utilisateur pensée pour un usage concret.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary><h3>Combien coûte la création d'une solution ?</h3></summary>
+            <p>Chaque projet est sur mesure, selon sa complexité technique et l'ampleur du design. Contactez-nous pour un devis gratuit adapté à votre besoin.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary><h3>Comment puis-je contacter NarroQ ou EzegLabs ?</h3></summary>
+            <p>Vous pouvez nous écrire à <a href="mailto:contact@narroq.com">contact@narroq.com</a> ou utiliser le formulaire de contact ci-dessus. Nous répondons sous 48 heures.</p>
+        </details>
+    </section>
 
 </main>
 
@@ -280,13 +299,22 @@
         <span class="logo-title">Ouessè Tourisme</span>
         <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>
     </div>
-    <input type="email" placeholder="Votre email pour les actualités" />
-    <div>
-        <a href="index.html">Accueil</a> ·
-        <a href="decouvert.html">Découvrir</a> ·
-        <a href="luc.html">Luc Atrokpo</a> ·
-        <a href="contact.html">Contact</a>
-    </div>
+
+    <form class="newsletter-form" action="#" method="post" aria-label="Inscription newsletter">
+        <label for="newsletter-email" class="visually-hidden">Votre email pour les actualités</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="Votre email pour les actualités" required />
+        <button type="submit" class="btn-newsletter">S'inscrire</button>
+    </form>
+
+    <nav aria-label="Navigation pied de page">
+        <ul class="footer-nav">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="decouvert.html">Découvrir</a></li>
+            <li><a href="luc.html">Luc Atrokpo</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <p class="footer-credit">&copy; 2025 NarroQ & EzegLabs – Donner une présence numérique aux territoires</p>
 </footer>
 

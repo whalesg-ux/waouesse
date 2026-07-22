@@ -32,6 +32,21 @@ h1, h2, h3 {
 }
 
 /* ============================================
+   UTILITAIRES
+============================================ */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ============================================
    HEADER
 ============================================ */
 .site-header {
@@ -42,6 +57,9 @@ h1, h2, h3 {
     background-color: var(--cream);
     border-bottom: 1px solid var(--line);
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
@@ -124,36 +142,13 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .site-header {
-        padding: 16px 20px;
-    }
-    .main-nav {
-        display: none;
-        width: 100%;
-        order: 3;
-    }
-    .main-nav.active {
-        display: block;
-    }
-    .main-nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        padding: 20px 0;
-    }
-    .menu-toggle {
-        display: block;
-    }
-}
-
 /* ============================================
    HERO (spécifique à cette page)
 ============================================ */
 .hero {
     position: relative;
     min-height: 500px;
-    margin: 20px 0 40px 0;
+    margin: 20px 48px 40px 48px;
     border-radius: 24px;
     overflow: hidden;
     background-image: url("https://res.cloudinary.com/nyke7lhc/image/upload/v1784318004/lucatro/ibidionlluc_trlbax.webp");
@@ -208,28 +203,11 @@ h1, h2, h3 {
     font-family: "Poppins", sans-serif;
 }
 
-.hero-text p {
+.hero-text p:not(.hero-date) {
     font-size: 1rem;
     color: #e0ede7;
     max-width: 550px;
     line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .hero {
-        min-height: 400px;
-        margin: 12px 0 30px 0;
-        border-radius: 16px;
-    }
-    .hero-content {
-        padding: 32px 24px;
-    }
-    .hero-title {
-        font-size: 2rem;
-    }
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
 }
 
 /* ============================================
@@ -238,7 +216,7 @@ h1, h2, h3 {
 .main-content {
     max-width: 1200px;
     margin: 0 auto 60px;
-    padding: 0 20px;
+    padding: 0 48px;
 }
 
 .main-content section {
@@ -369,9 +347,8 @@ h1, h2, h3 {
     text-align: center;
     color: #f1f1f1;
     font-size: 1rem;
-    padding: 0 20px;
-    background: rgba(0, 0, 0, 0.40);
     padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.40);
     max-width: 80%;
     margin: 0 auto;
     border-radius: 999px;
@@ -455,7 +432,6 @@ footer.pied {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    background-image: none !important;
 }
 footer.pied a {
     color: #aad4c2;
@@ -470,6 +446,40 @@ footer.pied input {
     border: none;
     width: 280px;
     max-width: 80%;
+    outline: none;
+}
+footer.pied input:focus {
+    box-shadow: 0 0 0 3px rgba(11, 107, 68, 0.3);
+}
+
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-newsletter {
+    background-color: var(--forest);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px 26px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+.btn-newsletter:hover:not(:disabled) {
+    background-color: var(--forest-dark);
+    transform: translateY(-1px);
+}
+.btn-newsletter:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
 }
 footer.pied .logo-text {
     display: flex;
@@ -488,13 +498,24 @@ footer.pied .logo-subtitle {
     margin-top: 4px;
 }
 
+.footer-nav {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
 /* ============================================================
-   BLOC AJOUTÉ — COMPLÉMENTS RESPONSIVE
-   (rien au-dessus n'a été modifié, uniquement des ajouts ci-dessous
-   pour couvrir tablette et très petits écrans)
+   RESPONSIVE — du plus large au plus étroit.
+   IMPORTANT : avec des media queries en max-width, l'ordre du fichier
+   doit aller du breakpoint le plus large (1024px) au plus étroit
+   (480px), sinon une règle "tablette" déclarée plus bas dans le fichier
+   écrase une règle "mobile" déclarée plus haut pour les largeurs où
+   les deux conditions sont vraies en même temps.
 ============================================================ */
 
-/* --- TABLETTE (769px – 1024px) --- */
+/* --- TABLETTE (≤ 1024px) --- */
 @media (max-width: 1024px) {
     .site-header {
         padding: 16px 32px;
@@ -516,9 +537,50 @@ footer.pied .logo-subtitle {
     .faq-section {
         padding: 32px 24px;
     }
+    .main-content {
+        padding: 0 32px;
+    }
 }
 
-/* --- MOBILE (≤ 480px) --- */
+/* --- MOBILE / MENU BURGER (≤ 768px) --- */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 16px 20px;
+    }
+    .main-nav {
+        display: none;
+        width: 100%;
+        order: 3;
+    }
+    .main-nav.active {
+        display: block;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 20px 0;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .hero {
+        min-height: 400px;
+        margin: 12px 20px 30px 20px;
+        border-radius: 16px;
+    }
+    .hero-content {
+        padding: 32px 24px;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* --- PETIT MOBILE (≤ 480px) --- */
 @media (max-width: 480px) {
     .site-header {
         padding: 14px 16px;
@@ -537,7 +599,7 @@ footer.pied .logo-subtitle {
     .hero {
         min-height: 340px;
         border-radius: 12px;
-        margin: 10px 0 24px 0;
+        margin: 10px 16px 24px 16px;
     }
     .hero-content {
         padding: 24px 18px;
@@ -554,7 +616,7 @@ footer.pied .logo-subtitle {
     }
 
     .main-content {
-        padding: 0 14px;
+        padding: 0 16px;
     }
     .main-content h2 {
         font-size: 1.25rem;
@@ -609,6 +671,13 @@ footer.pied .logo-subtitle {
         padding: 28px 16px;
     }
     footer.pied input {
+        width: 100%;
+    }
+    .newsletter-form {
+        width: 100%;
+        flex-direction: column;
+    }
+    .btn-newsletter {
         width: 100%;
     }
 }

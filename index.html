@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ouèssè (OUESSE) – Commune touristique du Bénin | WAOUESSE, venez découvrir !</title>
+    <title>Ouèssè Tourisme – WAOUESSE, venez découvrir !</title>
     <meta name="description" content="Ouèssè (OUESSE) : marbre bleu, forêts sacrées, culture authentique. WAOUESSE – « Viens à Ouèssè » (Wa = Viens en Fon). Découvrez nos trésors cachés !">
     <meta name="theme-color" content="#0b6b44">
     <meta property="og:title" content="Ouèssè Tourisme – WAOUESSE, venez à Ouèssè">
@@ -12,8 +12,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://waouesse.vercel.app/">
     <meta property="og:locale" content="fr_FR">
-    <meta name="google-site-verification" content="PBbAkUaEU6dXs4-8Z78LyLtL8i_tism_7kOf7XbqXv0" />
-    <meta name="msvalidate.01" content="48F756D7096DC462B19271EF61BCAC05" />
+    <meta name="google-site-verification" content="PBbAkUaEU6dXs4-8Z78LyLtL8i_tism_7kOf7XbqXv0">
+    <meta name="msvalidate.01" content="48F756D7096DC462B19271EF61BCAC05">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
 
     <!-- FONT AWESOME -->
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <link rel="icon" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" type="image/webp">
 
@@ -140,6 +140,7 @@
       }
     }
     </script>
+<base target="_blank">
 </head>
 <body>
 
@@ -152,13 +153,13 @@
         </div>
     </div>
 
-    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
-        <i class="fa-solid fa-bars"></i>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
     </button>
 
-    <nav class="main-nav" id="mainNav" role="navigation">
+    <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navigation principale">
         <ul>
-            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
             <li><a href="decouvert.html">Découvrir</a></li>
             <li><a href="a-propos.html">À propos</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -172,7 +173,7 @@
 <main>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-label="Bannière principale">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">Ouèssè, l&rsquo;<em>âme</em> du<br>Bénin authentique</h1>
@@ -183,18 +184,18 @@
             </p>
 
             <!-- FORMULAIRE DE RECHERCHE -->
-            <form class="search" id="searchForm" role="search" autocomplete="off">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="searchInput" placeholder="Rechercher un lieu, une expérience..." aria-label="Rechercher un lieu, une expérience à Ouèssè">
+            <form class="search" id="searchForm" role="search" action="/search" method="GET" autocomplete="off">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <input type="text" id="searchInput" name="q" placeholder="Rechercher un lieu, une expérience..." aria-label="Rechercher un lieu, une expérience à Ouèssè" required>
                 <button type="submit">Rechercher</button>
-                <div class="search-results" id="searchResults"></div>
+                <div class="search-results" id="searchResults" role="listbox" aria-label="Résultats de recherche"></div>
             </form>
 
             <!-- PANNEAU DE RÉSUMÉ -->
-            <div class="summary-panel" id="summaryPanel">
+            <div class="summary-panel" id="summaryPanel" role="dialog" aria-modal="true" aria-labelledby="summaryTitleText" hidden>
                 <div class="summary-header">
-                    <span class="summary-title"><i class="fa-solid fa-circle-info"></i> <span id="summaryTitleText"></span></span>
-                    <button class="summary-close" id="summaryClose" aria-label="Fermer le résumé">&times;</button>
+                    <span class="summary-title" id="summaryTitleText"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> <span>Résumé</span></span>
+                    <button class="summary-close" id="summaryClose" type="button" aria-label="Fermer le résumé">&times;</button>
                 </div>
                 <div class="summary-body">
                     <p id="summaryText"></p>
@@ -205,150 +206,152 @@
     </section>
 
     <!-- BLOC WAOUESSE -->
-    <section class="waouesse-bloc" id="waouesse">
-        <span class="fon-legend"><i class="fa-solid fa-hand-peace"></i> Langue Fon</span>
-        <h2>Pourquoi <strong>WAOUESSE</strong> ? L'invitation à découvrir Ouèssè</h2>
+    <section class="waouesse-bloc" id="waouesse" aria-labelledby="waouesse-title">
+        <span class="fon-legend"><i class="fa-solid fa-hand-peace" aria-hidden="true"></i> Langue Fon</span>
+        <h2 id="waouesse-title">Pourquoi <strong>WAOUESSE</strong> ? L'invitation à découvrir Ouèssè</h2>
         <p>
             <strong>« Wa »</strong> signifie <strong>« Viens »</strong> en langue Fon.
             <strong>WAOUESSE</strong> est notre cri du cœur : <strong>venez à Ouèssè</strong>
             pour explorer ses collines, ses forêts sacrées, son marbre bleu mondialement
-            reconnu et l’hospitalité légendaire de ses habitants.
-            <br><br>
-            Ce n’est pas un autre nom pour la commune, c’est une <strong>promesse d’évasion</strong>
-            et une invitation à découvrir les trésors que l’on ne montre pas aux regards
-            distraits. <strong>WAOUESSE</strong>, c’est l’appel de la terre shabè et mahi,
-            c’est votre prochaine aventure !
+            reconnu et l'hospitalité légendaire de ses habitants.
         </p>
-        <p style="margin-top: 12px; font-style: italic; color: #084d31;">
-            <i class="fa-solid fa-quote-left"></i>
-            Wa viens, Ouèssè t’attend.
+        <p>
+            Ce n'est pas un autre nom pour la commune, c'est une <strong>promesse d'évasion</strong>
+            et une invitation à découvrir les trésors que l'on ne montre pas aux regards
+            distraits. <strong>WAOUESSE</strong>, c'est l'appel de la terre shabè et mahi,
+            c'est votre prochaine aventure !
         </p>
+        <blockquote class="waouesse-quote">
+            <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+            Wa viens, Ouèssè t'attend.
+        </blockquote>
     </section>
 
     <!-- CARROUSEL -->
-    <section class="categories" id="categories">
-        <h2>Explorer par catégorie</h2>
+    <section class="categories" id="categories" aria-labelledby="categories-title">
+        <h2 id="categories-title">Explorer par catégorie</h2>
         <p class="categories-subtitle">Six univers pour vivre Ouèssè pleinement</p>
 
         <div class="carousel-wrapper">
-            <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-track" id="carouselTrack" role="region" aria-label="Carrousel de catégories">
                 <!-- Nature -->
-                <a href="#" class="category-card" onclick="return false;">
+                <article class="category-card">
                     <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356789/mmsass_w1krnx.webp"
                          srcset="https://res.cloudinary.com/nyke7lhc/image/upload/w_400,f_auto,q_auto/v1784356789/mmsass_w1krnx.webp 400w,
                                  https://res.cloudinary.com/nyke7lhc/image/upload/w_800,f_auto,q_auto/v1784356789/mmsass_w1krnx.webp 800w,
                                  https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,f_auto,q_auto/v1784356789/mmsass_w1krnx.webp 1200w"
                          sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
                          loading="lazy" decoding="async" width="300" height="200"
-                         alt="WAOUESSE – Venez explorer la nature préservée de Ouèssè"
-                         data-lightbox="true">
+                         alt="Forêt luxuriante de Ouèssè – Nature préservée à découvrir">
                     <span class="category-label">Nature</span>
-                </a>
+                </article>
                 <!-- Culture -->
-                <a href="#" class="category-card" onclick="return false;">
+                <article class="category-card">
                     <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784363149/naog_rmctvg.webp"
                          srcset="https://res.cloudinary.com/nyke7lhc/image/upload/w_400,f_auto,q_auto/v1784363149/naog_rmctvg.webp 400w,
                                  https://res.cloudinary.com/nyke7lhc/image/upload/w_800,f_auto,q_auto/v1784363149/naog_rmctvg.webp 800w,
                                  https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,f_auto,q_auto/v1784363149/naog_rmctvg.webp 1200w"
                          sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
                          loading="lazy" decoding="async" width="300" height="200"
-                         alt="WAOUESSE – Imprégnez-vous de la culture et du patrimoine sacré de Ouèssè"
-                         data-lightbox="true">
+                         alt="Patrimoine culturel et traditions sacrées de Ouèssè">
                     <span class="category-label">Culture &amp; Patrimoine</span>
-                </a>
+                </article>
                 <!-- Loisirs -->
-                <a href="#" class="category-card" onclick="return false;">
+                <article class="category-card">
                     <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356711/mmaswms_jaayr9.webp"
                          srcset="https://res.cloudinary.com/nyke7lhc/image/upload/w_400,f_auto,q_auto/v1784356711/mmaswms_jaayr9.webp 400w,
                                  https://res.cloudinary.com/nyke7lhc/image/upload/w_800,f_auto,q_auto/v1784356711/mmaswms_jaayr9.webp 800w,
                                  https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,f_auto,q_auto/v1784356711/mmaswms_jaayr9.webp 1200w"
                          sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
                          loading="lazy" decoding="async" width="300" height="200"
-                         alt="WAOUESSE – Loisirs et sports au cœur des collines de Ouèssè"
-                         data-lightbox="true">
+                         alt="Activités de loisirs et sports au cœur des collines de Ouèssè">
                     <span class="category-label">Loisirs et Sports</span>
-                </a>
+                </article>
                 <!-- Gastronomie -->
-                <a href="#" class="category-card" onclick="return false;">
+                <article class="category-card">
                     <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784369072/viande_bikd3m.webp"
                          srcset="https://res.cloudinary.com/nyke7lhc/image/upload/w_400,f_auto,q_auto/v1784369072/viande_bikd3m.webp 400w,
                                  https://res.cloudinary.com/nyke7lhc/image/upload/w_800,f_auto,q_auto/v1784369072/viande_bikd3m.webp 800w,
                                  https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,f_auto,q_auto/v1784369072/viande_bikd3m.webp 1200w"
                          sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
                          loading="lazy" decoding="async" width="300" height="200"
-                         alt="WAOUESSE – Venez goûter la gastronomie authentique de Ouèssè"
-                         data-lightbox="true">
+                         alt="Plats traditionnels et gastronomie authentique de Ouèssè">
                     <span class="category-label">Gastronomie</span>
-                </a>
+                </article>
                 <!-- Artisanat -->
-                <a href="#" class="category-card" onclick="return false;">
+                <article class="category-card">
                     <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784355824/vipbla_oequ6y.webp"
                          srcset="https://res.cloudinary.com/nyke7lhc/image/upload/w_400,f_auto,q_auto/v1784355824/vipbla_oequ6y.webp 400w,
                                  https://res.cloudinary.com/nyke7lhc/image/upload/w_800,f_auto,q_auto/v1784355824/vipbla_oequ6y.webp 800w,
                                  https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,f_auto,q_auto/v1784355824/vipbla_oequ6y.webp 1200w"
                          sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
                          loading="lazy" decoding="async" width="300" height="200"
-                         alt="WAOUESSE – L'artisanat unique de Ouèssè, un savoir-faire à découvrir"
-                         data-lightbox="true">
+                         alt="Artisanat local et savoir-faire traditionnel de Ouèssè">
                     <span class="category-label">Artisanat</span>
-                </a>
+                </article>
                 <!-- Événements -->
-                <a href="#" class="category-card" onclick="return false;">
+                <article class="category-card">
                     <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784355825/mairvip_gvychz.webp"
                          srcset="https://res.cloudinary.com/nyke7lhc/image/upload/w_400,f_auto,q_auto/v1784355825/mairvip_gvychz.webp 400w,
                                  https://res.cloudinary.com/nyke7lhc/image/upload/w_800,f_auto,q_auto/v1784355825/mairvip_gvychz.webp 800w,
                                  https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,f_auto,q_auto/v1784355825/mairvip_gvychz.webp 1200w"
                          sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
                          loading="lazy" decoding="async" width="300" height="200"
-                         alt="WAOUESSE – Les événements et fêtes traditionnelles de Ouèssè vous attendent"
-                         data-lightbox="true">
+                         alt="Festivals et événements traditionnels de Ouèssè">
                     <span class="category-label">Événements</span>
-                </a>
+                </article>
             </div>
 
-            <button class="carousel-btn prev" id="prevBtn" aria-label="Précédent">
-                <i class="fa-solid fa-chevron-left"></i>
+            <button class="carousel-btn prev" id="prevBtn" type="button" aria-label="Catégorie précédente">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
             </button>
-            <button class="carousel-btn next" id="nextBtn" aria-label="Suivant">
-                <i class="fa-solid fa-chevron-right"></i>
+            <button class="carousel-btn next" id="nextBtn" type="button" aria-label="Catégorie suivante">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
             </button>
         </div>
 
-        <div class="carousel-dots" id="carouselDots"></div>
+        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navigation du carrousel"></div>
     </section>
 
     <!-- PRÉSENTATION -->
-    <section class="texte" id="presentation">
+    <section class="texte" id="presentation" aria-labelledby="presentation-title">
         <div class="wrapper">
             <div class="profile">
                 <div class="profile-image">
                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto/q_auto/weills_syvaz1.webp"
                         loading="lazy" decoding="async" width="600" height="400"
-                        alt="Jeune fille de Ouèssè – WAOUESSE, venez rencontrer l'hospitalité locale"
-                        data-lightbox="true">
+                        alt="Jeune fille de Ouèssè souriante, symbole de l'hospitalité locale">
                 </div>
                 <div class="intro">
-                    <p>
-                    <h1>Présentation de la Commune de Ouèssè</h1>
-                    </p><p class="nouveaugraph">
+                    <h2 id="presentation-title">Présentation de la Commune de Ouèssè</h2>
+                    <p class="nouveaugraph">
                         La Commune de Ouèssè, vaste territoire situé au cœur du Bénin, est une destination dont le sous-sol regorge de la deuxième réserve mondiale de marbre bleu, derrière celle de l'Italie, notamment à Idadjo. Elle est également reconnue pour ses forêts classées, ses forêts sacrées, ses collines et ses forêts-galeries.
-
+                    </p>
+                    <p class="nouveaugraph">
                         Située au nord du département des Collines, à 327 km de Cotonou, elle couvre environ 3 200 km², soit 2,5 % de la superficie nationale.
-
+                    </p>
+                    <p class="nouveaugraph">
                         Elle est administrée par le Maire Ibidon Firmin Akpo et comprend neuf arrondissements : Challa-Ogoï, Djègbè, Gbanlin, Ikèmon, Kilibo, Laminou, Odougba, Ouèssè-Centre et Toui.
-
+                    </p>
+                    <p class="nouveaugraph">
                         La commune est limitée au nord par Tchaourou, au sud par Savè et Glazoué, à l'ouest par Bantè et Bassila, et à l'est par le Nigeria.
-
+                    </p>
+                    <p class="nouveaugraph">
                         Sa population est estimée à plus de 150 000 habitants, composée principalement des Shabè et des Mahis, auxquels s'ajoutent plusieurs autres groupes socioculturels.
-
+                    </p>
+                    <p class="nouveaugraph">
                         Son relief est peu accidenté et ses terres sont favorables à l'agriculture. Les principales cultures sont le maïs, le manioc, l'arachide, le riz, le haricot, le soja, le vouandzou et l'acajou.
-
+                    </p>
+                    <p class="nouveaugraph">
                         Grâce à une pluviométrie abondante, sept cours d'eau traversent la commune : l'Ouémé, l'Okpara, la Gbéffa, la Kilibo, la Liga, la Nonomi et la Toumi.
-
+                    </p>
+                    <p class="nouveaugraph">
                         Le premier souverain des terres de Ouèssè fut Sa Majesté Djahlin Djanta, alias Faka Foukou, qui régna de 1690 à 1720. Une imposante statue a été érigée en son honneur.
-
+                    </p>
+                    <p class="nouveaugraph">
                         Parmi les autres sites touristiques figurent les galeries souterraines (Odi) de Yaoui, les collines de Kèmon et les mares aux caïmans de Gbongui.
-
+                    </p>
+                    <p class="nouveaugraph">
                         La commune bénéficie également de plusieurs infrastructures modernes, notamment un stade omnisports de 3 000 places et l'Hôpital de Zone Savè-Ouèssè.
                     </p>
                 </div>
@@ -357,92 +360,108 @@
     </section>
 
     <!-- GALERIE -->
-    <div class="gallery" id="galerie">
-        <h2>OUESSEXWE 2025 – WAOUESSE, venez vivre la fête !</h2>
+    <section class="gallery" id="galerie" aria-labelledby="galerie-title">
+        <h2 id="galerie-title">OUESSEXWE 2025 – WAOUESSE, venez vivre la fête !</h2>
         <div class="gallery-container">
-            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356633/mmas_vjontu.webp"
-                 loading="lazy" decoding="async" width="300" height="200"
-                 alt="WAOUESSE – Venez à la fête traditionnelle OUESSEXWE 2025 à Ouèssè"
-                 data-lightbox="true">
-            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356706/mmascss_mmsltr.webp"
-                 loading="lazy" decoding="async" width="300" height="200"
-                 alt="WAOUESSE – Danse et couleurs lors des célébrations de Ouèssè"
-                 data-lightbox="true">
-            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361860/ezestztu_dd0uow.webp"
-                 loading="lazy" decoding="async" width="300" height="200"
-                 alt="WAOUESSE – Les visiteurs et habitants réunis pour OUESSEXWE 2025"
-                 data-lightbox="true">
-            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361921/ouessefe_ma0i47.webp"
-                 loading="lazy" decoding="async" width="300" height="200"
-                 alt="WAOUESSE – La jeunesse de Ouèssè en fête, venez les rejoindre"
-                 data-lightbox="true">
-            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361932/ouesseartis_ldyd1x.webp"
-                 loading="lazy" decoding="async" width="300" height="200"
-                 alt="WAOUESSE – Art et artisanat exposés lors de l'événement OUESSEXWE"
-                 data-lightbox="true">
-            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361866/ezeserg_oi8hb1.webp"
-                 loading="lazy" decoding="async" width="300" height="200"
-                 alt="WAOUESSE – Ambiance festive à Ouèssè, un appel à venir découvrir"
-                 data-lightbox="true">
+            <figure class="gallery-item">
+                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356633/mmas_vjontu.webp"
+                     loading="lazy" decoding="async" width="300" height="200"
+                     alt="Cérémonie traditionnelle OUESSEXWE 2025 à Ouèssè">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356706/mmascss_mmsltr.webp"
+                     loading="lazy" decoding="async" width="300" height="200"
+                     alt="Danseurs en tenues traditionnelles lors des célébrations de Ouèssè">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361860/ezestztu_dd0uow.webp"
+                     loading="lazy" decoding="async" width="300" height="200"
+                     alt="Visiteurs et habitants réunis pour la fête OUESSEXWE">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361921/ouessefe_ma0i47.webp"
+                     loading="lazy" decoding="async" width="300" height="200"
+                     alt="Jeunesse de Ouèssè célébrant lors de l'événement OUESSEXWE">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361932/ouesseartis_ldyd1x.webp"
+                     loading="lazy" decoding="async" width="300" height="200"
+                     alt="Artisans exposant leurs créations lors de OUESSEXWE">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361866/ezeserg_oi8hb1.webp"
+                     loading="lazy" decoding="async" width="300" height="200"
+                     alt="Ambiance festive et conviviale à Ouèssè pendant OUESSEXWE">
+            </figure>
         </div>
-    </div>
+    </section>
 
     <!-- VIDÉO -->
-    <div class="video-section" id="video">
-        <h2>WAOUESSE – Venez voir Ouèssè en vidéo !</h2>
+    <section class="video-section" id="video" aria-labelledby="video-title">
+        <h2 id="video-title">WAOUESSE – Venez voir Ouèssè en vidéo !</h2>
         <div class="video-container">
-            <div class="yt-facade" id="ytFacade" data-video-id="bKYKkJ_rKuE"
-                 style="position:relative;width:100%;max-width:560px;aspect-ratio:16/9;background:#000;cursor:pointer;margin:0 auto;border-radius:12px;overflow:hidden;">
+            <div class="yt-facade" id="ytFacade" data-video-id="bKYKkJ_rKuE">
                 <img src="https://i.ytimg.com/vi/bKYKkJ_rKuE/hqdefault.jpg"
-                     alt="Aperçu vidéo – WAOUESSE, venez découvrir Ouèssè" loading="lazy" decoding="async"
-                     style="width:100%;height:100%;object-fit:cover;">
-                <i class="fa-solid fa-circle-play"
-                   style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:64px;color:#fff;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.6));"></i>
+                     alt="Aperçu de la vidéo de présentation de Ouèssè" loading="lazy" decoding="async">
+                <button type="button" class="yt-play-btn" aria-label="Lire la vidéo de présentation de Ouèssè">
+                    <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- FAQ -->
-    <section class="faq-section" id="faq-section">
-        <h2>Questions fréquentes sur Ouèssè et WAOUESSE</h2>
-        <div class="faq-item" id="faq-waouesse">
-            <h3>Qu'est-ce que WAOUESSE ?</h3>
+    <section class="faq-section" id="faq-section" aria-labelledby="faq-title">
+        <h2 id="faq-title">Questions fréquentes sur Ouèssè et WAOUESSE</h2>
+
+        <details class="faq-item" id="faq-waouesse">
+            <summary><h3>Qu'est-ce que WAOUESSE ?</h3></summary>
             <p>WAOUESSE est une invitation en langue Fon : « Wa » signifie « Viens » et « Ouèssè » est la commune. C'est l'appel à découvrir les trésors cachés de Ouèssè.</p>
-        </div>
-        <div class="faq-item" id="faq-localisation">
-            <h3>Où se trouve la commune de Ouèssè ?</h3>
+        </details>
+
+        <details class="faq-item" id="faq-localisation">
+            <summary><h3>Où se trouve la commune de Ouèssè ?</h3></summary>
             <p>Ouèssè est située au nord du département des Collines, à 327 km de Cotonou, et partage une frontière avec le Nigeria à l'est.</p>
-        </div>
-        <div class="faq-item" id="faq-atouts">
-            <h3>Quels sont les principaux atouts touristiques de Ouèssè ?</h3>
+        </details>
+
+        <details class="faq-item" id="faq-atouts">
+            <summary><h3>Quels sont les principaux atouts touristiques de Ouèssè ?</h3></summary>
             <p>La commune abrite la deuxième réserve mondiale de marbre bleu (à Idadjo), des forêts classées et sacrées, sept rivières, des collines, des galeries souterraines, et un riche patrimoine royal Shabè et Mahi.</p>
-        </div>
-        <div class="faq-item" id="faq-maire">
-            <h3>Qui est le Maire de Ouèssè ?</h3>
+        </details>
+
+        <details class="faq-item" id="faq-maire">
+            <summary><h3>Qui est le Maire de Ouèssè ?</h3></summary>
             <p>Le Maire de Ouèssè est Firmin Akpo IBIDON, dont le mandat court jusqu'en 2026.</p>
-        </div>
-        <div class="faq-item" id="faq-visite">
-            <h3>Quand a eu lieu la visite de Luc S. Atrokpo à Ouèssè ?</h3>
+        </details>
+
+        <details class="faq-item" id="faq-visite">
+            <summary><h3>Quand a eu lieu la visite de Luc S. Atrokpo à Ouèssè ?</h3></summary>
             <p>Luc S. Atrokpo, Maire de Cotonou, a effectué une visite officielle au palais royal de Ouèssè le 16 août 2024, en compagnie du Maire Firmin Akpo IBIDON.</p>
-        </div>
+        </details>
     </section>
 
 </main>
 
 <footer class="pied">
-    <div class="logo-text">
-        <span class="logo-title" style="color:#fff;">Ouessè Tourisme</span>
-        <span class="logo-subtitle" style="color:#aad4c2;">Un projet NarroQ × EzegLabs</span>
+    <div class="footer-brand">
+        <span class="logo-title">Ouessè Tourisme</span>
+        <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>
     </div>
-    <input type="email" placeholder="Votre email pour les actualités" style="padding:10px 16px;border-radius:999px;border:none;width:280px;max-width:80%;">
-    <div>
-        <a href="index.html">Accueil</a> ·
-        <a href="decouvert.html">Découvrir</a> ·
-        <a href="contact.html">Contact</a> ·
-        <a href="#waouesse">WAOUESSE</a> ·
+
+    <form class="newsletter-form" action="/newsletter" method="POST" aria-label="Inscription à la newsletter">
+        <input type="email" name="email" placeholder="Votre email pour les actualités" required aria-label="Adresse email">
+        <button type="submit">S'inscrire</button>
+    </form>
+
+    <nav class="footer-nav" aria-label="Navigation pied de page">
+        <a href="index.html">Accueil</a>
+        <a href="decouvert.html">Découvrir</a>
+        <a href="contact.html">Contact</a>
+        <a href="#waouesse">WAOUESSE</a>
         <a href="#faq-section">FAQ</a>
-    </div>
-    <p style="font-size:0.8rem;opacity:0.7;margin-top:8px;">© 2025 Ouèssè Tourisme – Wa (Viens) à Ouèssè</p>
+    </nav>
+
+    <p class="copyright">© 2025 Ouèssè Tourisme – Wa (Viens) à Ouèssè</p>
 </footer>
 
 <!-- SCRIPTS EXTERNES -->

@@ -1,0 +1,614 @@
+/* ============================================
+   TOKENS
+============================================ */
+:root {
+    --cream: #ffffff;
+    --ink: #16261e;
+    --forest: #0b6b44;
+    --forest-dark: #084d31;
+    --forest-soft: #e7f3ec;
+    --line: #e1e6e3;
+}
+
+/* ============================================
+   RESET & BASE
+============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+}
+
+/* ============================================
+   HEADER
+============================================ */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 48px;
+    background-color: var(--cream);
+    border-bottom: 1px solid var(--line);
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    height: 34px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+.logo-title {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--ink);
+}
+.logo-subtitle {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    color: var(--forest);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--forest);
+    border-bottom-color: var(--forest);
+}
+
+.btn-explorer {
+    background-color: var(--forest);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px 26px;
+    border-radius: 999px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-explorer:hover {
+    background-color: var(--forest-dark);
+    transform: translateY(-1px);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--ink);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        padding: 16px 20px;
+    }
+    .main-nav {
+        display: none;
+        width: 100%;
+        order: 3;
+    }
+    .main-nav.active {
+        display: block;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 20px 0;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* ============================================
+   HERO (spécifique à cette page)
+============================================ */
+.hero {
+    position: relative;
+    min-height: 500px;
+    margin: 20px 0 40px 0;
+    border-radius: 24px;
+    overflow: hidden;
+    background-image: url("https://res.cloudinary.com/nyke7lhc/image/upload/v1784318004/lucatro/ibidionlluc_trlbax.webp");
+    background-size: cover;
+    background-position: center 30%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(8, 30, 20, 0.85) 0%, rgba(8, 30, 20, 0.50) 60%, rgba(8, 30, 20, 0.20) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    padding: 60px 50px;
+    color: #fff;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 8px;
+}
+.hero-title em {
+    font-style: italic;
+    color: #F0D8B8;
+}
+
+.hero-date {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #cde0d7;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+.hero-date i {
+    margin-right: 8px;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: #e0ede7;
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 400px;
+        margin: 12px 0 30px 0;
+        border-radius: 16px;
+    }
+    .hero-content {
+        padding: 32px 24px;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* ============================================
+   MAIN CONTENT
+============================================ */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.main-content section {
+    margin-top: 40px;
+}
+
+.main-content h2 {
+    color: var(--forest-dark);
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    border-left: 5px solid var(--forest);
+    padding-left: 16px;
+}
+
+.main-content p {
+    line-height: 1.8;
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.main-content strong {
+    color: var(--forest-dark);
+}
+
+/* ============================================
+   DISCLAIMER
+============================================ */
+.disclaimer {
+    background: var(--forest-soft);
+    padding: 18px 22px;
+    border-left: 6px solid var(--forest);
+    margin: 40px 0;
+    font-weight: 500;
+    font-size: 0.95em;
+    border-radius: 6px;
+    color: #1a3a2c;
+}
+.disclaimer i {
+    margin-right: 10px;
+    color: #b8860b;
+}
+
+/* ============================================
+   GALERIE
+============================================ */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.image-gallery figure {
+    margin: 0;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image-gallery img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.image-caption {
+    font-size: 0.85em;
+    color: #5a6b62;
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 450;
+}
+
+/* ============================================
+   LIGHTBOX
+============================================ */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 15, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 24px;
+    cursor: zoom-out;
+}
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.lightbox-close:hover {
+    transform: scale(1.15);
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 1rem;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.40);
+    padding: 12px 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
+}
+
+/* ============================================
+   FAQ (QUESTIONNAIRE SEO)
+============================================ */
+.faq-section {
+    margin-top: 60px;
+    padding: 40px 30px;
+    background: #f8fbfa;
+    border-radius: 20px;
+    border: 1px solid #e0e8e4;
+}
+
+.faq-section h2 {
+    font-size: 1.8rem;
+    color: var(--forest-dark);
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.faq-section > p {
+    text-align: center;
+    color: #4a5f55;
+    margin-bottom: 32px;
+}
+
+.faq-item {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e0e8e4;
+}
+.faq-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.faq-item h3 {
+    font-size: 1.15rem;
+    color: var(--forest-dark);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.faq-item h3::before {
+    content: "❓";
+    font-size: 1.2rem;
+}
+
+.faq-item p {
+    line-height: 1.7;
+    color: #1f2e27;
+    padding-left: 32px;
+}
+
+.highlight-date {
+    background: var(--forest);
+    color: #fff;
+    padding: 2px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+footer.pied {
+    background-color: #16261e;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background-image: none !important;
+}
+footer.pied a {
+    color: #aad4c2;
+    text-decoration: none;
+}
+footer.pied a:hover {
+    color: #fff;
+}
+footer.pied input {
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: none;
+    width: 280px;
+    max-width: 80%;
+}
+footer.pied .logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer.pied .logo-title {
+    color: #fff;
+}
+footer.pied .logo-subtitle {
+    color: #aad4c2;
+}
+.footer-credit {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+/* ============================================================
+   BLOC AJOUTÉ — COMPLÉMENTS RESPONSIVE
+   (rien au-dessus n'a été modifié, uniquement des ajouts ci-dessous
+   pour couvrir tablette et très petits écrans)
+============================================================ */
+
+/* --- TABLETTE (769px – 1024px) --- */
+@media (max-width: 1024px) {
+    .site-header {
+        padding: 16px 32px;
+    }
+    .main-nav ul {
+        gap: 20px;
+    }
+    .hero-content {
+        max-width: 640px;
+        padding: 48px 40px;
+    }
+    .hero-title {
+        font-size: 2.4rem;
+    }
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
+    .faq-section {
+        padding: 32px 24px;
+    }
+}
+
+/* --- MOBILE (≤ 480px) --- */
+@media (max-width: 480px) {
+    .site-header {
+        padding: 14px 16px;
+    }
+    .logo img {
+        height: 28px;
+    }
+    .logo-title {
+        font-size: 1rem;
+    }
+    .btn-explorer {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        min-height: 340px;
+        border-radius: 12px;
+        margin: 10px 0 24px 0;
+    }
+    .hero-content {
+        padding: 24px 18px;
+    }
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .hero-date,
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .main-content {
+        padding: 0 14px;
+    }
+    .main-content h2 {
+        font-size: 1.25rem;
+        padding-left: 12px;
+        border-left-width: 4px;
+    }
+    .main-content p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .disclaimer {
+        padding: 14px 16px;
+        font-size: 0.9em;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 28px 0;
+    }
+
+    .lightbox-close {
+        top: 14px;
+        right: 16px;
+        font-size: 30px;
+    }
+    .lightbox-caption {
+        font-size: 0.85rem;
+        padding: 10px 16px;
+        max-width: 92%;
+        bottom: 16px;
+    }
+
+    .faq-section {
+        padding: 24px 16px;
+        border-radius: 14px;
+        margin-top: 40px;
+    }
+    .faq-section h2 {
+        font-size: 1.4rem;
+    }
+    .faq-item h3 {
+        font-size: 1rem;
+    }
+    .faq-item p {
+        padding-left: 20px;
+        font-size: 0.9rem;
+    }
+
+    footer.pied {
+        padding: 28px 16px;
+    }
+    footer.pied input {
+        width: 100%;
+    }
+}

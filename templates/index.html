@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouèssè Tourisme</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background: #f4f8f6; }
+        h1 { color: #084d31; }
+        a { background: #0b6b44; color: white; padding: 12px 24px; border-radius: 999px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <!-- BUG CORRIGÉ (côté app.py) : cette page était rendue en PRIORITÉ sur
+         le vrai site (index.html à la racine), qui n'était donc jamais
+         affiché aux visiteurs. app.py sert maintenant le vrai index.html en
+         premier ; cette page ne sert plus que de filet de sécurité si ce
+         fichier venait à manquer. -->
+    <h1>Bienvenue sur le site officiel de Ouèssè Tourisme</h1>
+    <p>Découvrez nos articles et actualités.</p>
+    <p style="margin-top: 40px; font-size: 0.8rem; color: #888;">
+        Le fichier index.html est introuvable — cette page de secours s'affiche à la place.
+    </p>
+    <!-- BUG CORRIGÉ : le lien /admin a été retiré ici, car cette route est
+         désormais protégée par un jeton (?token=...) et un lien direct sans
+         jeton n'aurait mené qu'à une erreur 401. -->
+</body>
+</html>

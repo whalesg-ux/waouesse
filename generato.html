@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de pages — Ouèssè Tourisme</title>
+    <link rel="stylesheet" href="generator.css">
+</head>
+<body>
+
+    <h1>Générateur de pages — Ouèssè Tourisme</h1>
+    <p class="subtitle">Choisissez un modèle, remplissez les champs, prévisualisez, puis publiez directement sur GitHub (via le serveur Flask sécurisé).</p>
+
+    <div class="layout">
+        <!-- Panneau gauche : formulaire -->
+        <div class="panel">
+            <h2>1. Choisir le modèle du jour</h2>
+            <div class="template-choice">
+                <div>
+                    <input type="radio" name="template" id="tplA" value="actu" checked>
+                    <label for="tplA">Actualité /<br>Événement</label>
+                </div>
+                <div>
+                    <input type="radio" name="template" id="tplB" value="fond">
+                    <label for="tplB">Article<br>de fond</label>
+                </div>
+                <div>
+                    <input type="radio" name="template" id="tplC" value="court">
+                    <label for="tplC">Annonce<br>courte</label>
+                </div>
+            </div>
+
+            <h2>2. Informations générales</h2>
+            <label class="field-label">Titre de l'onglet (balise title)</label>
+            <input type="text" id="pageTitle" placeholder="Ex : La fête OUESSEXWE 2026 — Ouèssè Tourisme">
+
+            <label class="field-label">Description (pour Google, 1-2 phrases)</label>
+            <textarea id="pageDesc" placeholder="Résumé court de la page pour les moteurs de recherche"></textarea>
+
+            <label class="field-label">Nom du fichier (sans espace, ex : ouessexwe-2026.html)</label>
+            <input type="text" id="fileName" placeholder="mon-article.html">
+
+            <!-- ===== CONFIGURATION HEADER/FOOTER ===== -->
+            <h2>🎨 Personnalisation du site (Header / Footer)</h2>
+            <label class="field-label">Pages du menu (séparées par des virgules)</label>
+            <input type="text" id="menuPages" value="index.html,decouvert.html,luc.html,contact.html" placeholder="index.html,decouvert.html,contact.html">
+            
+            <label class="field-label">Noms des pages (séparés par des virgules, dans le même ordre)</label>
+            <input type="text" id="menuLabels" value="Accueil,Découvrir,Luc Atrokpo,Contact" placeholder="Accueil,Découvrir,Contact">
+            
+            <label class="field-label">Texte du pied de page (footer)</label>
+            <textarea id="footerText" placeholder="&copy; 2025 NarroQ & EzegLabs">&copy; 2025 NarroQ & EzegLabs – Donner une présence numérique aux territoires</textarea>
+
+            <div id="sectionsHost"></div>
+
+            <!-- ===== PUBLICATION ===== -->
+            <h2>3. Publication</h2>
+            <div style="background: #e7f3ec; padding: 12px; border-radius: 8px; margin-bottom: 16px; font-size: 0.9rem; color: #084d31;">
+                ⚙️ Les paramètres de connexion à GitHub (token, dépôt, branche) sont configurés sur le serveur via le fichier <code>.env</code>. Aucune saisie requise ici.
+            </div>
+
+            <!-- ===== BOUTONS D'ACTION ===== -->
+            <div class="actions">
+                <button class="btn-secondary" id="btnPreview" type="button">Aperçu</button>
+                <button class="btn-primary" id="btnDownload" type="button">Télécharger le fichier .html</button>
+                <button class="btn-publish" id="btnPublish" type="button">🚀 Publier sur GitHub</button>
+            </div>
+            <p class="status" id="status"></p>
+        </div>
+
+        <!-- Panneau droit : prévisualisation -->
+        <div class="panel preview-panel">
+            <h2>Aperçu en direct</h2>
+            <iframe id="previewFrame" title="Aperçu"></iframe>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         TEMPLATES DE CHAMPS (avec vidéo)
+    ============================================================ -->
+    <template id="fields-actu">
+        <fieldset>
+            <legend>Bandeau principal (hero)</legend>
+            <label class="field-label">Titre principal</label>
+            <input type="text" class="f-title" placeholder="Ex : OUESSEXWE 2026, la fête bat son plein">
+            <p class="hint">Astuce : entourez un mot de *étoiles* pour le mettre en couleur, ex : *OUESSEXWE*</p>
+            <label class="field-label">Date / lieu (optionnel)</label>
+            <input type="text" class="f-date" placeholder="Ex : 16 août 2026 – Palais royal de Ouèssè">
+            <label class="field-label">Sous-titre (optionnel)</label>
+            <input type="text" class="f-subtitle" placeholder="Une phrase d'accroche">
+            <label class="field-label">Texte d'introduction</label>
+            <textarea class="f-intro" placeholder="2-3 phrases qui présentent l'événement"></textarea>
+            <label class="field-label">Image de fond (URL)</label>
+            <input type="url" class="f-heroimg" placeholder="https://...">
+        </fieldset>
+        
+        <!-- SECTION VIDÉO -->
+        <fieldset>
+            <legend>📹 Vidéo (optionnel)</legend>
+            <label class="field-label">Titre de la vidéo</label>
+            <input type="text" class="f-video-title" placeholder="Ex : La fête OUESSEXWE en vidéo">
+            <label class="field-label">URL de la vidéo (YouTube, Vimeo, ou fichier .mp4)</label>
+            <input type="url" class="f-video-url" placeholder="https://www.youtube.com/watch?v=...">
+            <label class="field-label">Légende</label>
+            <input type="text" class="f-video-caption" placeholder="Description de la vidéo">
+            <div class="checkbox-row">
+                <input type="checkbox" class="f-video-autoplay" id="videoAutoplay">
+                <label for="videoAutoplay">Lecture automatique (mute)</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Corps de l'article</legend>
+            <div class="paragraphs-host"></div>
+            <button type="button" class="add-btn" data-add="paragraph">+ Ajouter un paragraphe</button>
+        </fieldset>
+        <fieldset>
+            <legend>Crédit / avertissement (optionnel)</legend>
+            <div class="checkbox-row">
+                <input type="checkbox" class="f-disclaimer-on" id="discOn">
+                <label for="discOn">Afficher un encadré crédit photo / avertissement</label>
+            </div>
+            <textarea class="f-disclaimer-text" placeholder="Ex : Photos prises par..."></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Galerie photo</legend>
+            <div class="gallery-host"></div>
+            <button type="button" class="add-btn" data-add="gallery">+ Ajouter une photo</button>
+        </fieldset>
+        <fieldset>
+            <legend>Questions fréquentes (optionnel)</legend>
+            <div class="faq-host"></div>
+            <button type="button" class="add-btn" data-add="faq">+ Ajouter une question</button>
+        </fieldset>
+    </template>
+
+    <template id="fields-fond">
+        <fieldset>
+            <legend>Bandeau principal (hero)</legend>
+            <label class="field-label">Titre principal</label>
+            <input type="text" class="f-title" placeholder="Ex : Le marbre bleu d'Idadjo">
+            <p class="hint">Astuce : entourez un mot de *étoiles* pour le mettre en couleur.</p>
+            <label class="field-label">Texte d'introduction</label>
+            <textarea class="f-intro" placeholder="2-3 phrases qui présentent le sujet"></textarea>
+            <label class="field-label">Image de fond (URL)</label>
+            <input type="url" class="f-heroimg" placeholder="https://...">
+        </fieldset>
+        <fieldset>
+            <legend>📹 Vidéo (optionnel)</legend>
+            <label class="field-label">URL de la vidéo</label>
+            <input type="url" class="f-video-url" placeholder="https://www.youtube.com/watch?v=...">
+            <label class="field-label">Légende</label>
+            <input type="text" class="f-video-caption" placeholder="Description">
+            <div class="checkbox-row">
+                <input type="checkbox" class="f-video-autoplay">
+                <label>Lecture auto (mute)</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Présentation (image + texte côte à côte)</legend>
+            <label class="field-label">Image (URL)</label>
+            <input type="url" class="f-profileimg" placeholder="https://...">
+            <label class="field-label">Titre de cette partie</label>
+            <input type="text" class="f-introtitle" placeholder="Ex : Bienvenue à Ouèssè">
+            <label class="field-label">Texte</label>
+            <textarea class="f-introtext" placeholder="Texte de présentation"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Sections de l'article</legend>
+            <div class="about-host"></div>
+            <button type="button" class="add-btn" data-add="about">+ Ajouter une section</button>
+        </fieldset>
+        <fieldset>
+            <legend>Témoignages (optionnel)</legend>
+            <div class="quotes-host"></div>
+            <button type="button" class="add-btn" data-add="quote">+ Ajouter un témoignage</button>
+        </fieldset>
+    </template>
+
+    <template id="fields-court">
+        <fieldset>
+            <legend>Bandeau principal (hero)</legend>
+            <label class="field-label">Titre principal</label>
+            <input type="text" class="f-title" placeholder="Ex : Marché spécial ce week-end à Ouèssè">
+            <p class="hint">Astuce : entourez un mot de *étoiles* pour le mettre en couleur.</p>
+            <label class="field-label">Texte d'introduction</label>
+            <textarea class="f-intro" placeholder="1-2 phrases"></textarea>
+            <label class="field-label">Image de fond (optionnel, URL)</label>
+            <input type="url" class="f-heroimg" placeholder="https://...">
+        </fieldset>
+        <fieldset>
+            <legend>📹 Vidéo (optionnel)</legend>
+            <label class="field-label">URL de la vidéo</label>
+            <input type="url" class="f-video-url" placeholder="https://www.youtube.com/watch?v=...">
+            <label class="field-label">Légende</label>
+            <input type="text" class="f-video-caption" placeholder="Description">
+        </fieldset>
+        <fieldset>
+            <legend>Contenu</legend>
+            <label class="field-label">Texte de l'annonce</label>
+            <textarea class="f-body" placeholder="Le texte complet de l'annonce"></textarea>
+            <label class="field-label">Image unique (optionnel, URL)</label>
+            <input type="url" class="f-singleimg" placeholder="https://...">
+            <label class="field-label">Légende de l'image</label>
+            <input type="text" class="f-singleimg-caption" placeholder="Légende">
+        </fieldset>
+    </template>
+
+    <!-- ============================================================
+         BLOCS RÉPÉTABLES
+    ============================================================ -->
+    <template id="row-paragraph">
+        <div class="repeat-block">
+            <button type="button" class="remove-btn">Supprimer</button>
+            <label class="field-label">Sous-titre (optionnel)</label>
+            <input type="text" class="r-subtitle" placeholder="Ex : Une histoire ancienne">
+            <label class="field-label">Texte du paragraphe</label>
+            <textarea class="r-text" placeholder="Texte..."></textarea>
+        </div>
+    </template>
+    <template id="row-gallery">
+        <div class="repeat-block">
+            <button type="button" class="remove-btn">Supprimer</button>
+            <label class="field-label">Image (URL)</label>
+            <input type="url" class="r-img" placeholder="https://...">
+            <label class="field-label">Légende</label>
+            <input type="text" class="r-caption" placeholder="Légende de la photo">
+        </div>
+    </template>
+    <template id="row-faq">
+        <div class="repeat-block">
+            <button type="button" class="remove-btn">Supprimer</button>
+            <label class="field-label">Question</label>
+            <input type="text" class="r-q" placeholder="Question">
+            <label class="field-label">Réponse</label>
+            <textarea class="r-a" placeholder="Réponse"></textarea>
+        </div>
+    </template>
+    <template id="row-about">
+        <div class="repeat-block">
+            <button type="button" class="remove-btn">Supprimer</button>
+            <label class="field-label">Titre de la section</label>
+            <input type="text" class="r-h2" placeholder="Titre">
+            <label class="field-label">Texte</label>
+            <textarea class="r-p" placeholder="Texte de la section"></textarea>
+        </div>
+    </template>
+    <template id="row-quote">
+        <div class="repeat-block">
+            <button type="button" class="remove-btn">Supprimer</button>
+            <label class="field-label">Citation</label>
+            <textarea class="r-quote" placeholder="« ... »"></textarea>
+            <label class="field-label">Auteur</label>
+            <input type="text" class="r-author" placeholder="— Un habitant de Ouèssè">
+        </div>
+    </template>
+
+    <script src="generator.js"></script>
+</body>
+</html>

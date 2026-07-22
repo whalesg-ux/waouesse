@@ -1,0 +1,4 @@
+This is a Brave Creators publisher verification file.
+
+Domain: waouesse.vercel.app
+Token: 44e49996d82782f197af7be67553defe64e56104bf1858a83e4f2157f73129d4

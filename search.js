@@ -1,39 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     /* =========================================================
-       CHARGEMENT DE L'INDEX DE RECHERCHE (JSON externe)
-       Chaque entrée contient le texte RÉEL de la section
-       (champ "text"), donc n'importe quel mot présent sur le
-       site est trouvable, pas seulement des mots-clés choisis.
-
-       Pour ajouter une future page : ajoute une entrée dans
-       search-index.json (voir le modèle en bas de ce fichier),
-       sans toucher au JS.
+       CONFIGURATION API
+       Le JS appelle maintenant le backend Python (Flask)
     ========================================================= */
-    let searchData = [];
-
-    const fallbackData = [
-        {
-            title: 'WAOUESSE', desc: 'Signification', icon: 'fa-hand-peace',
-            page: 'index.html', anchor: '#waouesse',
-            keywords: ['waouesse', 'wa', 'viens', 'fon'],
-            text: '« Wa » signifie « Viens » en langue Fon. WAOUESSE est l\'invitation à venir découvrir Ouèssè.'
-        },
-        {
-            title: 'Nous contacter', desc: 'Page', icon: 'fa-envelope',
-            page: 'contact.html', anchor: '',
-            keywords: ['contact', 'email'],
-            text: 'Contactez l\'équipe de Ouèssè Tourisme.'
-        }
-    ];
-
-    fetch('search-index.json')
-        .then(res => {
-            if (!res.ok) throw new Error('Réponse HTTP non valide');
-            return res.json();
-        })
-        .then(data => { searchData = data; })
-        .catch(() => { searchData = fallbackData; });
+    const API_BASE_URL = '';  // Laisse vide pour utiliser le même domaine
+    // Si vous êtes en développement local, vous pouvez décommenter :
+    // const API_BASE_URL = 'http://api/search';
 
     /* =========================================================
        ÉLÉMENTS DU DOM
@@ -50,6 +23,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!searchForm || !searchInput || !searchResults) return;
 
+    /* =========================================================
+       FONCTION : APPEL API VERS PYTHON
+    ========================================================= */
+    async function callPythonSearch(query) {
+        try {
+            // Construction de l'URL - utilise le même domaine que la page
+            const baseUrl = API_BASE_URL || window.location.origin;
+            const url = `${baseUrl}/api/search?q=${encodeURIComponent(query)}`;
+            
+            console.log(`🔍 Recherche: "${query}" → ${url}`);
+            
+            const response = await fetch(url);
+            
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP ${response.status}`);
+            }
+            
+            const data = await response.json();
+            
+            // L'API retourne directement un tableau de résultats
+            // ou un tableau vide si rien trouvé
+            if (Array.isArray(data)) {
+                return data;
+            }
+            
+            // Si l'API retourne un objet avec un champ results
+            if (data.results && Array.isArray(data.results)) {
+                return data.results;
+            }
+            
+            // Sinon, retourner un tableau vide
+            return [];
+            
+        } catch (err) {
+            console.error('❌ Erreur de connexion au backend Python:', err);
+            return [];
+        }
+    }
+
+    /* =========================================================
+       FONCTION : EXTRAIT PERTINENT
+    ========================================================= */
     function normaliser(txt) {
         return (txt || '')
             .toLowerCase()
@@ -58,54 +73,16 @@ document.addEventListener('DOMContentLoaded', function () {
             .trim();
     }
 
-    /* =========================================================
-       RECHERCHE FULL-TEXT
-       - Découpe la requête en mots.
-       - Un item est retenu si AU MOINS UN mot de la requête
-         apparaît dans son titre, ses mots-clés OU son texte.
-       - Le score sert juste à trier : titre > mots-clés > texte,
-         et plus de mots trouvés = mieux classé.
-    ========================================================= */
-    function chercher(valeur) {
-        const mots = normaliser(valeur).split(/\s+/).filter(Boolean);
-        if (mots.length === 0) return [];
-
-        const resultats = [];
-
-        searchData.forEach(item => {
-            const titreN = normaliser(item.title);
-            const motsClesN = (item.keywords || []).map(normaliser).join(' ');
-            const texteN = normaliser(item.text);
-
-            let score = 0;
-            let motsTrouves = 0;
-
-            mots.forEach(mot => {
-                let trouve = false;
-                if (titreN.includes(mot)) { score += 5; trouve = true; }
-                if (motsClesN.includes(mot)) { score += 3; trouve = true; }
-                if (texteN.includes(mot)) { score += 1; trouve = true; }
-                if (trouve) motsTrouves++;
-            });
-
-            if (motsTrouves > 0) {
-                resultats.push({ item, score, motsTrouves });
-            }
-        });
-
-        // Priorité aux items qui contiennent le plus de mots de la requête,
-        // puis au score global.
-        resultats.sort((a, b) => (b.motsTrouves - a.motsTrouves) || (b.score - a.score));
-
-        return resultats.map(r => r.item);
-    }
-
-    // Extrait un court passage du texte autour du premier mot trouvé,
-    // pour montrer un aperçu pertinent dans la liste de résultats.
     function extraitPertinent(item, valeur) {
+        // Si l'API a déjà fourni un extrait
+        if (item.extrait) return item.extrait;
+        if (item.desc && item.desc.length > 0) return item.desc;
+
         const mots = normaliser(valeur).split(/\s+/).filter(Boolean);
-        const texteN = normaliser(item.text);
+        const texteN = normaliser(item.text || '');
         const texteOriginal = item.text || '';
+
+        if (mots.length === 0 || !texteOriginal) return item.desc || '';
 
         let position = -1;
         for (const mot of mots) {
@@ -113,7 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
             if (idx !== -1) { position = idx; break; }
         }
 
-        if (position === -1) return item.desc || '';
+        if (position === -1) {
+            // Retourner les premiers caractères du texte
+            return texteOriginal.substring(0, 150) + (texteOriginal.length > 150 ? '…' : '');
+        }
 
         const debut = Math.max(0, position - 40);
         const fin = Math.min(texteOriginal.length, position + 80);
@@ -125,14 +105,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function pageActuelle() {
         const nom = location.pathname.split('/').pop();
-        return nom === '' ? 'index.html' : nom;
+        return nom === '' || nom === '' ? 'index.html' : nom;
     }
 
     function allerVersCible(item) {
         const cible = item.page || 'index.html';
         const surLaBonnePage = cible === pageActuelle();
 
-        if (surLaBonnePage && item.anchor) {
+        if (surLaBonnePage && item.anchor && item.anchor !== '#') {
             const el = document.querySelector(item.anchor);
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -140,66 +120,92 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         if (!surLaBonnePage) {
-            window.location.href = cible + (item.anchor || '');
+            const targetUrl = cible + (item.anchor || '');
+            window.location.href = targetUrl;
         }
     }
 
     function ouvrirResume(item) {
-        summaryTitleText.textContent = item.title;
-        summaryText.textContent = item.text || item.desc || '';
+        if (!summaryPanel) return;
+        summaryTitleText.textContent = item.title || 'Sans titre';
+        summaryText.textContent = item.text || item.desc || 'Aucune description disponible.';
         summaryLink.onclick = function (e) {
             e.preventDefault();
             allerVersCible(item);
             fermerResultats();
+            fermerResume();
         };
         summaryPanel.style.display = 'block';
     }
 
     function fermerResume() {
-        summaryPanel.style.display = 'none';
+        if (summaryPanel) {
+            summaryPanel.style.display = 'none';
+        }
     }
 
     function fermerResultats() {
-        searchResults.classList.remove('active');
-        searchResults.innerHTML = '';
+        if (searchResults) {
+            searchResults.classList.remove('active');
+            searchResults.innerHTML = '';
+        }
     }
 
+    /* =========================================================
+       AFFICHAGE DES RÉSULTATS
+    ========================================================= */
     function afficherResultats(resultats, valeur) {
+        if (!searchResults) return;
         searchResults.innerHTML = '';
 
-        if (resultats.length === 0) {
+        if (!resultats || resultats.length === 0) {
             const empty = document.createElement('div');
             empty.className = 'search-result-item';
-            empty.innerHTML = '<i class="fa-solid fa-circle-info"></i><span class="result-title">Aucun résultat</span><span class="result-desc">Essayez un autre mot : « marbre », « maire », « contact »…</span>';
+            
+            const icon = document.createElement('i');
+            icon.className = 'fa-solid fa-circle-info';
+            
+            const titleSpan = document.createElement('span');
+            titleSpan.className = 'result-title';
+            titleSpan.textContent = 'Aucun résultat';
+            
+            const descSpan = document.createElement('span');
+            descSpan.className = 'result-desc';
+            descSpan.textContent = `Essayez un autre mot : « marbre », « maire », « contact »…`;
+            
+            empty.appendChild(icon);
+            empty.appendChild(titleSpan);
+            empty.appendChild(descSpan);
             searchResults.appendChild(empty);
             searchResults.classList.add('active');
             return;
         }
 
-        // On limite l'affichage aux 8 meilleurs résultats pour rester lisible.
+        // Limiter l'affichage aux 8 meilleurs résultats
         resultats.slice(0, 8).forEach(item => {
             const row = document.createElement('div');
             row.className = 'search-result-item';
 
-            // BUG CORRIGÉ (XSS) : item.title et l'extrait de texte venaient
-            // directement de search-index.json (lui-même généré à partir de
-            // contenu publié via l'admin) et étaient insérés en innerHTML
-            // SANS échappement. Un titre contenant du HTML/JS aurait été
-            // exécuté dans le navigateur de tout visiteur qui utilise la
-            // recherche. On construit maintenant les nœuds via le DOM et on
-            // utilise textContent (jamais interprété comme du HTML).
+            // Icône - sécurité : nettoyer le nom de l'icône
             const icon = document.createElement('i');
-            const iconName = (item.icon || 'fa-magnifying-glass').replace(/[^a-z0-9-\s]/gi, '');
-            icon.className = 'fa-solid ' + iconName;
+            let iconName = (item.icon || 'fa-magnifying-glass');
+            // Nettoyer l'icône pour éviter le XSS
+            iconName = iconName.replace(/[^a-z0-9-\s]/gi, '').trim();
+            if (!iconName || iconName === '') iconName = 'fa-magnifying-glass';
+            icon.className = `fa-solid ${iconName}`;
 
+            // Titre
             const titleSpan = document.createElement('span');
             titleSpan.className = 'result-title';
-            titleSpan.textContent = item.title || '';
+            titleSpan.textContent = item.title || 'Sans titre';
 
+            // Description / Extrait
             const descSpan = document.createElement('span');
             descSpan.className = 'result-desc';
-            descSpan.textContent = extraitPertinent(item, valeur);
+            const extrait = extraitPertinent(item, valeur);
+            descSpan.textContent = extrait || 'Aucune description.';
 
+            // Bouton résumé
             const summaryBtn = document.createElement('button');
             summaryBtn.type = 'button';
             summaryBtn.className = 'summary-toggle';
@@ -210,13 +216,15 @@ document.addEventListener('DOMContentLoaded', function () {
             row.appendChild(descSpan);
             row.appendChild(summaryBtn);
 
+            // Clic sur la ligne → navigation
             row.addEventListener('click', function (e) {
                 if (e.target.closest('.summary-toggle')) return;
                 allerVersCible(item);
                 fermerResultats();
-                searchInput.value = '';
+                if (searchInput) searchInput.value = '';
             });
 
+            // Clic sur "Résumé" → afficher le résumé
             summaryBtn.addEventListener('click', function (e) {
                 e.stopPropagation();
                 ouvrirResume(item);
@@ -231,67 +239,81 @@ document.addEventListener('DOMContentLoaded', function () {
     /* =========================================================
        ÉVÉNEMENTS
     ========================================================= */
-    searchInput.addEventListener('input', function () {
-        const valeur = this.value;
-        if (valeur.trim() === '') {
+
+    let debounceTimer;
+
+    // Recherche en temps réel avec debounce
+    searchInput.addEventListener('input', async function () {
+        const valeur = this.value.trim();
+        
+        if (valeur === '') {
             fermerResultats();
             return;
         }
-        afficherResultats(chercher(valeur), valeur);
+
+        if (valeur.length < 2) {
+            // Ne pas chercher avec moins de 2 caractères
+            return;
+        }
+
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(async () => {
+            const resultats = await callPythonSearch(valeur);
+            afficherResultats(resultats, valeur);
+        }, 300);
     });
 
-    searchInput.addEventListener('focus', function () {
-        if (this.value.trim() !== '') {
-            afficherResultats(chercher(this.value), this.value);
+    // Réafficher les résultats si l'input reprend le focus
+    searchInput.addEventListener('focus', async function () {
+        const valeur = this.value.trim();
+        if (valeur.length >= 2) {
+            const resultats = await callPythonSearch(valeur);
+            afficherResultats(resultats, valeur);
         }
     });
 
-    searchForm.addEventListener('submit', function (e) {
+    // Soumission du formulaire → ouvrir le premier résultat
+    searchForm.addEventListener('submit', async function (e) {
         e.preventDefault();
-        const resultats = chercher(searchInput.value);
-        if (resultats.length > 0) {
+        const valeur = searchInput.value.trim();
+        if (valeur.length < 2) return;
+        
+        const resultats = await callPythonSearch(valeur);
+        if (resultats && resultats.length > 0) {
             ouvrirResume(resultats[0]);
         } else {
-            afficherResultats([], searchInput.value);
+            afficherResultats([], valeur);
         }
     });
 
+    // Fermer le résumé
     if (summaryClose) {
         summaryClose.addEventListener('click', fermerResume);
     }
 
+    // Clic en dehors pour fermer
     document.addEventListener('click', function (e) {
-        if (!e.target.closest('.search')) {
+        const searchContainer = e.target.closest('.search');
+        const summaryContainer = e.target.closest('#summaryPanel');
+        const summaryBtn = e.target.closest('.summary-toggle');
+        
+        if (!searchContainer) {
             fermerResultats();
         }
-        if (!e.target.closest('#summaryPanel') && !e.target.closest('.summary-toggle')) {
+        if (!summaryContainer && !summaryBtn) {
             fermerResume();
         }
     });
 
+    // Touche Échap pour fermer
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             fermerResultats();
             fermerResume();
+            if (searchInput) searchInput.blur();
         }
     });
 
+    console.log('🔍 Moteur de recherche OUESSE initialisé');
+    console.log(`📡 API endpoint: ${API_BASE_URL || window.location.origin}/api/search`);
 });
-
-/* =========================================================
-   TEMPLATE : entrée à copier dans search-index.json
-   quand tu crées une nouvelle page ou une nouvelle section.
-
-   {
-     "title": "Titre affiché dans les résultats",
-     "desc": "Catégorie courte (ex: Page, FAQ, Site touristique)",
-     "icon": "fa-nom-icone-fontawesome",
-     "page": "nouvelle-page.html",
-     "anchor": "#id-de-section-ou-vide",
-     "keywords": ["synonyme1", "synonyme2"],
-     "text": "Le texte RÉEL et complet de la section, tel qu'il apparaît
-              sur la page. C'est ce champ qui rend chaque mot
-              cherchable et qui sert de réponse dans le panneau
-              Résumé."
-   }
-========================================================= */

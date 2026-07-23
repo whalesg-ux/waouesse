@@ -4,3 +4,6 @@
         "dessous"
     ]
 }
+{
+    "python.terminal.useEnvFile": true
+}

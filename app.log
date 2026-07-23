@@ -1,0 +1,398 @@
+2026-07-23 15:37:27,063 - INFO - Table search_index créée avec succès
+2026-07-23 15:37:27,069 - INFO - Table search_fts non trouvée (recherche full-text désactivée)
+2026-07-23 15:37:27,079 - INFO - Base de données prête (ouesse-search.db)
+2026-07-23 15:37:27,203 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-23 15:37:27,203 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-23 16:41:56,298 - INFO - Table search_index déjà existante
+2026-07-23 16:41:56,299 - INFO - Table search_fts non trouvée (recherche full-text désactivée)
+2026-07-23 16:41:56,300 - INFO - Base de données prête (ouesse-search.db)
+2026-07-23 16:41:56,345 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-23 16:41:56,347 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-23 16:42:18,224 - INFO - 127.0.0.1 - - [23/Jul/2026 16:42:18] "GET / HTTP/1.1" 200 -
+2026-07-23 16:42:18,361 - INFO - 127.0.0.1 - - [23/Jul/2026 16:42:18] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:42:18,426 - INFO - 127.0.0.1 - - [23/Jul/2026 16:42:18] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:42:19,067 - INFO - 127.0.0.1 - - [23/Jul/2026 16:42:19] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 16:42:19,083 - INFO - 127.0.0.1 - - [23/Jul/2026 16:42:19] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 16:42:43,645 - INFO - 127.0.0.1 - - [23/Jul/2026 16:42:43] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 16:42:43,795 - INFO - 127.0.0.1 - - [23/Jul/2026 16:42:43] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:42:43,840 - INFO - 127.0.0.1 - - [23/Jul/2026 16:42:43] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 16:42:43,843 - INFO - 127.0.0.1 - - [23/Jul/2026 16:42:43] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 16:42:44,104 - INFO - 127.0.0.1 - - [23/Jul/2026 16:42:44] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:43:16,582 - INFO - 127.0.0.1 - - [23/Jul/2026 16:43:16] "GET /api/search?q=maire HTTP/1.1" 200 -
+2026-07-23 16:43:16,655 - INFO - 127.0.0.1 - - [23/Jul/2026 16:43:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-23 16:43:27,291 - INFO - 127.0.0.1 - - [23/Jul/2026 16:43:27] "GET / HTTP/1.1" 200 -
+2026-07-23 16:43:27,334 - INFO - 127.0.0.1 - - [23/Jul/2026 16:43:27] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:43:27,349 - INFO - 127.0.0.1 - - [23/Jul/2026 16:43:27] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 16:43:27,353 - INFO - 127.0.0.1 - - [23/Jul/2026 16:43:27] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 16:46:58,769 - INFO - 127.0.0.1 - - [23/Jul/2026 16:46:58] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 16:46:58,877 - INFO - 127.0.0.1 - - [23/Jul/2026 16:46:58] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:46:58,897 - INFO - 127.0.0.1 - - [23/Jul/2026 16:46:58] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 16:46:58,908 - INFO - 127.0.0.1 - - [23/Jul/2026 16:46:58] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 16:46:59,781 - INFO - 127.0.0.1 - - [23/Jul/2026 16:46:59] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 16:46:59,859 - INFO - 127.0.0.1 - - [23/Jul/2026 16:46:59] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:46:59,861 - INFO - 127.0.0.1 - - [23/Jul/2026 16:46:59] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 16:46:59,865 - INFO - 127.0.0.1 - - [23/Jul/2026 16:46:59] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 16:47:00,426 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:00] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 16:47:00,481 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:00] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:47:00,483 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:00] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 16:47:00,488 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:00] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 16:47:36,620 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:36] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 16:47:36,689 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:36] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:47:36,704 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:36] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 16:47:36,707 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:36] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 16:47:37,420 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:37] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 16:47:37,483 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:37] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:47:37,495 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:37] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 16:47:37,502 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:37] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 16:47:38,096 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:38] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 16:47:38,152 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:38] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:47:38,161 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:38] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 16:47:38,170 - INFO - 127.0.0.1 - - [23/Jul/2026 16:47:38] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 16:48:38,483 - INFO - ✅ Table search_index trouvée
+2026-07-23 16:48:38,486 - INFO - ✅ Base de données prête (ouesse-search.db)
+2026-07-23 16:48:38,521 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-23 16:48:38,522 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-23 16:48:46,245 - INFO - 127.0.0.1 - - [23/Jul/2026 16:48:46] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 16:48:46,467 - INFO - 127.0.0.1 - - [23/Jul/2026 16:48:46] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:48:46,532 - INFO - 127.0.0.1 - - [23/Jul/2026 16:48:46] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 16:48:46,539 - INFO - 127.0.0.1 - - [23/Jul/2026 16:48:46] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 16:52:36,984 - INFO - 127.0.0.1 - - [23/Jul/2026 16:52:36] "[33mGET /contact.html HTTP/1.1[0m" 404 -
+2026-07-23 16:52:37,300 - INFO - 127.0.0.1 - - [23/Jul/2026 16:52:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-23 16:55:42,951 - INFO - ✅ Table search_index trouvée
+2026-07-23 16:55:42,953 - INFO - ✅ Base de données prête (ouesse-search.db)
+2026-07-23 16:55:43,022 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.205.51.189:5000
+2026-07-23 16:55:43,023 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-23 16:55:51,463 - INFO - 10.205.51.189 - - [23/Jul/2026 16:55:51] "GET / HTTP/1.1" 200 -
+2026-07-23 16:55:51,547 - INFO - 10.205.51.189 - - [23/Jul/2026 16:55:51] "GET /style.css HTTP/1.1" 200 -
+2026-07-23 16:55:51,547 - INFO - 10.205.51.189 - - [23/Jul/2026 16:55:51] "GET /search.js HTTP/1.1" 200 -
+2026-07-23 16:55:51,548 - INFO - 10.205.51.189 - - [23/Jul/2026 16:55:51] "GET /script.js HTTP/1.1" 200 -
+2026-07-23 16:56:09,202 - WARNING - Tentative d'accès admin sans token depuis 10.205.51.189
+2026-07-23 16:56:09,206 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:09] "[31m[1mGET /admin HTTP/1.1[0m" 401 -
+2026-07-23 16:56:09,295 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-23 16:56:18,593 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:18] "GET /luc HTTP/1.1" 200 -
+2026-07-23 16:56:18,666 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:18] "GET /luc.css HTTP/1.1" 200 -
+2026-07-23 16:56:18,695 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:18] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2026-07-23 16:56:27,570 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:27] "GET /decouvert HTTP/1.1" 200 -
+2026-07-23 16:56:27,640 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:27] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2026-07-23 16:56:27,646 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:27] "GET /style-decouvert.css HTTP/1.1" 200 -
+2026-07-23 16:56:31,366 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:31] "GET /luc.html HTTP/1.1" 200 -
+2026-07-23 16:56:31,534 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:31] "[36mGET /luc.css HTTP/1.1[0m" 304 -
+2026-07-23 16:56:31,553 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:31] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2026-07-23 16:56:33,917 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:33] "GET /contact.html HTTP/1.1" 200 -
+2026-07-23 16:56:33,994 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:33] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2026-07-23 16:56:33,998 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:33] "GET /contact.css HTTP/1.1" 200 -
+2026-07-23 16:56:35,331 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:35] "[36mGET /luc.html HTTP/1.1[0m" 304 -
+2026-07-23 16:56:35,494 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:35] "[36mGET /luc.css HTTP/1.1[0m" 304 -
+2026-07-23 16:56:35,520 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:35] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2026-07-23 16:56:36,771 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:36] "GET /index.html HTTP/1.1" 200 -
+2026-07-23 16:56:36,824 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:36] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2026-07-23 16:56:36,839 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:36] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2026-07-23 16:56:36,847 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:36] "[36mGET /search.js HTTP/1.1[0m" 304 -
+2026-07-23 16:56:39,397 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:39] "GET /api/search?q=oue HTTP/1.1" 200 -
+2026-07-23 16:56:41,526 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:41] "GET /api/search?q=ou HTTP/1.1" 200 -
+2026-07-23 16:56:44,161 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:44] "GET /api/search?q=ouesse HTTP/1.1" 200 -
+2026-07-23 16:56:48,570 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:48] "GET /api/search?q=ouesse HTTP/1.1" 200 -
+2026-07-23 16:56:51,838 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:51] "GET /api/search?q=ouesse HTTP/1.1" 200 -
+2026-07-23 16:56:53,494 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:53] "GET /api/search?q=ma HTTP/1.1" 200 -
+2026-07-23 16:56:53,927 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:53] "GET /api/search?q=mar HTTP/1.1" 200 -
+2026-07-23 16:56:55,578 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:55] "GET /api/search?q=marbre HTTP/1.1" 200 -
+2026-07-23 16:56:56,646 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:56] "GET /api/search?q=marbre HTTP/1.1" 200 -
+2026-07-23 16:56:58,717 - INFO - 10.205.51.189 - - [23/Jul/2026 16:56:58] "GET /api/search?q=marbre HTTP/1.1" 200 -
+2026-07-23 16:58:55,289 - INFO - 127.0.0.1 - - [23/Jul/2026 16:58:55] "GET /api/search?q=marbre HTTP/1.1" 200 -
+2026-07-23 16:59:00,164 - INFO - 127.0.0.1 - - [23/Jul/2026 16:59:00] "GET /api/search HTTP/1.1" 200 -
+2026-07-23 16:59:03,240 - INFO - 127.0.0.1 - - [23/Jul/2026 16:59:03] "[33mGET /api/ HTTP/1.1[0m" 404 -
+2026-07-23 16:59:07,432 - INFO - 127.0.0.1 - - [23/Jul/2026 16:59:07] "GET / HTTP/1.1" 200 -
+2026-07-23 16:59:07,530 - INFO - 127.0.0.1 - - [23/Jul/2026 16:59:07] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 16:59:07,536 - INFO - 127.0.0.1 - - [23/Jul/2026 16:59:07] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 16:59:07,544 - INFO - 127.0.0.1 - - [23/Jul/2026 16:59:07] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 17:01:48,503 - WARNING - Tentative d'accès admin avec token invalide depuis 127.0.0.1
+2026-07-23 17:01:48,507 - INFO - 127.0.0.1 - - [23/Jul/2026 17:01:48] "[31m[1mGET /admin?token=TON_TOKEN_ICI HTTP/1.1[0m" 401 -
+2026-07-23 17:05:05,180 - INFO - Accès admin autorisé depuis 127.0.0.1
+2026-07-23 17:05:05,232 - ERROR - Exception on /admin [GET]
+Traceback (most recent call last):
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\app.py", line 372, in wrapped
+    desc = extraire_description(html_content, texte_brut)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\app.py", line 396, in admin
+    (title, desc, icon, page, anchor, keywords, text, created_at)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin.html
+2026-07-23 17:05:05,514 - ERROR - Erreur interne: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-07-23 17:05:05,517 - INFO - 127.0.0.1 - - [23/Jul/2026 17:05:05] "[35m[1mGET /admin?token=Kf8s9d7f3h2j1k4l5n6b7v8c9x0z1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t HTTP/1.1[0m" 500 -
+2026-07-23 17:09:10,597 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:10] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 17:09:10,900 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:10] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2026-07-23 17:09:10,907 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:10] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2026-07-23 17:09:10,940 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:10] "GET /search.js HTTP/1.1" 200 -
+2026-07-23 17:09:14,888 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:14] "GET /decouvert.html HTTP/1.1" 200 -
+2026-07-23 17:09:15,073 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:15] "[36mGET /style-decouvert.css HTTP/1.1[0m" 304 -
+2026-07-23 17:09:15,078 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:15] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2026-07-23 17:09:21,678 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:21] "GET /api/search?q=ou HTTP/1.1" 200 -
+2026-07-23 17:09:26,329 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:26] "GET /api/search?q=be HTTP/1.1" 200 -
+2026-07-23 17:09:27,834 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:27] "GET /api/search?q=benin HTTP/1.1" 200 -
+2026-07-23 17:09:36,427 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:36] "GET / HTTP/1.1" 200 -
+2026-07-23 17:09:36,530 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:36] "GET /style.css HTTP/1.1" 200 -
+2026-07-23 17:09:36,585 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:36] "GET /search.js HTTP/1.1" 200 -
+2026-07-23 17:09:36,586 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:36] "GET /script.js HTTP/1.1" 200 -
+2026-07-23 17:09:36,723 - INFO - 10.205.51.189 - - [23/Jul/2026 17:09:36] "GET /style.css HTTP/1.1" 200 -
+2026-07-23 17:10:35,669 - WARNING - Tentative d'accès admin sans token depuis 10.205.51.189
+2026-07-23 17:10:35,672 - INFO - 10.205.51.189 - - [23/Jul/2026 17:10:35] "[31m[1mGET /admin HTTP/1.1[0m" 401 -
+2026-07-23 17:10:39,371 - INFO - 127.0.0.1 - - [23/Jul/2026 17:10:39] "GET /api/search?q=marbre HTTP/1.1" 200 -
+2026-07-23 17:13:50,367 - INFO - Accès admin autorisé depuis 127.0.0.1
+2026-07-23 17:13:50,369 - ERROR - Exception on /admin [GET]
+Traceback (most recent call last):
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\app.py", line 372, in wrapped
+    desc = extraire_description(html_content, texte_brut)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\app.py", line 396, in admin
+    (title, desc, icon, page, anchor, keywords, text, created_at)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin.html
+2026-07-23 17:13:50,391 - ERROR - Erreur interne: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-07-23 17:13:50,392 - INFO - 127.0.0.1 - - [23/Jul/2026 17:13:50] "[35m[1mGET /admin?token=Kf8s9d7f3h2j1k4l5n6b7v8c9x0z1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t HTTP/1.1[0m" 500 -
+2026-07-23 17:14:48,617 - INFO - 127.0.0.1 - - [23/Jul/2026 17:14:48] "GET /api/search?q=maire HTTP/1.1" 200 -
+2026-07-23 17:21:59,593 - INFO - 127.0.0.1 - - [23/Jul/2026 17:21:59] "GET /api/search?q=maire HTTP/1.1" 200 -
+2026-07-23 17:22:07,620 - INFO - 127.0.0.1 - - [23/Jul/2026 17:22:07] "GET /api/search?q HTTP/1.1" 200 -
+2026-07-23 17:22:12,364 - INFO - 127.0.0.1 - - [23/Jul/2026 17:22:12] "[33mGET /api/ HTTP/1.1[0m" 404 -
+2026-07-23 17:22:16,606 - INFO - 127.0.0.1 - - [23/Jul/2026 17:22:16] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 17:22:16,693 - INFO - 127.0.0.1 - - [23/Jul/2026 17:22:16] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 17:22:16,703 - INFO - 127.0.0.1 - - [23/Jul/2026 17:22:16] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 17:22:16,720 - INFO - 127.0.0.1 - - [23/Jul/2026 17:22:16] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 17:22:26,871 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:26] "GET / HTTP/1.1" 200 -
+2026-07-23 17:22:26,979 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:26] "GET /style.css HTTP/1.1" 200 -
+2026-07-23 17:22:26,985 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:26] "GET /script.js HTTP/1.1" 200 -
+2026-07-23 17:22:26,987 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:26] "GET /search.js HTTP/1.1" 200 -
+2026-07-23 17:22:28,642 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:28] "GET / HTTP/1.1" 200 -
+2026-07-23 17:22:28,693 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:28] "GET /style.css HTTP/1.1" 200 -
+2026-07-23 17:22:28,695 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:28] "[36mGET /search.js HTTP/1.1[0m" 304 -
+2026-07-23 17:22:28,698 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:28] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2026-07-23 17:22:28,830 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:28] "GET /style.css HTTP/1.1" 200 -
+2026-07-23 17:22:32,798 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:32] "GET /api/search?q=ma HTTP/1.1" 200 -
+2026-07-23 17:22:36,645 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:36] "[33mGET /administration.html HTTP/1.1[0m" 404 -
+2026-07-23 17:22:42,969 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:42] "GET / HTTP/1.1" 200 -
+2026-07-23 17:22:43,047 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:43] "GET /style.css HTTP/1.1" 200 -
+2026-07-23 17:22:43,160 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:43] "GET /style.css HTTP/1.1" 200 -
+2026-07-23 17:22:46,885 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:46] "GET /api/search?q=lu HTTP/1.1" 200 -
+2026-07-23 17:22:57,996 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:57] "GET / HTTP/1.1" 200 -
+2026-07-23 17:22:58,037 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:58] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 17:22:58,151 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:58] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2026-07-23 17:22:58,154 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:58] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2026-07-23 17:22:58,161 - INFO - 10.205.51.189 - - [23/Jul/2026 17:22:58] "[36mGET /search.js HTTP/1.1[0m" 304 -
+2026-07-23 17:23:07,384 - INFO - 10.205.51.189 - - [23/Jul/2026 17:23:07] "GET /api/search?q=mai HTTP/1.1" 200 -
+2026-07-23 17:23:16,745 - INFO - 10.205.51.189 - - [23/Jul/2026 17:23:16] "[36mGET /contact.html HTTP/1.1[0m" 304 -
+2026-07-23 17:23:16,828 - INFO - 10.205.51.189 - - [23/Jul/2026 17:23:16] "[36mGET /contact.css HTTP/1.1[0m" 304 -
+2026-07-23 17:23:16,836 - INFO - 10.205.51.189 - - [23/Jul/2026 17:23:16] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2026-07-23 17:23:22,381 - INFO - 10.205.51.189 - - [23/Jul/2026 17:23:22] "GET /api/search?q=luc HTTP/1.1" 200 -
+2026-07-23 17:23:24,807 - INFO - 10.205.51.189 - - [23/Jul/2026 17:23:24] "GET /api/search?q=lu HTTP/1.1" 200 -
+2026-07-23 17:23:33,565 - INFO - 10.205.51.189 - - [23/Jul/2026 17:23:33] "GET /api/search?q=na HTTP/1.1" 200 -
+2026-07-23 17:23:37,091 - INFO - 10.205.51.189 - - [23/Jul/2026 17:23:37] "GET /api/search?q=nar HTTP/1.1" 200 -
+2026-07-23 17:23:38,711 - INFO - 10.205.51.189 - - [23/Jul/2026 17:23:38] "GET /api/search?q=na HTTP/1.1" 200 -
+2026-07-23 17:40:36,029 - INFO - 10.205.51.189 - - [23/Jul/2026 17:40:36] "GET /api/search?q=ma HTTP/1.1" 200 -
+2026-07-23 17:40:37,107 - INFO - 10.205.51.189 - - [23/Jul/2026 17:40:37] "GET /api/search?q=maire HTTP/1.1" 200 -
+2026-07-23 17:40:38,934 - INFO - 10.205.51.189 - - [23/Jul/2026 17:40:38] "GET /api/search?q=ma HTTP/1.1" 200 -
+2026-07-23 17:40:41,077 - INFO - 10.205.51.189 - - [23/Jul/2026 17:40:41] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 17:40:41,174 - INFO - 10.205.51.189 - - [23/Jul/2026 17:40:41] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2026-07-23 17:40:41,188 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:40:41,194 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:40:41,215 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:40:41,217 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:40:41,220 - INFO - 10.205.51.189 - - [23/Jul/2026 17:40:41] "[31m[1mGET /script.js HTTP/1.1[0m" 429 -
+2026-07-23 17:40:41,221 - INFO - 10.205.51.189 - - [23/Jul/2026 17:40:41] "[31m[1mGET /search.js HTTP/1.1[0m" 429 -
+2026-07-23 17:40:47,589 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:40:47,596 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:40:47,602 - INFO - 10.205.51.189 - - [23/Jul/2026 17:40:47] "[31m[1mGET /search?q=luc HTTP/1.1[0m" 429 -
+2026-07-23 17:41:16,341 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:41:16,343 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:41:16,346 - INFO - 10.205.51.189 - - [23/Jul/2026 17:41:16] "[31m[1mGET /search?q=luc HTTP/1.1[0m" 429 -
+2026-07-23 17:41:20,874 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:41:20,876 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:41:20,878 - INFO - 10.205.51.189 - - [23/Jul/2026 17:41:20] "[31m[1mGET /search?q HTTP/1.1[0m" 429 -
+2026-07-23 17:41:25,218 - INFO - 10.205.51.189 - - [23/Jul/2026 17:41:25] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 17:41:25,258 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:41:25,258 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:41:25,261 - INFO - 10.205.51.189 - - [23/Jul/2026 17:41:25] "[31m[1mGET /style.css HTTP/1.1[0m" 429 -
+2026-07-23 17:41:25,266 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:41:25,268 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:41:25,272 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:41:25,271 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:41:25,275 - INFO - 10.205.51.189 - - [23/Jul/2026 17:41:25] "[31m[1mGET /search.js HTTP/1.1[0m" 429 -
+2026-07-23 17:41:25,274 - INFO - 10.205.51.189 - - [23/Jul/2026 17:41:25] "[31m[1mGET /script.js HTTP/1.1[0m" 429 -
+2026-07-23 17:43:48,718 - INFO - 127.0.0.1 - - [23/Jul/2026 17:43:48] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 17:43:48,793 - INFO - 127.0.0.1 - - [23/Jul/2026 17:43:48] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 17:43:48,826 - INFO - 127.0.0.1 - - [23/Jul/2026 17:43:48] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 17:43:48,837 - INFO - 127.0.0.1 - - [23/Jul/2026 17:43:48] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 17:43:52,502 - INFO - 127.0.0.1 - - [23/Jul/2026 17:43:52] "GET /api/search?q=votre_mot HTTP/1.1" 200 -
+2026-07-23 17:44:05,082 - INFO - 127.0.0.1 - - [23/Jul/2026 17:44:05] "GET /api/search?q=ouesse HTTP/1.1" 200 -
+2026-07-23 17:44:23,806 - INFO - 10.205.51.189 - - [23/Jul/2026 17:44:23] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 17:44:23,875 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:44:23,877 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:44:23,878 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:44:23,877 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:44:23,880 - INFO - 10.205.51.189 - - [23/Jul/2026 17:44:23] "[31m[1mGET /script.js HTTP/1.1[0m" 429 -
+2026-07-23 17:44:23,887 - INFO - 10.205.51.189 - - [23/Jul/2026 17:44:23] "[31m[1mGET /style.css HTTP/1.1[0m" 429 -
+2026-07-23 17:44:23,891 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:44:23,902 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:44:23,907 - INFO - 10.205.51.189 - - [23/Jul/2026 17:44:23] "[31m[1mGET /search.js HTTP/1.1[0m" 429 -
+2026-07-23 17:47:28,952 - INFO - 127.0.0.1 - - [23/Jul/2026 17:47:28] "[33mPOST /api/indexer-tout?token= HTTP/1.1[0m" 404 -
+2026-07-23 17:52:50,434 - INFO - ✅ Table search_index trouvée
+2026-07-23 17:52:50,435 - INFO - ✅ Base de données prête (ouesse-search.db)
+2026-07-23 17:52:50,488 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.205.51.189:5000
+2026-07-23 17:52:50,489 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-23 17:53:46,446 - INFO - 10.205.51.189 - - [23/Jul/2026 17:53:46] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 17:53:46,541 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:53:46,545 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:53:46,546 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:53:46,548 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:53:46,550 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:53:46,553 - INFO - 10.205.51.189 - - [23/Jul/2026 17:53:46] "[31m[1mGET /style.css HTTP/1.1[0m" 429 -
+2026-07-23 17:53:46,555 - INFO - 10.205.51.189 - - [23/Jul/2026 17:53:46] "[31m[1mGET /script.js HTTP/1.1[0m" 429 -
+2026-07-23 17:53:46,555 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:53:46,715 - INFO - 10.205.51.189 - - [23/Jul/2026 17:53:46] "[31m[1mGET /search.js HTTP/1.1[0m" 429 -
+2026-07-23 17:53:50,711 - INFO - ratelimit 50 per 1 hour (10.205.51.189) exceeded at endpoint: servir_fichier
+2026-07-23 17:53:50,711 - WARNING - Rate limit atteint depuis 10.205.51.189
+2026-07-23 17:53:50,715 - INFO - 10.205.51.189 - - [23/Jul/2026 17:53:50] "[31m[1mGET /contact.html HTTP/1.1[0m" 429 -
+2026-07-23 17:54:15,491 - INFO - Accès admin autorisé depuis 127.0.0.1
+2026-07-23 17:54:15,494 - ERROR - Exception on /admin [GET]
+Traceback (most recent call last):
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\app.py", line 372, in wrapped
+    desc = extraire_description(html_content, texte_brut)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\app.py", line 396, in admin
+    (title, desc, icon, page, anchor, keywords, text, created_at)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\INGENIEUR LOG\OUESSE\.venv\Lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin.html
+2026-07-23 17:54:15,523 - ERROR - Erreur interne: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-07-23 17:54:15,524 - INFO - 127.0.0.1 - - [23/Jul/2026 17:54:15] "[35m[1mGET /admin?token=Kf8s9d7f3h2j1k4l5n6b7v8c9x0z1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t HTTP/1.1[0m" 500 -
+2026-07-23 17:54:15,890 - INFO - 127.0.0.1 - - [23/Jul/2026 17:54:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-23 17:54:36,423 - INFO - 127.0.0.1 - - [23/Jul/2026 17:54:36] "[33mGET /contact.html HTTP/1.1[0m" 404 -
+2026-07-23 17:54:39,331 - INFO - 127.0.0.1 - - [23/Jul/2026 17:54:39] "[33mGET /decouvert.html HTTP/1.1[0m" 404 -
+2026-07-23 17:59:04,431 - INFO - ✅ Table search_index trouvée
+2026-07-23 17:59:04,432 - INFO - ✅ Base de données prête (ouesse-search.db)
+2026-07-23 17:59:04,476 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.205.51.189:5000
+2026-07-23 17:59:04,477 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-23 18:00:19,990 - INFO - 127.0.0.1 - - [23/Jul/2026 18:00:19] "[33mPOST /api/indexer-local?token=Kf8s9d7f3h2j1k4l5n6b7v8c9x0z1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t HTTP/1.1[0m" 404 -
+2026-07-23 18:04:07,439 - INFO - ✅ Table search_index trouvée
+2026-07-23 18:04:07,440 - INFO - ✅ Base de données prête (ouesse-search.db)
+2026-07-23 18:04:07,485 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.205.51.189:5000
+2026-07-23 18:04:07,486 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-23 18:04:36,994 - INFO - 127.0.0.1 - - [23/Jul/2026 18:04:36] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 18:04:37,155 - INFO - 127.0.0.1 - - [23/Jul/2026 18:04:37] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 18:04:37,288 - INFO - 127.0.0.1 - - [23/Jul/2026 18:04:37] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2026-07-23 18:04:37,294 - INFO - 127.0.0.1 - - [23/Jul/2026 18:04:37] "[33mGET /search.js HTTP/1.1[0m" 404 -
+2026-07-23 18:04:37,540 - INFO - 127.0.0.1 - - [23/Jul/2026 18:04:37] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2026-07-23 18:04:42,893 - INFO - 10.205.51.189 - - [23/Jul/2026 18:04:42] "[36mGET / HTTP/1.1[0m" 304 -
+2026-07-23 18:04:43,078 - INFO - 10.205.51.189 - - [23/Jul/2026 18:04:43] "GET /style.css HTTP/1.1" 200 -
+2026-07-23 18:04:43,080 - INFO - 10.205.51.189 - - [23/Jul/2026 18:04:43] "GET /search.js HTTP/1.1" 200 -
+2026-07-23 18:04:43,114 - INFO - 10.205.51.189 - - [23/Jul/2026 18:04:43] "GET /script.js HTTP/1.1" 200 -
+2026-07-23 18:04:46,530 - INFO - 10.205.51.189 - - [23/Jul/2026 18:04:46] "GET /api/search?q=ou HTTP/1.1" 200 -
+2026-07-23 18:04:47,863 - INFO - 10.205.51.189 - - [23/Jul/2026 18:04:47] "GET /api/search?q=oue HTTP/1.1" 200 -
+2026-07-23 18:04:48,585 - INFO - 10.205.51.189 - - [23/Jul/2026 18:04:48] "GET /api/search?q=ouess HTTP/1.1" 200 -
+2026-07-23 18:04:56,675 - INFO - 10.205.51.189 - - [23/Jul/2026 18:04:56] "GET /generato.html HTTP/1.1" 200 -
+2026-07-23 18:04:56,752 - INFO - 10.205.51.189 - - [23/Jul/2026 18:04:56] "GET /generator.css HTTP/1.1" 200 -
+2026-07-23 18:04:56,762 - INFO - 10.205.51.189 - - [23/Jul/2026 18:04:56] "GET /generator.js HTTP/1.1" 200 -
+2026-07-23 18:05:03,171 - INFO - 10.205.51.189 - - [23/Jul/2026 18:05:03] "[33mGET /articles.css HTTP/1.1[0m" 404 -
+2026-07-23 18:05:03,181 - INFO - 10.205.51.189 - - [23/Jul/2026 18:05:03] "[36mGET /script.js HTTP/1.1[0m" 304 -

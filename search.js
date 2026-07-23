@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
        CONFIGURATION API
        Le JS appelle maintenant le backend Python (Flask)
     ========================================================= */
-    const API_BASE_URL = '';  // Laisse vide pour utiliser le même domaine
+   const API_BASE_URL = 'https://whalesg.pythonanywhere.com';
     // Si vous êtes en développement local, vous pouvez décommenter :
     // const API_BASE_URL = 'http://api/search';
 

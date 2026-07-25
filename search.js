@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
        CONFIGURATION API
        Le JS appelle maintenant le backend Python (Flask)
     ========================================================= */
-    const API_BASE_URL = '';  // Laisse vide pour utiliser le même domaine
+   const API_BASE_URL = 'https://whalesg.pythonanywhere.com';
     // Si vous êtes en développement local, vous pouvez décommenter :
     // const API_BASE_URL = 'http://api/search';
 
@@ -316,6 +316,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log('🔍 Moteur de recherche OUESSE initialisé');
     console.log(`📡 API endpoint: ${API_BASE_URL || window.location.origin}/api/search`);
+<<<<<<< HEAD
 
     /* =========================================================
        RECHERCHE AUTOMATIQUE DEPUIS L'URL (?q=...)
@@ -330,3 +331,6 @@ document.addEventListener('DOMContentLoaded', function () {
         callPythonSearch(requeteUrl).then(resultats => afficherResultats(resultats, requeteUrl));
     }
 });
+=======
+});
+>>>>>>> 38b1a6406b8db2798e045142f6e0e48738ed94d8

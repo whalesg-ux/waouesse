@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function pageActuelle() {
         const nom = location.pathname.split('/').pop();
-        return nom === '' || nom === '' ? 'index.html' : nom;
+        return nom === '' || nom === undefined ? 'index.html' : nom;
     }
 
     function allerVersCible(item) {
@@ -316,4 +316,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log('🔍 Moteur de recherche OUESSE initialisé');
     console.log(`📡 API endpoint: ${API_BASE_URL || window.location.origin}/api/search`);
+
+    /* =========================================================
+       RECHERCHE AUTOMATIQUE DEPUIS L'URL (?q=...)
+       Nécessaire pour que /search?q=... (utilisé par le
+       SearchAction schema.org / sitelinks Google) affiche
+       vraiment des résultats au chargement de la page.
+    ========================================================= */
+    const paramsUrl = new URLSearchParams(window.location.search);
+    const requeteUrl = (paramsUrl.get('q') || '').trim();
+    if (requeteUrl.length >= 2) {
+        searchInput.value = requeteUrl;
+        callPythonSearch(requeteUrl).then(resultats => afficherResultats(resultats, requeteUrl));
+    }
 });

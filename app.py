@@ -11,10 +11,14 @@ from datetime import datetime
 from functools import wraps
 from urllib.parse import urlparse
 import requests
-from flask import Flask, request, jsonify, render_template, redirect, send_from_directory, make_response
+from flask import (
+    Flask, request, jsonify, render_template,
+    redirect, send_from_directory, make_response, session, url_for
+)
 from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
+from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 
 # =============================================
@@ -24,7 +28,10 @@ env_path = '.env'
 if not os.path.exists(env_path):
     admin_token = secrets.token_urlsafe(32)
     secret_key = secrets.token_hex(32)
-    
+    # Mot de passe admin lisible (affiché une seule fois), stocké uniquement haché
+    admin_password_clair = secrets.token_urlsafe(9)
+    admin_password_hash = generate_password_hash(admin_password_clair)
+
     env_content = f"""# Configuration OUESSE Publisher + Recherche
 # ============================================
 
@@ -44,6 +51,7 @@ DB_PATH=ouesse-search.db
 # Sécurité (générées automatiquement)
 SECRET_KEY={secret_key}
 ADMIN_TOKEN={admin_token}
+ADMIN_PASSWORD_HASH={admin_password_hash}
 
 # CORS
 ALLOWED_ORIGINS=https://waouesse.vercel.app
@@ -54,17 +62,19 @@ PORT=5000
 """
     with open(env_path, 'w', encoding='utf-8') as f:
         f.write(env_content)
-    
+
     try:
         os.chmod(env_path, 0o600)
     except Exception:
         pass
-    
+
     print(f"\n{'='*50}")
     print("⚠️  FICHIER .env CRÉÉ AUTOMATIQUEMENT")
     print(f"{'='*50}")
-    print(f"\nADMIN_TOKEN : {admin_token}")
-    print(f"\nAccès admin: http://127.0.0.1:5000/admin?token={admin_token}")
+    print(f"\nADMIN_TOKEN (API)        : {admin_token}")
+    print(f"MOT DE PASSE ADMIN       : {admin_password_clair}")
+    print("⚠️  Notez ce mot de passe : il n'est pas stocké en clair et ne sera plus jamais affiché.")
+    print(f"\nConnexion admin : http://127.0.0.1:5000/admin/login")
     print(f"{'='*50}\n")
 
 load_dotenv()
@@ -106,7 +116,17 @@ BRANCH = os.getenv('GITHUB_BRANCH', 'main')
 SITE_URL = os.getenv('SITE_URL', 'https://votredomaine.com')
 REPO_PATH = os.getenv('GITHUB_PATH', '').strip()
 ADMIN_TOKEN = os.getenv('ADMIN_TOKEN')
+ADMIN_PASSWORD_HASH = os.getenv('ADMIN_PASSWORD_HASH')
 DB_PATH = os.getenv('DB_PATH', 'ouesse-search.db')
+
+# Cookies de session sécurisés (utilisés par la connexion admin par mot de passe)
+_debug_env = os.getenv('FLASK_DEBUG', 'false').lower() == 'true'
+app.config.update(
+    SESSION_COOKIE_HTTPONLY=True,
+    SESSION_COOKIE_SAMESITE='Lax',
+    SESSION_COOKIE_SECURE=not _debug_env,
+    PERMANENT_SESSION_LIFETIME=60 * 60 * 4,  # 4 heures
+)
 
 ALLOWED_ORIGINS = [o.strip() for o in os.getenv('ALLOWED_ORIGINS', SITE_URL).split(',') if o.strip()]
 if 'http://localhost:5000' not in ALLOWED_ORIGINS and 'http://127.0.0.1:5000' not in ALLOWED_ORIGINS:
@@ -137,6 +157,8 @@ if not all([GITHUB_TOKEN, OWNER, REPO]):
     logger.warning("Variables d'environnement GitHub manquantes. La publication sera désactivée.")
 if not ADMIN_TOKEN:
     logger.warning("ADMIN_TOKEN non défini : /admin et /api/publier sont désactivés.")
+if not ADMIN_PASSWORD_HASH:
+    logger.warning("ADMIN_PASSWORD_HASH non défini : la connexion admin par mot de passe est désactivée.")
 
 if GITHUB_TOKEN and not re.match(r'^ghp_[a-zA-Z0-9]{36}$|^ghs_[a-zA-Z0-9]{36}$|^github_pat_[a-zA-Z0-9_]{22,}', GITHUB_TOKEN):
     logger.warning("Format du GITHUB_TOKEN suspect. Vérifiez votre token.")
@@ -163,24 +185,24 @@ def get_db_connection():
 def init_db():
     """Vérifie et utilise la table search_index existante"""
     conn = get_db_connection()
-    
+
     cursor = conn.execute("""
         SELECT name FROM sqlite_master 
         WHERE type='table' AND name='search_index'
     """)
-    
+
     if cursor.fetchone():
         logger.info("✅ Table search_index trouvée")
         cursor = conn.execute("PRAGMA table_info(search_index)")
         columns = [col[1] for col in cursor.fetchall()]
-        
+
         colonnes_a_ajouter = {
             'desc': 'TEXT',
             'icon': "TEXT DEFAULT 'fa-magnifying-glass'",
             'anchor': "TEXT DEFAULT ''",
             'keywords': 'TEXT'
         }
-        
+
         for col, col_type in colonnes_a_ajouter.items():
             if col not in columns:
                 try:
@@ -189,6 +211,46 @@ def init_db():
                 except Exception as e:
                     logger.warning(f"Impossible d'ajouter {col}: {e}")
         conn.commit()
+
+        # BUG CORRIGÉ : indexer.py / indexer_tout.py faisaient un "INSERT OR REPLACE"
+        # sans contrainte UNIQUE sur "page", ce qui empilait des doublons (parfois
+        # avec un texte/mots-clés vides) et cassait le classement des résultats.
+        # On nettoie les doublons existants en ne gardant que la ligne la plus
+        # complète par page, puis on impose l'unicité pour empêcher que ça revienne.
+        doublons = conn.execute("""
+            SELECT page, COUNT(*) as n FROM search_index GROUP BY page HAVING n > 1
+        """).fetchall()
+        if doublons:
+            logger.warning(f"🧹 {len(doublons)} page(s) en doublon détectées dans search_index, nettoyage...")
+            for d in doublons:
+                lignes = conn.execute(
+                    "SELECT id, title, desc, keywords, text FROM search_index WHERE page = ?",
+                    (d["page"],)
+                ).fetchall()
+                # On garde la ligne avec le plus de contenu utile (texte+mots-clés+desc)
+                meilleure = max(
+                    lignes,
+                    key=lambda r: len(r["text"] or '') + len(r["keywords"] or '') + len(r["desc"] or '')
+                )
+                autres_ids = [r["id"] for r in lignes if r["id"] != meilleure["id"]]
+                if autres_ids:
+                    conn.executemany(
+                        "DELETE FROM search_index WHERE id = ?",
+                        [(i,) for i in autres_ids]
+                    )
+            conn.commit()
+            logger.info("✅ Doublons supprimés")
+
+        # Supprime les entrées vides (pages sans contenu réel, ex. fichier .html vide)
+        conn.execute("DELETE FROM search_index WHERE (text IS NULL OR TRIM(text) = '') AND (title IS NULL OR title = 'Sans titre' OR TRIM(title) = '')")
+        conn.commit()
+
+        try:
+            conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_search_index_page ON search_index(page)")
+            conn.commit()
+            logger.info("✅ Contrainte d'unicité sur 'page' garantie")
+        except Exception as e:
+            logger.warning(f"Impossible de créer l'index unique sur 'page': {e}")
     else:
         logger.info("🔄 Création de la table search_index...")
         conn.execute("""
@@ -204,9 +266,10 @@ def init_db():
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
+        conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_search_index_page ON search_index(page)")
         conn.commit()
         logger.info("✅ Table search_index créée")
-    
+
     conn.close()
     logger.info(f"✅ Base de données prête ({DB_PATH})")
 
@@ -314,8 +377,13 @@ def extraire_mots_cles(html_content, titre, texte_brut, data=None, limite=15):
             break
     return ', '.join(vus)
 
+MIN_CONTENT_LENGTH = 30  # en dessous, la page est considérée vide (ex: ibidon.html)
+
 def indexer_page(slug, titre, html_content, filename, page_url, data=None):
     texte_brut = extraire_texte_brut(html_content)
+    if len(texte_brut) < MIN_CONTENT_LENGTH:
+        logger.warning(f"⏭️  Page ignorée à l'indexation (contenu vide ou trop court) : {filename}")
+        return
     titre_final = extraire_titre_html(html_content, titre)
     desc = extraire_description(html_content, texte_brut)
     icone = extraire_icone(data or {})
@@ -326,7 +394,7 @@ def indexer_page(slug, titre, html_content, filename, page_url, data=None):
         "SELECT id FROM search_index WHERE page = ?", 
         (filename,)
     ).fetchone()
-    
+
     if existing:
         conn.execute("""
             UPDATE search_index 
@@ -341,7 +409,7 @@ def indexer_page(slug, titre, html_content, filename, page_url, data=None):
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """, (titre_final, desc, icone, filename, slug, mots_cles, texte_brut,
               datetime.now().isoformat()))
-    
+
     conn.commit()
     conn.close()
     logger.info(f"Page indexée dans search_index: {filename}")
@@ -353,17 +421,23 @@ def indexer_page(slug, titre, html_content, filename, page_url, data=None):
 def require_admin(view):
     @wraps(view)
     def wrapped(*args, **kwargs):
+        # Voie 1 : session ouverte via /admin/login (mot de passe)
+        if session.get('is_admin'):
+            logger.info(f"Accès admin autorisé (session) depuis {request.remote_addr}")
+            return view(*args, **kwargs)
+
         if not ADMIN_TOKEN:
             logger.warning("Tentative d'accès admin alors que ADMIN_TOKEN n'est pas configuré")
             return jsonify({'status': 'error', 'message': "Accès admin désactivé."}), 503
 
+        # Voie 2 : token API (query string, header Authorization, ou corps JSON)
         supplied = request.args.get('token', '')
         auth_header = request.headers.get('Authorization', '')
         if auth_header.startswith('Bearer '):
             supplied = auth_header[len('Bearer '):]
 
         if not supplied and request.is_json:
-            supplied = request.get_json(silent=True).get('token', '')
+            supplied = (request.get_json(silent=True) or {}).get('token', '')
 
         if not supplied:
             logger.warning(f"Tentative d'accès admin sans token depuis {request.remote_addr}")
@@ -373,8 +447,18 @@ def require_admin(view):
             logger.warning(f"Tentative d'accès admin avec token invalide depuis {request.remote_addr}")
             return jsonify({'status': 'error', 'message': 'Non autorisé.'}), 401
 
-        logger.info(f"Accès admin autorisé depuis {request.remote_addr}")
+        logger.info(f"Accès admin autorisé (token) depuis {request.remote_addr}")
         return view(*args, **kwargs)
+    return wrapped
+
+
+def admin_page_required(view):
+    """Comme require_admin, mais redirige vers la page de connexion (pour les pages HTML, pas l'API)."""
+    @wraps(view)
+    def wrapped(*args, **kwargs):
+        if session.get('is_admin'):
+            return view(*args, **kwargs)
+        return redirect(url_for('admin_login', next=request.path))
     return wrapped
 
 
@@ -426,19 +510,73 @@ def servir_images(filename):
 # =============================================
 # 10. ADMIN
 # =============================================
+@app.route('/admin/login', methods=['GET', 'POST'])
+@limiter.limit("8 per minute")
+def admin_login():
+    erreur = None
+    if request.method == 'POST':
+        if not ADMIN_PASSWORD_HASH:
+            erreur = "Connexion par mot de passe désactivée (ADMIN_PASSWORD_HASH manquant)."
+        else:
+            mot_de_passe = request.form.get('password', '')
+            if mot_de_passe and check_password_hash(ADMIN_PASSWORD_HASH, mot_de_passe):
+                session.clear()
+                session.permanent = True
+                session['is_admin'] = True
+                logger.info(f"✅ Connexion admin réussie depuis {request.remote_addr}")
+                dest = request.args.get('next') or url_for('admin')
+                return redirect(dest)
+            else:
+                logger.warning(f"❌ Échec de connexion admin depuis {request.remote_addr}")
+                erreur = "Mot de passe incorrect."
+
+    return render_template('admin_login.html', erreur=erreur)
+
+
+@app.route('/admin/logout')
+def admin_logout():
+    session.clear()
+    return redirect(url_for('admin_login'))
+
+
 @app.route('/admin')
-@require_admin
+@admin_page_required
 def admin():
-    if os.path.exists('admin.html'):
-        return send_from_directory('.', 'admin.html')
+    admin_html_path = None
     if os.path.exists('templates/admin.html'):
-        return send_from_directory('templates', 'admin.html')
-    return "Page admin non trouvée", 404
+        admin_html_path = 'templates/admin.html'
+    elif os.path.exists('admin.html'):
+        admin_html_path = 'admin.html'
+
+    if not admin_html_path:
+        return "Page admin non trouvée", 404
+
+    with open(admin_html_path, 'r', encoding='utf-8') as f:
+        contenu = f.read()
+
+    # Injecte discrètement le token API dans un champ caché pour que
+    # generator.js puisse publier sans que l'utilisateur ait à le ressaisir.
+    injection = f'<input type="hidden" id="adminToken" value="{html.escape(ADMIN_TOKEN or "")}">'
+    if '</body>' in contenu:
+        contenu = contenu.replace('</body>', injection + '\n</body>')
+    else:
+        contenu += injection
+
+    return contenu
 
 
 # =============================================
 # 11. ROUTES API (recherche, publication, indexation)
 # =============================================
+@app.route('/search')
+def page_recherche():
+    """Page de résultats de recherche. Corrige le SearchAction schema.org
+    (index.html) qui pointait vers /search?q=... alors que cette route
+    n'existait pas encore (404 pour les moteurs de recherche)."""
+    if os.path.exists('index.html'):
+        return send_from_directory('.', 'index.html')
+    return redirect('/')
+
 @app.route('/api/search')
 def api_search():
     mot_cle = request.args.get('q', '')
@@ -636,10 +774,11 @@ def indexer_local():
     dossiers = ['.', 'public', 'templates']
     fichiers_html = []
 
+    pages_exclues = {'admin.html', 'generato.html'}
     for dossier in dossiers:
         if os.path.exists(dossier):
             for fichier in os.listdir(dossier):
-                if fichier.endswith('.html') and fichier != 'admin.html':
+                if fichier.endswith('.html') and fichier not in pages_exclues:
                     chemin_complet = os.path.join(dossier, fichier)
                     if os.path.isfile(chemin_complet):
                         fichiers_html.append((dossier, fichier))
@@ -706,9 +845,10 @@ def generer_sitemap():
 
         urls = []
         now = datetime.now().isoformat()
+        pages_exclues_sitemap = {'admin.html', 'generato.html', 'ibidon.html'}
         for file in files:
             fname = file.get('name', '')
-            if fname.endswith('.html') and fname != 'admin.html':
+            if fname.endswith('.html') and fname not in pages_exclues_sitemap:
                 urls.append(
                     f"  <url>\n"
                     f"    <loc>{html.escape(SITE_URL)}/{html.escape(fname)}</loc>\n"
@@ -720,9 +860,12 @@ def generer_sitemap():
         if not urls:
             return
 
+        # CORRECTION : on construit le contenu en dehors de la f-string
+        # pour éviter le backslash dans l'expression f-string
+        urls_joined = "\n".join(urls)
         sitemap_content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{'\n'.join(urls)}
+{urls_joined}
 </urlset>"""
 
         sitemap_b64 = base64.b64encode(sitemap_content.encode('utf-8')).decode('utf-8')
@@ -759,7 +902,7 @@ def servir_fichier(filename):
         return "Accès interdit", 403
     if filename.endswith('/'):
         return "Dossier non accessible", 404
-    
+
     extensions_autorisees = ['.html', '.htm', '.css', '.js', '.json', 
                             '.png', '.jpg', '.jpeg', '.gif', '.svg', 
                             '.ico', '.webp', '.ttf', '.woff', '.woff2',
@@ -767,19 +910,19 @@ def servir_fichier(filename):
     ext = os.path.splitext(filename)[1].lower()
     if ext and ext not in extensions_autorisees:
         return "Type de fichier non autorisé", 403
-    
+
     dossiers = ['.', 'public', 'static', 'templates']
     for dossier in dossiers:
         chemin = os.path.join(dossier, filename)
         if os.path.exists(chemin) and os.path.isfile(chemin):
             return send_from_directory(dossier, filename)
-    
+
     if not ext and '.' not in filename:
         for dossier in dossiers:
             chemin = os.path.join(dossier, f'{filename}.html')
             if os.path.exists(chemin) and os.path.isfile(chemin):
                 return send_from_directory(dossier, f'{filename}.html')
-    
+
     return "Fichier non trouvé", 404
 
 

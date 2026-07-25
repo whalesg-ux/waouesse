@@ -13,6 +13,7 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:url" content="https://waouesse.vercel.app/a-propos.html">
+    <link rel="canonical" href="https://waouesse.vercel.app/a-propos.html">
     <meta name="google-site-verification" content="VOR9gQVoSw2v7YGsETFk_Vuqz0vDQyQ0HO1o94jUjKQ">
     <meta name="theme-color" content="#0b6b44">
     <title>À propos — Ouessè Tourisme</title>
@@ -34,6 +35,7 @@
     <!-- Font Awesome asynchrone -->
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="search-widget.css">
 </head>
 <body>
 
@@ -61,6 +63,25 @@
 
         <a href="decouvert.html" class="btn-explorer">Explorer</a>
     </header>
+
+    <div class="search-widget-wrap" style="margin: 18px auto; padding: 0 20px;">
+        <form class="search" id="searchForm" role="search" action="/search" method="GET" autocomplete="off">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="text" id="searchInput" name="q" placeholder="Rechercher un lieu, une expérience..." aria-label="Rechercher un lieu, une expérience à Ouèssè" required>
+            <button type="submit">Rechercher</button>
+            <div class="search-results" id="searchResults" role="listbox" aria-label="Résultats de recherche"></div>
+        </form>
+        <div class="summary-panel" id="summaryPanel" role="dialog" aria-modal="true" aria-labelledby="summaryTitleText" hidden>
+            <div class="summary-header">
+                <span class="summary-title" id="summaryTitleText"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> <span>Résumé</span></span>
+                <button class="summary-close" id="summaryClose" type="button" aria-label="Fermer le résumé">&times;</button>
+            </div>
+            <div class="summary-body">
+                <p id="summaryText"></p>
+                <a href="#" class="summary-link" id="summaryLink">Voir plus</a>
+            </div>
+        </div>
+    </div>
 
     <main>
         <section class="hero" aria-labelledby="hero-heading">
@@ -153,5 +174,6 @@
     </footer>
 
     <script src="script.js" defer></script>
+    <script src="search.js" defer></script>
 </body>
 </html>

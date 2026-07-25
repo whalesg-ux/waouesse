@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Disallow: /generato.html
+Disallow: /ibidon.html
+Disallow: /*.db$
+Disallow: /*.log$
+Disallow: /*.json$
+
+# Ressources utiles au rendu (CSS/JS/images) explicitement autorisées
+Allow: /*.css$
+Allow: /*.js$
+Allow: /images/
 
 Sitemap: https://waouesse.vercel.app/sitemap.xml

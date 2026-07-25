@@ -53,25 +53,38 @@ def extraire_mots_cles(html_content, texte_brut):
             break
     return ', '.join(vus)
 
+MIN_CONTENT_LENGTH = 30
+
 def indexer_page(page, titre, html_content, desc=None):
     texte_brut = extraire_texte_brut(html_content)
+    if len(texte_brut) < MIN_CONTENT_LENGTH:
+        print(f"⏭️  Ignoré (page vide) : {page}")
+        return
     if not desc:
         desc = extraire_description(html_content, texte_brut)
     titre_final = extraire_titre(html_content) or titre
     mots_cles = extraire_mots_cles(html_content, texte_brut)
 
     conn = sqlite3.connect(DB_PATH)
+    conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_search_index_page ON search_index(page)")
+    # BUG CORRIGÉ : voir indexer.py — INSERT OR REPLACE sans contrainte UNIQUE
+    # empilait des doublons à chaque exécution au lieu de mettre à jour la ligne.
     conn.execute("""
-        INSERT OR REPLACE INTO search_index (page, title, desc, icon, anchor, keywords, text, created_at)
+        INSERT INTO search_index (page, title, desc, icon, anchor, keywords, text, created_at)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(page) DO UPDATE SET
+            title=excluded.title, desc=excluded.desc, icon=excluded.icon,
+            anchor=excluded.anchor, keywords=excluded.keywords, text=excluded.text,
+            created_at=excluded.created_at
     """, (page, titre_final, desc, 'fa-file', '', mots_cles, texte_brut, datetime.now().isoformat()))
     conn.commit()
     conn.close()
     print(f"✅ Indexé: {page}")
 
 # Scanner tous les fichiers HTML
+pages_exclues = {'admin.html', 'generato.html'}
 for fichier in os.listdir('.'):
-    if fichier.endswith('.html') and fichier != 'admin.html':
+    if fichier.endswith('.html') and fichier not in pages_exclues:
         try:
             with open(fichier, 'r', encoding='utf-8') as f:
                 contenu = f.read()

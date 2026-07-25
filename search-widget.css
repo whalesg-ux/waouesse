@@ -1,0 +1,223 @@
+/* ============================================================
+   WIDGET DE RECHERCHE PARTAGÉ — OUESSE TOURISME
+   Ce fichier est autonome (ne dépend pas des variables définies
+   dans style.css) afin de pouvoir être inclus sur n'importe
+   quelle page du site (a-propos, contact, decouvert, luc...),
+   qui n'importaient jusqu'ici pas la recherche du tout.
+   ============================================================ */
+
+.search-widget-wrap {
+    position: relative;
+    max-width: 460px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #fff;
+    border-radius: 999px;
+    padding: 8px 8px 8px 22px;
+    max-width: 460px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.search i {
+    color: #0b6b44;
+    flex-shrink: 0;
+}
+
+.search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: #16261e;
+    background: transparent;
+    min-width: 0;
+}
+
+.search input::placeholder {
+    color: #6b7d74;
+}
+
+.search button[type="submit"] {
+    background-color: #0b6b44;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.search button[type="submit"]:hover {
+    background-color: #084d31;
+}
+
+/* Résultats de recherche */
+.search-results {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    display: none;
+    z-index: 100;
+    padding: 8px 0;
+}
+
+.search-results.active {
+    display: block;
+}
+
+.search-result-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.15s ease;
+    color: #16261e;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.search-result-item:hover,
+.search-result-item:focus-visible {
+    background: #f0f9f4;
+}
+
+.search-result-item i {
+    color: #0b6b44;
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.search-result-item .result-title {
+    font-weight: 500;
+}
+
+.search-result-item .result-desc {
+    font-size: 0.85rem;
+    color: #6b7d74;
+    margin-left: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.summary-toggle {
+    background: none;
+    border: none;
+    color: #0b6b44;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+    flex-shrink: 0;
+    text-decoration: underline;
+}
+
+/* Panneau de résumé */
+.summary-panel {
+    display: none;
+    position: relative;
+    margin-top: 12px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    padding: 0;
+    max-width: 460px;
+    width: 100%;
+    border: 1px solid #e0e8e4;
+    animation: searchFadeSlide 0.25s ease;
+    z-index: 99;
+}
+
+.summary-panel[hidden] {
+    display: none !important;
+}
+
+@keyframes searchFadeSlide {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: #f4f9f6;
+    border-radius: 16px 16px 0 0;
+    border-bottom: 1px solid #e0e8e4;
+}
+
+.summary-title {
+    font-weight: 600;
+    color: #084d31;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.summary-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #6b7d74;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+    line-height: 1;
+    padding: 4px;
+}
+
+.summary-close:hover {
+    transform: scale(1.2);
+    color: #16261e;
+}
+
+.summary-body {
+    padding: 16px 18px 20px;
+}
+
+.summary-body p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #16261e;
+    margin-bottom: 12px;
+}
+
+.summary-link {
+    display: inline-block;
+    background: #0b6b44;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: background 0.15s ease;
+}
+
+.summary-link:hover {
+    background: #084d31;
+}
+
+@media (max-width: 600px) {
+    .search-widget-wrap { max-width: 100%; }
+    .search { max-width: 100%; padding: 6px 6px 6px 16px; }
+    .search button[type="submit"] { padding: 10px 16px; }
+}

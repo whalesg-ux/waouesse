@@ -400,3 +400,20 @@ jinja2.exceptions.TemplateNotFound: admin.html
 2026-07-23 19:00:15,738 - INFO - 10.205.51.189 - - [23/Jul/2026 19:00:15] "GET /contact.html HTTP/1.1" 200 -
 2026-07-23 19:00:15,821 - INFO - 10.205.51.189 - - [23/Jul/2026 19:00:15] "[36mGET /contact.css HTTP/1.1[0m" 304 -
 2026-07-23 19:00:15,936 - INFO - 10.205.51.189 - - [23/Jul/2026 19:00:15] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2026-08-03 16:00:10,588 - WARNING - Format du GITHUB_TOKEN suspect. Vérifiez votre token.
+2026-08-03 16:00:10,619 - INFO - ✅ Table search_index trouvée
+2026-08-03 16:00:10,625 - INFO - ✅ Contrainte d'unicité sur 'page' garantie
+2026-08-03 16:00:10,626 - INFO - ✅ Base de données prête (ouesse-search.db)
+2026-08-04 01:15:42,422 - WARNING - Format du GITHUB_TOKEN suspect. Vérifiez votre token.
+2026-08-04 01:15:42,450 - INFO - ✅ Table search_index trouvée
+2026-08-04 01:15:42,452 - INFO - ✅ Contrainte d'unicité sur 'page' garantie
+2026-08-04 01:15:42,455 - INFO - ✅ Base de données prête (ouesse-search.db)
+2026-08-04 01:19:44,906 - WARNING - Format du GITHUB_TOKEN suspect. Vérifiez votre token.
+2026-08-04 01:19:44,922 - INFO - ✅ Table search_index trouvée
+2026-08-04 01:19:44,924 - INFO - ✅ Contrainte d'unicité sur 'page' garantie
+2026-08-04 01:19:44,925 - INFO - ✅ Base de données prête (ouesse-search.db)
+2026-08-04 01:19:45,345 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.96.0.7:5000
+2026-08-04 01:19:45,345 - INFO - [33mPress CTRL+C to quit[0m

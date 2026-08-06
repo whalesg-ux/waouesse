@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     /* =========================================================
-       CONFIGURATION API
-       Le JS appelle maintenant le backend Python (Flask)
+        CONFIGURATION API
+        Le JS appelle maintenant le backend Python (Flask)
     ========================================================= */
-   const API_BASE_URL = 'https://whalesg.pythonanywhere.com';
+    const API_BASE_URL = 'https://whalesg.pythonanywhere.com';
     // Si vous êtes en développement local, vous pouvez décommenter :
     // const API_BASE_URL = 'http://api/search';
 
     /* =========================================================
-       ÉLÉMENTS DU DOM
+        ÉLÉMENTS DU DOM
     ========================================================= */
     const searchForm = document.getElementById('searchForm');
     const searchInput = document.getElementById('searchInput');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!searchForm || !searchInput || !searchResults) return;
 
     /* =========================================================
-       FONCTION : APPEL API VERS PYTHON
+        FONCTION : APPEL API VERS PYTHON
     ========================================================= */
     async function callPythonSearch(query) {
         try {
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /* =========================================================
-       FONCTION : EXTRAIT PERTINENT
+        FONCTION : EXTRAIT PERTINENT
     ========================================================= */
     function normaliser(txt) {
         return (txt || '')
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /* =========================================================
-       AFFICHAGE DES RÉSULTATS
+        AFFICHAGE DES RÉSULTATS
     ========================================================= */
     function afficherResultats(resultats, valeur) {
         if (!searchResults) return;
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /* =========================================================
-       ÉVÉNEMENTS
+        ÉVÉNEMENTS
     ========================================================= */
 
     let debounceTimer;
@@ -316,13 +316,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log('🔍 Moteur de recherche OUESSE initialisé');
     console.log(`📡 API endpoint: ${API_BASE_URL || window.location.origin}/api/search`);
-<<<<<<< HEAD
 
     /* =========================================================
-       RECHERCHE AUTOMATIQUE DEPUIS L'URL (?q=...)
-       Nécessaire pour que /search?q=... (utilisé par le
-       SearchAction schema.org / sitelinks Google) affiche
-       vraiment des résultats au chargement de la page.
+        RECHERCHE AUTOMATIQUE DEPUIS L'URL (?q=...)
+        Nécessaire pour que /search?q=... (utilisé par le
+        SearchAction schema.org / sitelinks Google) affiche
+        vraiment des résultats au chargement de la page.
     ========================================================= */
     const paramsUrl = new URLSearchParams(window.location.search);
     const requeteUrl = (paramsUrl.get('q') || '').trim();
@@ -331,6 +330,3 @@ document.addEventListener('DOMContentLoaded', function () {
         callPythonSearch(requeteUrl).then(resultats => afficherResultats(resultats, requeteUrl));
     }
 });
-=======
-});
->>>>>>> 38b1a6406b8db2798e045142f6e0e48738ed94d8

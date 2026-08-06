@@ -1,17 +1,91 @@
+# robots.txt pour waouesse.vercel.app
+# Généré le 06/08/2026
+
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /admin/
-Disallow: /api/
-Disallow: /generato.html
-Disallow: /ibidon.html
-Disallow: /*.db$
-Disallow: /*.log$
+
+# Sitemap
+Sitemap: https://waouesse.vercel.app/sitemap.xml
+
+# Délai d'exploration (respectueux)
+Crawl-delay: 1
+
+# ============================================
+# PAGES À INDEXER (Autorisées)
+# ============================================
+
+# Pages principales
+Allow: /$
+Allow: /index.html$
+Allow: /decouvert.html$
+Allow: /a-propos.html$
+Allow: /contact.html$
+
+# Pages personnalités
+Allow: /benoit_degla.html$
+Allow: /briceahossa.html$
+Allow: /akpo_firmin_ibidon.html$
+Allow: /luc.html$
+
+# Pages événements
+Allow: /nuit-excellence-2026.html$
+
+# ============================================
+# PAGES À EXCLURE (Interdites)
+# ============================================
+
+# Pages outils et backend
+Disallow: /admin.html$
+Disallow: /generate.html$
+Disallow: /generator.html$
+
+# Fichiers CSS et JS (pas besoin d'indexation)
+Disallow: /*.css$
+Disallow: /*.js$
 Disallow: /*.json$
 
-# Ressources utiles au rendu (CSS/JS/images) explicitement autorisées
-Allow: /*.css$
-Allow: /*.js$
-Allow: /images/
+# Fichiers de configuration
+Disallow: /config.htaccess$
+Disallow: /package.json$
+Disallow: /package-lock.json$
+Disallow: /CHANGELOG.md$
+Disallow: /LICENSE$
 
-Sitemap: https://waouesse.vercel.app/sitemap.xml
+# Scripts Python et logs
+Disallow: /app.py$
+Disallow: /generate_index.py$
+Disallow: /indexer.py$
+Disallow: /app.log$
+
+# Base de données
+Disallow: /ouse-searcher.db$
+
+# ============================================
+# CONFIGURATION GOOGLE (optionnel)
+# ============================================
+
+# Activer le rendu JavaScript pour Google
+Host: https://waouesse.vercel.app/
+
+# ============================================
+# CONFIGURATION BING (optionnel)
+# ============================================
+
+# Bingbot (comportement similaire)
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+Disallow: /admin.html$
+Disallow: /generate.html$
+Disallow: /generator.html$
+
+# ============================================
+# CONFIGURATION YANDEX (optionnel)
+# ============================================
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+Disallow: /admin.html$
+Disallow: /generate.html$
+Disallow: /generator.html$

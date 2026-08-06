@@ -1,4 +1,20 @@
-
+{
+  "functions": {
+    "api/search.py": {
+      "runtime": "python3.9",
+      "includeFiles": "ouesse-searcher.db"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/search",
+      "destination": "/api/search.py"
+    }
+  ],
+  "env": {
+    "DATABASE_URL": "ouesse-searcher.db"
+  }
+}
 {
   "cleanUrls": true
 }

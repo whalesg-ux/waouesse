@@ -2,7 +2,7 @@
   "functions": {
     "api/search.py": {
       "runtime": "python3.9",
-      "includeFiles": "ouesse-searcher.db"
+      "includeFiles": "ouesse-search.db"
     }
   },
   "rewrites": [
@@ -12,9 +12,7 @@
     }
   ],
   "env": {
-    "DATABASE_URL": "ouesse-searcher.db"
-  }
-}
-{
+    "DB_PATH": "ouesse-search.db"
+  },
   "cleanUrls": true
 }

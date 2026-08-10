@@ -1,18 +1,9 @@
 {
-  "functions": {
-    "api/search.py": {
-      "runtime": "python3.9",
-      "includeFiles": "ouesse-search.db"
-    }
-  },
   "rewrites": [
     {
-      "source": "/api/search",
-      "destination": "/api/search.py"
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
     }
   ],
-  "env": {
-    "DB_PATH": "ouesse-search.db"
-  },
   "cleanUrls": true
 }

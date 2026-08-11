@@ -385,24 +385,6 @@
 <script src="script.js" defer></script>
 <script src="search.js" defer></script>
 
-<!-- Script menu mobile -->
-<script>
-(function() {
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', function() {
-            const isExpanded = mainNav.classList.toggle('active');
-            menuToggle.setAttribute('aria-expanded', isExpanded);
-            const icon = menuToggle.querySelector('i');
-            if (icon) {
-                icon.className = isExpanded ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-            }
-        });
-    }
-})();
-</script>
-
 <!-- Script Lightbox -->
 <script>
 (function() {

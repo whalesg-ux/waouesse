@@ -1,91 +1,70 @@
 # robots.txt pour waouesse.vercel.app
-# Généré le 06/08/2026
+# Mis à jour le 19/08/2026
 
+Sitemap: https://waouesse.vercel.app/sitemap.xml
+
+# ============================================
+# RÈGLES GÉNÉRALES (tous les robots)
+# ============================================
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://waouesse.vercel.app/sitemap.xml
-
-# Délai d'exploration (respectueux)
-Crawl-delay: 1
-
-# ============================================
-# PAGES À INDEXER (Autorisées)
-# ============================================
-
-# Pages principales
-Allow: /$
-Allow: /index.html$
-Allow: /decouvert.html$
-Allow: /a-propos.html$
-Allow: /contact.html$
-
-# Pages personnalités
-Allow: /benoit_degla.html$
-Allow: /briceahossa.html$
-Allow: /akpo_firmin_ibidon.html$
-Allow: /luc.html$
-
-# Pages événements
-Allow: /nuit-excellence-2026.html$
-
-# ============================================
-# PAGES À EXCLURE (Interdites)
-# ============================================
-
-# Pages outils et backend
+# Pages/fichiers à exclure de l'indexation
 Disallow: /admin.html$
-Disallow: /generate.html$
-Disallow: /generator.html$
-
-# Fichiers CSS et JS (pas besoin d'indexation)
-Disallow: /*.css$
-Disallow: /*.js$
-Disallow: /*.json$
-
-# Fichiers de configuration
-Disallow: /config.htaccess$
+Disallow: /generato.html$
+Disallow: /generator.js$
+Disallow: /backend/
+Disallow: /.env
+Disallow: /.env.example
+Disallow: /requirements.txt$
 Disallow: /package.json$
 Disallow: /package-lock.json$
+Disallow: /config.htaccess$
 Disallow: /CHANGELOG.md$
+Disallow: /README.md$
 Disallow: /LICENSE$
-
-# Scripts Python et logs
 Disallow: /app.py$
-Disallow: /generate_index.py$
 Disallow: /indexer.py$
 Disallow: /app.log$
+Disallow: /ouesse-search.db$
 
-# Base de données
-Disallow: /ouse-searcher.db$
-
-# ============================================
-# CONFIGURATION GOOGLE (optionnel)
-# ============================================
-
-# Activer le rendu JavaScript pour Google
-Host: https://waouesse.vercel.app/
+# Ne PAS bloquer .css/.js/.json : Google doit pouvoir les charger pour
+# rendre correctement les pages (mobile-friendly, Core Web Vitals). Les
+# bloquer est une erreur SEO classique, gardée volontairement de côté ici.
 
 # ============================================
-# CONFIGURATION BING (optionnel)
+# ROBOTS IA / GEO (Generative Engine Optimization)
 # ============================================
+User-agent: GPTBot
+Allow: /
 
-# Bingbot (comportement similaire)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ============================================
+# BINGBOT
+# ============================================
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 2
 Disallow: /admin.html$
-Disallow: /generate.html$
-Disallow: /generator.html$
+Disallow: /generato.html$
+Disallow: /generator.js$
+Disallow: /backend/
 
 # ============================================
-# CONFIGURATION YANDEX (optionnel)
+# YANDEX
 # ============================================
-
 User-agent: Yandex
 Allow: /
 Crawl-delay: 2
 Disallow: /admin.html$
-Disallow: /generate.html$
-Disallow: /generator.html$
+Disallow: /generato.html$
+Disallow: /generator.js$
+Disallow: /backend/

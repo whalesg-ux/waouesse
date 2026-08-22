@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +8,12 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0b6b44">
     <meta property="og:title" content="Ouèssè Tourisme – WAOUESSE, venez à Ouèssè">
+    <meta property="og:description" content="Ouèssè (OUESSE) : marbre bleu, forêts sacrées, culture authentique. WAOUESSE – « Viens à Ouèssè ».">
     <meta property="og:image" content="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://waouesse.vercel.app/">
     <meta property="og:locale" content="fr_FR">
-   <meta name="google-site-verification" content="VOR9gQVoSw2v7YGsETFk_Vuqz0vDQyQ0HO1o94jUjKQ" />
+    <meta name="google-site-verification" content="VOR9gQVoSw2v7YGsETFk_Vuqz0vDQyQ0HO1o94jUjKQ" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +35,17 @@
 
     <link rel="icon" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" type="image/webp">
 
-    <!-- DONNÉES STRUCTURÉES (JSON-LD) -->
+    <!-- ============================================
+         DONNÉES STRUCTURÉES (JSON-LD)
+         Faits vérifiés le 22/08/2026 (voir sources en commentaire
+         sous chaque bloc). À revérifier périodiquement : les faits
+         municipaux (maire, adjoints) changent après chaque élection
+         communale.
+    ============================================ -->
+
+    <!-- Organisation : sameAs pointe vers de vrais profils externes,
+         jamais vers le site lui-même (une auto-référence n'apporte
+         aucun signal). -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -51,25 +60,17 @@
         "contactType": "customer service",
         "availableLanguage": ["French"]
       },
-      "sameAs": ["https://waouesse.vercel.app/"]
+      "sameAs": [
+        "https://fr.wikipedia.org/wiki/Ou%C3%A8ss%C3%A8",
+        "https://www.wikidata.org/wiki/Q1133661"
+      ]
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Ouèssè Tourisme",
-      "url": "https://waouesse.vercel.app/",
-      "description": "Découvrez Ouèssè, ses trésors naturels et culturels, et l'invitation WAOUESSE (Viens à Ouèssè).",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://waouesse.vercel.app/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
+    <!-- FAQPage : chaque réponse doit rester identique au texte affiché
+         sur la page. Le fait "Maire" a été corrigé (élections
+         communales du 11/01/2026, nouveau maire installé le
+         14/02/2026 — source : Matin Libre, Baruka Media). -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -88,7 +89,7 @@
           "name": "Où se trouve la commune de Ouèssè ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ouèssè est située au nord du département des Collines, à 327 km de Cotonou, et partage une frontière avec le Nigeria à l'est."
+            "text": "Ouèssè se situe au nord-est du département des Collines, au centre du Bénin, à environ 327 km de Cotonou. Elle est limitée au nord par la commune de Tchaourou, au sud par Savè et Glazoué, à l'ouest par Bantè et Bassila, et à l'est par le Nigeria."
           }
         },
         {
@@ -96,41 +97,54 @@
           "name": "Quels sont les principaux atouts touristiques de Ouèssè ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La commune abrite la deuxième réserve mondiale de marbre bleu (à Idadjo), des forêts classées et sacrées, sept rivières, des collines, des galeries souterraines, et un riche patrimoine royal Shabè et Mahi."
+            "text": "La commune abrite la deuxième réserve mondiale de marbre bleu (à Idadjo, derrière l'Italie), des forêts classées et sacrées, sept rivières (Ouémé, Okpara, Gbeffa, Kilibo, Liga, Nonomi, Toumi), des galeries souterraines à Yaoui, les collines de Kèmon, et un riche patrimoine royal Shabè et Mahi."
           }
         },
         {
           "@type": "Question",
-          "name": "Qui est le Maire de Ouèssè ?",
+          "name": "Qui est le maire de Ouèssè ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Le Maire de Ouèssè est Firmin Akpo IBIDON, dont le mandat court jusqu'en 2026."
+            "text": "Depuis le 14 février 2026, le maire de Ouèssè est Romain Biaou Ayedon (Bloc Républicain), élu à la suite des élections communales du 11 janvier 2026, pour un mandat de sept ans. Il succède à Firmin Akpo Ibidon. Ses adjoints sont Marcel Awo (1er adjoint) et Louis Kocou Tchenagni (2e adjoint)."
           }
         },
         {
           "@type": "Question",
-          "name": "Quand a eu lieu la visite de Luc S. Atrokpo à Ouèssè ?",
+          "name": "Qu'est-ce que Ouèssè Wogoudo ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Luc S. Atrokpo, Maire de Cotonou, a effectué une visite officielle au palais royal de Ouèssè le 16 août 2024, en compagnie du Maire Firmin Akpo IBIDON."
+            "text": "Ouèssè Wogoudo est le nom traditionnel donné à la terre royale de Ouèssè. Selon la tradition, Sa Majesté Djahlin Djanta, dit Faka Foukou, en fut le premier souverain et régna de 1690 à 1720 ; une statue érigée par l'association culturelle Mahi Ouindo lui rend hommage."
           }
         }
       ]
     }
     </script>
 
+    <!-- TouristDestination : alternateName ajouté pour "Ouèssè Wogoudo"
+         (nom traditionnel/historique de la terre royale), plus utile
+         pour les recherches locales que le seul nom administratif. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "TouristDestination",
       "name": "Ouèssè",
-      "alternateName": "OUESSE",
-      "description": "Commune touristique du Bénin. WAOUESSE, venez à Ouèssè découvrir ses trésors cachés.",
+      "alternateName": ["OUESSE", "Ouèssè Wogoudo"],
+      "description": "Commune touristique du centre du Bénin, département des Collines. Connue pour sa réserve de marbre bleu, ses forêts sacrées et son patrimoine royal Shabè et Mahi. WAOUESSE, venez à Ouèssè découvrir ses trésors cachés.",
       "additionalProperty": [
         {
           "@type": "PropertyValue",
           "name": "Slogan",
           "value": "WAOUESSE – Wa (Viens) + Ouèssè"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Superficie",
+          "value": "environ 3 200 km² (2,5 % du territoire national)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Population",
+          "value": "142 017 habitants (recensement RGPH-4, 2013)"
         }
       ],
       "address": {
@@ -138,10 +152,23 @@
         "addressLocality": "Ouèssè",
         "addressRegion": "Collines",
         "addressCountry": "Bénin"
-      }
+      },
+      "sameAs": [
+        "https://fr.wikipedia.org/wiki/Ou%C3%A8ss%C3%A8",
+        "https://www.wikidata.org/wiki/Q1133661"
+      ]
     }
     </script>
 
+    <!-- SUPPRIMÉ : le bloc "WebSite" + "SearchAction" qui ciblait
+         https://waouesse.vercel.app/search?q={search_term_string}.
+         Cette page /search n'existe pas sur le site (la recherche est
+         gérée en JS via search.js, pas par une route serveur) : un
+         JSON-LD qui pointe vers une URL qui ne renvoie rien de valide
+         est pire qu'utile — il peut faire échouer la validation de
+         données structurées dans Search Console et donner un lien
+         mort au sitelinks searchbox. À réintroduire seulement si une
+         vraie page /search?q=... est créée un jour. -->
 </head>
 <body>
 

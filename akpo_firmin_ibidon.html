@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- TITRE PRINCIPAL -->
-    <title>Dr Ibidon Firmin Akpo : Maire de Ouèssè, Docteur en agronomie et Officier de l'Ordre national</title>
+    <!-- TITRE PRINCIPAL (corrigé : 50-60 caractères) -->
+    <title>Dr Ibidon Firmin Akpo, Maire de Ouèssè – Parcours et distinctions</title>
 
-    <!-- META DESCRIPTION -->
-    <meta name="description" content="Découvrez le parcours exceptionnel de Dr Ibidon Firmin Akpo, Maire de Ouèssè réélu quatre fois, Docteur en agronomie et Officier de l'Ordre national du Bénin. Une histoire de persévérance, du village de Gbèmè aux plus hautes distinctions." />
+    <!-- META DESCRIPTION (corrigée : 140-160 caractères) -->
+    <meta name="description" content="Dr Ibidon Firmin Akpo, Maire de Ouèssè réélu 4 fois, Docteur en économie rurale et Officier de l'Ordre national du Bénin. De Gbèmè aux plus hautes distinctions." />
 
     <!-- META KEYWORDS -->
     <meta name="keywords" content="Dr Ibidon Firmin Akpo, Maire de Ouessè, Firmin Akpo IBIDON, Docteur en agronomie, Officier de l'Ordre national du Bénin, Gbèmè, Ouessè Bénin, développement rural, réussite béninoise" />
 
+    <!-- META ROBOTS (ajoutée) -->
+    <meta name="robots" content="index, follow" />
+
     <meta name="theme-color" content="#0b6b44" />
 
     <!-- OPEN GRAPH -->
-    <meta property="og:title" content="Dr Ibidon Firmin Akpo : Maire de Ouèssè, Docteur en agronomie et Officier de l'Ordre national" />
+    <meta property="og:title" content="Dr Ibidon Firmin Akpo, Maire de Ouèssè – Parcours et distinctions" />
     <meta property="og:description" content="De Gbèmè au Doctorat : l'histoire de Dr Ibidon Firmin Akpo, Maire de Ouèssè réélu quatre fois et Officier de l'Ordre national du Bénin." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://waouesse.vercel.app/akpo_firmin_ibidon.html" />
@@ -47,12 +50,12 @@
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
 
-    <!-- DONNÉES STRUCTURÉES JSON-LD (Article + FAQ) -->
+    <!-- DONNÉES STRUCTURÉES JSON-LD (Article + Person + FAQ) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "NewsArticle",
-      "headline": "Dr Ibidon Firmin Akpo : Maire de Ouèssè, Docteur en agronomie et Officier de l'Ordre national",
+      "headline": "Dr Ibidon Firmin Akpo, Maire de Ouèssè – Parcours et distinctions",
       "description": "De Gbèmè au Doctorat : l'histoire de Dr Ibidon Firmin Akpo, Maire de Ouèssè réélu quatre fois et Officier de l'Ordre national du Bénin.",
       "image": "https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_1200/v1784363100/mairoi_qvgevk.webp",
       "datePublished": "2025-01-01",
@@ -71,8 +74,37 @@
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://waouesse.vercel.app/akpo_firmin_ibidon"
+        "@id": "https://waouesse.vercel.app/akpo_firmin_ibidon.html"
       }
+    }
+    </script>
+
+    <!-- Données structurées : entité Person (ajoutée pour le GEO) -->
+    <!--
+      NOTE : le champ "sameAs" ci-dessous est laissé vide/à compléter.
+      Ajoutez-y les URLs des profils officiels réellement existants
+      (page officielle de la mairie de Ouèssè, réseaux sociaux officiels,
+      article Wikipédia s'il existe, etc.). Ne jamais inventer une URL :
+      un lien mort ou factice dans le JSON-LD est pire que son absence.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ibidon Firmin Akpo",
+      "honorificPrefix": "Dr",
+      "jobTitle": "Maire de Ouèssè",
+      "birthPlace": {
+        "@type": "Place",
+        "name": "Ouèssè, Bénin"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Université d'Abomey-Calavi"
+      },
+      "award": "Officier de l'Ordre national du Bénin",
+      "image": "https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_1200/v1784363100/mairoi_qvgevk.webp",
+      "url": "https://waouesse.vercel.app/akpo_firmin_ibidon.html"
     }
     </script>
 
@@ -372,7 +404,7 @@
         <ul class="footer-nav">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="decouvert.html">Découvrir</a></li>
-            <li><a href="akpo_firmin_ibidon">Dr Ibidon Firmin Akpo</a></li>
+            <li><a href="akpo_firmin_ibidon.html">Dr Ibidon Firmin Akpo</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="#faq">FAQ</a></li>
         </ul>

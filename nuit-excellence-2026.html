@@ -38,6 +38,7 @@
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
 
+    <!-- JSON-LD : Article -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,6 +64,89 @@
         "@type": "WebPage",
         "@id": "https://waouesse.vercel.app/nuit-excellence-2026"
       }
+    }
+    </script>
+
+    <!-- JSON-LD : Event -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "La Nuit de l'Excellence & de l'Élégance 2026",
+      "startDate": "2026-08-01",
+      "location": {
+        "@type": "Place",
+        "name": "Maison des Jeunes de Ouèssè Wogoudo",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ouèssè",
+          "addressCountry": "BJ"
+        }
+      },
+      "image": "https://res.cloudinary.com/nyke7lhc/image/upload/v1785972758/troper_czpcot.webp",
+      "description": "Gala & Awards célébrant les talents et bâtisseurs de la commune de Ouèssè.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "LTNDR EVENT'S"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD : FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quand a eu lieu la Nuit de l'Excellence 2026 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le 1er août 2026, à la Maison des Jeunes de Ouèssè Wogoudo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qui étaient les invités d'honneur ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sa Majesté TCHINI TONOU, Roi de Ouèssè, la Reine, le Maire de Ouèssè, et de nombreuses autorités communales et départementales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels sont les lauréats principaux ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FARY SHOOT (Meilleur Photographe), NESDAV (Meilleur Graphiste), MATINOU OLABODE (Meilleur Footballeur), 8 Bâtisseurs et 5 Jeunes Leaders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qui était la Guest Star ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La talentueuse artiste OLUWA KEMY qui a électrisé le public avec sa prestation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment participer à la prochaine édition ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Suivez LTNDR EVENT'S sur les réseaux sociaux et restez connectés pour les annonces officielles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Où puis-je en apprendre plus sur Ouèssè ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pour découvrir l'histoire, la culture et les personnalités de Ouèssè, consultez les pages dédiées sur ce site."
+          }
+        }
+      ]
     }
     </script>
 
@@ -130,34 +214,32 @@
         </div>
     </div>
 
-  <!-- ===== GALERIE 3D STACKED CARDS – FLYERS & ANNONCES ===== -->
-<section class="gallery-3d-section">
-    <h2>Flyers & annonces</h2>
-    <p>Découvrez les visuels de l'événement, des annonces aux moments clés. Cliquez sur une carte pour l'agrandir.</p>
+    <!-- ===== GALERIE 3D STACKED CARDS – FLYERS & ANNONCES ===== -->
+    <section class="gallery-3d-section">
+        <h2>Flyers & annonces</h2>
+        <p>Découvrez les visuels de l'événement, des annonces aux moments clés. Cliquez sur une carte pour l'agrandir.</p>
 
-    <div class="card-stack-3d" id="flyerStack">
-        <div class="stack-container" id="flyerStackContainer">
-            <!-- Les cartes sont générées par JS -->
-        </div>
-        <div class="stack-controls">
-            <button id="flyerPrevBtn" class="stack-prev" aria-label="Précédent">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button id="flyerNextBtn" class="stack-next" aria-label="Suivant">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-        </div>
-    </div>
-</section>
-
-<!-- Lightbox pour l'agrandissement -->
-<div class="lightbox-overlay" id="flyerLightbox" aria-modal="true" role="dialog">
-    <button class="lightbox-close" id="flyerLightboxClose" aria-label="Fermer">&times;</button>
-    <img class="lightbox-content" id="flyerLightboxImg" src="" alt="Agrandissement du flyer">
-    <div class="lightbox-caption" id="flyerLightboxCaption"></div>
-</div>
+        <div class="card-stack-3d" id="flyerStack">
+            <div class="stack-container" id="flyerStackContainer">
+                <!-- Les cartes sont générées par JS -->
+            </div>
+            <div class="stack-controls">
+                <button id="flyerPrevBtn" class="stack-prev" aria-label="Précédent">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="flyerNextBtn" class="stack-next" aria-label="Suivant">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
         </div>
     </section>
+
+    <!-- Lightbox pour l'agrandissement des flyers -->
+    <div class="lightbox-overlay" id="flyerLightbox" aria-modal="true" role="dialog">
+        <button class="lightbox-close" id="flyerLightboxClose" aria-label="Fermer">&times;</button>
+        <img class="lightbox-content" id="flyerLightboxImg" src="" alt="Agrandissement du flyer">
+        <div class="lightbox-caption" id="flyerLightboxCaption"></div>
+    </div>
 
     <!-- ===== CHAPITRE 1 ===== -->
     <section>
@@ -165,50 +247,6 @@
         <p>Tout a commencé il y a plusieurs mois, dans l'esprit d'une équipe passionnée animée par une vision : <strong>célébrer l'excellence et mettre en lumière les bâtisseurs de la commune de Ouèssè</strong>. LTNDR EVENT'S, avec à sa tête des jeunes déterminés, s'est lancé un défi ambitieux : organiser la première édition d'une soirée de gala et awards digne des plus grands événements.</p>
         <p>L'idée a germé lors d'une réunion informelle entre amis, autour d'un repas, alors qu'ils échangeaient sur le manque de reconnaissance des talents locaux. "Pourquoi ne pas créer un événement qui mettrait à l'honneur ceux qui font bouger notre commune ?" s'est demandé l'un d'eux. Cette simple question a été le point de départ d'une aventure extraordinaire.</p>
         <p>Mais le chemin vers la réussite n'a pas été un long fleuve tranquille...</p>
-
-        <h3>LES DIFFICULTÉS RENCONTRÉES 💪</h3>
-        <h4>1. La mobilisation des moyens financiers 💰</h4>
-        <p>Organiser un événement de cette envergure nécessite des ressources considérables. L'équipe a dû faire face à :</p>
-        <ul>
-            <li>La recherche de sponsors et de partenaires</li>
-            <li>Le financement de la salle (Maison des Jeunes de Ouèssè Wogoudo)</li>
-            <li>La prise en charge des artistes invités</li>
-            <li>La fabrication des trophées et distinctions</li>
-            <li>La logistique complète (son, lumière, décoration)</li>
-        </ul>
-        <p><em>"Nous avons frappé à plusieurs portes avant que certains partenaires ne croient en notre projet."</em></p>
-        <p>Les premiers mois ont été marqués par de nombreux refus. Les entreprises locales étaient sceptiques quant à la faisabilité d'un tel événement dans une commune rurale. Certaines ont même ri au nez des organisateurs, leur disant que "Ouèssè n'est pas prête pour ce genre de soirée". Mais ces échecs n'ont fait que renforcer la détermination de l'équipe.</p>
-
-        <h4>2. La mobilisation des personnalités 👑</h4>
-        <p>Convaincre des autorités de prestige de participer à une première édition n'a pas été une tâche facile :</p>
-        <ul>
-            <li>Sollicitation de Sa Majesté TCHINI TONOU, Roi de la Commune de Ouèssè</li>
-            <li>Invitation du Maire de la commune</li>
-            <li>Mobilisation des autorités administratives, politiques, religieuses et traditionnelles</li>
-            <li>Organisation des déplacements des invités de marque</li>
-        </ul>
-        <p><em>"Nous avons multiplié les démarches, les audiences et les rencontres pour que Leurs Majestés acceptent d'honorer cet événement de leur présence."</em></p>
-        <p>Le protocole royal est strict et exigeant. Il a fallu des semaines de négociations, plusieurs audiences avec le conseil royal, et la présentation d'un dossier détaillé pour convaincre le Roi de l'importance de cet événement. Sa Majesté a finalement accepté, voyant dans cette initiative une opportunité de valoriser la culture et l'excellence de sa commune.</p>
-
-        <h4>3. La gestion du temps et des ressources ⏰</h4>
-        <p>Plusieurs mois de travail acharné :</p>
-        <ul>
-            <li>Des semaines de préparation intense</li>
-            <li>Des nuits blanches pour finaliser les détails</li>
-            <li>La coordination des différents acteurs</li>
-            <li>La gestion des imprévus de dernière minute</li>
-        </ul>
-        <p>L'équipe s'est réunie presque tous les soirs après le travail, sacrifiant leur sommeil et leur temps personnel. Les week-ends étaient consacrés aux réunions de coordination, aux visites de la salle, et aux négociations avec les fournisseurs. Parfois, ils travaillaient jusqu'à 3 heures du matin pour finaliser les programmes, les invitations et les communiqués de presse.</p>
-
-        <h4>4. La communication et la promotion 📢</h4>
-        <p>Faire connaître l'événement à toute la population :</p>
-        <ul>
-            <li>Campagnes sur les réseaux sociaux</li>
-            <li>Dévoilement progressif des nominés</li>
-            <li>Création de suspense autour des lauréats</li>
-            <li>Mobilisation des médias locaux</li>
-        </ul>
-        <p>Le défi était de taille : comment faire parler d'un événement dans une commune où l'accès à Internet est limité ? L'équipe a utilisé tous les canaux possibles : affiches dans les lieux publics, annonces dans les églises et les mosquées, passages à la radio locale, et bouche-à-oreille. Chaque membre de l'équipe est devenu un ambassadeur, parlant de l'événement à chaque occasion.</p>
 
         <h3>LA PERSÉVÉRANCE ET L'ACHARNEMENT AU TRAVAIL 🔥</h3>
         <p>Malgré ces obstacles, l'équipe de LTNDR EVENT'S n'a jamais baissé les bras. Voici ce qui les a motivés :</p>
@@ -237,181 +275,143 @@
         <p>Dès que l'annonce a été faite, les habitants ont commencé à s'intéresser à l'événement. Certains ont proposé leur aide bénévolement, d'autres ont fait des dons. Les commerçants locaux ont offert des produits pour le buffet. Cette mobilisation a renforcé la détermination de l'équipe.</p>
     </section>
 
-
-
     <!-- ===== CHAPITRE 2 ===== -->
     <section>
         <h2> LE JOUR J - LA NUIT DE L'EXCELLENCE ✨</h2>
         <h3>Une soirée inoubliable 🎉</h3>
         <p>Le 1er août 2026 restera gravé dans les mémoires. À la Maison des Jeunes de Ouèssè Wogoudo, tout était parfaitement orchestré pour accueillir les invités. Dès 14h00, l'équipe était sur place pour les derniers préparatifs. La salle avait été entièrement décorée aux couleurs de l'événement : doré, blanc et vert, les couleurs de l'excellence et de l'élégance.</p>
-
-        <h3>L'ambiance prestigieuse 💃</h3>
-        <p>Dès 20h00, les invités ont commencé à affluer, arborant leurs plus belles tenues locales chic et responsables. L'élégance était au rendez-vous :</p>
-        <ul>
-            <li>Dames en tenues traditionnelles raffinées, avec des pagnes aux motifs sophistiqués</li>
-            <li>Messieurs en boubous et complets locaux, certains avec des chapeaux traditionnels</li>
-            <li>Une diversité de couleurs et de tissus authentiques, du bazin au kente en passant par le wax</li>
-        </ul>
-        <p>Le tapis rouge avait été installé à l'entrée, et un photographe professionnel immortalisait chaque arrivée. L'ambiance était électrique, mêlant excitation et fierté. Les invités prenaient des selfies, échangeaient des sourires et se saluaient avec chaleur.</p>
-
-        <h3>La présence royale 👑</h3>
-        <p>Le moment le plus solennel de la soirée a été l'arrivée de Sa Majesté TCHINI TONOU, Roi de la Commune de Ouèssè, accompagné de Son Épouse, la Reine. Leur présence a rehaussé l'éclat de cette cérémonie.</p>
-        <p>L'arrivée du couple royal a été annoncée par un roulement de tambours traditionnels. Tous les invités se sont levés, marquant leur respect. Le Roi, vêtu de son costume royal aux couleurs de la commune, a salué l'assistance avec dignité. La Reine, élégante dans sa tenue traditionnelle, a accompagné son époux avec grâce.</p>
-        <p><em>"C'est avec un immense honneur que nous avons accueilli Leurs Majestés. Par leur présence, ils ont montré leur attachement aux initiatives qui valorisent le mérite et l'excellence."</em></p>
-        <p>Le Roi a pris la parole pour bénir l'événement et encourager les organisateurs. Il a souligné l'importance de reconnaître les talents locaux et a promis le soutien de la chefferie traditionnelle pour les éditions futures.</p>
-
-        <h3>Les autorités présentes 🏛️</h3>
-        <p>La soirée a également été honorée par la présence de :</p>
-        <ul>
-            <li>Monsieur le Maire de la Commune de Ouèssè, qui a salué l'initiative et promis le soutien de la mairie</li>
-            <li>Le Secrétaire Exécutif de la Mairie, qui a souligné l'importance de tels événements pour la cohésion sociale</li>
-            <li>Le Conseiller communal Antoine TAMEGNON, qui a félicité les organisateurs pour leur courage</li>
-            <li>De nombreuses autorités administratives, politiques et religieuses, représentant toutes les sensibilités de la commune</li>
-        </ul>
-        <p>La diversité des personnalités présentes témoignait de l'importance de l'événement et de la capacité des organisateurs à rassembler au-delà des clivages.</p>
     </section>
 
-   
-    <!-- ===== CHAPITRE 3 ===== -->
+    <!-- ===== CHAPITRE 3 : DISTINCTIONS AVEC IMAGES DES NOMINÉS ===== -->
     <section>
-       <!-- ===== CHAPITRE 3 : DISTINCTIONS AVEC IMAGES DES NOMINÉS ===== -->
-<section>
-    <h2>LES DISTINCTIONS - CÉLÉBRATION DE L'EXCELLENCE 🏆</h2>
-    <h3>Les catégories de récompenses</h3>
+        <h2>LES DISTINCTIONS - CÉLÉBRATION DE L'EXCELLENCE 🏆</h2>
+        <h3>Les catégories de récompenses</h3>
 
-    <h4>1. Le Grand Prix des Bâtisseurs de la Commune 🏛️</h4>
-    <p><strong>8 grandes personnalités</strong> ont été récompensées pour leur contribution au développement de Ouèssè :</p>
-    <p>Ces bâtisseurs, dont les noms ont été tenus secrets jusqu'à la soirée, représentent l'engagement et le dévouement pour la commune. Le suspense a été maintenu jusqu'au bout, avec des enveloppes scellées remises aux présentateurs.</p>
-    <p>Parmi les lauréats figuraient :</p>
-    <ul>
-        <li>Un enseignant qui a consacré 40 ans de sa vie à l'éducation des enfants de Ouèssè</li>
-        <li>Une femme d'affaires qui a créé des emplois pour les jeunes de la commune</li>
-        <li>Un agriculteur innovant qui a introduit des techniques modernes</li>
-        <li>Un artisan qui perpétue les traditions locales</li>
-        <li>Un responsable associatif qui œuvre pour le développement communautaire</li>
-    </ul>
-    <p><em>"Le moment est venu de révéler celles et ceux qui, par leur engagement et leurs actions, ont contribué au développement de notre commune."</em></p>
-    <p>Chaque lauréat a reçu un trophée en bois local sculpté par un artisan de la commune, symbolisant l'enracinement et la fierté locale.</p>
+        <h4>1. Le Grand Prix des Bâtisseurs de la Commune 🏛️</h4>
+        <p><strong>8 grandes personnalités</strong> ont été récompensées pour leur contribution au développement de Ouèssè :</p>
+        <p>Ces bâtisseurs, dont les noms ont été tenus secrets jusqu'à la soirée, représentent l'engagement et le dévouement pour la commune. Le suspense a été maintenu jusqu'au bout, avec des enveloppes scellées remises aux présentateurs.</p>
+        <p>Parmi les lauréats figuraient :</p>
+        <ul>
+            <li>Un enseignant qui a consacré 40 ans de sa vie à l'éducation des enfants de Ouèssè</li>
+            <li>Une femme d'affaires qui a créé des emplois pour les jeunes de la commune</li>
+            <li>Un agriculteur innovant qui a introduit des techniques modernes</li>
+            <li>Un artisan qui perpétue les traditions locales</li>
+            <li>Un responsable associatif qui œuvre pour le développement communautaire</li>
+        </ul>
+        <p><em>"Le moment est venu de révéler celles et ceux qui, par leur engagement et leurs actions, ont contribué au développement de notre commune."</em></p>
+        <p>Chaque lauréat a reçu un trophée en bois local sculpté par un artisan de la commune, symbolisant l'enracinement et la fierté locale.</p>
 
-    <h4>2. Le Grand Prix des Jeunes Leaders d'Impact ⭐</h4>
-    <p><strong>5 jeunes leaders</strong> ont été distingués pour leur vision, leur engagement et leurs actions concrètes :</p>
-    <p>Ces jeunes talents, âgés de moins de 35 ans, incarnent l'avenir de Ouèssè et son dynamisme. Ils ont été sélectionnés parmi une cinquantaine de candidats, après un processus rigoureux d'évaluation.</p>
-    <p>Les lauréats comprenaient :</p>
-    <ul>
-        <li>Un jeune entrepreneur dans le secteur numérique</li>
-        <li>Une étudiante engagée dans la cause environnementale</li>
-        <li>Un artiste qui utilise son art pour sensibiliser la jeunesse</li>
-        <li>Un agriculteur qui a modernisé les pratiques agricoles</li>
-        <li>Une responsable associative qui lutte contre le décrochage scolaire</li>
-    </ul>
-    <p>Leurs histoires ont inspiré toute l'assistance, montrant que la jeunesse de Ouèssè est pleine de ressources et d'ambitions.</p>
+        <h4>2. Le Grand Prix des Jeunes Leaders d'Impact ⭐</h4>
+        <p><strong>5 jeunes leaders</strong> ont été distingués pour leur vision, leur engagement et leurs actions concrètes :</p>
+        <p>Ces jeunes talents, âgés de moins de 35 ans, incarnent l'avenir de Ouèssè et son dynamisme. Ils ont été sélectionnés parmi une cinquantaine de candidats, après un processus rigoureux d'évaluation.</p>
+        <p>Les lauréats comprenaient :</p>
+        <ul>
+            <li>Un jeune entrepreneur dans le secteur numérique</li>
+            <li>Une étudiante engagée dans la cause environnementale</li>
+            <li>Un artiste qui utilise son art pour sensibiliser la jeunesse</li>
+            <li>Un agriculteur qui a modernisé les pratiques agricoles</li>
+            <li>Une responsable associative qui lutte contre le décrochage scolaire</li>
+        </ul>
+        <p>Leurs histoires ont inspiré toute l'assistance, montrant que la jeunesse de Ouèssè est pleine de ressources et d'ambitions.</p>
 
-    <!-- GALERIE DES NOMINÉS ARTISTES TRADI-MODERNES -->
-    <h4>3. Meilleur Artiste Tradi-Moderne 🎤</h4>
-    <p><strong>Les nominés étaient :</strong></p>
-    <ul>
-        <li>Alpha Oméga</li>
-        <li>Sajos</li>
-        <li>Wekouin Mandekpo</li>
-        <li>3S Wèkèzo</li>
-    </ul>
-    <p>Ces artistes ont marqué leur public par leur créativité et leur contribution à la valorisation du patrimoine culturel. Chacun a interprété un extrait de son répertoire, faisant vibrer la salle.</p>
-    <div class="card-deck-gallery" id="artistesGallery"></div>
+        <!-- GALERIE DES NOMINÉS ARTISTES TRADI-MODERNES -->
+        <h4>3. Meilleur Artiste Tradi-Moderne 🎤</h4>
+        <p><strong>Les nominés étaient :</strong></p>
+        <ul>
+            <li>Alpha Oméga</li>
+            <li>Sajos</li>
+            <li>Wekouin Mandekpo</li>
+            <li>3S Wèkèzo</li>
+        </ul>
+        <p>Ces artistes ont marqué leur public par leur créativité et leur contribution à la valorisation du patrimoine culturel. Chacun a interprété un extrait de son répertoire, faisant vibrer la salle.</p>
+        <div class="card-deck-gallery" id="artistesGallery"></div>
 
-    <!-- GALERIE DES NOMINÉS HUMORISTES -->
-    <h4>4. Meilleur Humoriste 😂</h4>
-    <p><strong>Les nominés étaient :</strong></p>
-    <ul>
-        <li>Akouna Matata</li>
-        <li>Osi Comédien</li>
-        <li>James Descartes</li>
-        <li>Adama Prince Two Love</li>
-        <li>Mariwol Alodoukpo</li>
-    </ul>
-    <p>Ces talents exceptionnels, par leur humour unique, savent faire rire tout en transmettant des messages forts. Leurs performances ont alterné entre rires et réflexions.</p>
-    <div class="card-deck-gallery" id="humoristesGallery"></div>
+        <!-- GALERIE DES NOMINÉS HUMORISTES -->
+        <h4>4. Meilleur Humoriste 😂</h4>
+        <p><strong>Les nominés étaient :</strong></p>
+        <ul>
+            <li>Akouna Matata</li>
+            <li>Osi Comédien</li>
+            <li>James Descartes</li>
+            <li>Adama Prince Two Love</li>
+            <li>Mariwol Alodoukpo</li>
+        </ul>
+        <p>Ces talents exceptionnels, par leur humour unique, savent faire rire tout en transmettant des messages forts. Leurs performances ont alterné entre rires et réflexions.</p>
+        <div class="card-deck-gallery" id="humoristesGallery"></div>
 
-    <!-- GALERIE DES NOMINÉS GRAPHISTES -->
-    <h4>5. Meilleur Graphiste 🎨</h4>
-    <p><strong>Les nominés étaient :</strong></p>
-    <ul>
-        <li>Marc Dossou</li>
-        <li>Aimé Charlemangne KETENGBE</li>
-        <li>Luc Fadonougbo</li>
-        <li>Nesdav (David Tchokponhoue)</li>
-        <li>AKPO Abolias</li>
-    </ul>
-    <p>Leurs créations ont été exposées tout au long de la soirée, montrant la richesse et la diversité du design graphique à Ouèssè.</p>
-    <div class="card-deck-gallery" id="graphistesGallery"></div>
+        <!-- GALERIE DES NOMINÉS GRAPHISTES -->
+        <h4>5. Meilleur Graphiste 🎨</h4>
+        <p><strong>Les nominés étaient :</strong></p>
+        <ul>
+            <li>Marc Dossou</li>
+            <li>Aimé Charlemangne KETENGBE</li>
+            <li>Luc Fadonougbo</li>
+            <li>Nesdav (David Tchokponhoue)</li>
+            <li>AKPO Abolias</li>
+        </ul>
+        <p>Leurs créations ont été exposées tout au long de la soirée, montrant la richesse et la diversité du design graphique à Ouèssè.</p>
+        <div class="card-deck-gallery" id="graphistesGallery"></div>
 
-    <!-- GALERIE DES NOMINÉS PHOTOGRAPHES -->
-    <h4>6. Meilleur Photographe 📸</h4>
-    <p><strong>Les nominés étaient :</strong></p>
-    <ul>
-        <li>Obryane Shoot It</li>
-        <li>Fary Shoot</li>
-        <li>Noé Mahougnon Tchokponhoue</li>
-        <li>Gbadebo Prod</li>
-        <li>Had Shoot</li>
-        <li>Nago Shoot</li>
-        <li>Terminator Shoot</li>
-    </ul>
-    <div class="card-deck-gallery" id="photographesGallery"></div>
+        <!-- GALERIE DES NOMINÉS PHOTOGRAPHES -->
+        <h4>6. Meilleur Photographe 📸</h4>
+        <p><strong>Les nominés étaient :</strong></p>
+        <ul>
+            <li>Obryane Shoot It</li>
+            <li>Fary Shoot</li>
+            <li>Noé Mahougnon Tchokponhoue</li>
+            <li>Gbadebo Prod</li>
+            <li>Had Shoot</li>
+            <li>Nago Shoot</li>
+            <li>Terminator Shoot</li>
+        </ul>
+        <div class="card-deck-gallery" id="photographesGallery"></div>
 
-    <!-- GALERIE DES NOMINÉS ÉVÉNEMENTS -->
-    <h4>7. Meilleur Événement de l'année 🎪</h4>
-    <p><strong>En compétition :</strong></p>
-    <ul>
-        <li>Azizaxwé de l'UDACO, le festival culturel incontournable</li>
-        <li>Festival de Contes de ECAK, le rendez-vous des mots</li>
-        <li>Podium Vacances de SoCAO, le divertissement estival</li>
-        <li>Pic Nic Tous en Blanc de Winner Events, l'élégance en plein air</li>
-        <li>Ouessèxwé de UDESCO, la célébration locale</li>
-        <li>5 ans de l'ECAO,L'institution artitisque</li>
-    </ul>
-    <div class="card-deck-gallery" id="evenementsGallery"></div>
+        <!-- GALERIE DES NOMINÉS ÉVÉNEMENTS -->
+        <h4>7. Meilleur Événement de l'année 🎪</h4>
+        <p><strong>En compétition :</strong></p>
+        <ul>
+            <li>Azizaxwé de l'UDACO, le festival culturel incontournable</li>
+            <li>Festival de Contes de ECAK, le rendez-vous des mots</li>
+            <li>Podium Vacances de SoCAO, le divertissement estival</li>
+            <li>Pic Nic Tous en Blanc de Winner Events, l'élégance en plein air</li>
+            <li>Ouessèxwé de UDESCO, la célébration locale</li>
+            <li>5 ans de l'ECAO, L'institution artistique</li>
+        </ul>
+        <div class="card-deck-gallery" id="evenementsGallery"></div>
 
-    <!-- GAGNANTS AVEC LEURS IMAGES -->
-    <h3>LES GAGNANTS DE L'ÉDITION 2026 🏆</h3>
-    <p>Au terme d'une délibération minutieuse, voici les lauréats qui ont marqué cette première édition :</p>
+        <!-- GAGNANTS AVEC LEURS IMAGES -->
+        <h3>LES GAGNANTS DE L'ÉDITION 2026 🏆</h3>
+        <p>Au terme d'une délibération minutieuse, voici les lauréats qui ont marqué cette première édition :</p>
 
-    <h4>🥇 Meilleur Photographe : FARY SHOOT</h4>
-    <p>Par sa créativité, son professionnalisme et son talent exceptionnel, Fary Shoot s'est distingué parmi les nominés. Ses clichés captent les émotions et racontent des histoires à travers son objectif. Le jury a salué "sa capacité à transformer l'ordinaire en extraordinaire".</p>
-    <div class="card-deck-gallery" id="laureatFaryGallery"></div>
+        <h4>🥇 Meilleur Photographe : FARY SHOOT</h4>
+        <p>Par sa créativité, son professionnalisme et son talent exceptionnel, Fary Shoot s'est distingué parmi les nominés. Ses clichés captent les émotions et racontent des histoires à travers son objectif. Le jury a salué "sa capacité à transformer l'ordinaire en extraordinaire".</p>
+        <div class="card-deck-gallery" id="laureatFaryGallery"></div>
 
-    <h4>🥇 Meilleur Graphiste : TCHOKPONHOUE DAVID "NESDAV"</h4>
-    <p>Son imagination, son sens artistique et son professionnalisme ont été récompensés. Nesdav donne vie aux idées à travers des visuels uniques et impactants. "Chaque création de Nesdav est une œuvre d'art qui raconte une histoire", a déclaré le jury.</p>
-    <div class="card-deck-gallery" id="laureatNesdavGallery"></div>
+        <h4>🥇 Meilleur Graphiste : TCHOKPONHOUE DAVID "NESDAV"</h4>
+        <p>Son imagination, son sens artistique et son professionnalisme ont été récompensés. Nesdav donne vie aux idées à travers des visuels uniques et impactants. "Chaque création de Nesdav est une œuvre d'art qui raconte une histoire", a déclaré le jury.</p>
+        <div class="card-deck-gallery" id="laureatNesdavGallery"></div>
 
-    <h4>🥇 Meilleur Footballeur : MATINOU OLABODE</h4>
-    <p>Par son talent et son engagement sur le terrain, Matinou Olabode s'est imposé comme une référence dans le domaine sportif. Capitaine de son équipe, il est un modèle pour les jeunes joueurs de la commune.</p>
-    <div class="card-deck-gallery" id="laureatMatinouGallery"></div>
-</section>
+        <h4>🥇 Meilleur Footballeur : MATINOU OLABODE</h4>
+        <p>Par son talent et son engagement sur le terrain, Matinou Olabode s'est imposé comme une référence dans le domaine sportif. Capitaine de son équipe, il est un modèle pour les jeunes joueurs de la commune.</p>
+        <div class="card-deck-gallery" id="laureatMatinouGallery"></div>
+    </section>
 
     <!-- ===== CHAPITRE 4 ===== -->
     <section>
         <h2>LES INVITÉS DE MARQUE ET LA GUEST STAR 🌟</h2>
         <h3>La présence exceptionnelle de OLUWA KEMY ✨</h3>
         <p>L'attente était terminée ! La talentueuse OLUWA KEMY était la Guest Star de cette soirée. Sa prestation a électrisé le public et marqué les esprits.</p>
-        <p>Son arrivée sur scène a été précédée d'un suspense haletant. Les lumières se sont éteintes, un roulement de tambour a retenti, et elle est apparue, vêtue d'une tenue traditionnelle moderne qui a fait sensation. Dès les premières notes, le public a été transporté dans un univers de rythmes et d'émotions.</p>
-        <p>Elle a interprété ses plus grands succès, mêlant habilement les sonorités traditionnelles et modernes. Le public chantait en chœur, dansait, et vivait chaque instant avec intensité. La star a salué l'initiative de LTNDR EVENT'S et a promis de revenir pour la prochaine édition.</p>
-        <p><em>"Préparez-vous à vivre une soirée exceptionnelle mêlant élégance, distinctions honorifiques, prestations artistiques, défilé de mode, barbecue, dégustation de vin et une ambiance inoubliable."</em></p>
 
-        <h3>Le défilé de mode 👗</h3>
-        <p>Un défilé de mode a mis en valeur la richesse de la mode locale, avec des créations uniques alliant tradition et modernité. Les tissus locaux, magnifiés par des coupes contemporaines, ont fait l'admiration de tous. Le public a particulièrement apprécié les tenues en pagne tissé main, une spécialité de la région.</p>
-        <p>Le défilé s'est terminé par une standing ovation, les créateurs venant saluer le public avec leurs mannequins.</p>
+        <!-- ARRIVÉE DES AUTORITÉS -->
+        <h3>Arrivée des autorités 👑</h3>
+        <div class="card-deck-gallery" id="autoritesArriveeGallery"></div>
+
+        <!-- REMISE DES PRIX -->
+        <h3>La cérémonie de remise des prix 🏆</h3>
+        <div class="card-deck-gallery" id="remisePrixGallery"></div>
     </section>
 
-    <!-- ===== CHAPITRE 5 : GALERIE PHOTO (DESCRIPTION) ===== -->
-    <section>
-        <h2> GALERIE PHOTO - LES MOMENTS FORTS DE LA SOIRÉE 📸</h2>
-        <p>Retrouvez ci-dessous les moments clés immortalisés par les photographes. Chaque image peut être agrandie en cliquant dessus.</p>
-
-    <!-- ARRIVÉE DES AUTORITÉS -->
-    <h3>Arrivée des autorités 👑</h3>
-      <div class="card-deck-gallery" id="autoritesArriveeGallery"></div>
-
-    <!-- ===== CHAPITRE 8 (renuméroté) ===== -->
+    <!-- ===== CHAPITRE 8 (Impact) ===== -->
     <section>
         <h2> L'IMPACT DE L'ÉVÉNEMENT SUR OUÈSSÈ 🌍</h2>
 
@@ -425,17 +425,6 @@
             <li>Attirer l'attention sur Ouèssè et son potentiel</li>
             <li>Montrer que les événements de prestige peuvent avoir lieu dans les zones rurales</li>
             <li>Renforcer la fierté des habitants de leur commune</li>
-        </ul>
-
-        <h3>Une dynamique positive</h3>
-        <p>Les retombées sont déjà visibles :</p>
-        <ul>
-            <li>Les lauréats sont plus motivés et ont reçu de nouvelles opportunités</li>
-            <li>Les jeunes s'inspirent des leaders récompensés et veulent s'engager</li>
-            <li>Les partenaires veulent renouveler l'expérience et soutenir les prochaines éditions</li>
-            <li>La population est fière de sa commune et de ses talents</li>
-            <li>Les autorités sont plus attentives aux initiatives jeunesse</li>
-            <li>De nouveaux projets émergent dans la commune</li>
         </ul>
 
         <h3>Un événement qui fait date</h3>
@@ -461,40 +450,21 @@
         <p><em>Cette première édition restera gravée dans nos mémoires et nous motive à faire encore mieux lors des prochaines éditions. Nous avons appris de nos erreurs, nous avons grandi avec cette expérience, et nous sommes plus déterminés que jamais à faire rayonner Ouèssè.</em></p>
         <p><em>Merci à chacune et à chacun d'entre vous. Continuons à promouvoir les talents, à encourager nos leaders et à faire rayonner Ouèssè.</em></p>
         <p><em>Avec toute ma gratitude."</em></p>
-
-        <h3>Les promesses pour l'avenir 🚀</h3>
-        <p>Forts du succès de cette première édition, LTNDR EVENT'S promet déjà :</p>
-        <ul>
-            <li>Une deuxième édition encore plus grandiose avec une programmation enrichie</li>
-            <li>Plus de catégories de récompenses pour couvrir tous les domaines d'activité</li>
-            <li>Des invités encore plus prestigieux, y compris des personnalités nationales et internationales</li>
-            <li>Une meilleure expérience pour les participants avec plus d'animations</li>
-            <li>Un rayonnement encore plus grand de Ouèssè à travers la médiatisation</li>
-            <li>L'implication de plus de jeunes dans l'organisation</li>
-            <li>La création d'une fondation pour soutenir les talents locaux</li>
-        </ul>
     </section>
 
-    <!-- ===== CHAPITRE 10 ===== -->
-    <section>
-        <h2>L'ÉQUIPE DE LTNDR EVENT'S - LES HÉROS DE L'OMBRE 👥</h2>
+    <!-- ===== CHAPITRE 10 : L'ÉQUIPE ===== -->
+    <section class="organisateurs-section">
+        <h2>🎪 Les organisateurs – LTNDR EVENT'S</h2>
+        <p>L'équipe passionnée qui a rendu cet événement possible. Cliquez sur les photos pour les agrandir.</p>
+        <div class="card-deck-gallery" id="organisateursGallery">
+            <!-- Les cartes sont générées par JavaScript -->
+        </div>
+    </section>
 
-        <p>Derrière ce succès, une équipe de passionnés :</p>
-        <ul>
-    <!-- ===== SECTION ORGANISATEURS ===== -->
-   <!-- ===== GALERIE ORGANISATEURS ===== -->
-<section class="organisateurs-section">
-    <h2>🎪 Les organisateurs – LTNDR EVENT'S</h2>
-    <p>L'équipe passionnée qui a rendu cet événement possible. Cliquez sur les photos pour les agrandir.</p>
-    <div class="card-deck-gallery" id="organisateursGallery">
-        <!-- Les cartes sont générées par JavaScript -->
-    </div>
-</section>
     <!-- ===== CONCLUSION ===== -->
     <section>
         <h2>CONCLUSION - OUÈSSÈ, UNE COMMUNE QUI RAYONNE ✨</h2>
         <p>La Nuit de l'Excellence & de l'Élégance - Gala & Awards 2026 a été bien plus qu'une simple soirée. C'est un symbole de ce que la persévérance, l'unité et la vision peuvent accomplir.</p>
-        <p>Malgré les difficultés rencontrées - recherche de financement, mobilisation des autorités, organisation logistique - l'équipe de LTNDR EVENT'S a tenu bon. Des mois de travail acharné ont abouti à une soirée mémorable qui a marqué l'histoire de Ouèssè.</p>
         <p>Ce succès est celui d'une équipe soudée, d'une population mobilisée, d'autorités confiantes et de partenaires engagés. Il prouve que même dans une commune rurale, on peut organiser des événements de prestige.</p>
 
         <h3>VIVE OUÈSSÈ ! 👑🇧🇯</h3>
@@ -507,40 +477,72 @@
         <p><em>Ce récit a été rédigé pour immortaliser la première édition de La Nuit de l'Excellence & de l'Élégance, et pour inspirer les générations futures à croire en leurs rêves et à œuvrer pour le développement de leur communauté.</em></p>
     </section>
 
-   <!-- ===== FAQ ===== -->
-<section class="faq-section" id="faq">
-    <h2>❓ Questions fréquentes sur La Nuit de l'Excellence</h2>
-    <p>Retrouvez ci-dessous les réponses aux questions les plus posées sur l'événement.</p>
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section" id="faq">
+        <h2>❓ Questions fréquentes sur La Nuit de l'Excellence</h2>
+        <p>Retrouvez ci-dessous les réponses aux questions les plus posées sur l'événement.</p>
 
-    <div class="faq-item">
-        <h3>Quand a eu lieu la Nuit de l'Excellence 2026 ?</h3>
-        <p>Le <strong>1er août 2026</strong>, à la Maison des Jeunes de Ouèssè Wogoudo.</p>
-    </div>
+        <div class="faq-item">
+            <h3>Quand a eu lieu la Nuit de l'Excellence 2026 ?</h3>
+            <p>Le <strong>1er août 2026</strong>, à la Maison des Jeunes de Ouèssè Wogoudo.</p>
+        </div>
 
-    <div class="faq-item">
-        <h3>Qui étaient les invités d'honneur ?</h3>
-        <p><strong>Sa Majesté TCHINI TONOU</strong>, Roi de Ouèssè, la Reine, le Maire de Ouèssè, et de nombreuses autorités communales et départementales.</p>
-    </div>
+        <div class="faq-item">
+            <h3>Qui étaient les invités d'honneur ?</h3>
+            <p><strong>Sa Majesté TCHINI TONOU</strong>, Roi de Ouèssè, la Reine, le Maire de Ouèssè, et de nombreuses autorités communales et départementales.</p>
+        </div>
 
-    <div class="faq-item">
-        <h3>Quels sont les lauréats principaux ?</h3>
-        <p><strong>FARY SHOOT</strong> (Meilleur Photographe), <strong>NESDAV</strong> (Meilleur Graphiste), <strong>MATINOU OLABODE</strong> (Meilleur Footballeur), <strong>8 Bâtisseurs</strong> et <strong>5 Jeunes Leaders</strong>.</p>
-    </div>
+        <div class="faq-item">
+            <h3>Quels sont les lauréats principaux ?</h3>
+            <p><strong>FARY SHOOT</strong> (Meilleur Photographe), <strong>NESDAV</strong> (Meilleur Graphiste), <strong>MATINOU OLABODE</strong> (Meilleur Footballeur), <strong>8 Bâtisseurs</strong> et <strong>5 Jeunes Leaders</strong>.</p>
+        </div>
 
-    <div class="faq-item">
-        <h3>Qui était la Guest Star ?</h3>
-        <p>La talentueuse artiste <strong>OLUWA KEMY</strong> qui a électrisé le public avec sa prestation.</p>
-    </div>
+        <div class="faq-item">
+            <h3>Qui était la Guest Star ?</h3>
+            <p>La talentueuse artiste <strong>OLUWA KEMY</strong> qui a électrisé le public avec sa prestation.</p>
+        </div>
 
-    <div class="faq-item">
-        <h3>Comment participer à la prochaine édition ?</h3>
-        <p>Suivez <strong>LTNDR EVENT'S</strong> sur les réseaux sociaux et restez connectés pour les annonces officielles.</p>
-    </div>
-</section>
+        <div class="faq-item">
+            <h3>Comment participer à la prochaine édition ?</h3>
+            <p>Suivez <strong>LTNDR EVENT'S</strong> sur les réseaux sociaux et restez connectés pour les annonces officielles.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Où puis-je en apprendre plus sur Ouèssè ?</h3>
+            <p>Pour découvrir l'histoire, la culture et les personnalités de Ouèssè, consultez ces ressources :</p>
+            <ul>
+                <li>
+                    <a href="https://waouesse.vercel.app/degla_benoit" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-user-tie"></i> Parcours de Benoît Assouan Comlan Dègla
+                    </a>
+                </li>
+                <li>
+                    <a href="https://waouesse.vercel.app/briceahossa" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-city"></i> La Mairie de Ouèssè
+                    </a>
+                </li>
+                <li>
+                    <a href="https://waouesse.vercel.app/nuit-excellence-2026" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-award"></i> La Nuit de l'Excellence
+                    </a>
+                </li>
+                <li>
+                    <a href="https://waouesse.vercel.app/decouvert.html" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-compass"></i> Découvrir Ouèssè
+                    </a>
+                </li>
+                <li>
+                    <a href="https://waouesse.vercel.app/contact.html" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-envelope"></i> Contacter l'équipe
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
 
 </main>
 
-<!-- ===== LIGHTBOX ===== -->
+<!-- ===== LIGHTBOX GÉNÉRALE ===== -->
 <div class="lightbox-overlay" id="lightbox" aria-modal="true" role="dialog">
     <button class="lightbox-close" id="lightboxClose" aria-label="Fermer la lightbox">&times;</button>
     <img class="lightbox-content" id="lightboxImg" src="" alt="Agrandissement" />
@@ -574,18 +576,14 @@
     <p class="footer-credit">&copy; 2026 Ouèssè Tourisme – Découverte et défis de la commune</p>
 </footer>
 
-   
-
 <!-- SCRIPTS -->
 <script src="script.js" defer></script>
-<!-- Remplacer l'ancien script par celui-ci -->
 <script src="js/search-static.js"></script>
 
 <script>
 (function() {
     // ============================================
-    // ============================================
-    // 2. LIGHTBOX
+    // LIGHTBOX
     // ============================================
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
@@ -623,12 +621,12 @@
     });
 
     // ============================================
-    // 3. FONCTION DE CRÉATION DE CARTE
+    // FONCTION DE CRÉATION DE CARTE
     // ============================================
     const baseImage = 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972758/troper_czpcot.webp';
     const baseImage2 = 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/kemyolluwa_cg3hpc.webp';
 
-    function createCard(imgSrc, title, caption, width = 400, height = 300) {
+    function createCard(imgSrc, title, caption) {
         const card = document.createElement('div');
         card.className = 'deck-card';
         card.setAttribute('data-full', imgSrc);
@@ -638,9 +636,6 @@
         img.src = imgSrc;
         img.alt = title || 'Image';
         img.loading = 'lazy';
-        img.width = width;
-        img.height = height;
-        // Gestion du srcset si l'image est de Cloudinary
         if (imgSrc.includes('cloudinary')) {
             img.srcset = `${imgSrc}?w=300 300w, ${imgSrc}?w=400 400w, ${imgSrc}?w=800 800w`;
             img.sizes = '(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw';
@@ -664,38 +659,30 @@
     }
 
     // ============================================
-    // 4. FONCTION DE PEUPLEMENT DES DECK
+    // FONCTION DE PEUPLEMENT DES DECK
     // ============================================
-    function populateDeck(containerId, items, titleKey = 'title', captionKey = 'caption', imgKey = 'img') {
+    function populateDeck(containerId, items) {
         const container = document.getElementById(containerId);
         if (!container) return;
-        
-        // Vider le conteneur avant d'ajouter (évite les doublons)
         container.innerHTML = '';
-        
         items.forEach(item => {
-            const imgSrc = item[imgKey] || baseImage;
-            const title = item[titleKey] || '';
-            const caption = item[captionKey] || '';
+            const imgSrc = item.img || baseImage;
+            const title = item.title || '';
+            const caption = item.caption || '';
             const card = createCard(imgSrc, title, caption);
             container.appendChild(card);
         });
     }
 
     // ============================================
-    // 5. CARROUSEL 3D STACKED CARDS (FLYERS)
+    // CARROUSEL 3D STACKED CARDS (FLYERS)
     // ============================================
     function initStackedCarousel(containerId, prevBtnId, nextBtnId, items) {
         const container = document.getElementById(containerId);
         if (!container) return;
 
-        // Peupler le conteneur avec les items
         items.forEach((item, index) => {
-            const card = createCard(
-                item.img || baseImage,
-                item.title || '',
-                item.caption || ''
-            );
+            const card = createCard(item.img || baseImage, item.title || '', item.caption || '');
             card.style.transform = `rotate(${(index - 2) * 2}deg) translateY(${index * 4}px)`;
             card.style.zIndex = 10 - index;
             container.appendChild(card);
@@ -703,7 +690,6 @@
 
         const prevBtn = document.getElementById(prevBtnId);
         const nextBtn = document.getElementById(nextBtnId);
-        
         if (!prevBtn || !nextBtn) return;
 
         let currentIndex = 0;
@@ -713,7 +699,6 @@
         function updateStack() {
             cards.forEach((card, idx) => {
                 const offset = (idx - currentIndex + total) % total;
-                // Calcul des positions en 3D
                 const normalizedOffset = (offset > total / 2) ? offset - total : offset;
                 const rotate = normalizedOffset * 3;
                 const translateY = normalizedOffset * 6;
@@ -721,16 +706,10 @@
                 const scale = 1 - Math.abs(normalizedOffset) * 0.05;
                 const opacity = 1 - Math.abs(normalizedOffset) * 0.15;
 
-                card.style.transform = `
-                    rotate(${rotate}deg) 
-                    translateY(${translateY}px) 
-                    translateZ(${translateZ}px) 
-                    scale(${Math.max(0.7, scale)})
-                `;
+                card.style.transform = `rotate(${rotate}deg) translateY(${translateY}px) translateZ(${translateZ}px) scale(${Math.max(0.7, scale)})`;
                 card.style.zIndex = total - Math.abs(normalizedOffset);
                 card.style.opacity = Math.max(0.3, opacity);
-                
-                // Carte active surlignée
+
                 if (normalizedOffset === 0) {
                     card.style.boxShadow = '0 20px 60px rgba(0,0,0,0.3)';
                     card.style.borderColor = 'rgba(255, 215, 0, 0.6)';
@@ -741,20 +720,17 @@
             });
         }
 
-        prevBtn.addEventListener('click', function() {
+        prevBtn.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + total) % total;
             updateStack();
         });
-
-        nextBtn.addEventListener('click', function() {
+        nextBtn.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % total;
             updateStack();
         });
 
-        // Navigation clavier
         document.addEventListener('keydown', function(e) {
-            const isCarouselVisible = container.offsetParent !== null;
-            if (!isCarouselVisible) return;
+            if (container.offsetParent === null) return;
             if (e.key === 'ArrowLeft') {
                 currentIndex = (currentIndex - 1 + total) % total;
                 updateStack();
@@ -769,48 +745,49 @@
     }
 
     // ============================================
-    // 6. INITIALISATION DES GALERIES
+    // INITIALISATION DES GALERIES
     // ============================================
 
-    // --- Flyers avec carrousel 3D ---
+    // Flyers (carrousel 3D)
     const flyersData = [
-        { title: 'Flyer annonce', caption: 'Dévoilement de la Nuit de l\'Excellence', img:"https://res.cloudinary.com/nyke7lhc/image/upload/v1786029819/flyereree_exfmfn.webp" },
+        { title: 'Flyer annonce', caption: 'Dévoilement de la Nuit de l\'Excellence', img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1786029819/flyereree_exfmfn.webp" },
         { title: 'Flyer Guest Star', caption: 'OLUWA KEMY annoncée', img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1786029814/flyeree_g13qes.webp" },
-        { title: 'Flyer Jour J', caption: '1er Août 2026 – Préparez-vous', img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1786029805/fleres_ygh9vy.webp"},
+        { title: 'Flyer Jour J', caption: '1er Août 2026 – Préparez-vous', img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1786029805/fleres_ygh9vy.webp" },
         { title: 'Flyer Nominés', caption: 'Les catégories dévoilées', img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1786029818/flyeyye_mnp5vt.webp" },
-        { title: 'Flyer Primés', caption: 'Les lauréats 2026', img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1786029805/fleres_ygh9vy.webp"},
+        { title: 'Flyer Primés', caption: 'Les lauréats 2026', img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1786029805/fleres_ygh9vy.webp" }
     ];
     initStackedCarousel('flyerStackContainer', 'flyerPrevBtn', 'flyerNextBtn', flyersData);
 
-    // --- Autres galeries (peuplement simple) ---
-
-    // Nominés
+    // Artistes
     const artistes = [
         { title: 'Alpha Oméga', caption: 'Artiste Tradi-Moderne', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972749/alphaomega_cgkzqf.webp' },
         { title: 'Sajos', caption: 'Artiste Tradi-Moderne', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785976158/Sajos_hmerha.webp' },
         { title: 'Wekouin Mandekpo', caption: 'Artiste Tradi-Moderne', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785976157/wekouinmandekpo_upwkvq.webp' },
-        { title: '3S Wèkèzo', caption: 'Artiste Tradi-Moderne', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972762/wekkezzo_utgmsx.webp' },
+        { title: '3S Wèkèzo', caption: 'Artiste Tradi-Moderne', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972762/wekkezzo_utgmsx.webp' }
     ];
     populateDeck('artistesGallery', artistes);
 
+    // Humoristes
     const humoristes = [
         { title: 'Akouna Matata', caption: 'Humoriste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785975685/akuna_zfxq1b.webp' },
         { title: 'Osi Comédien', caption: 'Humoriste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785975691/osias_gcehmt.webp' },
         { title: 'James Descartes', caption: 'Humoriste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785975499/descarte_ij76ko.webp' },
         { title: 'Adama Prince Two Love', caption: 'Humoriste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972744/adamaprince_behfif.webp' },
-        { title: 'Mariwol Alodoukpo', caption: 'Humoriste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785976375/humour_copie_tjiwin.webp' },
+        { title: 'Mariwol Alodoukpo', caption: 'Humoriste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785976375/humour_copie_tjiwin.webp' }
     ];
     populateDeck('humoristesGallery', humoristes);
 
+    // Graphistes
     const graphistes = [
         { title: 'Marc Dossou', caption: 'Graphiste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785977411/marc_dossou_fjmzwi.webp' },
         { title: 'Aimé Charlemangne KETENGBE', caption: 'Graphiste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785977450/aime_ketengbe_mt9laz.webp' },
         { title: 'Luc Fadonougbo', caption: 'Graphiste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785977451/fadonougbo_g63pzr.webp' },
         { title: 'Nesdav', caption: 'Graphiste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785976159/NESDAV_qkil35.webp' },
-        { title: 'AKPO Abolias', caption: 'Graphiste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972745/akpoabdias_vqme1b.webp' },
+        { title: 'AKPO Abolias', caption: 'Graphiste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972745/akpoabdias_vqme1b.webp' }
     ];
     populateDeck('graphistesGallery', graphistes);
 
+    // Photographes
     const photographes = [
         { title: 'Obryane Shoot It', caption: 'Photographe', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785977826/obryan_shoot_it_cecndv.webp' },
         { title: 'Fary Shoot', caption: 'Photographe', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785978000/farytrhope_sqtite.webp' },
@@ -818,17 +795,18 @@
         { title: 'Gbadebo Prod', caption: 'Photographe', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785977827/gbadebo_prod_fpgdqq.webp' },
         { title: 'Had Shoot', caption: 'Photographe', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972747/HADIROU_akpmc9.webp' },
         { title: 'Nago Shoot', caption: 'Photographe', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785977823/nago_shoot_rhwhyg.webp' },
-        { title: 'Terminator Shoot', caption: 'Photographe', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785977824/terminator_shoot_t8cl1l.webp' },
+        { title: 'Terminator Shoot', caption: 'Photographe', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785977824/terminator_shoot_t8cl1l.webp' }
     ];
     populateDeck('photographesGallery', photographes);
 
+    // Événements
     const evenements = [
         { title: 'Azizaxwé de l\'UDACO', caption: 'Festival culturel', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785979354/AZIZAXWE_zhhuja.webp' },
         { title: 'Festival de Contes ECAK', caption: 'Rendez-vous des mots', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785979236/ECAK_xh4cjo.webp' },
         { title: 'Podium Vacances SoCAO', caption: 'Divertissement estival', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785979231/SOCAOO_gztu5e.webp' },
         { title: 'Pic Nic Tous en Blanc', caption: 'Winner Events', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785979249/WINNER_EVENT_te51fu.webp' },
         { title: 'Ouessèxwé UDESCO', caption: 'Célébration locale', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785979235/UDESCO_rpubce.webp' },
-        { title: '5 ans de l\'ECAO', caption: 'Anniversaire institution', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785979233/ECAO_x83mbz.webp' },
+        { title: '5 ans de l\'ECAO', caption: 'Anniversaire institution', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785979233/ECAO_x83mbz.webp' }
     ];
     populateDeck('evenementsGallery', evenements);
 
@@ -838,37 +816,46 @@
         { title: 'Monsieur le Maire', caption: 'SEM', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972754/maire_eouk4u.webp' },
         { title: 'ANTOINE TAMEGNON', caption: 'SEM', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972747/conseiller_mairie_br8bnb.webp' },
         { title: 'Secrétaire Exécutif', caption: 'SEM', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972747/antoi_rri359.webp' },
-        { title: 'Igor TOSSOU', caption: 'SEM', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972744/igrotossou_v6yy8q.webp' },
+        { title: 'Igor TOSSOU', caption: 'SEM', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972744/igrotossou_v6yy8q.webp' }
     ];
     populateDeck('autoritesArriveeGallery', autoritesArrivee);
 
+    // Remise des prix
+    const remisePrix = [
+        { title: 'FARY SHOOT', caption: 'Reçoit son trophée', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/kemy_et_fary_rdblr8.webp' },
+        { title: 'NESDAV', caption: 'David Tchokponhoue', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785980762/david_tchokponhoue_ck5fkb.webp' },
+        { title: 'MATINOU OLABODE', caption: 'Entouré de ses supporters', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785980407/MATINOUOL_fsurqj.webp' },
+        { title: 'Jeunes Leaders "DICARLO PIERRE"', caption: 'Récompensés et posant ensemble', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785980313/PIERRE_DICARLO_w06wmg.webp' },
+        { title: '3S WEKEZO', caption: 'Sur scène, recevant son trophée', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972765/wekezo_lny8z0.webp' },
+        { title: 'ECAK MEILLEUR EVENT', caption: 'Moment d\'émotion', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785979236/ECAK_xh4cjo.webp' },
+        { title: 'GASS POLO - MEILLEUR ARTISTE "R.A.P"', caption: 'Moment d\'émotion', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972770/gasspolo_llvhek.webp' },
+        { title: 'AKOUNA MATATA - Meilleur Humoriste', caption: 'Moment d\'émotion', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785972745/akounamatata_swwp1k.webp' },
+        { title: 'Art musique traditionnelle', caption: 'Moment d\'émotion', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785980426/TRADI_copie_tzuyo6.webp' }
+    ];
+    populateDeck('remisePrixGallery', remisePrix);
+
+    // Lauréats individuels
+    populateDeck('laureatFaryGallery', [
+        { title: 'FARY SHOOT', caption: 'Meilleur Photographe', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785978000/farytrhope_sqtite.webp' }
+    ]);
+    populateDeck('laureatNesdavGallery', [
+        { title: 'NESDAV', caption: 'Meilleur Graphiste', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785976159/NESDAV_qkil35.webp' }
+    ]);
+    populateDeck('laureatMatinouGallery', [
+        { title: 'MATINOU OLABODE', caption: 'Meilleur Footballeur', img: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785980407/MATINOUOL_fsurqj.webp' }
+    ]);
+
     // Organisateurs
     const organisateurs = [
-        { 
-            title: 'GONZARIO SKIIBO\'S', 
-            caption: 'Directeur Général - LTNDR EVENT\'S', 
-            img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/GONZARIO_SKIIBO_go7yh6.webp"
-        },
-        { 
-            title: 'FLORENTIN ATCHADE', 
-            caption: 'Coordinateur Logistique', 
-            img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/florentin_pdzztv.webp"
-        },
-        { 
-            title: 'Responsable Communication', 
-            caption: 'Relations publiques & Médias', 
-            img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/kemmm_upml8d.webp"
-        },
-        { 
-            title: 'Responsable Partenariats', 
-            caption: 'Sponsors & Financements', 
-            img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/partenaires.webp"
-        },
+        { title: 'GONZARIO SKIIBO\'S', caption: 'Directeur Général - LTNDR EVENT\'S', img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/GONZARIO_SKIIBO_go7yh6.webp" },
+        { title: 'FLORENTIN ATCHADE', caption: 'Coordinateur Logistique', img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/florentin_pdzztv.webp" },
+        { title: 'Responsable Communication', caption: 'Relations publiques & Médias', img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/kemmm_upml8d.webp" },
+        { title: 'Responsable Partenariats', caption: 'Sponsors & Financements', img: "https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/partenaires.webp" }
     ];
     populateDeck('organisateursGallery', organisateurs);
 
     // ============================================
-    // 7. NEWSLETTER
+    // NEWSLETTER
     // ============================================
     const form = document.getElementById('newsletterForm');
     if (form) {
@@ -885,7 +872,6 @@
             }
         });
     }
-
 })();
 </script>
 

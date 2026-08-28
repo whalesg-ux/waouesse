@@ -263,7 +263,7 @@
                 </li>
             </ul>
 
-            <form class="contact-form" action="#" method="POST" novalidate>
+            <form class="contact-form" id="contactForm" novalidate>
                 <div class="form-row">
                     <div>
                         <label for="nom">Nom complet <span aria-label="obligatoire">*</span></label>
@@ -282,7 +282,8 @@
                     <label for="message">Votre message <span aria-label="obligatoire">*</span></label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-                <button type="submit">Envoyer le message</button>
+                <button type="submit" id="contactSubmitBtn">Envoyer le message</button>
+                <p id="contactFormStatus" class="form-status" role="status" aria-live="polite"></p>
             </form>
         </div>
     </section>
@@ -308,7 +309,7 @@
 
         <details class="faq-item">
             <summary><h3>Comment puis-je contacter NarroQ ou EzegLabs ?</h3></summary>
-            <p>Vous pouvez nous écrire à <a href="mailto:contact@narroq.com">contact@narroq.com</a> ou utiliser le formulaire de contact ci-dessus. Nous répondons sous 48 heures.</p>
+            <p>Vous pouvez nous écrire à <a href="mailto:neekleiooffice@gmail.com">neekleiooffice@gmail.com</a> ou utiliser le formulaire de contact ci-dessus. Nous répondons sous 48 heures.</p>
         </details>
     </section>
 
@@ -338,6 +339,75 @@
     <p class="footer-credit">&copy; 2025 NarroQ & EzegLabs – Donner une présence numérique aux territoires</p>
 </footer>
 
+<!-- EmailJS : envoie le formulaire directement par email, sans backend -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+(function () {
+  const EMAILJS_PUBLIC_KEY = "72a7hfG4OdpTjHKjx";
+  const EMAILJS_SERVICE_ID = "service_qrkjhop";
+  const EMAILJS_TEMPLATE_ID = "template_jp72hcb";
+  const RECEIVER_EMAIL = "tchokponhoueezechiel@gmail.com";
+
+  if (typeof emailjs === "undefined") {
+    console.error("EmailJS n'a pas pu être chargé.");
+    return;
+  }
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+
+  const submitBtn = document.getElementById("contactSubmitBtn");
+  const statusEl = document.getElementById("contactFormStatus");
+
+  function setStatus(message, type) {
+    if (!statusEl) return;
+    statusEl.textContent = message;
+    statusEl.className = "form-status" + (type ? " form-status--" + type : "");
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nom = form.nom.value.trim();
+    const email = form.email.value.trim();
+    const structure = form.structure.value.trim();
+    const message = form.message.value.trim();
+
+    if (!nom || !email || !message) {
+      setStatus("Merci de remplir les champs obligatoires (nom, email, message).", "error");
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Envoi en cours...";
+    setStatus("", "");
+
+    const templateParams = {
+      nom: nom,
+      email: email,
+      structure: structure || "Non précisé",
+      message: message,
+      to_email: RECEIVER_EMAIL,
+    };
+
+    emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+      .then(function () {
+        setStatus("Votre message a bien été envoyé. Nous vous répondons sous 48h.", "success");
+        form.reset();
+      })
+      .catch(function (error) {
+        console.error("Erreur d'envoi EmailJS :", error);
+        setStatus("Une erreur est survenue. Réessayez ou écrivez-nous à " + RECEIVER_EMAIL + ".", "error");
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Envoyer le message";
+      });
+  });
+})();
+</script>
 <script src="script.js" defer></script>
 <script src="search.js" defer></script>
 </body>

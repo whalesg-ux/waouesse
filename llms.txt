@@ -1,0 +1,152 @@
+# WAOUESSE - Plateforme Culturelle du Bénin
+# Site: https://waouesse.vercel.app/
+# Dernière mise à jour: 2026-08-28
+
+## SITEMAP DES PAGES ET IMAGES
+
+---
+
+## PAGE D'ACCUEIL
+URL: https://waouesse.vercel.app/
+Priorité: 1.0 | Fréquence: weekly | Modifié: 2026-08-06
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784361921/ouessefe_ma0i47.webp
+   Titre: Waouesse - Plateforme culturelle béninoise
+   Description: Découvrez la richesse culturelle du Bénin VODOUN
+
+2. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784361878/jouan_edsb2o.webp
+   Titre: ARTISTE A LA FETE DE OUESSEXWE 2025
+
+---
+
+## PAGE DÉCOUVERT
+URL: https://waouesse.vercel.app/decouvert.html
+Priorité: 0.9 | Fréquence: weekly | Modifié: 2026-08-06
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784361863/majou_mkmsns.webp
+   Titre: Découvrir la culture béninoise - Waouesse
+
+2. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784361908/zamgbe_r7s7vi.webp
+   Titre: Art et traditions du Bénin
+
+---
+
+## PAGE À PROPOS
+URL: https://waouesse.vercel.app/a-propos.html
+Priorité: 0.7 | Fréquence: monthly | Modifié: 2026-08-06
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785260330/sezs_n6qfyy.webp
+   Titre: Équipe Waouesse - À propos
+
+---
+
+## PAGE DEGLA BENOIT
+URL: https://waouesse.vercel.app/degla_benoit.html
+Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-08-06
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1786022190/deggl_SS_cj1y0y.webp
+   Titre: Degla Benoit - Portrait
+   Description: ancien premier ministre du benin Degla Benoit
+
+2. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1786022191/degga_copie_cbzkco.webp
+   Titre: Degla Benoit - Création 1
+
+---
+
+## PAGE BRICE AHOSSA
+URL: https://waouesse.vercel.app/briceahossa.html
+Priorité: 0.7 | Fréquence: monthly | Modifié: 2026-08-06
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1786022197/briceSSS_vglwm1.webp
+   Titre: Brice Ahossa - Portrait
+
+2. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1786022195/briceahos.jpg_2K_4_copie_eaylcy.webp
+   Titre: Brice Ahossa à UP
+
+---
+
+## PAGE AKPO FIRMIN IBIDON
+URL: https://waouesse.vercel.app/akpo_firmin_ibidon.html
+Priorité: 0.7 | Fréquence: monthly | Modifié: 2026-08-06
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784363087/mairesd_rnle9q.webp
+   Titre: Akpo Firmin Ibidon - au 1er aout 2025
+
+2. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784363083/aout_1er_b9faic.webp
+   Titre: Akpo Firmin Ibidon - 1er aout avec le roi ouesse
+
+---
+
+## PAGE LUC ATROKPO
+URL: https://waouesse.vercel.app/luc.html
+Priorité: 0.6 | Fréquence: monthly | Modifié: 2026-08-06
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784318002/lucatro/benedc_cwct3r.webp
+   Titre: Luc ATROKPO A OUESSE - Portrait
+
+---
+
+## PAGE NUIT D'EXCELLENCE 2026
+URL: https://waouesse.vercel.app/nuit-excellence-2026.html
+Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-08-06
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785980426/TRADI_copie_tzuyo6.webp
+   Titre: Nuit d'Excellence 2026 à Ouesse - Galerie 1
+   Description: Soirée culturelle d'excellence à Waouesse
+
+2. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785972758/troper_czpcot.webp
+   Titre: Nuit d'Excellence 2026 Ouesse - Galerie 2
+
+3. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785972752/kemmm_upml8d.webp
+   Titre: Nuit d'Excellence à ouesse 2026 - Galerie 3
+
+4. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785972754/maire_eouk4u.webp
+   Titre: Nuit d'Excellence à ouesse le maire 2026 - Galerie 4
+
+---
+
+## PAGES ADMINISTRATIVES (sans images)
+- https://waouesse.vercel.app/generate.html | Priorité: 0.3 | Fréquence: yearly
+- https://waouesse.vercel.app/admin.html | Priorité: 0.2 | Fréquence: yearly
+
+---
+
+## RÉCAPITULATIF DES IMAGES PAR PAGE
+
+| Page | Nombre d'images |
+|------|-----------------|
+| Accueil | 2 |
+| Découvert | 2 |
+| À propos | 1 |
+| Degla Benoit | 2 |
+| Brice Ahossa | 2 |
+| Akpo Firmin Ibidon | 2 |
+| Luc Atrokpo | 1 |
+| Nuit d'Excellence 2026 | 4 |
+| **TOTAL** | **16 images** |
+
+---
+
+## STATISTIQUES GLOBALES
+
+- **Total pages**: 10
+- **Total images**: 16
+- **Pages avec images**: 8
+- **Pages sans images**: 2 (generate, admin)
+- **Hébergement images**: Cloudinary (nyke7lhc)
+- **Format**: WebP optimisé
+- **Optimisation appliquée**: w_1200, q_auto:best, f_webp, c_limit, dpr_auto
+
+---
+
+## STRUCTURE DES URLS CLOUDINARY
+
+**Format de base:**

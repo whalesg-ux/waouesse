@@ -64,9 +64,9 @@
     <!-- Œuvre 1 -->
     <image:image>
       <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1786022191/degga_copie_cbzkco.webp</image:loc>
-      <image:title> Degla Benoit - Création 1</image:title>
+      <image:title>Degla Benoit - Création 1</image:title>
     </image:image>
-  
+  </url>
 
   <!-- Page Brice Ahossa -->
   <url>
@@ -96,7 +96,7 @@
     </image:image>
     <image:image>
       <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784363083/aout_1er_b9faic.webp</image:loc>
-      <image:title>Akpo Firmin Ibidon - 1er aaout avec le roi ouesse </image:title>
+      <image:title>Akpo Firmin Ibidon - 1er aout avec le roi ouesse</image:title>
     </image:image>
   </url>
 
@@ -108,7 +108,7 @@
     <priority>0.6</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784318002/lucatro/benedc_cwct3r.webp</image:loc>
-      <image:title>Luc ATROKPO A OUESSE- Portrait</image:title>
+      <image:title>Luc ATROKPO A OUESSE - Portrait</image:title>
     </image:image>
   </url>
 
@@ -118,9 +118,10 @@
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <!-- Photo principale -->
+  
+    
     <image:image>
-      <image:loc>https://res.cloudinary.com/votre-cloud/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1/waouesse/nuit-excellence-2026-main.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785976375/humour_copie_tjiwin.webp</image:loc>
       <image:title>Nuit d'Excellence 2026 - Événement</image:title>
       <image:caption>Soirée culturelle d'excellence à Waouesse</image:caption>
     </image:image>
@@ -131,15 +132,15 @@
     </image:image>
     <image:image>
       <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785972758/troper_czpcot.webp</image:loc>
-      <image:title>Nuit d'Excellence 2026 Ouesse- Galerie 2</image:title>
+      <image:title>Nuit d'Excellence 2026 Ouesse - Galerie 2</image:title>
     </image:image>
     <image:image>
       <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/kemmm_upml8d.webp</image:loc>
-      <image:title>Nuit d'Excellence à ouesse 2026 - Galerie 3</image:title>
+      <image:title>Nuit d'Excellence à Ouesse 2026 - Galerie 3</image:title>
     </image:image>
     <image:image>
       <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785972754/maire_eouk4u.webp</image:loc>
-      <image:title>Nuit d'Excellence à ouesse le maire 2026 - Galerie 4</image:title>
+      <image:title>Nuit d'Excellence à Ouesse le maire 2026 - Galerie 4</image:title>
     </image:image>
   </url>
 
@@ -151,12 +152,5 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Page Admin -->
-  <url>
-    <loc>https://waouesse.vercel.app/admin.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
 
 </urlset>

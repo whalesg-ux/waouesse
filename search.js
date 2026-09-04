@@ -160,13 +160,21 @@ document.addEventListener('DOMContentLoaded', function () {
     function ouvrirResume(item) {
         if (!summaryPanel) return;
         summaryTitleText.textContent = item.title || 'Sans titre';
-        summaryText.textContent = item.text || item.desc || 'Aucune description disponible.';
+        // Afficher un extrait court (300 chars max) et non tout le texte
+        const extrait = (item.desc && item.desc.length > 10)
+            ? item.desc
+            : (item.text || 'Aucune description disponible.').substring(0, 300) + '…';
+        summaryText.textContent = extrait;
+        const cible = item.page || 'index.html';
+        summaryLink.href = cible + (item.anchor || '');
+        summaryLink.textContent = 'Voir la page →';
         summaryLink.onclick = function (e) {
             e.preventDefault();
             allerVersCible(item);
             fermerResultats();
             fermerResume();
         };
+        summaryPanel.removeAttribute('hidden');
         summaryPanel.style.display = 'block';
     }
 
@@ -347,7 +355,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     console.log('🔍 Moteur de recherche OUESSE initialisé');
-    console.log(`📡 API endpoint: ${API_BASE_URL || window.location.origin}/api/search`);
 
     /* =========================================================
         RECHERCHE AUTOMATIQUE DEPUIS L'URL (?q=...)

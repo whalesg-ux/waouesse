@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Ouèssè Tourisme – WAOUESSE, venez découvrir !</title>
-    <meta name="description" content="Ouèssè (OUESSE) : marbre bleu, forêts sacrées, culture authentique. WAOUESSE – « Viens à Ouèssè » (Wa = Viens en Fon). Découvrez nos trésors cachés !">
+    <meta name="description"
+        content="Ouèssè (OUESSE) : marbre bleu, forêts sacrées, culture authentique. WAOUESSE – « Viens à Ouèssè » (Wa = Viens en Fon). Découvrez nos trésors cachés !">
     <link rel="canonical" href="https://waouesse.vercel.app/">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0b6b44">
     <meta property="og:title" content="Ouèssè Tourisme – WAOUESSE, venez à Ouèssè">
-    <meta property="og:description" content="Ouèssè (OUESSE) : marbre bleu, forêts sacrées, culture authentique. WAOUESSE – « Viens à Ouèssè ».">
-    <meta property="og:image" content="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp">
+    <meta property="og:description"
+        content="Ouèssè (OUESSE) : marbre bleu, forêts sacrées, culture authentique. WAOUESSE – « Viens à Ouèssè ».">
+    <meta property="og:image"
+        content="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://waouesse.vercel.app/">
     <meta property="og:locale" content="fr_FR">
@@ -22,20 +26,27 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
 
-    <link rel="preload" as="image" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784326466/ouesse_n5pdyh.webp" fetchpriority="high">
-    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="image"
+        href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784326466/ouesse_n5pdyh.webp" fetchpriority="high">
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2"
+        type="font/woff2" crossorigin>
 
     <!-- FEUILLE DE STYLE EXTERNE -->
     <link rel="stylesheet" href="style.css">
 
     <!-- GOOGLE FONTS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap">
 
     <!-- FONT AWESOME -->
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
 
-    <link rel="icon" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" type="image/webp">
+    <link rel="icon" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp"
+        type="image/webp">
 
     <!-- ============================================
          DONNÉES STRUCTURÉES (JSON-LD)
@@ -172,519 +183,1118 @@
          mort au sitelinks searchbox. À réintroduire seulement si une
          vraie page /search?q=... est créée un jour. -->
 </head>
+
 <body>
 
-<header class="site-header">
-    <div class="logo">
-        <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager">
-        <div class="logo-text">
-            <span class="logo-title">Ouessè</span>
-            <span class="logo-subtitle">TOURISME</span>
-        </div>
-    </div>
-
-    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
-    </button>
-
-    <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navigation principale">
-        <ul>
-            <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
-            <li><a href="decouvert.html">Découvrir</a></li>
-            <li><a href="a-propos.html">À propos</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="#waouesse">WAOUESSE</a></li>
-        </ul>
-    </nav>
-
-    <a href="decouvert.html" class="btn-explorer">Explorer</a>
-</header>
-
-<main>
-
-    <!-- HERO -->
-    <section class="hero" aria-label="Bannière principale">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Ouèssè, l&rsquo;<em>âme</em> du<br>Bénin authentique</h1>
-            <p class="hero-text">
-                Découvrez les trésors culturels, naturels et artisanaux de notre<br>
-                commune — entre forêts sacrées, marchés traditionnels et hospitalité<br>
-                légendaire.
-            </p>
-
-            <!-- FORMULAIRE DE RECHERCHE -->
-            <form class="search" id="searchForm" role="search" action="/search" method="GET" autocomplete="off">
-                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                <input type="text" id="searchInput" name="q" placeholder="Rechercher un lieu, une expérience..." aria-label="Rechercher un lieu, une expérience à Ouèssè" required>
-                <button type="submit">Rechercher</button>
-                <div class="search-results" id="searchResults" role="listbox" aria-label="Résultats de recherche"></div>
-            </form>
-
-            <!-- PANNEAU DE RÉSUMÉ -->
-            <div class="summary-panel" id="summaryPanel" role="dialog" aria-modal="true" aria-labelledby="summaryTitleText" hidden>
-                <div class="summary-header">
-                    <span class="summary-title" id="summaryTitleText"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> <span>Résumé</span></span>
-                    <button class="summary-close" id="summaryClose" type="button" aria-label="Fermer le résumé">&times;</button>
-                </div>
-                <div class="summary-body">
-                    <p id="summaryText"></p>
-                    <a href="#" class="summary-link" id="summaryLink">Voir plus</a>
-                </div>
+    <header class="site-header">
+        <div class="logo">
+            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp"
+                alt="Logo de Ouèssè" width="48" height="48" loading="eager">
+            <div class="logo-text">
+                <span class="logo-title">Ouessè</span>
+                <span class="logo-subtitle">TOURISME</span>
             </div>
         </div>
-    </section>
 
-    <!-- BLOC WAOUESSE -->
-    <section class="waouesse-bloc" id="waouesse" aria-labelledby="waouesse-title">
-        <span class="fon-legend"><i class="fa-solid fa-hand-peace" aria-hidden="true"></i> Langue Fon</span>
-        <h2 id="waouesse-title">Pourquoi <strong>WAOUESSE</strong> ? L'invitation à découvrir Ouèssè</h2>
-        <p>
-            <strong>« Wa »</strong> signifie <strong>« Viens »</strong> en langue Fon.
-            <strong>WAOUESSE</strong> est notre cri du cœur : <strong>venez à Ouèssè</strong>
-            pour explorer ses collines, ses forêts sacrées, son marbre bleu mondialement
-            reconnu et l'hospitalité légendaire de ses habitants.
-        </p>
-        <p>
-            Ce n'est pas un autre nom pour la commune, c'est une <strong>promesse d'évasion</strong>
-            et une invitation à découvrir les trésors que l'on ne montre pas aux regards
-            distraits. <strong>WAOUESSE</strong>, c'est l'appel de la terre shabè et mahi,
-            c'est votre prochaine aventure !
-        </p>
-        <blockquote class="waouesse-quote">
-            <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
-            Wa viens, Ouèssè t'attend.
-        </blockquote>
-    </section>
+        <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+            aria-controls="mainNav">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
 
-    <!-- CARROUSEL -->
-    <section class="categories" id="categories" aria-labelledby="categories-title">
-        <h2 id="categories-title">Explorer par catégorie</h2>
-        <p class="categories-subtitle">Six univers pour vivre Ouèssè pleinement</p>
+        <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
+                <li><a href="decouvert.html">Découvrir</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
 
-        <div class="carousel-wrapper">
-            <div class="carousel-track" id="carouselTrack" role="region" aria-label="Carrousel de catégories">
-                <!-- Nature -->
-                <article class="category-card">
-                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356789/mmsass_w1krnx.webp"
-                         srcset="https://res.cloudinary.com/nyke7lhc/image/upload/w_400,f_auto,q_auto/v1784356789/mmsass_w1krnx.webp 400w,
-                                 https://res.cloudinary.com/nyke7lhc/image/upload/w_800,f_auto,q_auto/v1784356789/mmsass_w1krnx.webp 800w,
-                                 https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,f_auto,q_auto/v1784356789/mmsass_w1krnx.webp 1200w"
-                         sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
-                         loading="lazy" decoding="async" width="300" height="200"
-                         alt="Forêt luxuriante de Ouèssè – Nature préservée à découvrir">
-                    <span class="category-label">Nature</span>
-                </article>
-                <!-- Culture -->
-                <article class="category-card">
-                    <a href="nuit-excellence-2026.html">
-                        <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972755/ouessww_r94zwl.webp"
-                             srcset="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972755/ouessww_r94zwl.webp 400w,
-                                     https://res.cloudinary.com/nyke7lhc/image/upload/v1785972755/ouessww_r94zwl.webp 800w,
-                                     https://res.cloudinary.com/nyke7lhc/image/upload/v1785972755/ouessww_r94zwl.webp 1200w"
-                             sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
-                             loading="lazy" decoding="async" width="300" height="200"
-                             alt="Patrimoine culturel et traditions sacrées de Ouèssè">
-                        <span class="category-label">Gala de la relève &amp; et culturelle</span>
-                    </a>
-                </article>
-                <!-- Loisirs -->
-                <article class="category-card">
-                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356711/mmaswms_jaayr9.webp"
-                         srcset="https://res.cloudinary.com/nyke7lhc/image/upload/w_400,f_auto,q_auto/v1784356711/mmaswms_jaayr9.webp 400w,
-                                 https://res.cloudinary.com/nyke7lhc/image/upload/w_800,f_auto,q_auto/v1784356711/mmaswms_jaayr9.webp 800w,
-                                 https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,f_auto,q_auto/v1784356711/mmaswms_jaayr9.webp 1200w"
-                         sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
-                         loading="lazy" decoding="async" width="300" height="200"
-                         alt="Activités de loisirs et sports au cœur des collines de Ouèssè">
-                    <span class="category-label">Loisirs et Sports</span>
-                </article>
-                <!-- Gastronomie -->
-                <article class="category-card">
-                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784369072/viande_bikd3m.webp"
-                         srcset="https://res.cloudinary.com/nyke7lhc/image/upload/w_400,f_auto,q_auto/v1784369072/viande_bikd3m.webp 400w,
-                                 https://res.cloudinary.com/nyke7lhc/image/upload/w_800,f_auto,q_auto/v1784369072/viande_bikd3m.webp 800w,
-                                 https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,f_auto,q_auto/v1784369072/viande_bikd3m.webp 1200w"
-                         sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
-                         loading="lazy" decoding="async" width="300" height="200"
-                         alt="Plats traditionnels et gastronomie authentique de Ouèssè">
-                    <span class="category-label">Gastronomie</span>
-                </article>
-                <!-- Artisanat -->
-                <article class="category-card">
-                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784355824/vipbla_oequ6y.webp"
-                         srcset="https://res.cloudinary.com/nyke7lhc/image/upload/w_400,f_auto,q_auto/v1784355824/vipbla_oequ6y.webp 400w,
-                                 https://res.cloudinary.com/nyke7lhc/image/upload/w_800,f_auto,q_auto/v1784355824/vipbla_oequ6y.webp 800w,
-                                 https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,f_auto,q_auto/v1784355824/vipbla_oequ6y.webp 1200w"
-                         sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
-                         loading="lazy" decoding="async" width="300" height="200"
-                         alt="Artisanat local et savoir-faire traditionnel de Ouèssè">
-                    <span class="category-label">Artisanat</span>
-                </article>
-                <!-- Événements -->
-                <article class="category-card">
-                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784355825/mairvip_gvychz.webp"
-                         srcset="https://res.cloudinary.com/nyke7lhc/image/upload/w_400,f_auto,q_auto/v1784355825/mairvip_gvychz.webp 400w,
-                                 https://res.cloudinary.com/nyke7lhc/image/upload/w_800,f_auto,q_auto/v1784355825/mairvip_gvychz.webp 800w,
-                                 https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,f_auto,q_auto/v1784355825/mairvip_gvychz.webp 1200w"
-                         sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 300px"
-                         loading="lazy" decoding="async" width="300" height="200"
-                         alt="Festivals et événements traditionnels de Ouèssè">
-                    <span class="category-label">Événements</span>
-                </article>
-            </div>
+            </ul>
+        </nav>
 
-            <button class="carousel-btn prev" id="prevBtn" type="button" aria-label="Catégorie précédente">
-                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <button class="carousel-btn next" id="nextBtn" type="button" aria-label="Catégorie suivante">
-                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </button>
-        </div>
+        <a href="decouvert.html" class="btn-explorer">Explorer</a>
+    </header>
 
-        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navigation du carrousel"></div>
-    </section>
+    <main>
 
-    <!-- PRÉSENTATION -->
-    <section class="texte" id="presentation" aria-labelledby="presentation-title">
-        <div class="wrapper">
-            <div class="profile">
-                <div class="profile-image">
-                   <img src="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto/q_auto/weills_syvaz1.webp"
-                        loading="lazy" decoding="async" width="600" height="400"
-                        alt="Jeune fille de Ouèssè souriante, symbole de l'hospitalité locale">
-                </div>
-                <div class="intro">
-                    <h2 id="presentation-title">Présentation de la Commune de Ouèssè</h2>
-                    <p class="nouveaugraph">
-                        La Commune de Ouèssè, vaste territoire situé au cœur du Bénin, est une destination dont le sous-sol regorge de la deuxième réserve mondiale de marbre bleu, derrière celle de l'Italie, notamment à Idadjo. Elle est également reconnue pour ses forêts classées, ses forêts sacrées, ses collines et ses forêts-galeries.
-                    </p>
-                    <p class="nouveaugraph">
-                        Située au nord du département des Collines, à 327 km de Cotonou, elle couvre environ 3 200 km², soit 2,5 % de la superficie nationale.
-                    </p>
-                    <p class="nouveaugraph">
-                        Depuis le 14 février 2026, elle est administrée par le Maire Romain Biaou Ayedon (Bloc Républicain), élu à la suite des élections communales du 11 janvier 2026 pour un mandat de sept ans, et succédant à Firmin Akpo Ibidon. La commune comprend neuf arrondissements : Challa-Ogoï, Djègbè, Gbanlin, Ikèmon, Kilibo, Laminou, Odougba, Ouèssè-Centre et Toui.
-                    </p>
-                    <p class="nouveaugraph">
-                        La commune est limitée au nord par Tchaourou, au sud par Savè et Glazoué, à l'ouest par Bantè et Bassila, et à l'est par le Nigeria.
-                    </p>
-                    <p class="nouveaugraph">
-                        Sa population était estimée à 142 017 habitants lors du recensement RGPH-4 (2013), composée principalement des Shabè et des Mahis, auxquels s'ajoutent plusieurs autres groupes socioculturels.
-                    </p>
-                    <p class="nouveaugraph">
-                        Son relief est peu accidenté et ses terres sont favorables à l'agriculture. Les principales cultures sont le maïs, le manioc, l'arachide, le riz, le haricot, le soja, le vouandzou et l'acajou.
-                    </p>
-                    <p class="nouveaugraph">
-                        Grâce à une pluviométrie abondante, sept cours d'eau traversent la commune : l'Ouémé, l'Okpara, la Gbéffa, la Kilibo, la Liga, la Nonomi et la Toumi.
-                    </p>
-                    <p class="nouveaugraph">
-                        Le premier souverain des terres de Ouèssè fut Sa Majesté Djahlin Djanta, alias Faka Foukou, qui régna de 1690 à 1720. Une imposante statue a été érigée en son honneur.
-                    </p>
-                    <p class="nouveaugraph">
-                        Parmi les autres sites touristiques figurent les galeries souterraines (Odi) de Yaoui, les collines de Kèmon et les mares aux caïmans de Gbongui.
-                    </p>
-                    <p class="nouveaugraph">
-                        La commune bénéficie également de plusieurs infrastructures modernes, notamment un stade omnisports de 3 000 places et l'Hôpital de Zone Savè-Ouèssè.
-                    </p>
+        <!-- HERO -->
+        <section class="hero" aria-label="Bannière principale">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Ouèssè, l&rsquo;<em>âme</em> du<br>Bénin authentique</h1>
+                <p class="hero-text">
+                    Découvrez les trésors culturels, naturels et artisanaux de notre<br>
+                    commune — entre forêts sacrées, marchés traditionnels et hospitalité<br>
+                    légendaire.
+                </p>
+
+                <!-- FORMULAIRE DE RECHERCHE -->
+                <form class="search" id="searchForm" role="search" action="/search" method="GET" autocomplete="off">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input type="text" id="searchInput" name="q" placeholder="Rechercher un lieu, une expérience..."
+                        aria-label="Rechercher un lieu, une expérience à Ouèssè" required>
+                    <button type="submit">Rechercher</button>
+                    <div class="search-results" id="searchResults" role="listbox" aria-label="Résultats de recherche">
+                    </div>
+                </form>
+
+                <!-- PANNEAU DE RÉSUMÉ -->
+                <div class="summary-panel" id="summaryPanel" role="dialog" aria-modal="true"
+                    aria-labelledby="summaryTitleText" hidden>
+                    <div class="summary-header">
+                        <span class="summary-title" id="summaryTitleText"><i class="fa-solid fa-circle-info"
+                                aria-hidden="true"></i> <span>Résumé</span></span>
+                        <button class="summary-close" id="summaryClose" type="button"
+                            aria-label="Fermer le résumé">&times;</button>
+                    </div>
+                    <div class="summary-body">
+                        <p id="summaryText"></p>
+                        <a href="#" class="summary-link" id="summaryLink">Voir plus</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- GALERIE OUESSEXWE 2025 -->
-    <section class="gallery" id="galerie" aria-labelledby="galerie-title">
-        <h2 id="galerie-title">OUESSEXWE 2025 – WAOUESSE, venez vivre la fête !</h2>
-        <div class="gallery-container">
-            <figure class="gallery-item">
-                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356633/mmas_vjontu.webp"
-                     loading="lazy" decoding="async" width="300" height="200"
-                     alt="Cérémonie traditionnelle OUESSEXWE 2025 à Ouèssè">
-            </figure>
-            <figure class="gallery-item">
-                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356706/mmascss_mmsltr.webp"
-                     loading="lazy" decoding="async" width="300" height="200"
-                     alt="Danseurs en tenues traditionnelles lors des célébrations de Ouèssè">
-            </figure>
-            <figure class="gallery-item">
-                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361860/ezestztu_dd0uow.webp"
-                     loading="lazy" decoding="async" width="300" height="200"
-                     alt="Visiteurs et habitants réunis pour la fête OUESSEXWE">
-            </figure>
-            <figure class="gallery-item">
-                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361921/ouessefe_ma0i47.webp"
-                     loading="lazy" decoding="async" width="300" height="200"
-                     alt="Jeunesse de Ouèssè célébrant lors de l'événement OUESSEXWE">
-            </figure>
-            <figure class="gallery-item">
-                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361932/ouesseartis_ldyd1x.webp"
-                     loading="lazy" decoding="async" width="300" height="200"
-                     alt="Artisans exposant leurs créations lors de OUESSEXWE">
-            </figure>
-            <figure class="gallery-item">
-                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361866/ezeserg_oi8hb1.webp"
-                     loading="lazy" decoding="async" width="300" height="200"
-                     alt="Ambiance festive et conviviale à Ouèssè pendant OUESSEXWE">
-            </figure>
-        </div>
-    </section>
-
-    <!-- VIDÉO -->
-    <section class="video-section" id="video" aria-labelledby="video-title">
-        <h2 id="video-title">WAOUESSE – Venez voir Ouèssè en vidéo !</h2>
-        <div class="video-container">
-            <div class="yt-facade" id="ytFacade" data-video-id="bKYKkJ_rKuE">
-                <img src="https://i.ytimg.com/vi/bKYKkJ_rKuE/hqdefault.jpg"
-                     alt="Aperçu de la vidéo de présentation de Ouèssè" loading="lazy" decoding="async">
-                <button type="button" class="yt-play-btn" aria-label="Lire la vidéo de présentation de Ouèssè">
-                    <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALERIE NUIT DE L'EXCELLENCE (ID distinct pour éviter le doublon avec la galerie OUESSEXWE 2025) -->
-    <section class="gallery" id="galerie-excellence" aria-labelledby="galerie-excellence-title">
-        <h2 id="galerie-excellence-title"><a href="nuit-excellence-2026.html">Découvrez la nuit de l'excellence !</a></h2>
-        <div class="gallery-container">
-            <figure class="gallery-item">
-                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972758/troper_czpcot.webp"
-                     loading="lazy" decoding="async" width="300" height="200"
-                     alt="Les trophées de la Nuit de l'Excellence 2026 à Ouèssè, célébrant les talents locaux">
-            </figure>
-            <figure class="gallery-item">
-                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972755/ouessww_r94zwl.webp"
-                     loading="lazy" decoding="async" width="300" height="200"
-                     alt="Le public de la nuit de l'Excellence 2026 à Ouèssè, applaudissant les performances et les récompenses">
-            </figure>
-            <figure class="gallery-item">
-                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/kemyolluwa_cg3hpc.webp"
-                     loading="lazy" decoding="async" width="300" height="200"
-                     alt="KEMY OLUWA a la NUIT DE L'EXCELLENCE 2026 à Ouèssè, captivant le public avec sa performance musicale">
-            </figure>
-            <figure class="gallery-item">
-                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972747/commit%C3%A9_wctjwh.webp"
-                     loading="lazy" decoding="async" width="300" height="200"
-                     alt="Jeunesse de Ouèssè célébrant la nuit de l'Excellence 2026, avec des danses et des festivités">
-            </figure>
-            <figure class="gallery-item">
-                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972744/igrotossou_v6yy8q.webp"
-                     loading="lazy" decoding="async" width="300" height="200"
-                     alt="IGOR TOSSOU à la Nuit de l'Excellence 2026 à Ouèssè, honoré pour sa contribution exceptionnelle à la culture locale">
-            </figure>
-            <figure class="gallery-item">
-                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972760/woauess_kkhzdy.webp"
-                     loading="lazy" decoding="async" width="300" height="200"
-                     alt="LE PUBLIC DE LA NUIT DE L'EXCELLENCE 2026 À OUÈSSÈ, APPLAUDISSANT LES PERFORMANCES ET LES RÉCOMPENSES">
-            </figure>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq-section" id="faq-section" aria-labelledby="faq-title">
-        <h2 id="faq-title">Questions fréquentes sur Ouèssè et WAOUESSE</h2>
-
-        <details class="faq-item" id="faq-waouesse">
-            <summary><h3>Qu'est-ce que WAOUESSE ?</h3></summary>
-            <p>WAOUESSE est une invitation en langue Fon : « Wa » signifie « Viens » et « Ouèssè » est la commune. C'est l'appel à découvrir les trésors cachés de Ouèssè.</p>
-        </details>
-
-        <details class="faq-item" id="faq-localisation">
-            <summary><h3>Où se trouve la commune de Ouèssè ?</h3></summary>
-            <p>Ouèssè est située au nord du département des Collines, à 327 km de Cotonou, et partage une frontière avec le Nigeria à l'est.</p>
-        </details>
-
-        <details class="faq-item" id="faq-atouts">
-            <summary><h3>Quels sont les principaux atouts touristiques de Ouèssè ?</h3></summary>
-            <p>La commune abrite la deuxième réserve mondiale de marbre bleu (à Idadjo), des forêts classées et sacrées, sept rivières, des collines, des galeries souterraines, et un riche patrimoine royal Shabè et Mahi.</p>
-        </details>
-
-        <details class="faq-item" id="faq-maire">
-            <summary><h3>Qui est le Maire de Ouèssè ?</h3></summary>
-            <p>Depuis le 14 février 2026, le Maire de Ouèssè est Romain Biaou Ayedon (Bloc Républicain), élu à la suite des élections communales du 11 janvier 2026 pour un mandat de sept ans. Il succède à Firmin Akpo Ibidon.</p>
-        </details>
-
-        <section>
-            <details class="faq-item" id="faq-visite-1">
-                <summary><h3>Quand a eu lieu la visite de Luc S. Atrokpo à Ouèssè ?</h3></summary>
-                <p>Luc S. Atrokpo, Maire de Cotonou, a effectué une visite officielle au palais royal de Ouèssè le 16 août 2024, en compagnie du Maire de l'époque, Firmin Akpo IBIDON.</p>
-            </details>
-
-            <details class="faq-item" id="faq-visite-2">
-                <summary><h3>Y a-t-il d'autres personnalités politiques qui viennent de Ouèssè pour toucher le pouvoir national et international ?</h3></summary>
-                <p>Bien sûr que oui, découvrez <a href="briceahossa.html">Brice Ahossa</a> &amp; <a href="degla_benoit.html">Dégla Benoit</a>.</p>
-            </details>
         </section>
-    </section>
+
+        <!-- BLOC WAOUESSE -->
+        <section class="waouesse-bloc" id="waouesse" aria-labelledby="waouesse-title">
+            <span class="fon-legend"><i class="fa-solid fa-hand-peace" aria-hidden="true"></i> Langue Fon</span>
+            <h2 id="waouesse-title">Pourquoi <strong>WAOUESSE</strong> ? L'invitation à découvrir Ouèssè</h2>
+            <p>
+                <strong>« Wa »</strong> signifie <strong>« Viens »</strong> en langue Fon.
+                <strong>WAOUESSE</strong> est notre cri du cœur : <strong>venez à Ouèssè</strong>
+                pour explorer ses collines, ses forêts sacrées, son marbre bleu mondialement
+                reconnu et l'hospitalité légendaire de ses habitants.
+            </p>
+            <p>
+                Ce n'est pas un autre nom pour la commune, c'est une <strong>promesse d'évasion</strong>
+                et une invitation à découvrir les trésors que l'on ne montre pas aux regards
+                distraits. <strong>WAOUESSE</strong>, c'est l'appel de la terre shabè et mahi,
+                c'est votre prochaine aventure !
+            </p>
+            <blockquote class="waouesse-quote">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                Wa viens, Ouèssè t'attend.
+            </blockquote>
+        </section>
+
+        <!-- CARROUSEL -->
+        <section class="categories" id="categories" aria-labelledby="categories-title">
+            <h2 id="categories-title">Explorer par catégorie</h2>
+            <p class="categories-subtitle">Six univers pour vivre Ouèssè pleinement</p>
+
+
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <div class="carousel-track marquee-track" id="carouselTrack" role="region"
+                    aria-label="Carrousel de catégories">
+
+                    <article class="category-card">
+                        <a href="decouvert.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356789/mmsass_w1krnx.webp"
+                                loading="lazy" width="300" height="200" alt="Nature">
+                            <span class="category-label">Nature</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="nuit-excellence-2026.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972755/ouessww_r94zwl.webp"
+                                loading="lazy" width="300" height="200" alt="Culture">
+                            <span class="category-label">Gala de la relève</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="decouvert.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356711/mmaswms_jaayr9.webp"
+                                loading="lazy" width="300" height="200" alt="Loisirs">
+                            <span class="category-label">Loisirs et Sports</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="decouvert.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784369072/viande_bikd3m.webp"
+                                loading="lazy" width="300" height="200" alt="Gastronomie">
+                            <span class="category-label">Gastronomie</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="decouvert.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784355824/vipbla_oequ6y.webp"
+                                loading="lazy" width="300" height="200" alt="Artisanat">
+                            <span class="category-label">Artisanat</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="nuit-excellence-2026.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784355825/mairvip_gvychz.webp"
+                                loading="lazy" width="300" height="200" alt="Événements">
+                            <span class="category-label">Événements</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="vacances-explor-actives.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.jpg"
+                                loading="lazy" width="300" height="200" alt="Vacances Explor'Actives">
+                            <span class="category-label">Vacances Explor'Actives</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="jij-ouesse-2026.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1788559696/jij_2026_2_sl5zdw.jpg" loading="lazy" width="300" height="200" alt="JIJ-OUÈSSÈ 2026">
+                            <span class="category-label">JIJ 2026</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="decouvert.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356789/mmsass_w1krnx.webp"
+                                loading="lazy" width="300" height="200" alt="Nature">
+                            <span class="category-label">Nature</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="nuit-excellence-2026.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972755/ouessww_r94zwl.webp"
+                                loading="lazy" width="300" height="200" alt="Culture">
+                            <span class="category-label">Gala de la relève</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="decouvert.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356711/mmaswms_jaayr9.webp"
+                                loading="lazy" width="300" height="200" alt="Loisirs">
+                            <span class="category-label">Loisirs et Sports</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="decouvert.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784369072/viande_bikd3m.webp"
+                                loading="lazy" width="300" height="200" alt="Gastronomie">
+                            <span class="category-label">Gastronomie</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="decouvert.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784355824/vipbla_oequ6y.webp"
+                                loading="lazy" width="300" height="200" alt="Artisanat">
+                            <span class="category-label">Artisanat</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="nuit-excellence-2026.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784355825/mairvip_gvychz.webp"
+                                loading="lazy" width="300" height="200" alt="Événements">
+                            <span class="category-label">Événements</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="vacances-explor-actives.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.jpg"
+                                loading="lazy" width="300" height="200" alt="Vacances Explor'Actives">
+                            <span class="category-label">Vacances Explor'Actives</span>
+                        </a>
+                    </article>
+                    <article class="category-card">
+                        <a href="jij-ouesse-2026.html">
+                            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1788559696/jij_2026_2_sl5zdw.jpg" loading="lazy" width="300" height="200" alt="JIJ-OUÈSSÈ 2026">
+                            <span class="category-label">JIJ 2026</span>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRÉSENTATION -->
+        <section class="texte" id="presentation" aria-labelledby="presentation-title">
+            <div class="wrapper">
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto/q_auto/weills_syvaz1.webp"
+                            loading="lazy" decoding="async" width="600" height="400"
+                            alt="Jeune fille de Ouèssè souriante, symbole de l'hospitalité locale">
+                    </div>
+                    <div class="intro">
+                        <h2 id="presentation-title">Présentation de la Commune de Ouèssè</h2>
+                        <p class="nouveaugraph">
+                            La Commune de Ouèssè, vaste territoire situé au cœur du Bénin, est une destination dont le
+                            sous-sol regorge de la deuxième réserve mondiale de marbre bleu, derrière celle de l'Italie,
+                            notamment à Idadjo. Elle est également reconnue pour ses forêts classées, ses forêts
+                            sacrées, ses collines et ses forêts-galeries.
+                        </p>
+                        <p class="nouveaugraph">
+                            Située au nord du département des Collines, à 327 km de Cotonou, elle couvre environ 3 200
+                            km², soit 2,5 % de la superficie nationale.
+                        </p>
+                        <p class="nouveaugraph">
+                            Depuis le 14 février 2026, elle est administrée par le Maire Romain Biaou Ayedon (Bloc
+                            Républicain), élu à la suite des élections communales du 11 janvier 2026 pour un mandat de
+                            sept ans, et succédant à Firmin Akpo Ibidon. La commune comprend neuf arrondissements :
+                            Challa-Ogoï, Djègbè, Gbanlin, Ikèmon, Kilibo, Laminou, Odougba, Ouèssè-Centre et Toui.
+                        </p>
+                        <p class="nouveaugraph">
+                            La commune est limitée au nord par Tchaourou, au sud par Savè et Glazoué, à l'ouest par
+                            Bantè et Bassila, et à l'est par le Nigeria.
+                        </p>
+                        <p class="nouveaugraph">
+                            Sa population était estimée à 142 017 habitants lors du recensement RGPH-4 (2013), composée
+                            principalement des Shabè et des Mahis, auxquels s'ajoutent plusieurs autres groupes
+                            socioculturels.
+                        </p>
+                        <p class="nouveaugraph">
+                            Son relief est peu accidenté et ses terres sont favorables à l'agriculture. Les principales
+                            cultures sont le maïs, le manioc, l'arachide, le riz, le haricot, le soja, le vouandzou et
+                            l'acajou.
+                        </p>
+                        <p class="nouveaugraph">
+                            Grâce à une pluviométrie abondante, sept cours d'eau traversent la commune : l'Ouémé,
+                            l'Okpara, la Gbéffa, la Kilibo, la Liga, la Nonomi et la Toumi.
+                        </p>
+                        <p class="nouveaugraph">
+                            Le premier souverain des terres de Ouèssè fut Sa Majesté Djahlin Djanta, alias Faka Foukou,
+                            qui régna de 1690 à 1720. Une imposante statue a été érigée en son honneur.
+                        </p>
+                        <p class="nouveaugraph">
+                            Parmi les autres sites touristiques figurent les galeries souterraines (Odi) de Yaoui, les
+                            collines de Kèmon et les mares aux caïmans de Gbongui.
+                        </p>
+                        <p class="nouveaugraph">
+                            La commune bénéficie également de plusieurs infrastructures modernes, notamment un stade
+                            omnisports de 3 000 places et l'Hôpital de Zone Savè-Ouèssè.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERIE OUESSEXWE 2025 -->
+        <section class="gallery" id="galerie" aria-labelledby="galerie-title">
+            <h2 id="galerie-title">OUESSEXWE 2025 – WAOUESSE, venez vivre la fête !</h2>
+            <div class="gallery-container">
+                <figure class="gallery-item">
+                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356633/mmas_vjontu.webp"
+                        loading="lazy" decoding="async" width="300" height="200"
+                        alt="Cérémonie traditionnelle OUESSEXWE 2025 à Ouèssè">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784356706/mmascss_mmsltr.webp"
+                        loading="lazy" decoding="async" width="300" height="200"
+                        alt="Danseurs en tenues traditionnelles lors des célébrations de Ouèssè">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361860/ezestztu_dd0uow.webp"
+                        loading="lazy" decoding="async" width="300" height="200"
+                        alt="Visiteurs et habitants réunis pour la fête OUESSEXWE">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361921/ouessefe_ma0i47.webp"
+                        loading="lazy" decoding="async" width="300" height="200"
+                        alt="Jeunesse de Ouèssè célébrant lors de l'événement OUESSEXWE">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361932/ouesseartis_ldyd1x.webp"
+                        loading="lazy" decoding="async" width="300" height="200"
+                        alt="Artisans exposant leurs créations lors de OUESSEXWE">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784361866/ezeserg_oi8hb1.webp"
+                        loading="lazy" decoding="async" width="300" height="200"
+                        alt="Ambiance festive et conviviale à Ouèssè pendant OUESSEXWE">
+                </figure>
+            </div>
+        </section>
+
+        <!-- VIDÉO -->
+        <section class="video-section" id="video" aria-labelledby="video-title">
+            <h2 id="video-title">WAOUESSE – Venez voir Ouèssè en vidéo !</h2>
+            <div class="video-container">
+                <div class="yt-facade" id="ytFacade" data-video-id="bKYKkJ_rKuE">
+                    <img src="https://i.ytimg.com/vi/bKYKkJ_rKuE/hqdefault.jpg"
+                        alt="Aperçu de la vidéo de présentation de Ouèssè" loading="lazy" decoding="async">
+                    <button type="button" class="yt-play-btn" aria-label="Lire la vidéo de présentation de Ouèssè">
+                        <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERIE NUIT DE L'EXCELLENCE (ID distinct pour éviter le doublon avec la galerie OUESSEXWE 2025) -->
+        <section class="gallery" id="galerie-excellence" aria-labelledby="galerie-excellence-title">
+            <h2 id="galerie-excellence-title"><a href="nuit-excellence-2026.html">Découvrez la nuit de l'excellence
+                    !</a></h2>
+            <div class="gallery-container">
+                <figure class="gallery-item">
+                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972758/troper_czpcot.webp"
+                        loading="lazy" decoding="async" width="300" height="200"
+                        alt="Les trophées de la Nuit de l'Excellence 2026 à Ouèssè, célébrant les talents locaux">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972755/ouessww_r94zwl.webp"
+                        loading="lazy" decoding="async" width="300" height="200"
+                        alt="Le public de la nuit de l'Excellence 2026 à Ouèssè, applaudissant les performances et les récompenses">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/kemyolluwa_cg3hpc.webp"
+                        loading="lazy" decoding="async" width="300" height="200"
+                        alt="KEMY OLUWA a la NUIT DE L'EXCELLENCE 2026 à Ouèssè, captivant le public avec sa performance musicale">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972747/commit%C3%A9_wctjwh.webp"
+                        loading="lazy" decoding="async" width="300" height="200"
+                        alt="Jeunesse de Ouèssè célébrant la nuit de l'Excellence 2026, avec des danses et des festivités">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972744/igrotossou_v6yy8q.webp"
+                        loading="lazy" decoding="async" width="300" height="200"
+                        alt="IGOR TOSSOU à la Nuit de l'Excellence 2026 à Ouèssè, honoré pour sa contribution exceptionnelle à la culture locale">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785972760/woauess_kkhzdy.webp"
+                        loading="lazy" decoding="async" width="300" height="200"
+                        alt="LE PUBLIC DE LA NUIT DE L'EXCELLENCE 2026 À OUÈSSÈ, APPLAUDISSANT LES PERFORMANCES ET LES RÉCOMPENSES">
+                </figure>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section" id="faq-section" aria-labelledby="faq-title">
+            <h2 id="faq-title">Questions fréquentes sur Ouèssè et WAOUESSE</h2>
+
+            <details class="faq-item" id="faq-waouesse">
+                <summary>
+                    <h3>Qu'est-ce que WAOUESSE ?</h3>
+                </summary>
+                <p>WAOUESSE est une invitation en langue Fon : « Wa » signifie « Viens » et « Ouèssè » est la commune.
+                    C'est l'appel à découvrir les trésors cachés de Ouèssè.</p>
+            </details>
+
+            <details class="faq-item" id="faq-localisation">
+                <summary>
+                    <h3>Où se trouve la commune de Ouèssè ?</h3>
+                </summary>
+                <p>Ouèssè est située au nord du département des Collines, à 327 km de Cotonou, et partage une frontière
+                    avec le Nigeria à l'est.</p>
+            </details>
+
+            <details class="faq-item" id="faq-atouts">
+                <summary>
+                    <h3>Quels sont les principaux atouts touristiques de Ouèssè ?</h3>
+                </summary>
+                <p>La commune abrite la deuxième réserve mondiale de marbre bleu (à Idadjo), des forêts classées et
+                    sacrées, sept rivières, des collines, des galeries souterraines, et un riche patrimoine royal Shabè
+                    et Mahi.</p>
+            </details>
+
+            <details class="faq-item" id="faq-maire">
+                <summary>
+                    <h3>Qui est le Maire de Ouèssè ?</h3>
+                </summary>
+                <p>Depuis le 14 février 2026, le Maire de Ouèssè est Romain Biaou Ayedon (Bloc Républicain), élu à la
+                    suite des élections communales du 11 janvier 2026 pour un mandat de sept ans. Il succède à Firmin
+                    Akpo Ibidon.</p>
+            </details>
+
+            <section>
+                <details class="faq-item" id="faq-visite-1">
+                    <summary>
+                        <h3>Quand a eu lieu la visite de Luc S. Atrokpo à Ouèssè ?</h3>
+                    </summary>
+                    <p>Luc S. Atrokpo, Maire de Cotonou, a effectué une visite officielle au palais royal de Ouèssè le
+                        16 août 2024, en compagnie du Maire de l'époque, Firmin Akpo IBIDON.</p>
+                </details>
+
+                <details class="faq-item" id="faq-visite-2">
+                    <summary>
+                        <h3>Y a-t-il d'autres personnalités politiques qui viennent de Ouèssè pour toucher le pouvoir
+                            national et international ?</h3>
+                    </summary>
+                    <p>Bien sûr que oui, découvrez <a href="briceahossa.html">Brice Ahossa</a> &amp; <a
+                            href="degla_benoit.html">Dégla Benoit</a>.</p>
+                </details>
+            </section>
+        </section>
+        <div id="aggregated-faqs" style="margin-top: 40px; border-top: 1px solid var(--line); padding-top: 40px;">
+            <h3 style="margin-bottom: 24px; font-family: var(--font-heading); color: var(--ink);">Plus de questions...
+            </h3>
+            <details class="faq-item">
+                <summary>
+                    <h3>Où et vers quelle année est né Dr Ibidon Firmin Akpo ?</h3>
+                </summary>
+                <p><strong>Dr Ibidon Firmin Akpo est né vers 1972 à Ouèssè</strong>, au cœur du Bénin, dans une famille
+                    modeste : son père était cultivateur et sa mère ménagère.</p>
+                <p style="margin-top: 10px;"><a href="akpo_firmin_ibidon.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Firmin Akpo Ibidon</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quel est le parcours scolaire de Dr Ibidon Firmin Akpo ?</h3>
+                </summary>
+                <p>À 10 ans, il obtient son <strong>CEFEB</strong>. En 1986, il décroche le <strong>BEPC</strong>, puis
+                    en 1994 le <strong>baccalauréat série D</strong>. Entre ces étapes, il se forme au lycée agricole
+                    Medji de Sékou et obtient un diplôme de contrôleur des travaux en BTP.</p>
+                <p style="margin-top: 10px;"><a href="akpo_firmin_ibidon.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Firmin Akpo Ibidon</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quel doctorat a obtenu Dr Ibidon Firmin Akpo ?</h3>
+                </summary>
+                <p>Après une maîtrise en Sociologie à l'Université d'Abomey-Calavi et un DESS, il obtient en 2016 un
+                    <strong>doctorat en économie rurale</strong>.
+                </p>
+                <p style="margin-top: 10px;"><a href="akpo_firmin_ibidon.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Firmin Akpo Ibidon</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Combien de mandats Dr Ibidon Firmin Akpo a-t-il effectués en tant que Maire de Ouèssè ?</h3>
+                </summary>
+                <p>Il a été élu Maire de Ouèssè pour <strong>quatre mandats consécutifs</strong>, étant le seul Maire du
+                    département des Collines réélu lors de la vague électorale précédente.</p>
+                <p style="margin-top: 10px;"><a href="akpo_firmin_ibidon.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Firmin Akpo Ibidon</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quelle distinction nationale a reçue Dr Ibidon Firmin Akpo ?</h3>
+                </summary>
+                <p>Dr Ibidon Firmin Akpo a été fait <strong>Officier de l'Ordre national du Bénin</strong>, une
+                    distinction consacrant une vie de service et d'intégrité.</p>
+                <p style="margin-top: 10px;"><a href="akpo_firmin_ibidon.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Firmin Akpo Ibidon</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Qui est l'actuel Maire de Ouèssè ?</h3>
+                </summary>
+                <p>Depuis son installation le <strong>14 février 2026</strong>, à la suite des élections communales du
+                    11 janvier 2026, <strong>Romain Biaou Ayedon</strong> est le Maire de Ouèssè. Il a succédé à Dr
+                    Ibidon Firmin Akpo, dont le portrait ci-dessus retrace le parcours.</p>
+                <p style="margin-top: 10px;"><a href="akpo_firmin_ibidon.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Firmin Akpo Ibidon</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Qui est Brice Ahossa ?</h3>
+                </summary>
+                <p><strong>Brice Ahossa</strong> est un leader béninois né le 15 février 2000 à Ouèssè. Il est reconnu
+                    pour son engagement étudiant, son leadership au Parlement des Jeunes du Bénin et sa distinction
+                    Forbes 30 Under 30 en 2026.</p>
+                <p style="margin-top: 10px;"><a href="briceahossa.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Brice Ahossa</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quel est le parcours académique de Brice Ahossa ?</h3>
+                </summary>
+                <p>Il a obtenu son CEP en 2012, son BEPC en 2016, son baccalauréat en 2019, puis une licence en Lettres
+                    modernes à l'Université de Parakou. En 2024, il a décroché la Bourse Eiffel pour un Master à
+                    l'Université de Corse.</p>
+                <p style="margin-top: 10px;"><a href="briceahossa.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Brice Ahossa</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quels sont les ouvrages publiés par Brice Ahossa ?</h3>
+                </summary>
+                <p>Il a publié <em>Dieu est un fumeur</em> en 2022 et <em>Le Baobab des sentiments</em> en 2023. Ces
+                    deux œuvres abordent des thématiques sociales et politiques.</p>
+                <p style="margin-top: 10px;"><a href="briceahossa.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Brice Ahossa</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Qu'est-ce que le CJAD ?</h3>
+                </summary>
+                <p>Le <strong>Cercle des Jeunes Activistes pour le Développement (CJAD)</strong> est une association
+                    fondée par Brice Ahossa pour former et accompagner les jeunes de Ouèssè dans leur insertion
+                    professionnelle.</p>
+                <p style="margin-top: 10px;"><a href="briceahossa.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Brice Ahossa</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Pourquoi Brice Ahossa a-t-il été classé dans Forbes 30 Under 30 ?</h3>
+                </summary>
+                <p>Il a été distingué pour son leadership politique, son engagement social et son parcours exemplaire,
+                    qui font de lui un modèle pour la jeunesse africaine.</p>
+                <p style="margin-top: 10px;"><a href="briceahossa.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Brice Ahossa</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Où puis-je en apprendre plus sur Ouèssè ?</h3>
+                </summary>
+                <p>Pour découvrir l'histoire, la culture et les personnalités de Ouèssè, consultez ces ressources :</p>
+                <ul style="list-style: none; padding-left: 32px; margin-top: 8px;">
+                    <li style="margin-bottom: 8px;">
+                        <a href="degla_benoit.html"
+                            style="color: #0b6b44; text-decoration: none; font-weight: 500; transition: color 0.3s ease;"
+                            onmouseover="this.style.color='#084d31'; this.style.textDecoration='underline';"
+                            onmouseout="this.style.color='#0b6b44'; this.style.textDecoration='none';">
+                            <i class="fa-solid fa-user-tie" style="margin-right: 8px;"></i> Parcours de Benoît Assouan
+                            Comlan Dègla
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="akpo_firmin_ibidon.html"
+                            style="color: #0b6b44; text-decoration: none; font-weight: 500; transition: color 0.3s ease;"
+                            onmouseover="this.style.color='#084d31'; this.style.textDecoration='underline';"
+                            onmouseout="this.style.color='#0b6b44'; this.style.textDecoration='none';">
+                            <i class="fa-solid fa-city" style="margin-right: 8px;"></i> La Mairie de Ouèssè
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="nuit-excellence-2026.html"
+                            style="color: #0b6b44; text-decoration: none; font-weight: 500; transition: color 0.3s ease;"
+                            onmouseover="this.style.color='#084d31'; this.style.textDecoration='underline';"
+                            onmouseout="this.style.color='#0b6b44'; this.style.textDecoration='none';">
+                            <i class="fa-solid fa-award" style="margin-right: 8px;"></i> La Nuit de l'Excellence
+                        </a>
+                    </li>
+                </ul>
+                <p style="margin-top: 10px;"><a href="briceahossa.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Brice Ahossa</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quels sont les liens utiles pour explorer la commune de Ouèssè ?</h3>
+                </summary>
+                <p>Retrouvez ci-dessous les principaux liens pour découvrir Ouèssè sous tous ses angles :</p>
+                <ul style="list-style: none; padding-left: 32px; margin-top: 8px;">
+                    <li style="margin-bottom: 8px;">
+                        <a href="degla_benoit.html"
+                            style="color: #0b6b44; text-decoration: none; font-weight: 500; transition: color 0.3s ease;"
+                            onmouseover="this.style.color='#084d31'; this.style.textDecoration='underline';"
+                            onmouseout="this.style.color='#0b6b44'; this.style.textDecoration='none';">
+                            <i class="fa-solid fa-landmark" style="margin-right: 8px;"></i> Benoît Dègla : Ministre et
+                            Député
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="akpo_firmin_ibidon.html"
+                            style="color: #0b6b44; text-decoration: none; font-weight: 500; transition: color 0.3s ease;"
+                            onmouseover="this.style.color='#084d31'; this.style.textDecoration='underline';"
+                            onmouseout="this.style.color='#0b6b44'; this.style.textDecoration='none';">
+                            <i class="fa-solid fa-building" style="margin-right: 8px;"></i> La Mairie de Ouèssè
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="nuit-excellence-2026.html"
+                            style="color: #0b6b44; text-decoration: none; font-weight: 500; transition: color 0.3s ease;"
+                            onmouseover="this.style.color='#084d31'; this.style.textDecoration='underline';"
+                            onmouseout="this.style.color='#0b6b44'; this.style.textDecoration='none';">
+                            <i class="fa-solid fa-trophy" style="margin-right: 8px;"></i> La Nuit de l'Excellence
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="decouvert.html"
+                            style="color: #0b6b44; text-decoration: none; font-weight: 500; transition: color 0.3s ease;"
+                            onmouseover="this.style.color='#084d31'; this.style.textDecoration='underline';"
+                            onmouseout="this.style.color='#0b6b44'; this.style.textDecoration='none';">
+                            <i class="fa-solid fa-compass" style="margin-right: 8px;"></i> Découvrir Ouèssè
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://waouesse.vercel.app/contact.html"
+                            style="color: #0b6b44; text-decoration: none; font-weight: 500; transition: color 0.3s ease;"
+                            onmouseover="this.style.color='#084d31'; this.style.textDecoration='underline';"
+                            onmouseout="this.style.color='#0b6b44'; this.style.textDecoration='none';">
+                            <i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contacter l'équipe
+                        </a>
+                    </li>
+                </ul>
+                <p style="margin-top: 10px;"><a href="briceahossa.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Brice Ahossa</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Qui sont NarroQ et EzegLabs ?</h3>
+                </summary>
+                <p>NarroQ est une organisation technologique spécialisée dans le développement web technique, la
+                    cybersécurité et les technologies profondes. C'est aussi un pôle de recherche en tech et innovation,
+                    explorant notamment l'apport de l'intelligence artificielle quantique, pour concevoir des solutions
+                    hybrides tournées vers l'arrivée de la NextGen Alpha, ancrées dans des usages réels. EzegLabs est le
+                    studio partenaire qui prend en charge le design et le flux de travail de chaque projet, assurant une
+                    identité visuelle forte et une exécution fluide de bout en bout.</p>
+                <p style="margin-top: 10px;"><a href="contact.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page Contact</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quels types de solutions réalisez-vous ?</h3>
+                </summary>
+                <p>Nous concevons différentes solutions hybrides sur mesure : plateformes e-commerce, applications
+                    mobiles, sites et outils web techniques intégrant des briques d'intelligence artificielle avancée.
+                    Chaque projet allie robustesse technique, sécurité et expérience utilisateur pensée pour un usage
+                    concret.</p>
+                <p style="margin-top: 10px;"><a href="contact.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page Contact</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Combien coûte la création d'une solution ?</h3>
+                </summary>
+                <p>Chaque projet est sur mesure, selon sa complexité technique et l'ampleur du design. Contactez-nous
+                    pour un devis gratuit adapté à votre besoin.</p>
+                <p style="margin-top: 10px;"><a href="contact.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page Contact</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Comment puis-je contacter NarroQ ou EzegLabs ?</h3>
+                </summary>
+                <p>Vous pouvez nous écrire à <a href="mailto:neekleiooffice@gmail.com">neekleiooffice@gmail.com</a> ou
+                    utiliser le formulaire de contact ci-dessus. Nous répondons sous 48 heures.</p>
+                <p style="margin-top: 10px;"><a href="contact.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page Contact</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quels sont les principaux défis de Ouèssè ?</h3>
+                </summary>
+                <p><strong>Les routes sont en mauvais état dans des zones comme LAMINOU AGBALOKOUGOUDO, la route allant
+                        à N'GBEHOUEDO de l'école primaire privée SEWE</strong> et d'autres. Les ressources politiques
+                    sont insuffisantes et la commune manque de moyens pour structurer le football, l'art et la musique.
+                    Le recul de la progression scolaire est également préoccupant.</p>
+                <p style="margin-top: 10px;"><a href="decouvert.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page Découverte</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quelles activités animent la jeunesse de Ouèssè ?</h3>
+                </summary>
+                <p>La jeunesse s'investit dans le football (tournois locaux), l'art (peinture, sculpture), la musique
+                    (concerts de rue), la photographie (reportages) et des événements festifs (parties, soirées).</p>
+                <p style="margin-top: 10px;"><a href="decouvert.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page Découverte</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Y a-t-il des événements culturels à Ouèssè ?</h3>
+                </summary>
+                <p>Oui, des festivals de musique, des expositions d'art, des matchs de football, et des soirées
+                    photographiques sont organisés régulièrement par les jeunes : <strong>LTNDR (Le Temps Nous Donnera
+                        Raison)</strong>, une initiative de <strong>Gonzario Setondji Adjahoungbo</strong>,
+                    <strong>Winner Event's</strong> de <strong>Abraham Bloh</strong>, <strong>ECAO, JIJ</strong> et les
+                    <strong>GALA</strong>, etc.
+                </p>
+                <p style="margin-top: 10px;"><a href="decouvert.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page Découverte</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Comment soutenir le développement de Ouèssè ?</h3>
+                </summary>
+                <p>En participant aux initiatives locales, en investissant dans des projets d'infrastructures, et en
+                    faisant connaître les potentialités de la commune auprès des décideurs.</p>
+                <p style="margin-top: 10px;"><a href="decouvert.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page Découverte</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Où et vers quelle année est né Benoît Assouan Comlan Dègla ?</h3>
+                </summary>
+                <p><strong>Benoît Assouan Comlan Dègla est né à Ouèssè</strong>, au cœur du Bénin, dans une famille
+                    modeste. Les sources ne mentionnent pas précisément son année de naissance, mais son parcours
+                    scolaire et professionnel s'étale des années 1980 à nos jours.</p>
+                <p style="margin-top: 10px;"><a href="degla_benoit.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Dégla Benoit</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quel est le parcours scolaire de Benoît Dègla ?</h3>
+                </summary>
+                <p><strong>Benoît Dègla a poursuivi des études en droit, en science politique et en
+                        administration.</strong> Il a obtenu des diplômes qui lui ont permis de comprendre les rouages
+                    de l'État et de la gouvernance, avant d'intégrer l'administration publique puis la politique.</p>
+                <p style="margin-top: 10px;"><a href="degla_benoit.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Dégla Benoit</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quelles sont les principales fonctions occupées par Benoît Dègla ?</h3>
+                </summary>
+                <p><strong>Benoît Dègla a été Ministre de l'Intérieur, de la Sécurité Publique et des Cultes</strong>
+                    (2011-2013), <strong>Conseiller Spécial du Président Boni Yayi pour les Affaires de
+                        Sécurité</strong> (2013-2016), puis <strong>Député de la 10e circonscription (Ouèssè)</strong>
+                    depuis 2019.</p>
+                <p style="margin-top: 10px;"><a href="degla_benoit.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Dégla Benoit</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quel rôle a joué Benoît Dègla dans l'affaire Patrice Talon ?</h3>
+                </summary>
+                <p>En tant que Ministre de l'Intérieur, <strong>Benoît Dègla a défendu la position du
+                        gouvernement</strong> face aux accusations de tentative d'empoisonnement visant le président
+                    Boni Yayi. Il s'est exprimé sur RFI en octobre 2012 pour clarifier la position de l'État.</p>
+                <p style="margin-top: 10px;"><a href="degla_benoit.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Dégla Benoit</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quelle est la position de Benoît Dègla sur les réformes électorales ?</h3>
+                </summary>
+                <p><strong>Benoît Dègla est un défenseur du nouveau Code électoral</strong> et des accords de
+                    gouvernance. Il estime que ces réformes visent à assainir le paysage politique béninois et à
+                    favoriser l'émergence de députés véritablement représentatifs.</p>
+                <p style="margin-top: 10px;"><a href="degla_benoit.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        page de Dégla Benoit</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quand est-ce que Luc S. Atrokpo est venu à Ouèssè ?</h3>
+                </summary>
+                <p><strong>Luc S. Atrokpo est venu à Ouèssè le <span class="highlight-date">16 août
+                            2024</span>.</strong> Cette date marque une visite officielle majeure au palais royal de la
+                    commune.</p>
+                <p style="margin-top: 10px;"><a href="luc.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        visite de Luc S. Atrokpo</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Qui a accueilli Luc Atrokpo à Ouèssè ?</h3>
+                </summary>
+                <p><strong>Luc S. Atrokpo a été accueilli par le nouveau Roi de Ouèssè</strong> et par le <strong>Maire
+                        de la commune, Firmin Akpo IBIDON</strong>. Les deux autorités ont accompagné le Maire de
+                    Cotonou tout au long de sa visite protocolaire.</p>
+                <p style="margin-top: 10px;"><a href="luc.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        visite de Luc S. Atrokpo</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Luc Atrokpo s'est-il prosterné devant le Roi de Ouèssè ?</h3>
+                </summary>
+                <p><strong>Oui.</strong> Les images exclusives montrent Luc S. Atrokpo dans une posture de profond
+                    respect, <strong>se prosternant devant le nouveau Roi de Ouèssè</strong>, marquant ainsi sa
+                    reconnaissance de l'autorité traditionnelle et spirituelle.</p>
+                <p style="margin-top: 10px;"><a href="luc.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        visite de Luc S. Atrokpo</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Où se trouve le palais royal de Ouèssè ?</h3>
+                </summary>
+                <p>Le <strong>palais royal de Ouèssè</strong> se situe au cœur l'arrondissement de Ouesse Centre devant
+                    la station centrale quittant le marché <strong>département des Collines</strong> au Bénin. C'est le
+                    siège de l'autorité traditionnelle et un lieu emblématique de la culture shabè et mahi.</p>
+                <p style="margin-top: 10px;"><a href="luc.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        visite de Luc S. Atrokpo</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quel est le lien entre Luc Atrokpo et Firmin Akpo IBIDON ?</h3>
+                </summary>
+                <p><strong>Luc S. Atrokpo</strong> est le Maire de Cotonou et <strong>Firmin Akpo IBIDON</strong> est le
+                    Maire de Ouèssè. Ils ont collaboré lors de cette visite du 16 août 2024 pour renforcer les liens
+                    institutionnels entre la capitale économique et la commune de Ouèssè.</p>
+                <p style="margin-top: 10px;"><a href="luc.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        visite de Luc S. Atrokpo</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quand a eu lieu la Nuit de l'Excellence 2026 ?</h3>
+                </summary>
+                <p>Le <strong>1er août 2026</strong>, à la Maison des Jeunes de Ouèssè Wogoudo.</p>
+                <p style="margin-top: 10px;"><a href="nuit-excellence-2026.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        Nuit de l'Excellence</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Qui étaient les invités d'honneur ?</h3>
+                </summary>
+                <p><strong>Sa Majesté TCHINI TONOU</strong>, Roi de Ouèssè, la Reine, le Maire de Ouèssè, et de
+                    nombreuses autorités communales et départementales.</p>
+                <p style="margin-top: 10px;"><a href="nuit-excellence-2026.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        Nuit de l'Excellence</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quels sont les lauréats principaux ?</h3>
+                </summary>
+                <p><strong>FARY SHOOT</strong> (Meilleur Photographe), <strong>NESDAV</strong> (Meilleur Graphiste),
+                    <strong>MATINOU OLABODE</strong> (Meilleur Footballeur), <strong>8 Bâtisseurs</strong> et <strong>5
+                        Jeunes Leaders</strong>.
+                </p>
+                <p style="margin-top: 10px;"><a href="nuit-excellence-2026.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        Nuit de l'Excellence</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Qui était la Guest Star ?</h3>
+                </summary>
+                <p>La talentueuse artiste <strong>OLUWA KEMY</strong> qui a électrisé le public avec sa prestation.</p>
+                <p style="margin-top: 10px;"><a href="nuit-excellence-2026.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        Nuit de l'Excellence</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Comment participer à la prochaine édition ?</h3>
+                </summary>
+                <p>Suivez <strong>LTNDR EVENT'S</strong> sur les réseaux sociaux et restez connectés pour les annonces
+                    officielles.</p>
+                <p style="margin-top: 10px;"><a href="nuit-excellence-2026.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la
+                        Nuit de l'Excellence</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Qu'est-ce que Vacances Explor'Actives ?</h3>
+                </summary>
+                <p>C'est une initiative visant à promouvoir l'éducation culturelle et la découverte touristique auprès
+                    des jeunes de la Commune de Ouessè, à travers des excursions et des activités intellectuelles (comme
+                    les Génies en Herbe).</p>
+                <p style="margin-top: 10px;"><a href="vacances-explor-actives.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur
+                        Vacances Explor'Actives</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Où se déroulent les activités ?</h3>
+                </summary>
+                <p>Le projet se déroule intégralement dans la Commune de Ouessè, située dans le département des
+                    Collines, au Bénin. Nous visitons divers sites sacrés, patrimoniaux et naturels.</p>
+                <p style="margin-top: 10px;"><a href="vacances-explor-actives.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur
+                        Vacances Explor'Actives</a></p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    <h3>Quels lieux ont été visités lors de la première édition ?</h3>
+                </summary>
+                <p>Lors de la première édition, les participants ont découvert plusieurs sites remarquables de la
+                    commune, dont le Mont Gbongui, la localité d'Idadjo et son marbre, le site sacré du Vodoun Dan
+                    Djegbé, ainsi que le Palais Royal et le fleuve Ouémé.</p>
+                <p style="margin-top: 10px;"><a href="vacances-explor-actives.html"
+                        style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur
+                        Vacances Explor'Actives</a></p>
+            </details>
+        
+    <details class="faq-item">
+        <summary><h3>Où et quand a eu lieu la JIJ-OUÈSSÈ 2026 ?</h3></summary>
+            <p>La 5ᵉ édition de la Journée Internationale de la Jeunesse à Ouèssè s'est tenue le <strong>samedi 29 août 2026</strong>, à la Place publique Gbedokpo, dans l’arrondissement d’Odougba.</p>
+    <p style="margin-top: 10px;"><a href="jij-ouesse-2026.html" style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la JIJ 2026</a></p>
+    </details>
+    <details class="faq-item">
+        <summary><h3>Quelles activités ont marqué la 5ᵉ édition de la JIJ-OUÈSSÈ ?</h3></summary>
+            <p>L'événement a vibré au rythme de la spectaculaire <strong>danse des échassiers</strong>, de communications inspirantes et de l'effervescence du concours <strong>"J’épelle Sans Faute"</strong>.</p>
+    <p style="margin-top: 10px;"><a href="jij-ouesse-2026.html" style="color: var(--forest); font-weight: 600; text-decoration: underline;">👉 Lire plus sur la JIJ 2026</a></p>
+    </details>
+</div>
 </main>
 
-<footer class="pied">
-    <div class="footer-brand">
-        <span class="logo-title">Ouessè Tourisme</span>
-        <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>
+    <footer class="pied">
+        <div class="footer-brand">
+            <span class="logo-title">Ouessè Tourisme</span>
+            <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>
+        </div>
+
+        <form class="newsletter-form" action="/newsletter" method="POST" aria-label="Inscription à la newsletter">
+            <input type="email" name="email" placeholder="Votre email pour les actualités" required
+                aria-label="Adresse email">
+            <button type="submit">S'inscrire</button>
+        </form>
+
+        <nav class="footer-nav" aria-label="Navigation pied de page">
+            <a href="index.html">Accueil</a>
+            <a href="decouvert.html">Découvrir</a>
+            <a href="contact.html">Contact</a>
+
+            <a href="#faq-section">FAQ</a>
+            <a href="rgpd.html">politique de confidentialité</a>.
+            <a href="cgu.html">CGU</a>
+        </nav>
+
+        <p class="copyright">© 2025 Ouèssè Tourisme – Wa (Viens) à Ouèssè</p>
+    </footer>
+
+    <!-- SCRIPTS EXTERNES -->
+    <!-- Bandeau de consentement aux cookies -->
+    <script src="script.js" defer></script>
+    <script src="search.js" defer></script>
+    <div id="cookie-banner" role="dialog" aria-label="Gestion des cookies" hidden>
+        <p>
+            Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic et afficher des publicités
+            personnalisées.
+            En poursuivant votre navigation, vous acceptez notre
+            <a href="rgpd.html">politique de confidentialité</a>.
+        </p>
+        <div class="cookie-buttons">
+            <button type="button" id="cookie-accept">Accepter</button>
+            <button type="button" id="cookie-refuse">Refuser</button>
+        </div>
     </div>
 
-    <form class="newsletter-form" action="/newsletter" method="POST" aria-label="Inscription à la newsletter">
-        <input type="email" name="email" placeholder="Votre email pour les actualités" required aria-label="Adresse email">
-        <button type="submit">S'inscrire</button>
-    </form>
-
-    <nav class="footer-nav" aria-label="Navigation pied de page">
-        <a href="index.html">Accueil</a>
-        <a href="decouvert.html">Découvrir</a>
-        <a href="contact.html">Contact</a>
-        <a href="#waouesse">WAOUESSE</a>
-        <a href="#faq-section">FAQ</a>
-        <a href="rgpd.html" target="_blank">politique de confidentialité</a>.
-        <a href="cgu.html">CGU</a>
-    </nav>
-
-    <p class="copyright">© 2025 Ouèssè Tourisme – Wa (Viens) à Ouèssè</p>
-</footer>
-
-<!-- SCRIPTS EXTERNES -->
-<script src="script.js" defer></script>
-<script src="search.js" defer></script>
-<!-- Bandeau de consentement aux cookies -->
-<div id="cookie-banner" role="dialog" aria-label="Gestion des cookies" hidden>
-    <p>
-        Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic et afficher des publicités personnalisées. 
-        En poursuivant votre navigation, vous acceptez notre 
-        <a href="rgpd.html" target="_blank">politique de confidentialité</a>.
-    </p>
-    <div class="cookie-buttons">
-        <button type="button" id="cookie-accept">Accepter</button>
-        <button type="button" id="cookie-refuse">Refuser</button>
-    </div>
-</div>
-
-<style>
-#cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1a1a2e;
-    color: #fff;
-    padding: 1rem;
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
-    z-index: 9999;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    font-size: 0.9rem;
-}
-#cookie-banner[hidden] {
-    display: none !important;
-}
-#cookie-banner p {
-    margin: 0;
-    flex: 1 1 60%;
-}
-#cookie-banner a {
-    color: #ffd700;
-    text-decoration: underline;
-}
-.cookie-buttons {
-    display: flex;
-    gap: 0.5rem;
-}
-.cookie-buttons button {
-    background: #ffd700;
-    color: #1a1a2e;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.3s;
-}
-.cookie-buttons button:hover {
-    background: #e6c200;
-}
-.cookie-buttons button#cookie-refuse {
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-}
-.cookie-buttons button#cookie-refuse:hover {
-    background: rgba(255,255,255,0.1);
-}
-@media (max-width: 600px) {
-    #cookie-banner {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .cookie-buttons {
-        justify-content: flex-end;
-    }
-}
-</style>
-
-<script>
-(function() {
-    console.log('Script cookie démarré');
-
-    const cookieBanner = document.getElementById('cookie-banner');
-    const cookieAccept = document.getElementById('cookie-accept');
-    const cookieRefuse = document.getElementById('cookie-refuse');
-
-    console.log('Bandeau trouvé:', cookieBanner ? 'OUI' : 'NON');
-    console.log('Bouton Accepter trouvé:', cookieAccept ? 'OUI' : 'NON');
-    console.log('Bouton Refuser trouvé:', cookieRefuse ? 'OUI' : 'NON');
-
-    function setCookieConsent(choice) {
-        console.log('Choix enregistré:', choice);
-        try {
-            localStorage.setItem('cookieConsent', choice);
-            console.log('localStorage OK');
-        } catch(e) {
-            console.error('Erreur localStorage:', e);
+    <style>
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1a1a2e;
+            color: #fff;
+            padding: 1rem;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            font-size: 0.9rem;
         }
-        if (cookieBanner) {
-            cookieBanner.hidden = true;
-            console.log('Bandeau masqué');
+
+        #cookie-banner[hidden] {
+            display: none !important;
         }
-    }
 
-    // Vérifier si le consentement a déjà été donné
-    let consent = null;
-    try {
-        consent = localStorage.getItem('cookieConsent');
-        console.log('Consentement existant:', consent);
-    } catch(e) {
-        console.error('Erreur lecture localStorage:', e);
-    }
-
-    if (consent === null) {
-        // Aucun choix enregistré -> afficher le bandeau
-        if (cookieBanner) {
-            cookieBanner.hidden = false;
-            console.log('Bandeau affiché');
+        #cookie-banner p {
+            margin: 0;
+            flex: 1 1 60%;
         }
-    } else {
-        // Choix déjà fait -> masquer
-        if (cookieBanner) {
-            cookieBanner.hidden = true;
-            console.log('Bandeau masqué (choix existant)');
+
+        #cookie-banner a {
+            color: #ffd700;
+            text-decoration: underline;
         }
-    }
 
-    if (cookieAccept) {
-        cookieAccept.addEventListener('click', function() {
-            console.log('Clic sur Accepter');
-            setCookieConsent('accepted');
-        });
-    }
+        .cookie-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
 
-    if (cookieRefuse) {
-        cookieRefuse.addEventListener('click', function() {
-            console.log('Clic sur Refuser');
-            setCookieConsent('refused');
-        });
-    }
-})();
-</script>
+        .cookie-buttons button {
+            background: #ffd700;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cookie-buttons button:hover {
+            background: #e6c200;
+        }
+
+        .cookie-buttons button#cookie-refuse {
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+        .cookie-buttons button#cookie-refuse:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            #cookie-banner {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .cookie-buttons {
+                justify-content: flex-end;
+            }
+        }
+    </style>
+
+    <script>
+        (function () {
+            console.log('Script cookie démarré');
+
+            const cookieBanner = document.getElementById('cookie-banner');
+            const cookieAccept = document.getElementById('cookie-accept');
+            const cookieRefuse = document.getElementById('cookie-refuse');
+
+            console.log('Bandeau trouvé:', cookieBanner ? 'OUI' : 'NON');
+            console.log('Bouton Accepter trouvé:', cookieAccept ? 'OUI' : 'NON');
+            console.log('Bouton Refuser trouvé:', cookieRefuse ? 'OUI' : 'NON');
+
+            function setCookieConsent(choice) {
+                console.log('Choix enregistré:', choice);
+                try {
+                    localStorage.setItem('cookieConsent', choice);
+                    console.log('localStorage OK');
+                } catch (e) {
+                    console.error('Erreur localStorage:', e);
+                }
+                if (cookieBanner) {
+                    cookieBanner.hidden = true;
+                    console.log('Bandeau masqué');
+                }
+            }
+
+            // Vérifier si le consentement a déjà été donné
+            let consent = null;
+            try {
+                consent = localStorage.getItem('cookieConsent');
+                console.log('Consentement existant:', consent);
+            } catch (e) {
+                console.error('Erreur lecture localStorage:', e);
+            }
+
+            if (consent === null) {
+                // Aucun choix enregistré -> afficher le bandeau
+                if (cookieBanner) {
+                    cookieBanner.hidden = false;
+                    console.log('Bandeau affiché');
+                }
+            } else {
+                // Choix déjà fait -> masquer
+                if (cookieBanner) {
+                    cookieBanner.hidden = true;
+                    console.log('Bandeau masqué (choix existant)');
+                }
+            }
+
+            if (cookieAccept) {
+                cookieAccept.addEventListener('click', function () {
+                    console.log('Clic sur Accepter');
+                    setCookieConsent('accepted');
+                });
+            }
+
+            if (cookieRefuse) {
+                cookieRefuse.addEventListener('click', function () {
+                    console.log('Clic sur Refuser');
+                    setCookieConsent('refused');
+                });
+            }
+        })();
+    </script>
 </body>
+
 </html>

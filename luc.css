@@ -13,23 +13,11 @@
 /* ============================================
    RESET & BASE
 ============================================ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
 
-body {
-    background-color: var(--cream);
-    color: var(--ink);
-    font-family: "Poppins", sans-serif;
-}
 
-h1, h2, h3 {
-    font-family: "Fraunces", serif;
-    font-weight: 600;
-}
+
+
+
 
 /* ============================================
    UTILITAIRES
@@ -67,12 +55,14 @@ h1, h2, h3 {
     align-items: center;
     gap: 10px;
 }
+
 .logo img {
     height: 34px;
     width: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
+
 .logo img:hover {
     transform: scale(1.1);
 }
@@ -82,12 +72,14 @@ h1, h2, h3 {
     flex-direction: column;
     line-height: 1.1;
 }
+
 .logo-title {
-    font-family: "Fraunces", serif;
+    
     font-weight: 600;
     font-size: 1.1rem;
     color: var(--ink);
 }
+
 .logo-subtitle {
     font-size: 0.6rem;
     letter-spacing: 2px;
@@ -112,6 +104,7 @@ h1, h2, h3 {
     border-bottom: 2px solid transparent;
     transition: color 0.3s ease, border-color 0.3s ease;
 }
+
 .main-nav a:hover,
 .main-nav a.active {
     color: var(--forest);
@@ -128,6 +121,7 @@ h1, h2, h3 {
     border-radius: 999px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 .btn-explorer:hover {
     background-color: var(--forest-dark);
     transform: translateY(-1px);
@@ -151,7 +145,7 @@ h1, h2, h3 {
     margin: 20px 48px 40px 48px;
     border-radius: 24px;
     overflow: hidden;
-    background-image: url("https://res.cloudinary.com/nyke7lhc/image/upload/v1784318004/lucatro/ibidionlluc_trlbax.webp");
+    background-image: url("https://res.cloudinary.com/nyke7lhc/image/upload/v1784318004/lucatro/ibidionlluc_trlbax.webp") !important;
     background-size: cover;
     background-position: center 30%;
     display: flex;
@@ -178,6 +172,7 @@ h1, h2, h3 {
     color: #fff;
     margin-bottom: 8px;
 }
+
 .hero-title em {
     font-style: italic;
     color: #F0D8B8;
@@ -190,6 +185,7 @@ h1, h2, h3 {
     margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
+
 .hero-date i {
     margin-right: 8px;
 }
@@ -200,7 +196,7 @@ h1, h2, h3 {
     color: #ffffff;
     margin-bottom: 12px;
     line-height: 1.4;
-    font-family: "Poppins", sans-serif;
+    
 }
 
 .hero-text p:not(.hero-date) {
@@ -254,6 +250,7 @@ h1, h2, h3 {
     border-radius: 6px;
     color: #1a3a2c;
 }
+
 .disclaimer i {
     margin-right: 10px;
     color: #b8860b;
@@ -283,6 +280,7 @@ h1, h2, h3 {
     cursor: zoom-in;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .image-gallery img:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
@@ -310,6 +308,7 @@ h1, h2, h3 {
     padding: 24px;
     cursor: zoom-out;
 }
+
 .lightbox-overlay.active {
     display: flex;
 }
@@ -335,6 +334,7 @@ h1, h2, h3 {
     cursor: pointer;
     transition: transform 0.2s;
 }
+
 .lightbox-close:hover {
     transform: scale(1.15);
 }
@@ -358,58 +358,23 @@ h1, h2, h3 {
 /* ============================================
    FAQ (QUESTIONNAIRE SEO)
 ============================================ */
-.faq-section {
-    margin-top: 60px;
-    padding: 40px 30px;
-    background: #f8fbfa;
-    border-radius: 20px;
-    border: 1px solid #e0e8e4;
-}
 
-.faq-section h2 {
-    font-size: 1.8rem;
-    color: var(--forest-dark);
-    border-left: none;
-    padding-left: 0;
-    text-align: center;
-    margin-bottom: 8px;
-}
 
-.faq-section > p {
-    text-align: center;
-    color: #4a5f55;
-    margin-bottom: 32px;
-}
 
-.faq-item {
-    margin-bottom: 28px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e0e8e4;
-}
+
+
+
+
 .faq-item:last-child {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
-.faq-item h3 {
-    font-size: 1.15rem;
-    color: var(--forest-dark);
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.faq-item h3::before {
-    content: "❓";
-    font-size: 1.2rem;
-}
 
-.faq-item p {
-    line-height: 1.7;
-    color: #1f2e27;
-    padding-left: 32px;
-}
+
+
+
 
 .highlight-date {
     background: var(--forest);
@@ -433,13 +398,16 @@ footer.pied {
     align-items: center;
     gap: 16px;
 }
+
 footer.pied a {
     color: #aad4c2;
     text-decoration: none;
 }
+
 footer.pied a:hover {
     color: #fff;
 }
+
 footer.pied input {
     padding: 10px 16px;
     border-radius: 999px;
@@ -448,6 +416,7 @@ footer.pied input {
     max-width: 80%;
     outline: none;
 }
+
 footer.pied input:focus {
     box-shadow: 0 0 0 3px rgba(11, 107, 68, 0.3);
 }
@@ -472,26 +441,32 @@ footer.pied input:focus {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
+
 .btn-newsletter:hover:not(:disabled) {
     background-color: var(--forest-dark);
     transform: translateY(-1px);
 }
+
 .btn-newsletter:disabled {
     opacity: 0.6;
     cursor: not-allowed;
     transform: none;
 }
+
 footer.pied .logo-text {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 footer.pied .logo-title {
     color: #fff;
 }
+
 footer.pied .logo-subtitle {
     color: #aad4c2;
 }
+
 .footer-credit {
     font-size: 0.8rem;
     opacity: 0.7;
@@ -520,23 +495,25 @@ footer.pied .logo-subtitle {
     .site-header {
         padding: 16px 32px;
     }
+
     .main-nav ul {
         gap: 20px;
     }
+
     .hero-content {
         max-width: 640px;
         padding: 48px 40px;
     }
+
     .hero-title {
         font-size: 2.4rem;
     }
+
     .image-gallery {
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 20px;
     }
-    .faq-section {
-        padding: 32px 24px;
-    }
+
     .main-content {
         padding: 0 32px;
     }
@@ -547,34 +524,42 @@ footer.pied .logo-subtitle {
     .site-header {
         padding: 16px 20px;
     }
+
     .main-nav {
         display: none;
         width: 100%;
         order: 3;
     }
+
     .main-nav.active {
         display: block;
     }
+
     .main-nav ul {
         flex-direction: column;
         align-items: center;
         gap: 16px;
         padding: 20px 0;
     }
+
     .menu-toggle {
         display: block;
     }
+
     .hero {
         min-height: 400px;
         margin: 12px 20px 30px 20px;
         border-radius: 16px;
     }
+
     .hero-content {
         padding: 32px 24px;
     }
+
     .hero-title {
         font-size: 2rem;
     }
+
     .hero-subtitle {
         font-size: 1.1rem;
     }
@@ -585,12 +570,15 @@ footer.pied .logo-subtitle {
     .site-header {
         padding: 14px 16px;
     }
+
     .logo img {
         height: 28px;
     }
+
     .logo-title {
         font-size: 1rem;
     }
+
     .btn-explorer {
         padding: 8px 18px;
         font-size: 0.85rem;
@@ -601,15 +589,19 @@ footer.pied .logo-subtitle {
         border-radius: 12px;
         margin: 10px 16px 24px 16px;
     }
+
     .hero-content {
         padding: 24px 18px;
     }
+
     .hero-title {
         font-size: 1.6rem;
     }
+
     .hero-subtitle {
         font-size: 1rem;
     }
+
     .hero-date,
     .hero-text p {
         font-size: 0.9rem;
@@ -618,11 +610,13 @@ footer.pied .logo-subtitle {
     .main-content {
         padding: 0 16px;
     }
+
     .main-content h2 {
         font-size: 1.25rem;
         padding-left: 12px;
         border-left-width: 4px;
     }
+
     .main-content p {
         font-size: 0.95rem;
         line-height: 1.7;
@@ -644,6 +638,7 @@ footer.pied .logo-subtitle {
         right: 16px;
         font-size: 30px;
     }
+
     .lightbox-caption {
         font-size: 0.85rem;
         padding: 10px 16px;
@@ -651,32 +646,24 @@ footer.pied .logo-subtitle {
         bottom: 16px;
     }
 
-    .faq-section {
-        padding: 24px 16px;
-        border-radius: 14px;
-        margin-top: 40px;
-    }
-    .faq-section h2 {
-        font-size: 1.4rem;
-    }
-    .faq-item h3 {
-        font-size: 1rem;
-    }
-    .faq-item p {
-        padding-left: 20px;
-        font-size: 0.9rem;
-    }
+
+
+
+
 
     footer.pied {
         padding: 28px 16px;
     }
+
     footer.pied input {
         width: 100%;
     }
+
     .newsletter-form {
         width: 100%;
         flex-direction: column;
     }
+
     .btn-newsletter {
         width: 100%;
     }

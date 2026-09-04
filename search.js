@@ -2,11 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* =========================================================
         CONFIGURATION API
-        Le JS appelle maintenant le backend Python (Flask)
+        Le JS utilise maintenant le fichier statique search_data.json
     ========================================================= */
-    const API_BASE_URL = 'https://whalesg.pythonanywhere.com';
-    // Si vous êtes en développement local, vous pouvez décommenter :
-    // const API_BASE_URL = 'http://api/search';
+    const JSON_URL = '/search_data.json';
 
     /* =========================================================
         ÉLÉMENTS DU DOM
@@ -24,42 +22,76 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!searchForm || !searchInput || !searchResults) return;
 
     /* =========================================================
-        FONCTION : APPEL API VERS PYTHON
+        FONCTION : RECHERCHE STATIQUE (JSON)
     ========================================================= */
-    async function callPythonSearch(query) {
+    let searchDataCache = null;
+
+    async function loadSearchData() {
+        if (searchDataCache) return searchDataCache;
         try {
-            // Construction de l'URL - utilise le même domaine que la page
-            const baseUrl = API_BASE_URL || window.location.origin;
-            const url = `${baseUrl}/api/search?q=${encodeURIComponent(query)}`;
-            
-            console.log(`🔍 Recherche: "${query}" → ${url}`);
-            
+            const url = 'search_data.json';
             const response = await fetch(url);
-            
-            if (!response.ok) {
-                throw new Error(`Erreur HTTP ${response.status}`);
-            }
-            
-            const data = await response.json();
-            
-            // L'API retourne directement un tableau de résultats
-            // ou un tableau vide si rien trouvé
-            if (Array.isArray(data)) {
-                return data;
-            }
-            
-            // Si l'API retourne un objet avec un champ results
-            if (data.results && Array.isArray(data.results)) {
-                return data.results;
-            }
-            
-            // Sinon, retourner un tableau vide
-            return [];
-            
-        } catch (err) {
-            console.error('❌ Erreur de connexion au backend Python:', err);
+            if (!response.ok) throw new Error(`Erreur HTTP ${response.status}`);
+            searchDataCache = await response.json();
+            return searchDataCache;
+        } catch (e) {
+            console.error('❌ Erreur de chargement de search_data.json:', e);
             return [];
         }
+    }
+
+    async function callPythonSearch(query) {
+        const data = await loadSearchData();
+        if (!data || data.length === 0) return [];
+
+        const mots_requete = normaliser(query).split(/\s+/).filter(Boolean);
+        if (mots_requete.length === 0) return [];
+
+        const resultats = [];
+
+        data.forEach(item => {
+            const titre_n = normaliser(item.title);
+            const mots_cles_n = normaliser(item.keywords || "");
+            const texte_n = normaliser(item.text || "");
+            
+            let score = 0;
+            let mots_trouves = [];
+            
+            for (const mot of mots_requete) {
+                if (titre_n.includes(mot)) {
+                    score += 10;
+                    mots_trouves.push(mot);
+                }
+                if (mots_cles_n.includes(mot)) {
+                    score += 5;
+                    if (!mots_trouves.includes(mot)) mots_trouves.push(mot);
+                }
+                if (texte_n.includes(mot)) {
+                    score += 1;
+                    const occurrences = texte_n.split(mot).length - 1;
+                    if (occurrences > 1) {
+                        score += Math.min(occurrences, 5);
+                    }
+                    if (!mots_trouves.includes(mot)) mots_trouves.push(mot);
+                }
+            }
+            
+            if (score > 0) {
+                resultats.push({
+                    title: item.title,
+                    desc: item.desc || "",
+                    icon: item.icon || "fa-magnifying-glass",
+                    page: item.page,
+                    anchor: item.anchor || "",
+                    keywords: item.keywords || "",
+                    text: item.text || "",
+                    score: score
+                });
+            }
+        });
+        
+        resultats.sort((a, b) => b.score - a.score);
+        return resultats.slice(0, 15);
     }
 
     /* =========================================================

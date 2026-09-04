@@ -151,34 +151,36 @@
     </script>
 
     <link rel="stylesheet" href="search-widget.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
     <div class="logo">
-        <img src="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_64/v1784319943/logo_copie_kzzyfd.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager" />
+        <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager">
         <div class="logo-text">
             <span class="logo-title">Ouessè</span>
             <span class="logo-subtitle">TOURISME</span>
         </div>
     </div>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
-        <i class="fa-solid fa-bars"></i>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
     </button>
 
-    <nav class="main-nav" id="mainNav" role="navigation">
+    <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navigation principale">
         <ul>
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
             <li><a href="decouvert.html">Découvrir</a></li>
             <li><a href="a-propos.html">À propos</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            
         </ul>
     </nav>
 
     <a href="decouvert.html" class="btn-explorer">Explorer</a>
 </header>
+
 
 <div class="search-widget-wrap" style="margin: 18px auto; padding: 0 20px;">
     <form class="search" id="searchForm" role="search" action="/search" method="GET" autocomplete="off">
@@ -197,6 +199,8 @@
             <a href="#" class="summary-link" id="summaryLink">Voir plus</a>
         </div>
     </div>
+</div>
+
 </div>
 
 <main class="main-content">
@@ -482,62 +486,62 @@
         <h2>❓ Questions fréquentes sur La Nuit de l'Excellence</h2>
         <p>Retrouvez ci-dessous les réponses aux questions les plus posées sur l'événement.</p>
 
-        <div class="faq-item">
-            <h3>Quand a eu lieu la Nuit de l'Excellence 2026 ?</h3>
+        <details class="faq-item">
+            <summary><h3>Quand a eu lieu la Nuit de l'Excellence 2026 ?</h3></summary>
             <p>Le <strong>1er août 2026</strong>, à la Maison des Jeunes de Ouèssè Wogoudo.</p>
-        </div>
+        </details>
 
-        <div class="faq-item">
-            <h3>Qui étaient les invités d'honneur ?</h3>
+        <details class="faq-item">
+            <summary><h3>Qui étaient les invités d'honneur ?</h3></summary>
             <p><strong>Sa Majesté TCHINI TONOU</strong>, Roi de Ouèssè, la Reine, le Maire de Ouèssè, et de nombreuses autorités communales et départementales.</p>
-        </div>
+        </details>
 
-        <div class="faq-item">
-            <h3>Quels sont les lauréats principaux ?</h3>
+        <details class="faq-item">
+            <summary><h3>Quels sont les lauréats principaux ?</h3></summary>
             <p><strong>FARY SHOOT</strong> (Meilleur Photographe), <strong>NESDAV</strong> (Meilleur Graphiste), <strong>MATINOU OLABODE</strong> (Meilleur Footballeur), <strong>8 Bâtisseurs</strong> et <strong>5 Jeunes Leaders</strong>.</p>
-        </div>
+        </details>
 
-        <div class="faq-item">
-            <h3>Qui était la Guest Star ?</h3>
+        <details class="faq-item">
+            <summary><h3>Qui était la Guest Star ?</h3></summary>
             <p>La talentueuse artiste <strong>OLUWA KEMY</strong> qui a électrisé le public avec sa prestation.</p>
-        </div>
+        </details>
 
-        <div class="faq-item">
-            <h3>Comment participer à la prochaine édition ?</h3>
+        <details class="faq-item">
+            <summary><h3>Comment participer à la prochaine édition ?</h3></summary>
             <p>Suivez <strong>LTNDR EVENT'S</strong> sur les réseaux sociaux et restez connectés pour les annonces officielles.</p>
-        </div>
+        </details>
 
-        <div class="faq-item">
-            <h3>Où puis-je en apprendre plus sur Ouèssè ?</h3>
+        <details class="faq-item">
+            <summary><h3>Où puis-je en apprendre plus sur Ouèssè ?</h3></summary>
             <p>Pour découvrir l'histoire, la culture et les personnalités de Ouèssè, consultez ces ressources :</p>
             <ul>
                 <li>
-                    <a href="https://waouesse.vercel.app/degla_benoit" target="_blank" rel="noopener noreferrer">
+                    <a href="https://waouesse.vercel.app/degla_benoit"  >
                         <i class="fa-solid fa-user-tie"></i> Parcours de Benoît Assouan Comlan Dègla
                     </a>
                 </li>
                 <li>
-                    <a href="https://waouesse.vercel.app/briceahossa" target="_blank" rel="noopener noreferrer">
+                    <a href="https://waouesse.vercel.app/briceahossa"  >
                         <i class="fa-solid fa-city"></i> La Mairie de Ouèssè
                     </a>
                 </li>
                 <li>
-                    <a href="https://waouesse.vercel.app/nuit-excellence-2026" target="_blank" rel="noopener noreferrer">
+                    <a href="https://waouesse.vercel.app/nuit-excellence-2026"  >
                         <i class="fa-solid fa-award"></i> La Nuit de l'Excellence
                     </a>
                 </li>
                 <li>
-                    <a href="https://waouesse.vercel.app/decouvert.html" target="_blank" rel="noopener noreferrer">
+                    <a href="https://waouesse.vercel.app/decouvert.html"  >
                         <i class="fa-solid fa-compass"></i> Découvrir Ouèssè
                     </a>
                 </li>
                 <li>
-                    <a href="https://waouesse.vercel.app/contact.html" target="_blank" rel="noopener noreferrer">
+                    <a href="https://waouesse.vercel.app/contact.html"  >
                         <i class="fa-solid fa-envelope"></i> Contacter l'équipe
                     </a>
                 </li>
             </ul>
-        </div>
+        </details>
     </section>
 
 </main>
@@ -551,33 +555,30 @@
 
 <!-- ===== FOOTER ===== -->
 <footer class="pied">
-    <div class="logo-text">
+    <div class="footer-brand">
         <span class="logo-title">Ouessè Tourisme</span>
         <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>
     </div>
 
-    <form class="newsletter-form" id="newsletterForm" aria-label="Inscription newsletter">
-        <label for="newsletter-email" class="visually-hidden">Votre email pour les actualités</label>
-        <input type="email" id="newsletter-email" name="email" placeholder="Votre email pour les actualités" required />
-        <button type="submit" class="btn-newsletter">S'inscrire</button>
+    <form class="newsletter-form" action="/newsletter" method="POST" aria-label="Inscription à la newsletter">
+        <input type="email" name="email" placeholder="Votre email pour les actualités" required aria-label="Adresse email">
+        <button type="submit">S'inscrire</button>
     </form>
 
-    <nav aria-label="Navigation pied de page">
-        <ul class="footer-nav">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="decouvert.html">Découvrir</a></li>
-            <li><a href="degla_benoit.html">Benoît Dègla</a></li>
-            <li><a href="nuit-excellence-2026.html">Nuit de l'Excellence</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul>
+    <nav class="footer-nav" aria-label="Navigation pied de page">
+        <a href="index.html">Accueil</a>
+        <a href="decouvert.html">Découvrir</a>
+        <a href="contact.html">Contact</a>
+        
+        <a href="#faq-section">FAQ</a>
+        <a href="rgpd.html" >politique de confidentialité</a>.
+        <a href="cgu.html">CGU</a>
     </nav>
 
-    <p class="footer-credit">&copy; 2026 Ouèssè Tourisme – Découverte et défis de la commune</p>
+    <p class="copyright">© 2025 Ouèssè Tourisme – Wa (Viens) à Ouèssè</p>
 </footer>
 
 <!-- SCRIPTS -->
-<script src="script.js" defer></script>
 <script src="js/search-static.js"></script>
 
 <script>
@@ -874,6 +875,153 @@
     }
 })();
 </script>
+
+<!-- SCRIPTS EXTERNES -->
+<!-- Bandeau de consentement aux cookies -->
+<script src="script.js" defer></script>
+<script src="search.js" defer></script>
+<div id="cookie-banner" role="dialog" aria-label="Gestion des cookies" hidden>
+    <p>
+        Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic et afficher des publicités personnalisées. 
+        En poursuivant votre navigation, vous acceptez notre 
+        <a href="rgpd.html" >politique de confidentialité</a>.
+    </p>
+    <div class="cookie-buttons">
+        <button type="button" id="cookie-accept">Accepter</button>
+        <button type="button" id="cookie-refuse">Refuser</button>
+    </div>
+</div>
+
+<style>
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 1rem;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+#cookie-banner[hidden] {
+    display: none !important;
+}
+#cookie-banner p {
+    margin: 0;
+    flex: 1 1 60%;
+}
+#cookie-banner a {
+    color: #ffd700;
+    text-decoration: underline;
+}
+.cookie-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+.cookie-buttons button {
+    background: #ffd700;
+    color: #1a1a2e;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.cookie-buttons button:hover {
+    background: #e6c200;
+}
+.cookie-buttons button#cookie-refuse {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.cookie-buttons button#cookie-refuse:hover {
+    background: rgba(255,255,255,0.1);
+}
+@media (max-width: 600px) {
+    #cookie-banner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .cookie-buttons {
+        justify-content: flex-end;
+    }
+}
+</style>
+
+<script>
+(function() {
+    console.log('Script cookie démarré');
+
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAccept = document.getElementById('cookie-accept');
+    const cookieRefuse = document.getElementById('cookie-refuse');
+
+    console.log('Bandeau trouvé:', cookieBanner ? 'OUI' : 'NON');
+    console.log('Bouton Accepter trouvé:', cookieAccept ? 'OUI' : 'NON');
+    console.log('Bouton Refuser trouvé:', cookieRefuse ? 'OUI' : 'NON');
+
+    function setCookieConsent(choice) {
+        console.log('Choix enregistré:', choice);
+        try {
+            localStorage.setItem('cookieConsent', choice);
+            console.log('localStorage OK');
+        } catch(e) {
+            console.error('Erreur localStorage:', e);
+        }
+        if (cookieBanner) {
+            cookieBanner.hidden = true;
+            console.log('Bandeau masqué');
+        }
+    }
+
+    // Vérifier si le consentement a déjà été donné
+    let consent = null;
+    try {
+        consent = localStorage.getItem('cookieConsent');
+        console.log('Consentement existant:', consent);
+    } catch(e) {
+        console.error('Erreur lecture localStorage:', e);
+    }
+
+    if (consent === null) {
+        // Aucun choix enregistré -> afficher le bandeau
+        if (cookieBanner) {
+            cookieBanner.hidden = false;
+            console.log('Bandeau affiché');
+        }
+    } else {
+        // Choix déjà fait -> masquer
+        if (cookieBanner) {
+            cookieBanner.hidden = true;
+            console.log('Bandeau masqué (choix existant)');
+        }
+    }
+
+    if (cookieAccept) {
+        cookieAccept.addEventListener('click', function() {
+            console.log('Clic sur Accepter');
+            setCookieConsent('accepted');
+        });
+    }
+
+    if (cookieRefuse) {
+        cookieRefuse.addEventListener('click', function() {
+            console.log('Clic sur Refuser');
+            setCookieConsent('refused');
+        });
+    }
+})();
+</script>
+</body>
 
 </body>
 </html>

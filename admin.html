@@ -6,6 +6,7 @@
     <meta name="robots" content="noindex, nofollow">
     <title>Générateur de pages — Ouèssè Tourisme</title>
     <link rel="stylesheet" href="generator.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -258,5 +259,152 @@
     </template>
 
     <script src="generator.js"></script>
+<!-- SCRIPTS EXTERNES -->
+<!-- Bandeau de consentement aux cookies -->
+<script src="script.js" defer></script>
+<script src="search.js" defer></script>
+<div id="cookie-banner" role="dialog" aria-label="Gestion des cookies" hidden>
+    <p>
+        Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic et afficher des publicités personnalisées. 
+        En poursuivant votre navigation, vous acceptez notre 
+        <a href="rgpd.html" >politique de confidentialité</a>.
+    </p>
+    <div class="cookie-buttons">
+        <button type="button" id="cookie-accept">Accepter</button>
+        <button type="button" id="cookie-refuse">Refuser</button>
+    </div>
+</div>
+
+<style>
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 1rem;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+#cookie-banner[hidden] {
+    display: none !important;
+}
+#cookie-banner p {
+    margin: 0;
+    flex: 1 1 60%;
+}
+#cookie-banner a {
+    color: #ffd700;
+    text-decoration: underline;
+}
+.cookie-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+.cookie-buttons button {
+    background: #ffd700;
+    color: #1a1a2e;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.cookie-buttons button:hover {
+    background: #e6c200;
+}
+.cookie-buttons button#cookie-refuse {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.cookie-buttons button#cookie-refuse:hover {
+    background: rgba(255,255,255,0.1);
+}
+@media (max-width: 600px) {
+    #cookie-banner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .cookie-buttons {
+        justify-content: flex-end;
+    }
+}
+</style>
+
+<script>
+(function() {
+    console.log('Script cookie démarré');
+
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAccept = document.getElementById('cookie-accept');
+    const cookieRefuse = document.getElementById('cookie-refuse');
+
+    console.log('Bandeau trouvé:', cookieBanner ? 'OUI' : 'NON');
+    console.log('Bouton Accepter trouvé:', cookieAccept ? 'OUI' : 'NON');
+    console.log('Bouton Refuser trouvé:', cookieRefuse ? 'OUI' : 'NON');
+
+    function setCookieConsent(choice) {
+        console.log('Choix enregistré:', choice);
+        try {
+            localStorage.setItem('cookieConsent', choice);
+            console.log('localStorage OK');
+        } catch(e) {
+            console.error('Erreur localStorage:', e);
+        }
+        if (cookieBanner) {
+            cookieBanner.hidden = true;
+            console.log('Bandeau masqué');
+        }
+    }
+
+    // Vérifier si le consentement a déjà été donné
+    let consent = null;
+    try {
+        consent = localStorage.getItem('cookieConsent');
+        console.log('Consentement existant:', consent);
+    } catch(e) {
+        console.error('Erreur lecture localStorage:', e);
+    }
+
+    if (consent === null) {
+        // Aucun choix enregistré -> afficher le bandeau
+        if (cookieBanner) {
+            cookieBanner.hidden = false;
+            console.log('Bandeau affiché');
+        }
+    } else {
+        // Choix déjà fait -> masquer
+        if (cookieBanner) {
+            cookieBanner.hidden = true;
+            console.log('Bandeau masqué (choix existant)');
+        }
+    }
+
+    if (cookieAccept) {
+        cookieAccept.addEventListener('click', function() {
+            console.log('Clic sur Accepter');
+            setCookieConsent('accepted');
+        });
+    }
+
+    if (cookieRefuse) {
+        cookieRefuse.addEventListener('click', function() {
+            console.log('Clic sur Refuser');
+            setCookieConsent('refused');
+        });
+    }
+})();
+</script>
+</body>
+
 </body>
 </html>

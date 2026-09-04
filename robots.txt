@@ -13,20 +13,18 @@ Allow: /
 Disallow: /admin.html$
 Disallow: /generato.html$
 Disallow: /generator.js$
-Disallow: /backend/
+
 Disallow: /.env
 Disallow: /.env.example
-Disallow: /requirements.txt$
+
 Disallow: /package.json$
 Disallow: /package-lock.json$
 Disallow: /config.htaccess$
 Disallow: /CHANGELOG.md$
 Disallow: /README.md$
 Disallow: /LICENSE$
-Disallow: /app.py$
-Disallow: /indexer.py$
+
 Disallow: /app.log$
-Disallow: /ouesse-search.db$
 
 # Ne PAS bloquer .css/.js/.json : Google doit pouvoir les charger pour
 # rendre correctement les pages (mobile-friendly, Core Web Vitals). Les
@@ -56,7 +54,6 @@ Crawl-delay: 2
 Disallow: /admin.html$
 Disallow: /generato.html$
 Disallow: /generator.js$
-Disallow: /backend/
 
 # ============================================
 # YANDEX
@@ -67,4 +64,7 @@ Crawl-delay: 2
 Disallow: /admin.html$
 Disallow: /generato.html$
 Disallow: /generator.js$
-Disallow: /backend/
+
+# Ignorer les sourcemaps
+Disallow: /*.js.map$
+Disallow: /*.css.map$

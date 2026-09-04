@@ -153,4 +153,28 @@
   </url>
 
 
+
+  <!-- Vacances Explor'Actives -->
+  <url>
+    <loc>https://waouesse.vercel.app/vacances-explor-actives.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.jpg</image:loc>
+      <image:title>Vacances Explor'Actives</image:title>
+    </image:image>
+  </url>
+
+  <!-- JIJ-OUÈSSÈ 2026 -->
+  <url>
+    <loc>https://waouesse.vercel.app/jij-ouesse-2026.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1788559768/jij_2026_7_gdg3pu.jpg</image:loc>
+      <image:title>JIJ-OUÈSSÈ 2026</image:title>
+    </image:image>
+  </url>
 </urlset>

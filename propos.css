@@ -8,23 +8,11 @@
     --line: #e1e6e3;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
 
-body {
-    background-color: var(--cream);
-    color: var(--ink);
-    font-family: "Poppins", sans-serif;
-}
 
-h1, h2, h3 {
-    font-family: "Poppins", serif;
-    font-weight: 600;
-}
+
+
+
 
 /* ===== HEADER & NAVIGATION ===== */
 .site-header {
@@ -61,7 +49,7 @@ h1, h2, h3 {
 }
 
 .logo-title {
-    font-family: "Fraunces", serif;
+    
     font-weight: 600;
     font-size: 1.1rem;
     color: var(--ink);

@@ -111,6 +111,7 @@
     </script>
 
     <link rel="stylesheet" href="search-widget.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -120,28 +121,30 @@
 
 <header class="site-header">
     <div class="logo">
-        <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" alt="Logo de Ouèssè Tourisme" width="48" height="48" loading="eager" />
+        <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager">
         <div class="logo-text">
             <span class="logo-title">Ouessè</span>
             <span class="logo-subtitle">TOURISME</span>
         </div>
     </div>
 
-    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
         <i class="fa-solid fa-bars" aria-hidden="true"></i>
     </button>
 
     <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navigation principale">
         <ul>
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
             <li><a href="decouvert.html">Découvrir</a></li>
-            <li><a href="luc.html">Luc Atrokpo</a></li>
-            <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
         </ul>
     </nav>
 
     <a href="decouvert.html" class="btn-explorer">Explorer</a>
 </header>
+
 
 <div class="search-widget-wrap" style="margin: 18px auto; padding: 0 20px;">
     <form class="search" id="searchForm" role="search" action="/search" method="GET" autocomplete="off">
@@ -160,6 +163,8 @@
             <a href="#" class="summary-link" id="summaryLink">Voir plus</a>
         </div>
     </div>
+</div>
+
 </div>
 
 <main class="main-content" id="main-content">
@@ -316,27 +321,27 @@
 </main>
 
 <footer class="pied">
-    <div class="logo-text">
+    <div class="footer-brand">
         <span class="logo-title">Ouessè Tourisme</span>
         <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>
     </div>
 
-    <form class="newsletter-form" action="#" method="post" aria-label="Inscription newsletter">
-        <label for="newsletter-email" class="visually-hidden">Votre email pour les actualités</label>
-        <input type="email" id="newsletter-email" name="email" placeholder="Votre email pour les actualités" required />
-        <button type="submit" class="btn-newsletter">S'inscrire</button>
+    <form class="newsletter-form" action="/newsletter" method="POST" aria-label="Inscription à la newsletter">
+        <input type="email" name="email" placeholder="Votre email pour les actualités" required aria-label="Adresse email">
+        <button type="submit">S'inscrire</button>
     </form>
 
-    <nav aria-label="Navigation pied de page">
-        <ul class="footer-nav">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="decouvert.html">Découvrir</a></li>
-            <li><a href="https://tchokponhoueezechiel.vercel.app" target="_blank" rel="noopener">Développeur</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <nav class="footer-nav" aria-label="Navigation pied de page">
+        <a href="index.html">Accueil</a>
+        <a href="decouvert.html">Découvrir</a>
+        <a href="contact.html">Contact</a>
+        
+        <a href="#faq-section">FAQ</a>
+        <a href="rgpd.html" >politique de confidentialité</a>.
+        <a href="cgu.html">CGU</a>
     </nav>
 
-    <p class="footer-credit">&copy; 2025 NarroQ & EzegLabs – Donner une présence numérique aux territoires</p>
+    <p class="copyright">© 2025 Ouèssè Tourisme – Wa (Viens) à Ouèssè</p>
 </footer>
 
 <!-- EmailJS : envoie le formulaire directement par email, sans backend -->
@@ -408,7 +413,152 @@
   });
 })();
 </script>
+<!-- SCRIPTS EXTERNES -->
+<!-- Bandeau de consentement aux cookies -->
 <script src="script.js" defer></script>
 <script src="search.js" defer></script>
+<div id="cookie-banner" role="dialog" aria-label="Gestion des cookies" hidden>
+    <p>
+        Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic et afficher des publicités personnalisées. 
+        En poursuivant votre navigation, vous acceptez notre 
+        <a href="rgpd.html" >politique de confidentialité</a>.
+    </p>
+    <div class="cookie-buttons">
+        <button type="button" id="cookie-accept">Accepter</button>
+        <button type="button" id="cookie-refuse">Refuser</button>
+    </div>
+</div>
+
+<style>
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 1rem;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+#cookie-banner[hidden] {
+    display: none !important;
+}
+#cookie-banner p {
+    margin: 0;
+    flex: 1 1 60%;
+}
+#cookie-banner a {
+    color: #ffd700;
+    text-decoration: underline;
+}
+.cookie-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+.cookie-buttons button {
+    background: #ffd700;
+    color: #1a1a2e;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.cookie-buttons button:hover {
+    background: #e6c200;
+}
+.cookie-buttons button#cookie-refuse {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.cookie-buttons button#cookie-refuse:hover {
+    background: rgba(255,255,255,0.1);
+}
+@media (max-width: 600px) {
+    #cookie-banner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .cookie-buttons {
+        justify-content: flex-end;
+    }
+}
+</style>
+
+<script>
+(function() {
+    console.log('Script cookie démarré');
+
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAccept = document.getElementById('cookie-accept');
+    const cookieRefuse = document.getElementById('cookie-refuse');
+
+    console.log('Bandeau trouvé:', cookieBanner ? 'OUI' : 'NON');
+    console.log('Bouton Accepter trouvé:', cookieAccept ? 'OUI' : 'NON');
+    console.log('Bouton Refuser trouvé:', cookieRefuse ? 'OUI' : 'NON');
+
+    function setCookieConsent(choice) {
+        console.log('Choix enregistré:', choice);
+        try {
+            localStorage.setItem('cookieConsent', choice);
+            console.log('localStorage OK');
+        } catch(e) {
+            console.error('Erreur localStorage:', e);
+        }
+        if (cookieBanner) {
+            cookieBanner.hidden = true;
+            console.log('Bandeau masqué');
+        }
+    }
+
+    // Vérifier si le consentement a déjà été donné
+    let consent = null;
+    try {
+        consent = localStorage.getItem('cookieConsent');
+        console.log('Consentement existant:', consent);
+    } catch(e) {
+        console.error('Erreur lecture localStorage:', e);
+    }
+
+    if (consent === null) {
+        // Aucun choix enregistré -> afficher le bandeau
+        if (cookieBanner) {
+            cookieBanner.hidden = false;
+            console.log('Bandeau affiché');
+        }
+    } else {
+        // Choix déjà fait -> masquer
+        if (cookieBanner) {
+            cookieBanner.hidden = true;
+            console.log('Bandeau masqué (choix existant)');
+        }
+    }
+
+    if (cookieAccept) {
+        cookieAccept.addEventListener('click', function() {
+            console.log('Clic sur Accepter');
+            setCookieConsent('accepted');
+        });
+    }
+
+    if (cookieRefuse) {
+        cookieRefuse.addEventListener('click', function() {
+            console.log('Clic sur Refuser');
+            setCookieConsent('refused');
+        });
+    }
+})();
+</script>
+</body>
+
 </body>
 </html>

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ===== LIGHTBOX =====
-    var images = document.querySelectorAll('img[data-lightbox="true"]');
+    var images = document.querySelectorAll('img:not(header img):not(footer img):not(a img)');
     images.forEach(function(img) {
         img.addEventListener('click', function(e) {
             e.preventDefault();

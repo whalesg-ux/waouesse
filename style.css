@@ -443,7 +443,7 @@ input:focus-visible {
 }
 
 .category-card {
-    flex: 0 0 calc(33.3333% - 16px);
+    flex: 0 0 300px;
     margin: 0 8px;
     box-sizing: border-box;
     text-decoration: none;
@@ -1305,4 +1305,22 @@ footer.pied {
     .gallery-item {
         break-inside: avoid;
     }
+}
+
+
+/* Universal Lightbox Cursor */
+img:not(header img, footer img) { cursor: zoom-in; }
+
+.marquee-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    animation: scrollContinuous 20s linear infinite;
+}
+.carousel-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}
+@keyframes scrollContinuous {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 8px)); }
 }

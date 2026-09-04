@@ -121,7 +121,7 @@
     }
 
     function textToParagraphs(str) {
-        return esc(str).split(/\n{2,}/).map(function(p) {
+        return esc(str).split(/\n{2,}/).map(function (p) {
             return '<p>' + p.replace(/\n/g, '<br>') + '</p>';
         }).join('\n');
     }
@@ -139,7 +139,7 @@
         var host = sectionsHost.querySelector(hostSelector);
         var tpl = document.getElementById(rowTemplateId);
         var node = tpl.content.cloneNode(true);
-        node.querySelector('.remove-btn').addEventListener('click', function(e) {
+        node.querySelector('.remove-btn').addEventListener('click', function (e) {
             e.target.closest('.repeat-block').remove();
         });
         host.appendChild(node);
@@ -148,28 +148,28 @@
     function wireRepeaters() {
         var map = {
             paragraph: ['.paragraphs-host', 'row-paragraph'],
-            gallery:   ['.gallery-host',   'row-gallery'],
-            faq:       ['.faq-host',       'row-faq'],
-            about:     ['.about-host',     'row-about'],
-            quote:     ['.quotes-host',    'row-quote']
+            gallery: ['.gallery-host', 'row-gallery'],
+            faq: ['.faq-host', 'row-faq'],
+            about: ['.about-host', 'row-about'],
+            quote: ['.quotes-host', 'row-quote']
         };
-        sectionsHost.querySelectorAll('[data-add]').forEach(function(btn) {
-            btn.addEventListener('click', function() {
+        sectionsHost.querySelectorAll('[data-add]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
                 var kind = btn.getAttribute('data-add');
                 addRow(map[kind][0], map[kind][1]);
             });
         });
     }
 
-    radios.forEach(function(r) { r.addEventListener('change', loadTemplateFields); });
+    radios.forEach(function (r) { r.addEventListener('change', loadTemplateFields); });
     loadTemplateFields();
     // Ajouter quelques lignes par défaut pour l'aperçu
-    document.querySelectorAll('[data-add]').forEach(function(btn) { btn.click(); });
+    document.querySelectorAll('[data-add]').forEach(function (btn) { btn.click(); });
 
     // ---- Header et Footer paramétrables ----
     function header(menuPagesStr, menuLabelsStr) {
-        var pages = menuPagesStr ? menuPagesStr.split(',').map(function(s) { return s.trim(); }) : ['index.html', 'decouvert.html', 'luc.html', 'contact.html'];
-        var labels = menuLabelsStr ? menuLabelsStr.split(',').map(function(s) { return s.trim(); }) : ['Accueil', 'Découvrir', 'Luc Atrokpo', 'Contact'];
+        var pages = menuPagesStr ? menuPagesStr.split(',').map(function (s) { return s.trim(); }) : ['index.html', 'decouvert.html', 'luc.html', 'contact.html'];
+        var labels = menuLabelsStr ? menuLabelsStr.split(',').map(function (s) { return s.trim(); }) : ['Accueil', 'Découvrir', 'Luc Atrokpo', 'Contact'];
 
         var navItems = '';
         for (var i = 0; i < pages.length; i++) {
@@ -189,7 +189,7 @@
             '        <i class="fa-solid fa-bars"></i>\n' +
             '    </button>\n' +
             '    <nav class="main-nav" id="mainNav" role="navigation">\n' +
-            '        <ul>\n' + navItems + 
+            '        <ul>\n' + navItems +
             '        </ul>\n' +
             '    </nav>\n' +
             '    <a href="decouvert.html" class="btn-explorer">Explorer</a>\n' +
@@ -318,7 +318,7 @@
         var main = '<main class="main-content">\n';
         main += buildVideoBlock(root);
 
-        root.querySelectorAll('.paragraphs-host .repeat-block').forEach(function(block) {
+        root.querySelectorAll('.paragraphs-host .repeat-block').forEach(function (block) {
             var sub = block.querySelector('.r-subtitle').value;
             var text = block.querySelector('.r-text').value;
             main += '<section>\n';
@@ -336,7 +336,7 @@
         var hasGallery = false;
         if (galleryRows.length) {
             var gal = '<div class="image-gallery">\n';
-            galleryRows.forEach(function(block) {
+            galleryRows.forEach(function (block) {
                 var src = block.querySelector('.r-img').value;
                 var cap = block.querySelector('.r-caption').value;
                 if (!src) return;
@@ -350,10 +350,10 @@
 
         var faqRows = root.querySelectorAll('.faq-host .repeat-block');
         var hasFaq = false;
-        faqRows.forEach(function(b) { if (b.querySelector('.r-q').value) hasFaq = true; });
+        faqRows.forEach(function (b) { if (b.querySelector('.r-q').value) hasFaq = true; });
         if (hasFaq) {
             main += '<section class="faq-section">\n<h2>Questions fréquentes</h2>\n';
-            faqRows.forEach(function(block) {
+            faqRows.forEach(function (block) {
                 var q = block.querySelector('.r-q').value;
                 var a = block.querySelector('.r-a').value;
                 if (!q) return;
@@ -394,7 +394,7 @@
         }
         main += presentation;
 
-        root.querySelectorAll('.about-host .repeat-block').forEach(function(block) {
+        root.querySelectorAll('.about-host .repeat-block').forEach(function (block) {
             var h2 = block.querySelector('.r-h2').value;
             var p = block.querySelector('.r-p').value;
             if (!h2 && !p) return;
@@ -405,10 +405,10 @@
 
         var quoteRows = root.querySelectorAll('.quotes-host .repeat-block');
         var hasQuotes = false;
-        quoteRows.forEach(function(b) { if (b.querySelector('.r-quote').value) hasQuotes = true; });
+        quoteRows.forEach(function (b) { if (b.querySelector('.r-quote').value) hasQuotes = true; });
         if (hasQuotes) {
             main += '<section class="about-section">\n<div class="quotes-grid">\n';
-            quoteRows.forEach(function(block) {
+            quoteRows.forEach(function (block) {
                 var q = block.querySelector('.r-quote').value;
                 var a = block.querySelector('.r-author').value;
                 if (!q) return;
@@ -462,7 +462,7 @@
     }
 
     // ---- Bouton Aperçu ----
-    document.getElementById('btnPreview').addEventListener('click', function() {
+    document.getElementById('btnPreview').addEventListener('click', function () {
         var html = generate();
         var frame = document.getElementById('previewFrame');
         var fullHtml = html.replace('</head>', PREVIEW_STYLES + '</head>');
@@ -471,7 +471,7 @@
     });
 
     // ---- Bouton Télécharger ----
-    document.getElementById('btnDownload').addEventListener('click', function() {
+    document.getElementById('btnDownload').addEventListener('click', function () {
         var html = generate();
         var name = document.getElementById('fileName').value.trim() || 'page.html';
         if (!name.endsWith('.html')) name += '.html';
@@ -500,7 +500,7 @@
         try {
             var stored = localStorage.getItem('ouesse_admin_token');
             if (stored) return stored;
-        } catch(e) {}
+        } catch (e) { }
         return '';
     }
 
@@ -508,10 +508,10 @@
     function saveAdminToken(token) {
         try {
             localStorage.setItem('ouesse_admin_token', token);
-        } catch(e) {}
+        } catch (e) { }
     }
 
-    document.getElementById('btnPublish').addEventListener('click', function() {
+    document.getElementById('btnPublish').addEventListener('click', function () {
         var html = generate();
         var titre = document.getElementById('pageTitle').value.trim() || 'Sans titre';
         var fileName = document.getElementById('fileName').value.trim() || '';
@@ -553,36 +553,36 @@
                 token: adminToken  // Backup au cas où le header ne passerait pas
             })
         })
-        .then(function(response) {
-            // CORRECTION : Vérifier d'abord si la réponse est du JSON
-            var contentType = response.headers.get('content-type');
-            if (contentType && contentType.includes('application/json')) {
-                return response.json().then(function(data) {
-                    if (!response.ok) {
-                        throw new Error(data.message || 'Erreur ' + response.status);
-                    }
-                    return data;
-                });
-            } else {
-                // Le serveur a retourné du HTML (erreur 401, 404, 500...)
-                throw new Error('Erreur ' + response.status + ' — Le serveur a retourné une page HTML au lieu de JSON. Vérifiez que le serveur Flask est bien accessible et que l\'URL /api/publier existe.');
-            }
-        })
-        .then(function(data) {
-            if (data.status === 'success') {
-                status.innerHTML = '✅ ' + data.message + '<br>🔗 <a href="' + data.url + '" target="_blank">' + data.url + '</a>';
-                saveAdminToken(adminToken);
-            } else {
-                throw new Error(data.message || 'Erreur inconnue du serveur');
-            }
-        })
-        .catch(function(error) {
-            status.innerHTML = '❌ <strong>Erreur :</strong> ' + esc(error.message);
-            console.error('Erreur publication:', error);
-        })
-        .finally(function() {
-            btn.disabled = false;
-        });
+            .then(function (response) {
+                // CORRECTION : Vérifier d'abord si la réponse est du JSON
+                var contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json().then(function (data) {
+                        if (!response.ok) {
+                            throw new Error(data.message || 'Erreur ' + response.status);
+                        }
+                        return data;
+                    });
+                } else {
+                    // Le serveur a retourné du HTML (erreur 401, 404, 500...)
+                    throw new Error('Erreur ' + response.status + ' — Le serveur a retourné une page HTML au lieu de JSON. Vérifiez que le serveur Flask est bien accessible et que l\'URL /api/publier existe.');
+                }
+            })
+            .then(function (data) {
+                if (data.status === 'success') {
+                    status.innerHTML = '✅ ' + data.message + '<br>🔗 <a href="' + data.url + '" target="_blank">' + data.url + '</a>';
+                    saveAdminToken(adminToken);
+                } else {
+                    throw new Error(data.message || 'Erreur inconnue du serveur');
+                }
+            })
+            .catch(function (error) {
+                status.innerHTML = '❌ <strong>Erreur :</strong> ' + esc(error.message);
+                console.error('Erreur publication:', error);
+            })
+            .finally(function () {
+                btn.disabled = false;
+            });
     });
 
 })();

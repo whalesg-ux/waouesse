@@ -150,3 +150,23 @@ Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-08-06
 ## STRUCTURE DES URLS CLOUDINARY
 
 **Format de base:**
+
+---
+
+## PAGE VACANCES EXPLOR'ACTIVES
+URL: https://waouesse.vercel.app/vacances-explor-actives.html
+Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-09-04
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.jpg
+   Titre: Vacances Explor'Actives
+
+---
+
+## PAGE JIJ-OUÈSSÈ 2026
+URL: https://waouesse.vercel.app/jij-ouesse-2026.html
+Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-09-04
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1788559768/jij_2026_7_gdg3pu.jpg
+   Titre: JIJ-OUÈSSÈ 2026

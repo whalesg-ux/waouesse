@@ -13,22 +13,11 @@
 /* ============================================
    RESET & BASE
 ============================================ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    background-color: var(--cream);
-    color: var(--ink);
-    font-family: "Poppins", sans-serif;
-}
 
-h1, h2, h3 {
-    font-family: "Fraunces", serif;
-    font-weight: 600;
-}
+
+
+
 
 /* ============================================
    UTILITAIRES
@@ -82,7 +71,7 @@ h1, h2, h3 {
     line-height: 1.1;
 }
 .logo-title {
-    font-family: "Fraunces", serif;
+    
     font-weight: 600;
     font-size: 1.1rem;
     color: var(--ink);
@@ -152,7 +141,7 @@ h1, h2, h3 {
     margin: 20px 48px 40px 48px;
     border-radius: 24px;
     overflow: hidden;
-    background-image: url("https://res.cloudinary.com/nyke7lhc/image/upload/v1786022187/B%C3%A9no%C3%AEt_D%C3%A8gla_bwoys8.webp");
+    background-image: url("https://res.cloudinary.com/nyke7lhc/image/upload/v1786022187/B%C3%A9no%C3%AEt_D%C3%A8gla_bwoys8.webp") !important;
     background-size: cover;
     background-position: center 30%;
     display: flex;
@@ -201,7 +190,7 @@ h1, h2, h3 {
     color: #ffffff;
     margin-bottom: 12px;
     line-height: 1.4;
-    font-family: "Poppins", sans-serif;
+    
 }
 
 .hero-text p:not(.hero-date) {
@@ -221,7 +210,7 @@ h1, h2, h3 {
 }
 
 .story-section h2 {
-    font-family: 'Fraunces', serif;
+    
     font-size: 2rem;
     color: #1a3a5c;
     margin-top: 50px;
@@ -231,7 +220,7 @@ h1, h2, h3 {
 }
 
 .story-section h3 {
-    font-family: 'Fraunces', serif;
+    
     font-size: 1.5rem;
     color: #2a5a8c;
     margin-top: 35px;
@@ -239,7 +228,7 @@ h1, h2, h3 {
 }
 
 .story-section p {
-    font-family: 'Poppins', sans-serif;
+    
     font-size: 1.05rem;
     line-height: 1.8;
     color: #2d2d2d;
@@ -248,7 +237,7 @@ h1, h2, h3 {
 }
 
 .story-section ul {
-    font-family: 'Poppins', sans-serif;
+    
     font-size: 1.05rem;
     line-height: 1.8;
     color: #2d2d2d;
@@ -338,7 +327,7 @@ h1, h2, h3 {
     padding: 15px 20px;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     color: #fff;
-    font-family: 'Poppins', sans-serif;
+    
     font-size: 0.9rem;
     font-weight: 500;
     text-align: center;
@@ -424,61 +413,23 @@ h1, h2, h3 {
 /* ============================================
    FAQ
 ============================================ */
-.faq-section {
-    margin-top: 60px;
-    padding: 40px 30px;
-    background: #f8fbfa;
-    border-radius: 20px;
-    border: 1px solid #e0e8e4;
-}
 
-.faq-section h2 {
-    font-size: 1.8rem;
-    color: var(--forest-dark);
-    border-left: none;
-    padding-left: 0;
-    text-align: center;
-    margin-bottom: 8px;
-    font-family: "Fraunces", serif;
-}
 
-.faq-section > p {
-    text-align: center;
-    color: #4a5f55;
-    margin-bottom: 32px;
-}
 
-.faq-item {
-    margin-bottom: 28px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e0e8e4;
-}
+
+
+
+
 .faq-item:last-child {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
-.faq-item h3 {
-    font-size: 1.15rem;
-    color: var(--forest-dark);
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: "Fraunces", serif;
-}
-.faq-item h3::before {
-    content: "❓";
-    font-size: 1.2rem;
-}
 
-.faq-item p {
-    line-height: 1.7;
-    color: #1f2e27;
-    padding-left: 32px;
-    font-family: "Poppins", sans-serif;
-}
+
+
+
 
 /* ============================================
    FOOTER
@@ -507,7 +458,7 @@ footer.pied input[type="email"] {
     width: 280px;
     max-width: 80%;
     outline: none;
-    font-family: "Poppins", sans-serif;
+    
 }
 footer.pied input[type="email"]:focus {
     box-shadow: 0 0 0 3px rgba(11, 107, 68, 0.3);
@@ -532,7 +483,7 @@ footer.pied input[type="email"]:focus {
     border-radius: 999px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-    font-family: "Poppins", sans-serif;
+    
 }
 .btn-newsletter:hover:not(:disabled) {
     background-color: var(--forest-dark);
@@ -619,9 +570,7 @@ footer.pied .logo-subtitle {
         margin-left: -125px;
         margin-top: -155px;
     }
-    .faq-section {
-        padding: 32px 24px;
-    }
+    
 }
 
 /* --- MOBILE / MENU BURGER (≤ 768px) --- */
@@ -699,19 +648,10 @@ footer.pied .logo-subtitle {
         height: 40px;
         font-size: 1rem;
     }
-    .faq-section {
-        padding: 28px 20px;
-    }
-    .faq-section h2 {
-        font-size: 1.5rem;
-    }
-    .faq-item h3 {
-        font-size: 1.05rem;
-    }
-    .faq-item p {
-        padding-left: 24px;
-        font-size: 0.95rem;
-    }
+    
+    
+    
+    
     footer.pied {
         padding: 32px 16px;
     }
@@ -816,34 +756,13 @@ footer.pied .logo-subtitle {
         height: 10px;
     }
 
-    .faq-section {
-        padding: 20px 14px;
-        border-radius: 12px;
-        margin-top: 30px;
-    }
-    .faq-section h2 {
-        font-size: 1.2rem;
-    }
-    .faq-section > p {
-        font-size: 0.9rem;
-        margin-bottom: 20px;
-    }
-    .faq-item {
-        margin-bottom: 20px;
-        padding-bottom: 16px;
-    }
-    .faq-item h3 {
-        font-size: 0.95rem;
-        gap: 8px;
-    }
-    .faq-item h3::before {
-        font-size: 1rem;
-    }
-    .faq-item p {
-        padding-left: 16px;
-        font-size: 0.85rem;
-        line-height: 1.6;
-    }
+    
+    
+    
+    
+    
+    
+    
 
     footer.pied {
         padding: 24px 12px;
@@ -888,7 +807,7 @@ footer.pied .logo-subtitle {
 /* Correction pour les titres dans le carrousel */
 .carousel-3d-wrapper h2 {
     text-align: center;
-    font-family: 'Fraunces', serif;
+    
     font-size: 2rem;
     color: #1a3a5c;
     margin-bottom: 10px;
@@ -896,7 +815,7 @@ footer.pied .logo-subtitle {
 
 .carousel-3d-wrapper p {
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+    
     color: #555;
     margin-bottom: 20px;
 }
@@ -951,7 +870,7 @@ footer.pied .logo-subtitle {
     font-size: 0.9rem;
     background: transparent;
     outline: none;
-    font-family: "Poppins", sans-serif;
+    
     min-width: 100px;
 }
 
@@ -965,7 +884,7 @@ footer.pied .logo-subtitle {
     font-size: 0.85rem;
     cursor: pointer;
     transition: background 0.3s ease;
-    font-family: "Poppins", sans-serif;
+    
     white-space: nowrap;
 }
 

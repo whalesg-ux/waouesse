@@ -1554,19 +1554,24 @@ footer.pied {
 .footer-col {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 12px;
 }
 
 .footer-col-title {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #e05638;
-    margin: 0 0 4px 0;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    padding: 6px 12px !important;
+    border-radius: 0px !important; /* Non arrondi */
+    display: inline-block !important;
+    border: none !important;
+    border-left: 4px solid #e05638 !important;
+    margin: 0 0 8px 0 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .footer-col-links {

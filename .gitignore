@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Fichiers d'environnement (secrets)
+.env
+
+# Logs
+*.log
+
+# Vercel
+.vercel/

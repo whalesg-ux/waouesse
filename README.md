@@ -1,0 +1,55 @@
+# WAOUESSE — Ouèssè Tourisme
+
+Site touristique de la commune de Ouèssè (Bénin), avec back-office Flask
+permettant de publier des pages directement sur GitHub, une recherche
+interne, et un générateur de pages.
+
+## Démarrage rapide
+
+```bash
+pip install -r requirements.txt
+python app.py
+```
+
+Au tout premier lancement, un fichier `.env` est créé automatiquement avec :
+- un `SECRET_KEY` et un `ADMIN_TOKEN` (pour l'API `/api/publier`)
+- un **mot de passe administrateur**, affiché **une seule fois** dans la
+  console au démarrage — notez-le immédiatement, il n'est jamais stocké en
+  clair ensuite (seul son hash est conservé).
+
+```
+ADMIN_TOKEN (API)        : ...........................
+MOT DE PASSE ADMIN       : ...........................
+```
+
+Éditez ensuite `.env` pour renseigner vos vraies informations GitHub
+(`GITHUB_TOKEN`, `GITHUB_OWNER`, `GITHUB_REPO`) et votre domaine
+(`SITE_URL`).
+
+## Accès admin
+
+- Connexion : `http://127.0.0.1:5000/admin/login` (mot de passe)
+- Une fois connecté, `/admin` ouvre le générateur de pages et publie
+  automatiquement via l'API GitHub configurée dans `.env`.
+- Déconnexion : lien "Se déconnecter" en haut de la page admin, ou
+  `/admin/logout`.
+
+Si vous perdez le mot de passe : supprimez la ligne `ADMIN_PASSWORD_HASH`
+du `.env`, régénérez-en un (voir `generate_index.py`/README ou définissez-en
+un manuellement avec `werkzeug.security.generate_password_hash`), et
+relancez l'app.
+
+## Recherche interne
+
+La recherche (`/api/search?q=...`) s'appuie sur la base SQLite
+`ouesse-search.db` (table `search_index`, unique par page). Pour
+ré-indexer tout le site après une modification manuelle des fichiers HTML,
+utilisez la route admin `/api/indexer-local` (POST, protégée) ou le script
+`indexer_tout.py`.
+
+## Structure
+
+- `app.py` — serveur Flask (routes publiques, API, admin, recherche, sitemap)
+- `templates/admin_login.html` — page de connexion admin
+- `search.js` / `search-widget.css` — widget de recherche partagé
+- `robots.txt` / `sitemap.xml` — référencement

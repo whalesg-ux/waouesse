@@ -1,0 +1,70 @@
+# robots.txt pour ouesse.com
+# Mis à jour le 19/08/2026
+
+Sitemap: https://ouesse.com/sitemap.xml
+
+# ============================================
+# RÈGLES GÉNÉRALES (tous les robots)
+# ============================================
+User-agent: *
+Allow: /
+
+# Pages/fichiers à exclure de l'indexation
+Disallow: /admin.html$
+Disallow: /generato.html$
+Disallow: /generator.js$
+
+Disallow: /.env
+Disallow: /.env.example
+
+Disallow: /package.json$
+Disallow: /package-lock.json$
+Disallow: /config.htaccess$
+Disallow: /CHANGELOG.md$
+Disallow: /README.md$
+Disallow: /LICENSE$
+
+Disallow: /app.log$
+
+# Ne PAS bloquer .css/.js/.json : Google doit pouvoir les charger pour
+# rendre correctement les pages (mobile-friendly, Core Web Vitals). Les
+# bloquer est une erreur SEO classique, gardée volontairement de côté ici.
+
+# ============================================
+# ROBOTS IA / GEO (Generative Engine Optimization)
+# ============================================
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ============================================
+# BINGBOT
+# ============================================
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+Disallow: /admin.html$
+Disallow: /generato.html$
+Disallow: /generator.js$
+
+# ============================================
+# YANDEX
+# ============================================
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+Disallow: /admin.html$
+Disallow: /generato.html$
+Disallow: /generator.js$
+
+# Ignorer les sourcemaps
+Disallow: /*.js.map$
+Disallow: /*.css.map$

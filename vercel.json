@@ -1,0 +1,21 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  ],
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/(.*)\\.(css|js|webp|jpg|png|svg|json)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "trailingSlash": false
+}

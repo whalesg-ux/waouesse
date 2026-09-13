@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://ouesse.com/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <!-- Image principale -->
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784361921/ouessefe_ma0i47.webp</image:loc>
+      <image:title>Waouesse - Plateforme culturelle béninoise</image:title>
+      <image:caption>Découvrez la richesse culturelle du Bénin VODOUN </image:caption>
+    </image:image>
+    <!-- Deuxième image -->
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784361878/jouan_edsb2o.webp</image:loc>
+      <image:title>ARTISTE A LA FETE DE OUESSEXWE 2025</image:title>
+    </image:image>
+  </url>
+
+  <!-- Page Découvert -->
+  <url>
+    <loc>https://ouesse.com/decouvert.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784361863/majou_mkmsns.webp</image:loc>
+      <image:title>Découvrir la culture béninoise - Waouesse</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784361908/zamgbe_r7s7vi.webp</image:loc>
+      <image:title>Art et traditions du Bénin</image:title>
+    </image:image>
+  </url>
+
+  <!-- Page À propos -->
+  <url>
+    <loc>https://ouesse.com/a-propos.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785260330/sezs_n6qfyy.webp</image:loc>
+      <image:title>Équipe Waouesse - À propos</image:title>
+    </image:image>
+  </url>
+
+  <!-- Page Degla Benoit -->
+  <url>
+    <loc>https://ouesse.com/degla_benoit.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Portrait principal -->
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1786022190/deggl_SS_cj1y0y.webp</image:loc>
+      <image:title>Degla Benoit - Portrait</image:title>
+      <image:caption>ancien premier ministre du benin Degla Benoit</image:caption>
+    </image:image>
+    <!-- Œuvre 1 -->
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1786022191/degga_copie_cbzkco.webp</image:loc>
+      <image:title>Degla Benoit - Création 1</image:title>
+    </image:image>
+  </url>
+
+  <!-- Page Brice Ahossa -->
+  <url>
+    <loc>https://ouesse.com/briceahossa.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1786022197/briceSSS_vglwm1.webp</image:loc>
+      <image:title>Brice Ahossa - Portrait</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1786022195/briceahos.jpg_2K_4_copie_eaylcy.webp</image:loc>
+      <image:title>Brice Ahossa à UP</image:title>
+    </image:image>
+  </url>
+
+  <!-- Page Akpo Firmin Ibidon -->
+  <url>
+    <loc>https://ouesse.com/akpo_firmin_ibidon.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784363087/mairesd_rnle9q.webp</image:loc>
+      <image:title>Akpo Firmin Ibidon - au 1er aout 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784363083/aout_1er_b9faic.webp</image:loc>
+      <image:title>Akpo Firmin Ibidon - 1er aout avec le roi ouesse</image:title>
+    </image:image>
+  </url>
+
+  <!-- Page Luc -->
+  <url>
+    <loc>https://ouesse.com/luc.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784318002/lucatro/benedc_cwct3r.webp</image:loc>
+      <image:title>Luc ATROKPO A OUESSE - Portrait</image:title>
+    </image:image>
+  </url>
+
+  <!-- Page Nuit d'Excellence 2026 -->
+  <url>
+    <loc>https://ouesse.com/nuit-excellence-2026.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  
+    
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785976375/humour_copie_tjiwin.webp</image:loc>
+      <image:title>Nuit d'Excellence 2026 - Événement</image:title>
+      <image:caption>Soirée culturelle d'excellence à Waouesse</image:caption>
+    </image:image>
+    <!-- Galerie de l'événement -->
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785980426/TRADI_copie_tzuyo6.webp</image:loc>
+      <image:title>Nuit d'Excellence 2026 à Ouesse - Galerie 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785972758/troper_czpcot.webp</image:loc>
+      <image:title>Nuit d'Excellence 2026 Ouesse - Galerie 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/kemmm_upml8d.webp</image:loc>
+      <image:title>Nuit d'Excellence à Ouesse 2026 - Galerie 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785972754/maire_eouk4u.webp</image:loc>
+      <image:title>Nuit d'Excellence à Ouesse le maire 2026 - Galerie 4</image:title>
+    </image:image>
+  </url>
+
+  <!-- Page Generate -->
+  <url>
+    <loc>https://ouesse.com/generate.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+
+
+  <!-- Vacances Explor'Actives -->
+  <url>
+    <loc>https://ouesse.com/vacances-explor-actives.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.jpg</image:loc>
+      <image:title>Vacances Explor'Actives</image:title>
+    </image:image>
+  </url>
+
+  <!-- JIJ-OUÈSSÈ 2026 -->
+  <url>
+    <loc>https://ouesse.com/jij-ouesse-2026.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1788559768/jij_2026_7_gdg3pu.jpg</image:loc>
+      <image:title>JIJ-OUÈSSÈ 2026</image:title>
+    </image:image>
+  </url>
+</urlset>

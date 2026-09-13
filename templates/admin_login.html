@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Connexion admin — Ouèssè Tourisme</title>
+    <link rel="canonical" href="https://ouesse.com/admin_login.html">
+<style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', Arial, sans-serif;
+        background: #0b3d24;
+        background: linear-gradient(135deg, #0b3d24, #14532d);
+        padding: 20px;
+    }
+    .login-card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 36px 32px;
+        width: 100%;
+        max-width: 380px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+    .login-card h1 {
+        font-size: 1.3rem;
+        margin: 0 0 6px;
+        color: #0b3d24;
+    }
+    .login-card p.subtitle {
+        margin: 0 0 24px;
+        color: #5a6b63;
+        font-size: 0.9rem;
+    }
+    label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #14532d;
+    }
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid #cbd5d1;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        margin-bottom: 16px;
+    }
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus {
+        outline: none;
+        border-color: #14532d;
+        box-shadow: 0 0 0 3px rgba(20,83,45,0.15);
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: #14532d;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 6px;
+    }
+    button:hover { background: #0b3d24; }
+    .erreur {
+        background: #fdecec;
+        color: #b42318;
+        border: 1px solid #f3b4ae;
+        padding: 10px 12px;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        margin-bottom: 18px;
+    }
+</style>
+</head>
+<body>
+    <form class="login-card" method="POST" autocomplete="off">
+        <h1>🔐 Espace administrateur</h1>
+        <p class="subtitle">Ouèssè Tourisme — accès réservé</p>
+
+        {% if erreur %}
+        <div class="erreur">{{ erreur }}</div>
+        {% endif %}
+
+        <label for="password">Code d'accès secret *</label>
+        <input type="password" id="password" name="password" placeholder="Code d'accès (ex: OUESSE2026)" required autofocus>
+
+        <label for="email">E-mail d'inscription *</label>
+        <input type="email" id="email" name="email" placeholder="admin@ouessetourisme.bj" required>
+
+        <label for="phone">Numéro de téléphone *</label>
+        <input type="tel" id="phone" name="phone" placeholder="+229 01 23 45 67" required>
+
+        <button type="submit">Se connecter</button>
+    </form>
+
+</body>
+</html>

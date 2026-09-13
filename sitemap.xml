@@ -177,4 +177,16 @@
       <image:title>JIJ-OUÈSSÈ 2026</image:title>
     </image:image>
   </url>
+
+  <!-- Répertoire Candidats, Lauréats & Personnalités -->
+  <url>
+    <loc>https://ouesse.com/details-laureats.html</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp</image:loc>
+      <image:title>Candidats, Lauréats &amp; Personnalités de Ouèssè</image:title>
+    </image:image>
+  </url>
 </urlset>

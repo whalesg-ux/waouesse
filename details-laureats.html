@@ -28,52 +28,77 @@
 
     <style>
         .details-hero {
-            background: linear-gradient(135deg, #0b6b44 0%, #16261e 100%);
-            color: #fff;
-            padding: 60px 20px;
+            position: relative;
+            background: #000000 url('narroq_hero.jpg') center/cover no-repeat;
+            color: #ffffff;
+            padding: 70px 20px 50px 20px;
             text-align: center;
-            border-bottom: 4px solid #e05638;
+            border-bottom: none !important; /* Trait séparateur supprimé */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+        .details-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.85) 100%);
+            z-index: 1;
+        }
+        .details-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
         }
         .details-hero h1 {
             font-family: "Fraunces", serif;
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            margin-bottom: 12px;
+            font-size: clamp(2rem, 4.5vw, 3.2rem);
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.9);
+            margin: 0;
         }
         .details-hero p {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
-            color: #cbd5e1;
+            color: #e2e8f0;
             font-size: 1.05rem;
+            line-height: 1.6;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.9);
         }
-        .category-nav-bar {
-            background: #111827;
-            padding: 14px 20px;
+        .category-nav-bar-hero {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
-            position: sticky;
-            top: 0;
-            z-index: 900;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-top: 15px;
+            width: 100%;
         }
-        .category-nav-bar a {
-            background: rgba(255,255,255,0.08);
-            color: #e2e8f0;
+        .category-nav-bar-hero a {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #ffffff;
             text-decoration: none;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 4px; /* Non arrondi */
+            font-size: 0.88rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
-        .category-nav-bar a:hover {
+        .category-nav-bar-hero a:hover {
             background: #e05638;
-            color: #fff;
+            color: #ffffff;
+            border-color: #e05638;
             transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(224, 86, 56, 0.4);
         }
         .details-container {
             max-width: 1150px;
@@ -228,22 +253,24 @@
     </header>
 
     <div class="details-hero">
-        <h1>Répertoire des Candidats, Lauréats &amp; Personnalités</h1>
-        <p>Retrouvez l'intégralité des nominations, lauréats récompensés lors de La Nuit de l'Excellence 2026 ainsi que les grandes figures politiques et acteurs du développement de la commune de Ouèssè.</p>
-    </div>
+        <div class="details-hero-overlay"></div>
+        <div class="details-hero-content">
+            <h1>Répertoire des Candidats, Lauréats &amp; Personnalités</h1>
+            <p>Retrouvez l'intégralité des nominations, lauréats récompensés lors de La Nuit de l'Excellence 2026 ainsi que les grandes figures politiques et acteurs du développement de la commune de Ouèssè.</p>
 
-    <!-- Sticky Nav Table of Contents -->
-    <div class="category-nav-bar">
-        <a href="#laureats"><i class="fa-solid fa-trophy"></i> Grands Lauréats</a>
-        <a href="#photographes"><i class="fa-solid fa-camera"></i> Photographes</a>
-        <a href="#graphistes"><i class="fa-solid fa-palette"></i> Graphistes</a>
-        <a href="#artistes"><i class="fa-solid fa-microphone"></i> Artistes</a>
-        <a href="#humoristes"><i class="fa-solid fa-masks-theater"></i> Humoristes</a>
-        <a href="#footballeurs"><i class="fa-solid fa-futbol"></i> Sport</a>
-        <a href="#batisseurs"><i class="fa-solid fa-landmark"></i> Bâtisseurs</a>
-        <a href="#leaders"><i class="fa-solid fa-star"></i> Jeunes Leaders</a>
-        <a href="#evenements"><i class="fa-solid fa-users"></i> Événements</a>
-        <a href="#politiques"><i class="fa-solid fa-user-tie"></i> Hommes Politiques</a>
+            <div class="category-nav-bar-hero">
+                <a href="#laureats">Grands Lauréats</a>
+                <a href="#photographes">Photographes</a>
+                <a href="#graphistes">Graphistes</a>
+                <a href="#artistes">Artistes</a>
+                <a href="#humoristes">Humoristes</a>
+                <a href="#footballeurs">Sport</a>
+                <a href="#batisseurs">Bâtisseurs</a>
+                <a href="#leaders">Jeunes Leaders</a>
+                <a href="#evenements">Événements</a>
+                <a href="#politiques">Hommes Politiques</a>
+            </div>
+        </div>
     </div>
 
     <main class="details-container">

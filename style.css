@@ -1569,9 +1569,8 @@ footer.pied {
     border-radius: 0px !important; /* Non arrondi */
     display: inline-block !important;
     border: none !important;
-    border-left: 4px solid #e05638 !important;
     margin: 0 0 8px 0 !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: none !important;
 }
 
 .footer-col-links {

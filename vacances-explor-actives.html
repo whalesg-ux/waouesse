@@ -103,6 +103,165 @@
     }
     </script>
     <link rel="stylesheet" href="search-widget.css" />
+    <!-- STYLES DU CADRE DE DÉFILEMENT CONTINU (VOIR AUSSI) -->
+    <style>
+        .dark-marquee-section {
+            background: #ffffff !important;
+            padding: 4.5rem 0 5rem 0;
+            overflow: hidden;
+            position: relative;
+            border: none !important;
+        }
+
+        .dark-marquee-header {
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto 3rem auto;
+            padding: 0 1.5rem;
+            box-sizing: border-box;
+        }
+
+        .dark-marquee-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(20, 83, 45, 0.08);
+            color: #14532D;
+            border: 1px solid rgba(20, 83, 45, 0.25);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.8rem;
+        }
+
+        .dark-marquee-title {
+            font-family: var(--font-heading, 'Fraunces', serif);
+            color: #14532D;
+            font-size: 2.3rem;
+            margin: 0 0 0.8rem 0;
+            letter-spacing: -0.5px;
+        }
+
+        .dark-marquee-desc {
+            color: #4b5563;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .marquee-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 10px 0 20px 0;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 24px;
+            width: max-content;
+            animation: continuousScroll 45s linear infinite;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes continuousScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .dark-nav-card {
+            flex: 0 0 320px;
+            width: 320px;
+            background: #11261a;
+            background: linear-gradient(150deg, #132a1e 0%, #0a1811 100%);
+            border: 1px solid rgba(20, 83, 45, 0.45);
+            border-radius: 18px;
+            padding: 1.8rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+            white-space: normal;
+            box-sizing: border-box;
+        }
+
+        .dark-nav-card:hover {
+            transform: translateY(-8px);
+            border-color: #b5862b;
+            box-shadow: 0 18px 35px rgba(181, 134, 43, 0.25);
+        }
+
+        .dark-card-tag {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #4ade80;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 0.8rem;
+        }
+
+        .dark-card-h3 {
+            color: #ffffff;
+            font-family: var(--font-heading, 'Fraunces', serif);
+            font-size: 1.25rem;
+            margin: 0 0 0.8rem 0;
+            line-height: 1.35;
+        }
+
+        .dark-card-p {
+            color: #cbd5e1;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin: 0 0 1.2rem 0;
+        }
+
+        .dark-card-link {
+            color: #facc15;
+            font-weight: 700;
+            font-size: 0.92rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s ease, gap 0.2s ease;
+            margin-top: auto;
+        }
+
+        .dark-card-link:hover {
+            color: #ffffff;
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .dark-marquee-section {
+                padding: 3.5rem 0 4rem 0;
+            }
+            .dark-marquee-title {
+                font-size: 1.8rem;
+            }
+            .dark-nav-card {
+                flex: 0 0 280px;
+                width: 280px;
+                padding: 1.4rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -334,41 +493,241 @@
             </div>
         </section>
     
-    <!-- === BACKLINKS INTERNES === -->
-    <section class="texte" id="voir-aussi" style="background:var(--paper,#f9f6f1);padding:2rem 1.5rem;">
-      <div class="wrapper">
-        <h2 style="font-family:var(--font-heading,'Fraunces'),serif;color:var(--forest,#2d5a27);margin-bottom:1rem;">
-          <i class="fa-solid fa-link"></i> À lire aussi sur Ouèssè Tourisme
-        </h2>
-        <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:1rem;">
-          <li><a href="podium-vacances-socao.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--forest,#2d5a27);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;"><i class="fa-solid fa-music"></i> Podium Vacances SoCAO</a></li>
-          <li><a href="nuit-excellence-2026.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--forest,#2d5a27);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
-            <i class="fa-solid fa-award"></i> Nuit de l'Excellence &amp; de l'Élégance 2026
-          </a></li>
-          <li><a href="jij-ouesse-2026.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--ochre,#b5862b);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
-            <i class="fa-solid fa-people-group"></i> JIJ-OUÈSSÈ 2026
-          </a></li>
-          <li><a href="decouvert.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:#444;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
-            <i class="fa-solid fa-compass"></i> Découvrir Ouèssè
-          </a></li>
-          <li><a href="decouvert.html#nature" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--forest,#2d5a27);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
-            <i class="fa-solid fa-mountain"></i> Collines, Grottes &amp; Sites Naturels
-          </a></li>
-          <li><a href="decouvert.html#hebergement" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--ochre,#b5862b);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
-            <i class="fa-solid fa-hotel"></i> Hôtels &amp; Hébergements à Ouèssè
-          </a></li>
-          <li><a href="degla_benoit.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:#555;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
-            <i class="fa-solid fa-user-tie"></i> Benoît Dègla – Personnalité de Ouèssè
-          </a></li>
-          <li><a href="briceahossa.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--forest,#2d5a27);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
-            <i class="fa-solid fa-city"></i> La Mairie de Ouèssè
-          </a></li>
-          <li><a href="details-laureats.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:#336;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
-            <i class="fa-solid fa-trophy"></i> Lauréats &amp; Candidats Awards
-          </a></li>
-        </ul>
-      </div>
-    </section>
+            <!-- SECTION NAVIGATION THEMATIQUE : DÉFILEMENT TRANSITION CONTINU -->
+        <section class="dark-marquee-section" id="voir-aussi" aria-labelledby="marquee-title">
+            <div class="dark-marquee-header">
+                <span class="dark-marquee-badge">
+                    <i class="fa-solid fa-compass"></i> Navigation Thématique
+                </span>
+                <h2 class="dark-marquee-title" id="marquee-title">
+                    À lire aussi sur Ouèssè Tourisme
+                </h2>
+                <p class="dark-marquee-desc">
+                    Poursuivez votre découverte des grands événements, des figures d'impact et des circuits touristiques de la commune.
+                </p>
+            </div>
+
+            <div class="marquee-container" aria-label="Défilement continu des thématiques de Ouèssè">
+                <div class="marquee-track">
+                    <!-- 1. Podium Vacances SoCAO -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-music"></i> Concours Culturel</span>
+                            <h3 class="dark-card-h3">Podium Vacances SoCAO</h3>
+                            <p class="dark-card-p">Grand concours estival de révélation des talents en musique, danse, théâtre et savoir à Odougba.</p>
+                        </div>
+                        <a href="podium-vacances-socao.html" class="dark-card-link">
+                            Découvrir SoCAO <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 2. Nuit de l'Excellence & de l'Élégance 2026 -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-award"></i> Gala &amp; Palmarès</span>
+                            <h3 class="dark-card-h3">Nuit de l'Excellence &amp; de l'Élégance 2026</h3>
+                            <p class="dark-card-p">La prestigieuse soirée de consécration et de récompense des acteurs d'impact et talents de Ouèssè.</p>
+                        </div>
+                        <a href="nuit-excellence-2026.html" class="dark-card-link">
+                            Découvrir la soirée <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 3. JIJ-OUÈSSÈ 2026 -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-users"></i> Jeunesse &amp; Leadership</span>
+                            <h3 class="dark-card-h3">JIJ-OUÈSSÈ 2026</h3>
+                            <p class="dark-card-p">Journée Internationale de la Jeunesse célébrée avec fierté, concours, échassiers et message officiel du Dr Akpo.</p>
+                        </div>
+                        <a href="jij-ouesse-2026.html" class="dark-card-link">
+                            Consulter l'événement <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 4. Découvrir Ouèssè -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-compass"></i> Guide Touristique</span>
+                            <h3 class="dark-card-h3">Découvrir Ouèssè</h3>
+                            <p class="dark-card-p">Guide complet pour visiter notre commune, sa culture shabè et mahi, son artisanat et son hospitalité.</p>
+                        </div>
+                        <a href="decouvert.html" class="dark-card-link">
+                            Consulter le guide <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 5. Collines, Grottes & Sites Naturels -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-mountain"></i> Nature &amp; Écotourisme</span>
+                            <h3 class="dark-card-h3">Collines, Grottes &amp; Sites Naturels</h3>
+                            <p class="dark-card-p">Les réserves de marbre bleu d'Idadjo, les grottes d'Odi, les collines sacrées et le fleuve Ouémé.</p>
+                        </div>
+                        <a href="decouvert.html#nature" class="dark-card-link">
+                            Explorer la nature <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 6. Hôtels & Hébergements à Ouèssè -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-hotel"></i> Séjour &amp; Maquis</span>
+                            <h3 class="dark-card-h3">Hôtels &amp; Hébergements à Ouèssè</h3>
+                            <p class="dark-card-p">Où loger et se restaurer en toute sérénité lors de vos événements et vacances dans la commune.</p>
+                        </div>
+                        <a href="decouvert.html#hebergement" class="dark-card-link">
+                            Trouver un hébergement <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 7. Benoît Dègla – Personnalité de Ouèssè -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-user-tie"></i> Personnalité Politique</span>
+                            <h3 class="dark-card-h3">Benoît Dègla – Personnalité de Ouèssè</h3>
+                            <p class="dark-card-p">Parcours de l'ancien Ministre et Député, figure majeure engagée pour l'essor des Collines.</p>
+                        </div>
+                        <a href="degla_benoit.html" class="dark-card-link">
+                            Lire la biographie <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 8. La Mairie de Ouèssè -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-landmark"></i> Administration Locale</span>
+                            <h3 class="dark-card-h3">La Mairie de Ouèssè</h3>
+                            <p class="dark-card-p">Acteurs municipaux, services communaux, Brice Ahossa et initiatives de développement territorial.</p>
+                        </div>
+                        <a href="briceahossa.html" class="dark-card-link">
+                            Découvrir la mairie <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 9. Lauréats & Candidats Awards -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-trophy"></i> Répertoire Officiel</span>
+                            <h3 class="dark-card-h3">Lauréats &amp; Candidats Awards</h3>
+                            <p class="dark-card-p">Tous les artistes, photographes, graphistes, footballeurs et jeunes leaders d'impact récompensés.</p>
+                        </div>
+                        <a href="details-laureats.html" class="dark-card-link">
+                            Consulter le palmarès <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 1. Podium Vacances SoCAO -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-music"></i> Concours Culturel</span>
+                            <h3 class="dark-card-h3">Podium Vacances SoCAO</h3>
+                            <p class="dark-card-p">Grand concours estival de révélation des talents en musique, danse, théâtre et savoir à Odougba.</p>
+                        </div>
+                        <a href="podium-vacances-socao.html" class="dark-card-link">
+                            Découvrir SoCAO <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 2. Nuit de l'Excellence & de l'Élégance 2026 -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-award"></i> Gala &amp; Palmarès</span>
+                            <h3 class="dark-card-h3">Nuit de l'Excellence &amp; de l'Élégance 2026</h3>
+                            <p class="dark-card-p">La prestigieuse soirée de consécration et de récompense des acteurs d'impact et talents de Ouèssè.</p>
+                        </div>
+                        <a href="nuit-excellence-2026.html" class="dark-card-link">
+                            Découvrir la soirée <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 3. JIJ-OUÈSSÈ 2026 -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-users"></i> Jeunesse &amp; Leadership</span>
+                            <h3 class="dark-card-h3">JIJ-OUÈSSÈ 2026</h3>
+                            <p class="dark-card-p">Journée Internationale de la Jeunesse célébrée avec fierté, concours, échassiers et message officiel du Dr Akpo.</p>
+                        </div>
+                        <a href="jij-ouesse-2026.html" class="dark-card-link">
+                            Consulter l'événement <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 4. Découvrir Ouèssè -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-compass"></i> Guide Touristique</span>
+                            <h3 class="dark-card-h3">Découvrir Ouèssè</h3>
+                            <p class="dark-card-p">Guide complet pour visiter notre commune, sa culture shabè et mahi, son artisanat et son hospitalité.</p>
+                        </div>
+                        <a href="decouvert.html" class="dark-card-link">
+                            Consulter le guide <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 5. Collines, Grottes & Sites Naturels -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-mountain"></i> Nature &amp; Écotourisme</span>
+                            <h3 class="dark-card-h3">Collines, Grottes &amp; Sites Naturels</h3>
+                            <p class="dark-card-p">Les réserves de marbre bleu d'Idadjo, les grottes d'Odi, les collines sacrées et le fleuve Ouémé.</p>
+                        </div>
+                        <a href="decouvert.html#nature" class="dark-card-link">
+                            Explorer la nature <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 6. Hôtels & Hébergements à Ouèssè -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-hotel"></i> Séjour &amp; Maquis</span>
+                            <h3 class="dark-card-h3">Hôtels &amp; Hébergements à Ouèssè</h3>
+                            <p class="dark-card-p">Où loger et se restaurer en toute sérénité lors de vos événements et vacances dans la commune.</p>
+                        </div>
+                        <a href="decouvert.html#hebergement" class="dark-card-link">
+                            Trouver un hébergement <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 7. Benoît Dègla – Personnalité de Ouèssè -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-user-tie"></i> Personnalité Politique</span>
+                            <h3 class="dark-card-h3">Benoît Dègla – Personnalité de Ouèssè</h3>
+                            <p class="dark-card-p">Parcours de l'ancien Ministre et Député, figure majeure engagée pour l'essor des Collines.</p>
+                        </div>
+                        <a href="degla_benoit.html" class="dark-card-link">
+                            Lire la biographie <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 8. La Mairie de Ouèssè -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-landmark"></i> Administration Locale</span>
+                            <h3 class="dark-card-h3">La Mairie de Ouèssè</h3>
+                            <p class="dark-card-p">Acteurs municipaux, services communaux, Brice Ahossa et initiatives de développement territorial.</p>
+                        </div>
+                        <a href="briceahossa.html" class="dark-card-link">
+                            Découvrir la mairie <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 9. Lauréats & Candidats Awards -->
+                    <div class="dark-nav-card">
+                        <div>
+                            <span class="dark-card-tag"><i class="fa-solid fa-trophy"></i> Répertoire Officiel</span>
+                            <h3 class="dark-card-h3">Lauréats &amp; Candidats Awards</h3>
+                            <p class="dark-card-p">Tous les artistes, photographes, graphistes, footballeurs et jeunes leaders d'impact récompensés.</p>
+                        </div>
+                        <a href="details-laureats.html" class="dark-card-link">
+                            Consulter le palmarès <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 </main>
 
 

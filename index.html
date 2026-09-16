@@ -11,6 +11,7 @@
     <link rel="canonical" href="https://ouesse.com/">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0b6b44">
+    <meta property="og:site_name" content="Ouèssè">
     <meta property="og:title" content="Ouèssè Tourisme – WAOUESSE, venez à Ouèssè">
     <meta property="og:description"
         content="Ouèssè (OUESSE) : marbre bleu, forêts sacrées, culture authentique. WAOUESSE – « Viens à Ouèssè ».">
@@ -173,15 +174,16 @@
     }
     </script>
 
-    <!-- SUPPRIMÉ : le bloc "WebSite" + "SearchAction" qui ciblait
-         https://ouesse.com/search?q={search_term_string}.
-         Cette page /search n'existe pas sur le site (la recherche est
-         gérée en JS via search.js, pas par une route serveur) : un
-         JSON-LD qui pointe vers une URL qui ne renvoie rien de valide
-         est pire qu'utile — il peut faire échouer la validation de
-         données structurées dans Search Console et donner un lien
-         mort au sitelinks searchbox. À réintroduire seulement si une
-         vraie page /search?q=... est créée un jour. -->
+    <!-- WebSite : Nom du site officiel pour Google Search (Site Names) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Ouèssè",
+      "alternateName": ["Ouèssè Tourisme", "WAOUESSE"],
+      "url": "https://ouesse.com/"
+    }
+    </script>
 </head>
 
 <body>

@@ -67,7 +67,7 @@
         h2 { font-size: 2rem; color: #084d31; margin-bottom: 16px; position: relative; }
         h2::after { content: ''; display: block; width: 60px; height: 4px; background: #0b6b44; margin-top: 8px; border-radius: 4px; }
         p { font-size: 1.05rem; line-height: 1.8; color: #1f2e27; margin-bottom: 20px; }
-        .disclaimer { background: #fff3cd; border-left: 4px solid #ffc107; padding: 16px; margin: 20px 0; border-radius: 8px; }
+        .disclaimer { background: #fff3cd; border: 1px solid #ffc107; padding: 16px; margin: 20px 0; border-radius: 8px; }
         .image-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 20px; margin: 20px 0; }
         .image-gallery figure { margin: 0; }
         .image-gallery img { width: 100%; height: auto; border-radius: 8px; }

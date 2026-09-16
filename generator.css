@@ -454,7 +454,7 @@ input[type="password"] {
 
 .auth-notice-box {
     background: #e7f3ec;
-    border-left: 4px solid #0b6b44;
+    border: 1px solid rgba(11, 107, 68, 0.2);
     padding: 10px 12px;
     border-radius: 8px;
     font-size: 0.81rem;

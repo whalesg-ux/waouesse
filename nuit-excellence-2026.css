@@ -222,8 +222,7 @@ h1, h2, h3, h4 {
     color: var(--forest-dark);
     font-size: 1.8rem;
     margin-bottom: 16px;
-    border-left: 5px solid var(--forest);
-    padding-left: 16px;
+    
     
 }
 
@@ -270,7 +269,7 @@ h1, h2, h3, h4 {
 blockquote {
     background: var(--forest-soft);
     padding: 20px 24px;
-    border-left: 5px solid var(--forest);
+    border: 1px solid rgba(45, 90, 39, 0.15);
     margin: 20px 0;
     font-style: italic;
     border-radius: 0 8px 8px 0;

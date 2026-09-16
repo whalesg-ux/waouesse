@@ -12,6 +12,7 @@ Allow: /
 # Pages/fichiers à exclure de l'indexation
 Disallow: /admin.html$
 Disallow: /generato.html$
+Disallow: /generate.html$
 Disallow: /generator.js$
 
 Disallow: /.env
@@ -53,6 +54,7 @@ Allow: /
 Crawl-delay: 2
 Disallow: /admin.html$
 Disallow: /generato.html$
+Disallow: /generate.html$
 Disallow: /generator.js$
 
 # ============================================
@@ -63,6 +65,7 @@ Allow: /
 Crawl-delay: 2
 Disallow: /admin.html$
 Disallow: /generato.html$
+Disallow: /generate.html$
 Disallow: /generator.js$
 
 # Ignorer les sourcemaps

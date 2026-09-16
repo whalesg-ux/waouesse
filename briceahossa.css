@@ -282,8 +282,7 @@
     color: var(--forest-dark);
     font-size: 1.7rem;
     margin-bottom: 20px;
-    border-left: 5px solid var(--forest);
-    padding-left: 18px;
+    
     
 }
 
@@ -308,7 +307,7 @@
 .main-content blockquote {
     background: var(--forest-soft);
     padding: 24px 30px;
-    border-left: 6px solid var(--forest);
+    border: 1px solid rgba(45, 90, 39, 0.2);
     margin: 24px 0;
     font-style: italic;
     font-size: 1.05rem;

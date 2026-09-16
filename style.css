@@ -366,7 +366,7 @@ input:focus-visible {
     padding: 40px 24px;
     background: #f4f9f6;
     border-radius: var(--radius-lg);
-    border-left: 8px solid var(--terracotta);
+    border: 1px solid rgba(226, 149, 120, 0.3);
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
@@ -409,7 +409,7 @@ input:focus-visible {
     margin-top: 12px;
     font-style: italic;
     color: #084d31;
-    border-left: 3px solid var(--terracotta);
+    
     padding-left: 16px;
     font-size: 1.05rem;
 }
@@ -1550,12 +1550,11 @@ img:not(header img):not(footer img):not(a img) { cursor: zoom-in; }
         position: static !important;
         box-shadow: none !important;
         background: rgba(11, 107, 68, 0.04) !important;
-        border: none !important;
-        border-left: 3px solid #0b6b44 !important;
-        border-radius: 0 8px 8px 0 !important;
+        border: 1px solid rgba(11, 107, 68, 0.12) !important;
+        border-radius: 8px !important;
         display: flex !important;
         flex-direction: column !important;
-        padding: 4px 0 4px 10px !important;
+        padding: 6px 10px !important;
         margin: 4px 0 8px 12px !important;
         min-width: unset !important;
         width: calc(100% - 12px) !important;

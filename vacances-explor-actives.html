@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -43,6 +43,8 @@
       "name": "Vacances Explor'Actives",
       "startDate": "2024-08-20",
       "endDate": "2024-08-21",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "location": {
         "@type": "Place",
         "name": "Ouèssè, Département des Collines",
@@ -59,9 +61,21 @@
       },
       "image": "https://res.cloudinary.com/nyke7lhc/image/upload/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.jpg",
       "description": "Programme éducatif, culturel et touristique conçu pour les jeunes de la Commune de Ouèssè.",
+      "performer": {
+        "@type": "PerformingGroup",
+        "name": "Jeunesse et animateurs de la Commune de Ouèssè"
+      },
       "organizer": {
         "@type": "Organization",
-        "name": "L'équipe d'organisation locale Vacances Explor'Actives"
+        "name": "L'équipe d'organisation locale Vacances Explor'Actives",
+        "url": "https://vacanceexplor.vercel.app/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://vacanceexplor.vercel.app/",
+        "price": "0",
+        "priceCurrency": "XOF",
+        "availability": "https://schema.org/InStock"
       }
     }
     </script>
@@ -119,6 +133,7 @@
                     <li><a href="nuit-excellence-2026.html" >Nuit de l'Excellence 2026</a></li>
                     <li><a href="vacances-explor-actives.html" class="active">Vacances Explor'Actives</a></li>
                     <li><a href="jij-ouesse-2026.html" >JIJ Ouèssè 2026</a></li>
+                      <li><a href="podium-vacances-socao.html">Podium Vacances SoCAO</a></li>
                     <li><a href="details-laureats.html" >Candidats &amp; Lauréats</a></li>
                 </ul>
             </li>
@@ -220,7 +235,7 @@
 
                         <br><br>
                         <div
-                            style="background-color: var(--paper); padding: 1.5rem; border-left: 4px solid var(--ochre);">
+                            style="background-color: var(--paper); padding: 1.5rem; border: 1px solid rgba(181, 134, 43, 0.2);">
                             <h3 style="color: var(--forest); margin-bottom: 0.5rem; font-family: var(--font-heading);">
                                 En savoir plus sur le site officiel</h3>
                             <p style="margin: 0;">
@@ -318,7 +333,43 @@
                 </details>
             </div>
         </section>
-    </main>
+    
+    <!-- === BACKLINKS INTERNES === -->
+    <section class="texte" id="voir-aussi" style="background:var(--paper,#f9f6f1);padding:2rem 1.5rem;">
+      <div class="wrapper">
+        <h2 style="font-family:var(--font-heading,'Fraunces'),serif;color:var(--forest,#2d5a27);margin-bottom:1rem;">
+          <i class="fa-solid fa-link"></i> À lire aussi sur Ouèssè Tourisme
+        </h2>
+        <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:1rem;">
+          <li><a href="podium-vacances-socao.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--forest,#2d5a27);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;"><i class="fa-solid fa-music"></i> Podium Vacances SoCAO</a></li>
+          <li><a href="nuit-excellence-2026.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--forest,#2d5a27);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
+            <i class="fa-solid fa-award"></i> Nuit de l'Excellence &amp; de l'Élégance 2026
+          </a></li>
+          <li><a href="jij-ouesse-2026.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--ochre,#b5862b);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
+            <i class="fa-solid fa-people-group"></i> JIJ-OUÈSSÈ 2026
+          </a></li>
+          <li><a href="decouvert.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:#444;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
+            <i class="fa-solid fa-compass"></i> Découvrir Ouèssè
+          </a></li>
+          <li><a href="decouvert.html#nature" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--forest,#2d5a27);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
+            <i class="fa-solid fa-mountain"></i> Collines, Grottes &amp; Sites Naturels
+          </a></li>
+          <li><a href="decouvert.html#hebergement" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--ochre,#b5862b);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
+            <i class="fa-solid fa-hotel"></i> Hôtels &amp; Hébergements à Ouèssè
+          </a></li>
+          <li><a href="degla_benoit.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:#555;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
+            <i class="fa-solid fa-user-tie"></i> Benoît Dègla – Personnalité de Ouèssè
+          </a></li>
+          <li><a href="briceahossa.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--forest,#2d5a27);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
+            <i class="fa-solid fa-city"></i> La Mairie de Ouèssè
+          </a></li>
+          <li><a href="details-laureats.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:#336;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
+            <i class="fa-solid fa-trophy"></i> Lauréats &amp; Candidats Awards
+          </a></li>
+        </ul>
+      </div>
+    </section>
+</main>
 
 
     <!-- FOOTER -->
@@ -343,6 +394,7 @@
                     <li><a href="nuit-excellence-2026.html">Nuit de l'Excellence 2026</a></li>
                     <li><a href="vacances-explor-actives.html">Vacances Explor'Actives</a></li>
                     <li><a href="jij-ouesse-2026.html">JIJ Ouèssè 2026</a></li>
+                    <li><a href="podium-vacances-socao.html">Podium Vacances SoCAO</a></li>
                     <li><a href="details-laureats.html#evenements">Événements de l'Année</a></li>
                     <li><a href="decouvert.html#fetes">Fêtes &amp; Festivals Traditionnels</a></li>
                 </ul>

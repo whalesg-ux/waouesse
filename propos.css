@@ -232,7 +232,7 @@
     background: #e7f3ec;
     border-radius: 16px;
     padding: 26px;
-    border-left: 5px solid var(--forest);
+    border: 1px solid rgba(45, 90, 39, 0.15);
 }
 .quote-card p {
     font-style: italic;

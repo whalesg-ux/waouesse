@@ -238,6 +238,7 @@
         return '<!DOCTYPE html>\n<html lang="fr">\n<head>\n' +
             '<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
             '<meta name="description" content="' + esc(desc) + '">\n<meta name="theme-color" content="#0b6b44">\n' +
+            '<meta property="og:site_name" content="Ouèssè">\n' +
             '<title>' + esc(title) + '</title>\n' +
             '<link rel="icon" href="' + LOGO + '" type="image/webp">\n' +
             '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +

@@ -1,6 +1,6 @@
 [
     {
-        "page": "index.html",
+        "page": "/",
         "title": "Ouèssè Tourisme – Accueil & Découverte de la Commune",
         "desc": "Portail officiel de promotion culturelle, touristique, économique et des personnalités de la commune de Ouèssè au Bénin.",
         "icon": "fa-house",
@@ -9,7 +9,7 @@
         "text": "Ouèssè Tourisme – WAOUESSE, venez découvrir ! Ouèssè : marbre bleu, forêts sacrées, culture authentique. WAOUESSE – Viens à Ouèssè (Wa = Viens en Fon). Découvrez nos trésors cachés ! L'âme du Bénin authentique. Forêts sacrées, marchés traditionnels, hospitalité légendaire, deuxième réserve mondiale de marbre bleu à Idadjo, Mont Gbongui, galeries souterraines Odi de Yaoui, mares aux caïmans."
     },
     {
-        "page": "decouvert.html",
+        "page": "/decouvert",
         "title": "Découvrir Ouèssè : Hôtels, Marbre Bleu, Forêts Sacrées & Gastronomie",
         "desc": "Guide touristique complet de Ouèssè : hébergements, hôtels, maquis, collines de Kèmon, marbre bleu d'Idadjo, artisanat et traditions.",
         "icon": "fa-compass",
@@ -18,7 +18,7 @@
         "text": "Découvrir Ouèssè : jeunesse, football, art, musique, technologie et défis routiers. Marbre bleu à Idadjo, deuxième réserve mondiale. Hôtels et hébergements confortables à Ouèssè. Restauration locale, maquis, agapes et boissons traditionnelles. Collines de Kèmon, mares aux caïmans de Gbongui, galeries souterraines d'Odi. Festivals, danses traditionnelles et artisanat du terroir."
     },
     {
-        "page": "a-propos.html",
+        "page": "/a-propos",
         "title": "À propos de Ouèssè – Histoire, Géographie & Arrondissements",
         "desc": "Découvrez l'histoire ancienne de Ouèssè depuis Sa Majesté Djahlin Djanta, les 9 arrondissements, le relief, l'agriculture et les infrastructures.",
         "icon": "fa-circle-info",
@@ -27,7 +27,7 @@
         "text": "À propos de Ouèssè : histoire, culture et attractions. Fondée sous le règne de Sa Majesté Djahlin Djanta (1690-1720). Neuf arrondissements : Challa-Ogoï, Djègbè, Gbanlin, Ikèmon, Kilibo, Laminou, Odougba, Ouèssè-Centre, Toui. Population de 150 000 habitants, superficie de 3 200 km². Cours d'eau : Ouémé, Okpara, Gbéffa, Kilibo, Liga, Nonomi, Toumi."
     },
     {
-        "page": "nuit-excellence-2026.html",
+        "page": "/nuit-excellence-2026",
         "title": "La Nuit de l'Excellence & de l'Élégance 2026 – Gala & Awards",
         "desc": "Le récit complet du Gala & Awards du 1er août 2026 à la Maison des Jeunes de Ouèssè Wogoudo. Lauréats, invités d'honneur et Guest Star Oluwa Kemy.",
         "icon": "fa-trophy",
@@ -36,7 +36,7 @@
         "text": "La Nuit de l'Excellence & de l'Élégance 2026 – Gala & Awards 1er août 2026 à la Maison des Jeunes de Ouèssè Wogoudo. Organisé par LTNDR EVENT'S. Célébration du mérite, du leadership et des bâtisseurs de la commune. Guest Star Oluwa Kemy. Grands lauréats : Fary Shoot (Meilleur Photographe), Nesdav (Meilleur Graphiste), Matinou Olabode (Meilleur Footballeur), 8 Bâtisseurs et 5 Jeunes Leaders d'Impact."
     },
     {
-        "page": "jij-ouesse-2026.html",
+        "page": "/jij-ouesse-2026",
         "title": "JIJ-OUÈSSÈ 2026 : 5ᵉ Édition de la Journée Internationale de la Jeunesse",
         "desc": "La 5ᵉ édition de la JIJ-OUÈSSÈ à Odougba : concours J'épelle Sans Faute, danse des échassiers, et présence des autorités communales.",
         "icon": "fa-users",
@@ -45,7 +45,7 @@
         "text": "JIJ-OUÈSSÈ 2026 : UNE 5ᵉ ÉDITION QUI CONFIRME L’ESSOR DE LA JEUNESSE. Le samedi 29 août 2026, la Place publique Gbedokpo dans l'arrondissement d'Odougba a accueilli la 5ᵉ édition de la Journée Internationale de la Jeunesse à Ouèssè (JIJ-OUÈSSÈ 2026). Présence des autorités : Romain Biaou AYEDON (Maire de Ouèssè), Bernard AVOHOU (Premier Adjoint au Maire), Dr Ibidon Firmin AKPO (Ancien Maire). Message fort du Dr Ibidon Firmin Akpo à la jeunesse disponible en téléchargement PDF. Concours J’épelle Sans Faute, spectaculaire danse des échassiers, communications inspirantes et remise de prix."
     },
     {
-        "page": "vacances-explor-actives.html",
+        "page": "/vacances-explor-actives",
         "title": "Vacances Explor'Actives – Programme Jeunesse & Découverte",
         "desc": "Programme éducatif et touristique pour la jeunesse de Ouèssè : visites du Mont Gbongui, Idadjo, Palais Royal, ateliers et citoyenneté.",
         "icon": "fa-sun",
@@ -54,7 +54,7 @@
         "text": "Vacances Explor'Actives : la jeunesse en mouvement à Ouèssè. Visites du Palais Royal de Ouèssè, du site Dan Gôdôgô, du Mont Gbongui, du fleuve Ouémé, du site de marbre bleu d'Idadjo. Concours Génies en Herbe, ateliers créatifs et éducation citoyenne."
     },
     {
-        "page": "details-laureats.html",
+        "page": "/details-laureats",
         "title": "Répertoire Complet des Candidats, Lauréats & Personnalités de Ouèssè",
         "desc": "Consultez l'annuaire exhaustif de tous les nominés, grands gagnants, photographes, graphistes, artistes, humoristes, footballeurs, bâtisseurs et hommes politiques de Ouèssè.",
         "icon": "fa-list-check",
@@ -63,7 +63,7 @@
         "text": "Répertoire des Candidats, Lauréats & Personnalités de Ouèssè. Nuit de l'Excellence 2026. Grands Lauréats : Fary Shoot (Meilleur Photographe), Nesdav (Meilleur Graphiste), Matinou Olabode (Meilleur Footballeur), Oluwa Kemy (Guest Star). Catégorie Photographes : Obryane Shoot It, Noé Mahougnon Tchokponhoue, Gbadebo Prod, Had Shoot, Nago Shoot, Terminator Shoot. Catégorie Graphistes : Marc Dossou, Aimé Charlemangne KETENGBE, Luc Fadonougbo, AKPO Abolias. Catégorie Artistes : Alpha Oméga, Sajos, Wekouin, Mandekpo, 3S Wèkèzo. Catégorie Humoristes : Akouna Matata, Osi Comédien, James Descartes, Adama, Prince Two Love, Mariwol Alodoukpo. Bâtisseurs et Jeunes Leaders. Hommes Politiques : Benoît Dègla, Brice Ahossa, Firmin Ibidon Akpo, Luc S. Cann, Sa Majesté TCHINI TONOU."
     },
     {
-        "page": "details-laureats.html",
+        "page": "/details-laureats",
         "title": "Grands Lauréats & Vainqueurs Awards 2026",
         "desc": "Les grands vainqueurs plébiscités lors du Gala de La Nuit de l'Excellence : Fary Shoot, Nesdav, Matinou Olabode, Oluwa Kemy.",
         "icon": "fa-trophy",
@@ -72,7 +72,7 @@
         "text": "Grands Gagnants & Lauréats Awards 2026 : Fary Shoot (Meilleur Photographe), Tchokponhoue David Nesdav (Meilleur Graphiste), Matinou Olabode (Meilleur Footballeur), Oluwa Kemy (Artiste Guest Star d'Honneur)."
     },
     {
-        "page": "details-laureats.html",
+        "page": "/details-laureats",
         "title": "Candidats & Nominés – Catégorie Photographie",
         "desc": "Liste des photographes nominés à La Nuit de l'Excellence 2026 : Fary Shoot, Obryane Shoot, Noé Mahougnon, Gbadebo Prod, Had Shoot, Nago Shoot, Terminator Shoot.",
         "icon": "fa-camera",
@@ -81,7 +81,7 @@
         "text": "Nominés Meilleur Photographe : FARY SHOOT (Gagnant), Obryane Shoot It, Noé Mahougnon Tchokponhoue, Gbadebo Prod, Had Shoot, Nago Shoot, Terminator Shoot."
     },
     {
-        "page": "details-laureats.html",
+        "page": "/details-laureats",
         "title": "Candidats & Nominés – Catégorie Graphisme & Design",
         "desc": "Liste des graphistes nominés : Nesdav (Tchokponhoue David), Marc Dossou, Aimé Charlemangne KETENGBE, Luc Fadonougbo, AKPO Abolias.",
         "icon": "fa-palette",
@@ -90,7 +90,7 @@
         "text": "Nominés Meilleur Graphiste : TCHOKPONHOUE DAVID NESDAV (Gagnant), Marc Dossou, Aimé Charlemangne KETENGBE, Luc Fadonougbo, AKPO Abolias."
     },
     {
-        "page": "details-laureats.html",
+        "page": "/details-laureats",
         "title": "Candidats & Nominés – Catégorie Artistes Tradi-Modernes",
         "desc": "Liste des artistes tradi-modernes en compétition : Alpha Oméga, Sajos, Wekouin, Mandekpo, 3S Wèkèzo.",
         "icon": "fa-microphone",
@@ -99,7 +99,7 @@
         "text": "Nominés Meilleur Artiste Tradi-Moderne : Alpha Oméga, Sajos, Wekouin, Mandekpo, 3S Wèkèzo."
     },
     {
-        "page": "details-laureats.html",
+        "page": "/details-laureats",
         "title": "Candidats & Nominés – Catégorie Humoristes & Comédiens",
         "desc": "Liste des humoristes nominés : Akouna Matata, Osi Comédien, James Descartes, Adama, Prince Two Love, Mariwol Alodoukpo.",
         "icon": "fa-masks-theater",
@@ -108,7 +108,7 @@
         "text": "Nominés Meilleur Humoriste : Akouna Matata, Osi Comédien, James Descartes, Adama, Prince Two Love, Mariwol Alodoukpo."
     },
     {
-        "page": "details-laureats.html",
+        "page": "/details-laureats",
         "title": "Hommes Politiques, Autorités & Leaders de Ouèssè",
         "desc": "Portraits et parcours des hommes politiques et figures publiques : Benoît Dègla, Brice Ahossa, Firmin Ibidon Akpo, Luc S. Cann, Sa Majesté TCHINI TONOU.",
         "icon": "fa-user-tie",
@@ -117,7 +117,7 @@
         "text": "Hommes Politiques, Autorités & Figures de Ouèssè : Benoît Assouan Comlan Dègla (Ancien Député & Ministre), Brice Ahossa (Maire de Ouèssè), Dr Ibidon Firmin Akpo (Ancien Maire), Luc S. Cann, Sa Majesté TCHINI TONOU (Roi de Ouèssè Wogoudo)."
     },
     {
-        "page": "degla_benoit.html",
+        "page": "/degla_benoit",
         "title": "Benoît Assouan Comlan Dègla – Ancien Député & Ministre",
         "desc": "Portrait et biographie complète de Benoît Dègla, figure politique majeure de la commune de Ouèssè.",
         "icon": "fa-user-tie",
@@ -126,7 +126,7 @@
         "text": "Benoît Assouan Comlan Dègla, homme politique majeur originaire de Ouèssè. Ancien Ministre de l'Intérieur et de la Sécurité Publique, Député à l'Assemblée nationale. Actions pour le désenclavement routier, l'électrification rurale, la construction d'écoles et de centres de santé dans la commune de Ouèssè."
     },
     {
-        "page": "briceahossa.html",
+        "page": "/briceahossa",
         "title": "Brice Ahossa – Maire de Ouèssè, Leader & Forbes 30 Under 30",
         "desc": "Le parcours exceptionnel de Brice Ahossa, Maire de Ouèssè, écrivain et lauréat du classement Forbes 30 Under 30 2026.",
         "icon": "fa-city",
@@ -135,7 +135,7 @@
         "text": "Brice Ahossa, Maire de la commune de Ouèssè, né le 15 février 2000 à Ouèssè. Classé Forbes 30 Under 30 Afrique 2026. Ancien vice-président de la FNEUP, membre du Parlement des Jeunes du Bénin, fondateur du CJAD et initiateur de la JIJ-Ouèssè. Auteur des ouvrages Dieu est un fumeur et Le Baobab des sentiments."
     },
     {
-        "page": "akpo_firmin_ibidon.html",
+        "page": "/akpo_firmin_ibidon",
         "title": "Dr Ibidon Firmin Akpo – Ancien Maire de Ouèssè (4 mandats)",
         "desc": "Parcours et bilan de Dr Ibidon Firmin Akpo, Maire de Ouèssè réélu 4 fois, Docteur en agronomie et Officier de l'Ordre national.",
         "icon": "fa-landmark-flag",
@@ -144,7 +144,7 @@
         "text": "Dr Ibidon Firmin Akpo, né à Gbèmè vers 1972. Docteur en agronomie et économie rurale. Maire de la commune de Ouèssè pendant 4 mandats consécutifs. Réalisations majeures : construction de l'Hôtel de Ville de Ouèssè (445 millions FCFA), adduction d'eau Kilibo-Ikèmon (241 millions FCFA). Officier de l'Ordre national du Bénin."
     },
     {
-        "page": "luc.html",
+        "page": "/luc",
         "title": "Luc S. Cann – Personnalité & Acteur du Développement",
         "desc": "Portrait de Luc S. Cann, engagé pour le développement communautaire et les initiatives locales à Ouèssè.",
         "icon": "fa-user-gear",
@@ -153,7 +153,7 @@
         "text": "Luc S. Cann, personnalité engagée dans la promotion sociale, économique et culturelle de la commune de Ouèssè. Acteur clé du développement local et des initiatives de la jeunesse."
     },
     {
-        "page": "contact.html",
+        "page": "/contact",
         "title": "Contact & Informations – Ouèssè Tourisme",
         "desc": "Contactez l'équipe de Ouèssè Tourisme pour toute demande d'information, partenariat ou suggestion.",
         "icon": "fa-envelope",
@@ -162,7 +162,7 @@
         "text": "Contactez l'équipe de Ouèssè Tourisme. Email : neekleiooffice@gmail.com. Infoline : +229 0156661558 / 0162198215 / 0196298708. Adresse : Mairie de Ouèssè, Département des Collines, Bénin."
     },
     {
-        "page": "cgu.html",
+        "page": "/cgu",
         "title": "Conditions Générales d'Utilisation (CGU) – Ouèssè Tourisme",
         "desc": "Conditions d'utilisation du site officiel Ouèssè Tourisme (ouesse.com).",
         "icon": "fa-file-contract",
@@ -171,7 +171,7 @@
         "text": "Conditions Générales d'Utilisation du site Ouèssè Tourisme. Accès gratuit, propriété intellectuelle, respect du droit d'auteur (loi béninoise n° 2005-30)."
     },
     {
-        "page": "rgpd.html",
+        "page": "/rgpd",
         "title": "Politique de Confidentialité (RGPD) – Ouèssè Tourisme",
         "desc": "Protection des données personnelles et politique de confidentialité conforme au RGPD et au Code du Numérique du Bénin.",
         "icon": "fa-shield-halved",
@@ -180,7 +180,7 @@
         "text": "Politique de confidentialité et protection des données personnelles. Conforme au RGPD et au Code du Numérique du Bénin (Loi n° 2017-20). Vos droits d'accès, de rectification et de suppression."
     },
     {
-        "page": "podium-vacances-socao.html",
+        "page": "/podium-vacances-socao",
         "title": "Podium Vacances SoCAO (Acte 3) – Révéler les Talents & Construire des Avenirs",
         "desc": "La 3ᵉ édition du grand Concours Podium Vacances par SoCAO à Odougba-Ouèssè : finales chorégraphiques, concours intellectuel Champion du Savoir, chant, théâtre, et bourses de formation professionnelle.",
         "icon": "fa-trophy",

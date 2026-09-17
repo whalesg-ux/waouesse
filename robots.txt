@@ -10,9 +10,12 @@ User-agent: *
 Allow: /
 
 # Pages/fichiers à exclure de l'indexation
-Disallow: /admin.html$
-Disallow: /generato.html$
-Disallow: /generate.html$
+Disallow: /admin
+Disallow: /admin.html
+Disallow: /generato
+Disallow: /generato.html
+Disallow: /generate
+Disallow: /generate.html
 Disallow: /generator.js$
 
 Disallow: /.env
@@ -52,9 +55,12 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 2
-Disallow: /admin.html$
-Disallow: /generato.html$
-Disallow: /generate.html$
+Disallow: /admin
+Disallow: /admin.html
+Disallow: /generato
+Disallow: /generato.html
+Disallow: /generate
+Disallow: /generate.html
 Disallow: /generator.js$
 
 # ============================================
@@ -63,9 +69,12 @@ Disallow: /generator.js$
 User-agent: Yandex
 Allow: /
 Crawl-delay: 2
-Disallow: /admin.html$
-Disallow: /generato.html$
-Disallow: /generate.html$
+Disallow: /admin
+Disallow: /admin.html
+Disallow: /generato
+Disallow: /generato.html
+Disallow: /generate
+Disallow: /generate.html
 Disallow: /generator.js$
 
 # Ignorer les sourcemaps

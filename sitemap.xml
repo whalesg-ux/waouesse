@@ -23,7 +23,7 @@
 
   <!-- Page Découvert -->
   <url>
-    <loc>https://ouesse.com/decouvert.html</loc>
+    <loc>https://ouesse.com/decouvert</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -39,7 +39,7 @@
 
   <!-- Page À propos -->
   <url>
-    <loc>https://ouesse.com/a-propos.html</loc>
+    <loc>https://ouesse.com/a-propos</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -51,7 +51,7 @@
 
   <!-- Page Degla Benoit -->
   <url>
-    <loc>https://ouesse.com/degla_benoit.html</loc>
+    <loc>https://ouesse.com/degla_benoit</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -70,7 +70,7 @@
 
   <!-- Page Brice Ahossa -->
   <url>
-    <loc>https://ouesse.com/briceahossa.html</loc>
+    <loc>https://ouesse.com/briceahossa</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -86,7 +86,7 @@
 
   <!-- Page Akpo Firmin Ibidon -->
   <url>
-    <loc>https://ouesse.com/akpo_firmin_ibidon.html</loc>
+    <loc>https://ouesse.com/akpo_firmin_ibidon</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -102,7 +102,7 @@
 
   <!-- Page Luc -->
   <url>
-    <loc>https://ouesse.com/luc.html</loc>
+    <loc>https://ouesse.com/luc</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -114,7 +114,7 @@
 
   <!-- Page Nuit d'Excellence 2026 -->
   <url>
-    <loc>https://ouesse.com/nuit-excellence-2026.html</loc>
+    <loc>https://ouesse.com/nuit-excellence-2026</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -150,7 +150,7 @@
 
   <!-- Vacances Explor'Actives -->
   <url>
-    <loc>https://ouesse.com/vacances-explor-actives.html</loc>
+    <loc>https://ouesse.com/vacances-explor-actives</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -162,7 +162,7 @@
 
   <!-- JIJ-OUÈSSÈ 2026 -->
   <url>
-    <loc>https://ouesse.com/jij-ouesse-2026.html</loc>
+    <loc>https://ouesse.com/jij-ouesse-2026</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -174,7 +174,7 @@
 
   <!-- Répertoire Candidats, Lauréats & Personnalités -->
   <url>
-    <loc>https://ouesse.com/details-laureats.html</loc>
+    <loc>https://ouesse.com/details-laureats</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -185,7 +185,7 @@
   </url>
   <!-- Page Podium Vacances SoCAO (Acte 3) -->
   <url>
-    <loc>https://ouesse.com/podium-vacances-socao.html</loc>
+    <loc>https://ouesse.com/podium-vacances-socao</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -242,7 +242,7 @@
 
   <!-- Page Contact -->
   <url>
-    <loc>https://ouesse.com/contact.html</loc>
+    <loc>https://ouesse.com/contact</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

@@ -63,7 +63,7 @@
       "logo": "https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp",
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "contact@narroq.com",
+        "email": "narroqtowns@ouesse.com",
         "contactType": "Commercial",
         "availableLanguage": ["French", "English"]
       }
@@ -261,7 +261,7 @@
                     <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                     <div>
                         <strong>Email</strong>
-                        <a href="mailto:contact@narroq.com">contact@narroq.com</a>
+                        <a href="mailto:narroqtowns@ouesse.com">narroqtowns@ouesse.com</a>
                     </div>
                 </li>
                 <li>
@@ -333,7 +333,7 @@
 
         <details class="faq-item">
             <summary><h3>Comment puis-je contacter NarroQ ou EzegLabs ?</h3></summary>
-            <p>Vous pouvez nous écrire à <a href="mailto:neekleiooffice@gmail.com">neekleiooffice@gmail.com</a> ou utiliser le formulaire de contact ci-dessus. Nous répondons sous 48 heures.</p>
+            <p>Vous pouvez nous écrire à <a href="mailto:narroqtowns@ouesse.com">narroqtowns@ouesse.com</a> ou utiliser le formulaire de contact ci-dessus. Nous répondons sous 48 heures.</p>
         </details>
     </section>
 
@@ -420,16 +420,20 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
 (function () {
-  const EMAILJS_PUBLIC_KEY = "72a7hfG4OdpTjHKjx";
-  const EMAILJS_SERVICE_ID = "service_qrkjhop";
-  const EMAILJS_TEMPLATE_ID = "template_jp72hcb";
-  const RECEIVER_EMAIL = "tchokponhoueezechiel@gmail.com";
+  const EMAILJS_PUBLIC_KEY = "NWEjibrRnaKkAnudE";
+  const EMAILJS_PRIVATE_KEY = "68gKWayAzSUrRxb2QTyAg";
+  const EMAILJS_SERVICE_ID = "default_service";
+  const EMAILJS_TEMPLATE_ID = "template_kdp9i4j";
+  const RECEIVER_EMAIL = "narroqtowns@ouesse.com";
 
   if (typeof emailjs === "undefined") {
     console.error("EmailJS n'a pas pu être chargé.");
     return;
   }
-  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  emailjs.init({
+    publicKey: EMAILJS_PUBLIC_KEY,
+    privateKey: EMAILJS_PRIVATE_KEY
+  });
 
   const form = document.getElementById("contactForm");
   if (!form) return;
@@ -462,14 +466,31 @@
 
     const templateParams = {
       nom: nom,
+      name: nom,
+      from_name: nom,
+      user_name: nom,
       email: email,
+      from_email: email,
+      user_email: email,
+      reply_to: email,
       structure: structure || "Non précisé",
+      commune: structure || "Non précisé",
       message: message,
       to_email: RECEIVER_EMAIL,
     };
 
-    emailjs
-      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+    function sendEmail(serviceId) {
+      return emailjs.send(serviceId, EMAILJS_TEMPLATE_ID, templateParams);
+    }
+
+    sendEmail(EMAILJS_SERVICE_ID)
+      .catch(function (err) {
+        // En cas d'échec avec default_service, tentative de repli avec service_qrkjhop
+        if (EMAILJS_SERVICE_ID === "default_service") {
+          return sendEmail("service_qrkjhop");
+        }
+        throw err;
+      })
       .then(function () {
         setStatus("Votre message a bien été envoyé. Nous vous répondons sous 48h.", "success");
         form.reset();

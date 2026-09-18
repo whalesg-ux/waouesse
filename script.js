@@ -76,10 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
             iframe.height = '315';
             iframe.title = 'WAOUESSE – Découvrez Ouèssè en vidéo';
             iframe.frameBorder = '0';
-            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
             iframe.allowFullscreen = true;
             iframe.style.width = '100%';
-            iframe.style.height = '100%';
+            iframe.style.aspectRatio = '16/9';
             iframe.style.borderRadius = '12px';
             this.replaceWith(iframe);
         }, { once: true });

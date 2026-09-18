@@ -196,21 +196,75 @@
             '</header>';
     }
 
-    function footer(footerText) {
-        var text = footerText || '&copy; 2025 NarroQ & EzegLabs – Donner une présence numérique aux territoires';
+    function footer() {
         return '<footer class="pied">\n' +
-            '    <div class="logo-text">\n' +
-            '        <span class="logo-title">Ouessè Tourisme</span>\n' +
-            '        <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>\n' +
+            '    <div class="footer-top">\n' +
+            '        <div class="footer-brand">\n' +
+            '            <span class="logo-title">Ouessè Tourisme</span>\n' +
+            '            <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>\n' +
+            '            <p class="footer-desc">Portail officiel de promotion culturelle, touristique, événementielle et des personnalités de la commune de Ouèssè, Bénin.</p>\n' +
+            '        </div>\n' +
+            '        <form class="newsletter-form" action="/newsletter" method="POST" aria-label="Inscription à la newsletter">\n' +
+            '            <input type="email" name="email" placeholder="Votre email pour les actualités" required aria-label="Adresse email">\n' +
+            '            <button type="submit">S\'inscrire</button>\n' +
+            '        </form>\n' +
             '    </div>\n' +
-            '    <input type="email" placeholder="Votre email pour les actualités" />\n' +
-            '    <div>\n' +
-            '        <a href="index.html">Accueil</a> ·\n' +
-            '        <a href="decouvert.html">Découvrir</a> ·\n' +
-            '        <a href="luc.html">Luc Atrokpo</a> ·\n' +
-            '        <a href="contact.html">Contact</a>\n' +
+            '    <div class="footer-grid">\n' +
+            '        <div class="footer-col">\n' +
+            '            <h4 class="footer-col-title">Événements &amp; Gala</h4>\n' +
+            '            <ul class="footer-col-links">\n' +
+            '                <li><a href="/nuit-excellence-2026">Nuit de l\'Excellence 2026</a></li>\n' +
+            '                <li><a href="/vacances-explor-actives">Vacances Explor\'Actives</a></li>\n' +
+            '                <li><a href="/jij-ouesse-2026">JIJ Ouèssè 2026</a></li>\n' +
+            '                <li><a href="/podium-vacances-socao">Podium Vacances SoCAO</a></li>\n' +
+            '                <li><a href="/details-laureats#evenements">Événements de l\'Année</a></li>\n' +
+            '                <li><a href="/decouvert#fetes">Fêtes &amp; Festivals Traditionnels</a></li>\n' +
+            '            </ul>\n' +
+            '        </div>\n' +
+            '        <div class="footer-col">\n' +
+            '            <h4 class="footer-col-title">Personnalités &amp; Politique</h4>\n' +
+            '            <ul class="footer-col-links">\n' +
+            '                <li><a href="/details-laureats#politiques">Hommes Politiques &amp; Élus</a></li>\n' +
+            '                <li><a href="/briceahossa">La Mairie &amp; Acteurs Municipaux</a></li>\n' +
+            '                <li><a href="/degla_benoit">Parcours des Députés &amp; Ministres</a></li>\n' +
+            '                <li><a href="/details-laureats#batisseurs">Bâtisseurs de la Commune</a></li>\n' +
+            '                <li><a href="/details-laureats#leaders">Jeunes Leaders d\'Impact</a></li>\n' +
+            '            </ul>\n' +
+            '        </div>\n' +
+            '        <div class="footer-col">\n' +
+            '            <h4 class="footer-col-title">Artistes &amp; Lauréats</h4>\n' +
+            '            <ul class="footer-col-links">\n' +
+            '                <li><a href="/details-laureats#laureats">Grands Gagnants des Awards</a></li>\n' +
+            '                <li><a href="/details-laureats#artistes">Artistes Tradi-Modernes</a></li>\n' +
+            '                <li><a href="/details-laureats#humoristes">Humoristes &amp; Comédiens</a></li>\n' +
+            '                <li><a href="/details-laureats#photographes">Candidats Photographie</a></li>\n' +
+            '                <li><a href="/details-laureats#graphistes">Candidats Design &amp; Graphisme</a></li>\n' +
+            '            </ul>\n' +
+            '        </div>\n' +
+            '        <div class="footer-col">\n' +
+            '            <h4 class="footer-col-title">Hôtels, Guide &amp; Blog</h4>\n' +
+            '            <ul class="footer-col-links">\n' +
+            '                <li><a href="/decouvert#hebergement">Hôtels &amp; Hébergements</a></li>\n' +
+            '                <li><a href="/decouvert#restauration">Restauration &amp; Maquis</a></li>\n' +
+            '                <li><a href="/decouvert#nature">Collines &amp; Sites Naturels</a></li>\n' +
+            '                <li><a href="/decouvert#blog">Blog &amp; Guide Touristique</a></li>\n' +
+            '                <li><a href="/decouvert">Découvrir Ouèssè</a></li>\n' +
+            '            </ul>\n' +
+            '        </div>\n' +
+            '        <div class="footer-col">\n' +
+            '            <h4 class="footer-col-title">Informations &amp; Légal</h4>\n' +
+            '            <ul class="footer-col-links">\n' +
+            '                <li><a href="/">Accueil</a></li>\n' +
+            '                <li><a href="/a-propos">À propos</a></li>\n' +
+            '                <li><a href="/contact">Contact</a></li>\n' +
+            '                <li><a href="/cgu">CGU</a></li>\n' +
+            '                <li><a href="/rgpd">Confidentialité (RGPD)</a></li>\n' +
+            '            </ul>\n' +
+            '        </div>\n' +
             '    </div>\n' +
-            '    <p class="footer-credit">' + text + '</p>\n' +
+            '    <div class="footer-bottom">\n' +
+            '        <p class="copyright">© 2026 Ouèssè Tourisme – Wa (Viens) à Ouèssè | Tous droits réservés.</p>\n' +
+            '    </div>\n' +
             '</footer>';
     }
 

@@ -112,7 +112,7 @@ module.exports = async function handler(req, res) {
         if (decoded.includes("PRIVATE KEY")) {
           privateKey = decoded;
         }
-      } catch (_) {}
+      } catch (_) { }
     }
 
     // Remplacer les retours à la ligne échappés (\n → saut de ligne réel)

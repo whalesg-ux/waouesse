@@ -748,6 +748,15 @@ input:focus-visible {
     filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
 }
 
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+    border-radius: var(--radius-md);
+    display: block;
+    box-shadow: var(--shadow-md);
+}
+
 /* ============================================
    FAQ
 ============================================ */

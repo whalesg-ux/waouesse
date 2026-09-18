@@ -160,19 +160,21 @@ async function recupererJWT(nomAffiche, salleCourt) {
 
     if (!reponse.ok) {
       let detail = "";
+      let code = "";
       try {
         const donneesErr = await reponse.json();
         detail = donneesErr.message || donneesErr.error || "";
+        code = donneesErr.code || "";
       } catch (_) {}
       console.warn("API /api/generate-jwt a répondu avec une erreur:", reponse.status, detail);
-      return { token: null, error: detail || `Erreur serveur (${reponse.status})` };
+      return { token: null, error: detail || `Erreur serveur (${reponse.status})`, code: code };
     }
 
     const donnees = await reponse.json();
-    return { token: donnees.token || null, error: null };
+    return { token: donnees.token || null, error: null, code: null };
   } catch (erreur) {
     console.warn("Erreur réseau vers /api/generate-jwt:", erreur);
-    return { token: null, error: erreur.message || "Endpoint introuvable" };
+    return { token: null, error: erreur.message || "Endpoint introuvable", code: "NETWORK_ERROR" };
   }
 }
 
@@ -213,8 +215,8 @@ async function demarrerReunion() {
     jetonJWT = resultatJWT.token;
   } else {
     // Si l'API renvoie une erreur (ex: variables d'environnement non configurées ou environnement local)
-    console.warn("JWT non généré:", resultatJWT.error);
-    if (resultatJWT.error && resultatJWT.error.includes("JAAS_CONFIG_MISSING")) {
+    console.warn("JWT non généré:", resultatJWT.error, resultatJWT.code);
+    if (resultatJWT.code === "JAAS_CONFIG_MISSING" || (resultatJWT.error && resultatJWT.error.includes("JAAS_CONFIG_MISSING"))) {
       afficherMessage(
         "Connexion sécurisée Narroq en cours (mode direct)...",
         "info"

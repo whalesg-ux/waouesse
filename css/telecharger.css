@@ -208,6 +208,7 @@ footer.pied {
 }
 
 .footer-brand .logo-title {
+    font-family: "Fraunces", serif;
     font-size: 1.5rem;
     color: #ffffff;
     font-weight: 700;

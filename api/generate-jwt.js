@@ -20,9 +20,9 @@ function sanitiser(valeur, longueurMax = 100) {
     .replace(/[<>"'`]/g, "");
 }
 
-// Valide le nom de salle : uniquement alphanumériques, tirets, underscores
+// Valide le nom de salle : uniquement alphanumériques, tirets, underscores ou wildcard *
 function estNomSalleValide(salle) {
-  return typeof salle === "string" && /^[a-zA-Z0-9\-_]{2,60}$/.test(salle);
+  return typeof salle === "string" && (/^[a-zA-Z0-9\-_]{2,60}$/.test(salle) || salle === "*");
 }
 
 // Encode en base64url standard (sans padding '=')
@@ -105,6 +105,13 @@ module.exports = async function handler(req, res) {
       });
     }
 
+    // Gestion des guillemets accidentels dans la variable d'environnement
+    privateKey = privateKey.trim();
+    if ((privateKey.startsWith('"') && privateKey.endsWith('"')) || 
+        (privateKey.startsWith("'") && privateKey.endsWith("'"))) {
+      privateKey = privateKey.slice(1, -1);
+    }
+
     // Gestion de la clé encodée en base64 (pour éviter les problèmes de saut de ligne)
     if (!privateKey.includes("BEGIN RSA PRIVATE KEY") && !privateKey.includes("BEGIN PRIVATE KEY")) {
       try {
@@ -118,13 +125,17 @@ module.exports = async function handler(req, res) {
     // Remplacer les retours à la ligne échappés (\n → saut de ligne réel)
     privateKey = privateKey.replace(/\\n/g, "\n");
 
+    // Standard 8x8 JaaS : kid doit suivre le format [AppID]/[KeyID]
+    const keyId = apiKey.startsWith(`${appId}/`) ? apiKey : `${appId}/${apiKey}`;
+
     const header = {
       alg: "RS256",
       typ: "JWT",
-      kid: apiKey
+      kid: keyId
     };
 
     const nowInSeconds = Math.floor(Date.now() / 1000);
+    const userId = crypto.randomUUID ? crypto.randomUUID() : `user-${Date.now()}`;
     const payload = {
       aud: "jitsi",
       iss: "chat",
@@ -135,6 +146,7 @@ module.exports = async function handler(req, res) {
       exp: nowInSeconds + 4 * 3600, // Valide 4 heures
       context: {
         user: {
+          id: userId,
           name: userDisplayName,
           email: userEmail,
           avatar: "https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp",

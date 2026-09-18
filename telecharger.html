@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OUESSE — Télécharger l'application</title>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#1f6f3d" />
+  <link rel="stylesheet" href="css/telecharger.css" />
+
+  <!-- OneSignal — notifications push web -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function (OneSignal) {
+      await OneSignal.init({
+        appId: "1890c9d5-d449-40d9-8946-464ae9bc0aed",
+        safari_web_id: "web.onesignal.auto.3b9e77c1-5852-4edd-a278-c29c156a72b0",
+        notifyButton: { enable: false },
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <header class="ouesse-header">
+    <div class="ouesse-header-inner">
+      <span class="ouesse-logo">OUESSE</span>
+      <span class="ouesse-tagline">Télécharger l'application</span>
+    </div>
+  </header>
+
+  <main class="ouesse-main">
+    <div class="carte">
+      <h1>Installer OUESSE sur votre téléphone</h1>
+      <p class="sous-titre">
+        Accédez aux actualités et aux réunions directement depuis une icône
+        sur votre écran d'accueil, comme une vraie application.
+      </p>
+
+      <button id="bouton-installer-app" class="btn-principal" hidden>
+        📲 Installer l'application
+      </button>
+
+      <p id="message-deja-installee" class="message-info" hidden>
+        ✅ L'application est déjà installée sur cet appareil.
+      </p>
+
+      <button id="bouton-activer-notifications" class="btn-secondaire-large">
+        🔔 Recevoir les notifications des actualités
+      </button>
+      <p id="message-notifications-actives" class="message-info" hidden>
+        ✅ Notifications activées.
+      </p>
+
+      <div id="bloc-android" class="bloc-plateforme" hidden>
+        <h2>Sur Android (Chrome)</h2>
+        <p>Cliquez sur le bouton ci-dessus. Si rien n'apparaît, ouvrez le menu ⋮ du navigateur puis "Ajouter à l'écran d'accueil".</p>
+      </div>
+
+      <div id="bloc-iphone" class="bloc-plateforme" hidden>
+        <h2>Sur iPhone (Safari)</h2>
+        <ol>
+          <li>Ouvrez cette page dans <strong>Safari</strong> (pas Chrome).</li>
+          <li>Appuyez sur l'icône de partage en bas de l'écran.</li>
+          <li>Choisissez <strong>« Sur l'écran d'accueil »</strong>.</li>
+          <li>Appuyez sur <strong>« Ajouter »</strong> en haut à droite.</li>
+        </ol>
+      </div>
+
+      <div id="bloc-autre" class="bloc-plateforme" hidden>
+        <h2>Sur ordinateur</h2>
+        <p>Dans la barre d'adresse de Chrome ou Edge, cliquez sur l'icône d'installation ⊕ à droite, ou ouvrez le menu du navigateur et choisissez "Installer OUESSE".</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="ouesse-footer">
+    <p>OUESSE — Commune de Ouessè</p>
+  </footer>
+
+  <script src="js/register-pwa.js"></script>
+  <script src="js/telecharger.js"></script>
+  <script src="js/notifications.js"></script>
+</body>
+</html>

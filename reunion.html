@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OUESSE — Réunion en ligne</title>
+  <link rel="stylesheet" href="reunion.css" />
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function (OneSignal) {
+      await OneSignal.init({
+        appId: "1890c9d5-d449-40d9-8946-464ae9bc0aed",
+        safari_web_id: "web.onesignal.auto.3b9e77c1-5852-4edd-a278-c29c156a72b0",
+        notifyButton: { enable: false },
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <header class="ouesse-header">
+    <div class="ouesse-header-inner">
+      <span class="ouesse-logo">OUESSE</span>
+      <span class="ouesse-tagline">Réunion en ligne des Community Managers</span>
+    </div>
+  </header>
+
+  <main class="ouesse-main">
+
+    <!-- Écran de démarrage : on choisit / rejoint une salle avant d'entrer -->
+    <section id="ecran-demarrage" class="ecran">
+      <div class="carte">
+        <h1>Rejoindre la réunion</h1>
+        <p class="sous-titre">Entrez votre nom pour rejoindre la salle des CM.</p>
+
+        <label for="nom-participant">Votre nom</label>
+        <input type="text" id="nom-participant" placeholder="Ex : Ezéchiel" maxlength="40" />
+
+        <button id="btn-rejoindre" class="btn-principal">Rejoindre la réunion</button>
+
+        <p class="info-salle">
+          Salle : <code id="nom-salle-affiche">—</code>
+        </p>
+
+        <div class="bloc-partage">
+          <p>Lien à partager avec les CM :</p>
+          <div class="ligne-copie">
+            <input type="text" id="lien-partage" readonly />
+            <button id="btn-copier" class="btn-secondaire">Copier</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Écran de la réunion elle-même -->
+    <section id="ecran-reunion" class="ecran cachee">
+      <div id="conteneur-jitsi"></div>
+    </section>
+
+  </main>
+
+  <footer class="ouesse-footer">
+    <p>OUESSE — Commune de Ouessè</p>
+  </footer>
+
+  <script src="https://meet.jit.si/external_api.js"></script>
+  <script src="reunion.js"></script>
+</body>
+
+</html>

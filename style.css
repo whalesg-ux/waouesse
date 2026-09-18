@@ -410,7 +410,7 @@ input:focus-visible {
     padding: 40px 24px;
     background: #f4f9f6;
     border-radius: var(--radius-lg);
-    border: 1px solid rgba(226, 149, 120, 0.3);
+    border: none;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 

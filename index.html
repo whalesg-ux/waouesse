@@ -184,6 +184,18 @@
       "url": "https://ouesse.com/"
     }
     </script>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function (OneSignal) {
+      await OneSignal.init({
+        appId: "1890c9d5-d449-40d9-8946-464ae9bc0aed",
+        safari_web_id: "web.onesignal.auto.3b9e77c1-5852-4edd-a278-c29c156a72b0",
+        notifyButton: { enable: false },
+      });
+    });
+  </script>
+
 </head>
 
 <body>
@@ -1196,7 +1208,8 @@
                 <p><strong><i class="fa-solid fa-person-walking" style="color: #14532D; margin-right: 6px;"></i>
                         Chorégraphie (3 formations en compétition) :</strong><br>
                     1. <strong>LES PÉPITES DU TERROIR</strong> • 2. <strong>LES PRINCES DE LA DANSE</strong> • 3.
-                    <strong>ASSEB ÉLITE</strong>.</p>
+                    <strong>ASSEB ÉLITE</strong>.
+                </p>
                 <p><strong><i class="fa-solid fa-drum" style="color: #8B1E1E; margin-right: 6px;"></i> Danse
                         Traditionnelle (3 troupes patrimoniales) :</strong><br>
                     1. <strong>ASSOUKAVI</strong> • 2. <strong>LES PERLES DE BOTTI</strong> • 3. <strong>BAOBAB DE LA

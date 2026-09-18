@@ -1,0 +1,148 @@
+:root {
+  /* TODO : remplace ces 2 couleurs par celles déjà utilisées sur ouesse.com */
+  --ouesse-couleur-principale: #1f6f3d;
+  --ouesse-couleur-fonce: #12421f;
+  --ouesse-couleur-fond: #f5f7f4;
+  --ouesse-couleur-texte: #1c1c1c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--ouesse-couleur-fond);
+  color: var(--ouesse-couleur-texte);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ouesse-header {
+  background: var(--ouesse-couleur-principale);
+  color: #fff;
+  padding: 16px 24px;
+}
+.ouesse-header-inner {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.ouesse-logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+.ouesse-tagline {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.ouesse-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.ecran.cachee { display: none; }
+
+.carte {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  padding: 32px;
+  width: 100%;
+  max-width: 420px;
+}
+.carte h1 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: var(--ouesse-couleur-fonce);
+}
+.sous-titre { color: #555; margin-bottom: 20px; }
+
+label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem; }
+
+#nom-participant {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.btn-principal {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--ouesse-couleur-principale);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-principal:hover { background: var(--ouesse-couleur-fonce); }
+
+.btn-secondaire {
+  border: 1px solid var(--ouesse-couleur-principale);
+  background: #fff;
+  color: var(--ouesse-couleur-principale);
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.info-salle { margin-top: 18px; font-size: 0.85rem; color: #666; }
+.info-salle code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.bloc-partage {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+  font-size: 0.85rem;
+}
+.ligne-copie {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+#lien-partage {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+#conteneur-jitsi {
+  width: 100%;
+  max-width: 1100px;
+  height: 80vh;
+  min-height: 480px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+
+.ouesse-footer {
+  text-align: center;
+  padding: 12px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+@media (max-width: 480px) {
+  .carte { padding: 22px; }
+  #conteneur-jitsi { height: 70vh; }
+}

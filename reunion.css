@@ -1,148 +1,569 @@
+/* =========================================================
+   reunion.css — Visioconférence Ouèssè (8x8 JaaS)
+   Couleurs officielles de la Commune de Ouèssè
+   ========================================================= */
+
 :root {
-  /* TODO : remplace ces 2 couleurs par celles déjà utilisées sur ouesse.com */
-  --ouesse-couleur-principale: #1f6f3d;
-  --ouesse-couleur-fonce: #12421f;
-  --ouesse-couleur-fond: #f5f7f4;
-  --ouesse-couleur-texte: #1c1c1c;
+  --ouesse-vert: #0b6b44;
+  --ouesse-vert-clair: #1f6f3d;
+  --ouesse-vert-fonce: #07472c;
+  --ouesse-vert-fond: #f0f7f2;
+  --ouesse-or: #d4a017;
+  --ouesse-texte: #1d2d24;
+  --ouesse-texte-muet: #5b6f63;
+  --ouesse-bordure: #d7e4dc;
+  --ouesse-blanc: #ffffff;
+  --ouesse-ombre: 0 10px 30px rgba(11, 107, 68, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --ouesse-rayon: 14px;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: var(--ouesse-couleur-fond);
-  color: var(--ouesse-couleur-texte);
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #f4f8f5 0%, #eaf3ed 100%);
+  color: var(--ouesse-texte);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/* ---------------------------------------------------------
+   En-tête de la page
+   --------------------------------------------------------- */
 .ouesse-header {
-  background: var(--ouesse-couleur-principale);
-  color: #fff;
-  padding: 16px 24px;
+  background: linear-gradient(90deg, var(--ouesse-vert-fonce) 0%, var(--ouesse-vert) 100%);
+  color: var(--ouesse-blanc);
+  padding: 14px 24px;
+  box-shadow: 0 2px 10px rgba(7, 71, 44, 0.2);
 }
+
 .ouesse-header-inner {
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
-  align-items: baseline;
-  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   flex-wrap: wrap;
 }
-.ouesse-logo {
-  font-weight: 700;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
+
+.ouesse-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
 }
-.ouesse-tagline {
-  font-size: 0.95rem;
+
+.ouesse-brand:hover {
   opacity: 0.9;
 }
 
+.ouesse-logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+}
+
+.ouesse-badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.ouesse-tagline {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+/* ---------------------------------------------------------
+   Zone principale
+   --------------------------------------------------------- */
 .ouesse-main {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px;
-}
-
-.ecran.cachee { display: none; }
-
-.carte {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-  padding: 32px;
   width: 100%;
-  max-width: 420px;
 }
-.carte h1 {
-  margin-top: 0;
-  font-size: 1.4rem;
-  color: var(--ouesse-couleur-fonce);
-}
-.sous-titre { color: #555; margin-bottom: 20px; }
 
-label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem; }
+.ecran {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ecran.cachee {
+  display: none !important;
+}
+
+/* ---------------------------------------------------------
+   Carte d'accueil (Écran de démarrage)
+   --------------------------------------------------------- */
+.carte {
+  background: var(--ouesse-blanc);
+  border-radius: var(--ouesse-rayon);
+  box-shadow: var(--ouesse-ombre);
+  padding: 36px;
+  width: 100%;
+  max-width: 480px;
+  border: 1px solid rgba(11, 107, 68, 0.1);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.carte-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.icone-bulle {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 14px;
+  background: var(--ouesse-vert-fond);
+  color: var(--ouesse-vert);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.carte h1 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--ouesse-vert-fonce);
+  margin-bottom: 6px;
+}
+
+.sous-titre {
+  color: var(--ouesse-texte-muet);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+/* ---------------------------------------------------------
+   Bannière de message
+   --------------------------------------------------------- */
+.message-banner {
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 0.86rem;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.message-info {
+  background: #e6f4ea;
+  color: #137333;
+  border: 1px solid #ceead6;
+}
+
+.message-warning {
+  background: #fef7e0;
+  color: #b06000;
+  border: 1px solid #feefc3;
+}
+
+.message-error {
+  background: #fce8e6;
+  color: #c5221f;
+  border: 1px solid #fad2cf;
+}
+
+.message-success {
+  background: #e6f4ea;
+  color: #137333;
+  border: 1px solid #ceead6;
+}
+
+/* ---------------------------------------------------------
+   Formulaire et champs
+   --------------------------------------------------------- */
+.champ-groupe {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 7px;
+  font-size: 0.88rem;
+  color: var(--ouesse-texte);
+}
+
+label i {
+  color: var(--ouesse-vert);
+  margin-right: 4px;
+}
 
 #nom-participant {
   width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1.5px solid var(--ouesse-bordure);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fafcfb;
 }
 
+#nom-participant:focus {
+  outline: none;
+  border-color: var(--ouesse-vert);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(11, 107, 68, 0.12);
+}
+
+/* Bloc d'info sur la salle */
+.info-salle-bloc {
+  background: var(--ouesse-vert-fond);
+  border: 1px solid #d4e7db;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.info-salle-texte {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.label-salle {
+  font-weight: 500;
+  color: var(--ouesse-vert-fonce);
+}
+
+.info-salle-texte code {
+  background: #ffffff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ouesse-vert);
+  border: 1px solid #c7decb;
+}
+
+.btn-icone {
+  background: #ffffff;
+  border: 1px solid var(--ouesse-bordure);
+  color: var(--ouesse-vert-fonce);
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-icone:hover {
+  background: var(--ouesse-vert);
+  color: #ffffff;
+  border-color: var(--ouesse-vert);
+}
+
+/* ---------------------------------------------------------
+   Boutons
+   --------------------------------------------------------- */
 .btn-principal {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   border: none;
-  border-radius: 8px;
-  background: var(--ouesse-couleur-principale);
-  color: #fff;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--ouesse-vert) 0%, var(--ouesse-vert-fonce) 100%);
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  box-shadow: 0 4px 14px rgba(11, 107, 68, 0.25);
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
 }
-.btn-principal:hover { background: var(--ouesse-couleur-fonce); }
+
+.btn-principal:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(11, 107, 68, 0.35);
+}
+
+.btn-principal:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
 
 .btn-secondaire {
-  border: 1px solid var(--ouesse-couleur-principale);
-  background: #fff;
-  color: var(--ouesse-couleur-principale);
+  border: 1.5px solid var(--ouesse-vert);
+  background: #ffffff;
+  color: var(--ouesse-vert);
   border-radius: 8px;
-  padding: 8px 14px;
+  padding: 8px 16px;
   cursor: pointer;
-  white-space: nowrap;
+  font-weight: 600;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  font-family: inherit;
 }
 
-.info-salle { margin-top: 18px; font-size: 0.85rem; color: #666; }
-.info-salle code {
-  background: #f0f0f0;
-  padding: 2px 6px;
-  border-radius: 4px;
+.btn-secondaire:hover {
+  background: var(--ouesse-vert-fond);
 }
 
+.btn-secondaire.copie-succes {
+  background: var(--ouesse-vert);
+  color: #ffffff;
+}
+
+/* Bloc partage */
 .bloc-partage {
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid #eee;
-  font-size: 0.85rem;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--ouesse-bordure);
 }
+
+.partage-titre {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ouesse-texte);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .ligne-copie {
   display: flex;
   gap: 8px;
-  margin-top: 6px;
 }
+
 #lien-partage {
   flex: 1;
-  padding: 8px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--ouesse-bordure);
+  font-size: 0.82rem;
+  background: #f8faf8;
+  color: #444444;
+  font-family: inherit;
+}
+
+.note-securite {
+  margin-top: 18px;
+  font-size: 0.78rem;
+  color: var(--ouesse-texte-muet);
+  text-align: center;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* ---------------------------------------------------------
+   Écran de réunion active (Visioconférence JaaS)
+   --------------------------------------------------------- */
+#ecran-reunion {
+  flex-direction: column;
+  width: 100%;
+  max-width: 1300px;
+  height: calc(100vh - 140px);
+  min-height: 580px;
+  background: #111a14;
+  border-radius: var(--ouesse-rayon);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(11, 107, 68, 0.2);
+}
+
+.barre-reunion {
+  background: #0d1510;
+  color: #ffffff;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1a2a1e;
+  gap: 12px;
+}
+
+.barre-reunion-gauche {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.point-vert {
+  width: 10px;
+  height: 10px;
+  background: #00d26a;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00d26a;
+  animation: pulsation 2s infinite ease-in-out;
+}
+
+@keyframes pulsation {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.texte-reunion-titre {
+  font-size: 0.88rem;
+  color: #a0b8a6;
+}
+
+.badge-salle-en-cours {
+  background: #1b2e21;
+  color: #6ee7b7;
+  padding: 3px 8px;
   border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 0.8rem;
-  color: #333;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+.barre-reunion-droite {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-barre {
+  background: #1e3325;
+  border: 1px solid #2d4c38;
+  color: #e2f0e6;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+}
+
+.btn-barre:hover {
+  background: #2b4935;
+}
+
+.btn-quitter {
+  background: #b91c1c;
+  border: none;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+}
+
+.btn-quitter:hover {
+  background: #991b1b;
 }
 
 #conteneur-jitsi {
+  flex: 1;
   width: 100%;
-  max-width: 1100px;
-  height: 80vh;
-  min-height: 480px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  height: calc(100% - 48px);
+  background: #000000;
 }
 
+#conteneur-jitsi iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ---------------------------------------------------------
+   Pied de page
+   --------------------------------------------------------- */
 .ouesse-footer {
   text-align: center;
-  padding: 12px;
+  padding: 14px;
   font-size: 0.8rem;
-  color: #888;
+  color: var(--ouesse-texte-muet);
+  background: transparent;
 }
 
-@media (max-width: 480px) {
-  .carte { padding: 22px; }
-  #conteneur-jitsi { height: 70vh; }
+/* ---------------------------------------------------------
+   Responsive Mobile
+   --------------------------------------------------------- */
+@media (max-width: 600px) {
+  .ouesse-header {
+    padding: 10px 16px;
+  }
+
+  .ouesse-tagline {
+    display: none;
+  }
+
+  .ouesse-main {
+    padding: 10px;
+  }
+
+  .carte {
+    padding: 22px 18px;
+  }
+
+  #ecran-reunion {
+    height: calc(100vh - 90px);
+    min-height: 400px;
+    border-radius: 8px;
+  }
+
+  .txt-btn {
+    display: none;
+  }
+
+  .ligne-copie {
+    flex-direction: column;
+  }
+
+  .btn-secondaire {
+    justify-content: center;
+  }
 }

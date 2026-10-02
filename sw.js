@@ -7,24 +7,20 @@
 //
 // Fusionné avec le service worker OneSignal (notifications push)
 // pour n'avoir qu'un seul service worker actif sur le site.
+// Version v2 : correction du cache pour éviter les ressources obsolètes
 // ---------------------------------------------------------
 
 importScripts("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js");
 
-const VERSION = "ouesse-v1";
+const VERSION = "ouesse-v2";
 const CACHE_STATIQUE = `${VERSION}-statique`;
 
 // Fichiers essentiels mis en cache pour que l'app s'ouvre
-// même sans connexion (adapte cette liste à tes vraies pages).
+// même sans connexion. Réduit à un strict minimum pour éviter les 404s.
 const FICHIERS_ESSENTIELS = [
   "/",
   "/index.html",
-  "/a-propos.html",
-  "/decouvert.html",
-  "/contact.html",
-  "/manifest.json",
-  "/icons/icon-192.png",
-  "/icons/icon-512.png",
+  "/manifest.json"
 ];
 
 // Installation : on met en cache le strict nécessaire
@@ -62,6 +58,10 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     fetch(event.request)
       .then((reponse) => {
+        // Ne mettre en cache que les réponses valides (200-299)
+        if (!reponse || reponse.status < 200 || reponse.status >= 300) {
+          return reponse;
+        }
         const copie = reponse.clone();
         caches.open(CACHE_STATIQUE).then((cache) => cache.put(event.request, copie));
         return reponse;

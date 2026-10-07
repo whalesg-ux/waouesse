@@ -956,3 +956,39 @@ footer.pied {
         grid-template-columns: 1fr !important;
     }
 }
+
+/* ============================================
+   CHARGEMENT PROGRESSIF (IntersectionObserver)
+   Classes utilitaires : .reveal, .reveal--visible
+   Variantes : --from-left, --from-right, --delay-1…5
+============================================ */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal--from-left {
+    transform: translateX(-36px);
+}
+.reveal--from-right {
+    transform: translateX(36px);
+}
+.reveal--visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+/* Délais d'entrée en cascade */
+.reveal--delay-1 { transition-delay: 0.10s; }
+.reveal--delay-2 { transition-delay: 0.20s; }
+.reveal--delay-3 { transition-delay: 0.30s; }
+.reveal--delay-4 { transition-delay: 0.40s; }
+.reveal--delay-5 { transition-delay: 0.50s; }
+
+/* Respecter la préférence d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

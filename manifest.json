@@ -1,8 +1,8 @@
 {
-  "name": "OUESSE — Commune de Ouessè",
-  "short_name": "OUESSE",
-  "description": "Actualités, tourisme et vie de la Commune de Ouessè",
-  "start_url": "/index.html",
+  "name": "OUÈSSÈ — Commune de Ouèssè",
+  "short_name": "Ouèssè",
+  "description": "Actualités, tourisme et vie de la Commune de Ouèssè",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
@@ -11,6 +11,18 @@
   "lang": "fr",
   "icons": [
     {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
       "src": "https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_192/v1784319943/logo_copie_kzzyfd.webp",
       "sizes": "192x192",
       "type": "image/webp",
@@ -21,18 +33,6 @@
       "sizes": "512x512",
       "type": "image/webp",
       "purpose": "any"
-    },
-    {
-      "src": "https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_192/v1784319943/logo_copie_kzzyfd.webp",
-      "sizes": "192x192",
-      "type": "image/webp",
-      "purpose": "maskable"
-    },
-    {
-      "src": "https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_512/v1784319943/logo_copie_kzzyfd.webp",
-      "sizes": "512x512",
-      "type": "image/webp",
-      "purpose": "maskable"
     }
   ]
 }

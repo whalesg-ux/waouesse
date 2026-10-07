@@ -243,8 +243,40 @@
   <!-- Page Contact -->
   <url>
     <loc>https://ouesse.com/contact</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- Page RGPD & Confidentialité -->
+  <url>
+    <loc>https://ouesse.com/rgpd</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Page Conditions Générales d'Utilisation -->
+  <url>
+    <loc>https://ouesse.com/cgu</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Page Réunion / Visioconférence -->
+  <url>
+    <loc>https://ouesse.com/reunion</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Page Téléchargement App PWA -->
+  <url>
+    <loc>https://ouesse.com/telecharger</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

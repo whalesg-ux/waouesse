@@ -1,15 +1,7 @@
 /**
  * js/progressive-reveal.js
  * Chargement progressif des sections au scroll (IntersectionObserver).
- *
- * Usage HTML :
- *   Ajouter la classe "reveal" sur n'importe quel élément à révéler.
- *   Les variantes optionnelles :
- *     - "reveal--delay-1" à "reveal--delay-5" : retard d'animation (100ms – 500ms)
- *     - "reveal--from-left" / "reveal--from-right" : direction d'entrée
- *
- * Ce script est non bloquant : il ne fait rien si IntersectionObserver
- * n'est pas disponible (vieux navigateurs).
+ * Version ACCÉLÉRÉE pour éviter l'impression de lenteur.
  */
 (function () {
     'use strict';
@@ -19,34 +11,34 @@
         document.querySelectorAll('.reveal').forEach(function (el) {
             el.classList.add('reveal--visible');
         });
+        window.revealRefresh = function () {};
         return;
     }
 
-    // Options de l'observer
+    // Options ACCÉLÉRÉES
     var observerOptions = {
         root: null,
-        rootMargin: '0px 0px -60px 0px', // déclenche légèrement avant le bas de l'écran
-        threshold: 0.12
+        rootMargin: '0px 0px 300px 0px', // déclenche 300px AVANT l'écran
+        threshold: 0.01                   // déclenche dès 1% de visibilité
     };
 
     var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('reveal--visible');
-                // On arrête d'observer une fois révélé (révélation unique)
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observer tous les éléments .reveal présents dans le DOM
     function observeAll() {
-        document.querySelectorAll('.reveal').forEach(function (el) {
+        document.querySelectorAll('.reveal:not(.reveal--visible)').forEach(function (el) {
             observer.observe(el);
         });
     }
 
-    // Attendre que le DOM soit prêt
+    window.revealRefresh = observeAll;
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', observeAll);
     } else {

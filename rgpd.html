@@ -11,146 +11,170 @@
     <meta name="description" content="Politique de confidentialité et protection des données de Ouèssè Tourisme : engagement d'indépendance, conformité RGPD, Code du numérique béninois, infrastructure Narroq & Ezeg et gestion des médias.">
     <link rel="canonical" href="https://ouesse.com/rgpd">
     <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0b6b44">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="icon" type="image/webp"
+        href="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_192/v1784319943/logo_copie_kzzyfd.webp">
+    <link rel="alternate icon" type="image/png"
+        href="https://res.cloudinary.com/nyke7lhc/image/upload/f_png,q_auto,w_192/v1784319943/logo_copie_kzzyfd.png">
+
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function (OneSignal) {
+        await OneSignal.init({
+          appId: "1890c9d5-d449-40d9-8946-464ae9bc0aed",
+          safari_web_id: "web.onesignal.auto.3b9e77c1-5852-4edd-a278-c29c156a72b0",
+          notifyButton: { enable: false },
+        });
+      });
+    </script>
+
     <style>
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            margin: 0; 
-            padding: 20px; 
-            line-height: 1.75; 
-            color: #2d3748; 
-            background: #faf7f2; 
+        /* ============================================
+            PAGE RGPD — CONTENU CENTRÉ
+            ============================================ */
+        .rgpd-page {
+            max-width: 920px;
+            margin: 40px auto 60px auto;
+            padding: 0 24px;
             text-align: center;
         }
-        .container { 
-            max-width: 920px; 
-            margin: 20px auto; 
-            background: #fff; 
-            padding: 3rem 2rem; 
-            border-radius: 20px; 
-            box-shadow: 0 8px 30px rgba(0,0,0,0.06); 
-            border: 1px solid rgba(0,0,0,0.05); 
-            text-align: center;
-            box-sizing: border-box;
-        }
-        h1 { 
-            color: #16261e; 
-            font-family: 'Fraunces', serif; 
-            font-size: 2.2rem; 
-            margin-top: 0; 
-            text-align: center;
-        }
-        h2 { 
-            color: #16261e; 
-            font-family: 'Fraunces', serif; 
-            font-size: 1.35rem; 
-            border-bottom: 2px solid #e05a2b; 
+
+        .rgpd-page .badge {
             display: inline-block;
-            padding-bottom: 6px; 
-            margin-top: 2.4rem; 
-            text-align: center;
+            background: #0b6b44;
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
         }
-        h3 { 
-            color: #1e293b; 
-            font-size: 1.1rem; 
-            margin-top: 1.4rem; 
-            text-align: center;
-        }
-        p { 
-            font-size: 0.96rem; 
-            color: #334155; 
-            max-width: 780px; 
-            margin: 12px auto; 
-            text-align: center; 
-        }
-        ul { 
-            list-style-position: inside; 
-            padding: 0; 
-            max-width: 780px; 
-            margin: 14px auto; 
-            text-align: center;
-        }
-        li { 
-            font-size: 0.95rem; 
-            color: #334155; 
-            margin-bottom: 12px; 
-            text-align: center;
-            list-style-type: none;
-            position: relative;
-            padding-left: 0;
-        }
-        li strong {
-            color: #0f172a;
-        }
-        a { 
-            color: #e05a2b; 
-            text-decoration: underline; 
-            font-weight: 500; 
-        }
-        a:hover { 
-            color: #c04318; 
-        }
-        .official-declaration {
-            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
-            border: 2px solid #ea580c;
-            border-radius: 16px;
-            padding: 22px 24px;
-            margin: 24px auto;
-            max-width: 820px;
-            text-align: center;
-            box-shadow: 0 4px 18px rgba(234, 88, 12, 0.12);
-        }
-        .official-declaration h3 {
-            color: #9a3412;
+
+        .rgpd-page h1 {
             font-family: 'Fraunces', serif;
-            font-size: 1.25rem;
-            margin: 6px 0 10px 0;
+            color: #16261e;
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            margin: 0 auto 12px auto;
+            text-align: center;
         }
-        .official-declaration p {
-            color: #431407;
-            font-size: 0.95rem;
+
+        .rgpd-page .update-date {
+            font-style: italic;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin: 0 auto 30px auto;
+            text-align: center;
+        }
+
+        .rgpd-page h2 {
+            font-family: 'Fraunces', serif;
+            color: #16261e;
+            font-size: 1.35rem;
+            margin: 40px auto 14px auto;
+            text-align: center;
+        }
+
+        .rgpd-page h3 {
+            color: #1e293b;
+            font-size: 1.1rem;
+            margin: 20px auto 10px auto;
+            text-align: center;
+        }
+
+        .rgpd-page p {
+            font-size: 0.98rem;
+            color: #334155;
+            max-width: 760px;
+            margin: 14px auto;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .rgpd-page ul {
+            list-style: none;
+            padding: 0;
+            max-width: 760px;
+            margin: 14px auto;
+            text-align: center;
+        }
+
+        .rgpd-page li {
+            font-size: 0.96rem;
+            color: #334155;
+            margin-bottom: 12px;
+            text-align: center;
             line-height: 1.7;
         }
-        .declaration-icon {
-            font-size: 2rem;
-            display: block;
-            margin-bottom: 6px;
+
+        .rgpd-page li strong { color: #0f172a; }
+
+        .rgpd-page a {
+            color: #0b6b44;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
         }
-        .alert-box { 
-            background: #fff7ed; 
-            border: 1px solid #fed7aa;
-            border-radius: 12px; 
-            padding: 16px 20px; 
-            margin: 20px auto; 
+        .rgpd-page a:hover { color: #064e3b; }
+
+        .official-declaration {
+            background: #ecfdf5;
+            border-radius: 16px;
+            padding: 26px 24px;
+            margin: 26px auto;
+            max-width: 820px;
+            text-align: center;
+        }
+        .official-declaration h3 {
+            color: #064e3b;
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            margin: 6px 0 12px 0;
+        }
+        .official-declaration p {
+            color: #064e3b;
+            font-size: 0.96rem;
+            line-height: 1.75;
+        }
+
+        .alert-box,
+        .success-box {
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin: 22px auto;
             max-width: 800px;
             text-align: center;
         }
-        .success-box { 
-            background: #f0fdf4; 
-            border: 1px solid #bbf7d0;
-            border-radius: 12px; 
-            padding: 16px 20px; 
-            margin: 20px auto; 
-            max-width: 800px;
+        .alert-box { background: #f8fafc; }
+        .success-box { background: #ecfdf5; }
+        .alert-box p,
+        .success-box p {
+            color: #334155;
+            font-size: 0.95rem;
+            margin: 0 auto;
             text-align: center;
         }
-        .badge { 
-            display: inline-block; 
-            background: #e05a2b; 
-            color: #fff; 
-            font-size: 0.75rem; 
-            font-weight: 700; 
-            padding: 3px 12px; 
-            border-radius: 9999px; 
-            text-transform: uppercase; 
-            margin-bottom: 12px; 
-        }
+        .success-box p { color: #064e3b; }
+
         .partner-narroq {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin: 2.5rem auto 1.5rem auto;
+            margin: 50px auto 20px auto;
             text-align: center;
         }
         .narroq-footer-logo {
@@ -158,126 +182,250 @@
             height: 110px;
             object-fit: contain;
             border-radius: 50%;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
             background: #ffffff;
             padding: 6px;
             transition: transform 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.06);
         }
-        .narroq-footer-logo:hover {
-            transform: scale(1.06);
-        }
+        .narroq-footer-logo:hover { transform: scale(1.06); }
         .narroq-caption {
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             color: #64748b;
-            margin-top: 10px;
+            margin-top: 12px;
+            text-align: center;
         }
-        .footer { 
-            margin-top: 2rem; 
-            text-align: center; 
-            font-size: 0.9rem; 
-            color: #718096; 
-            border-top: 1px solid #edf2f7; 
-            padding-top: 1.5rem; 
+        .narroq-caption strong { color: #0b6b44; }
+
+        /* ============================================
+            NEWSLETTER FOOTER — DESIGN MODERNE
+            ============================================ */
+        .newsletter-form {
+            display: flex;
+            align-items: stretch;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 6px;
+            max-width: 440px;
+            width: 100%;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
         }
-        .footer p {
-            margin: 6px auto;
+
+        .newsletter-form input[type="email"] {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: #0f172a;
+            background: transparent;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .newsletter-form input[type="email"]::placeholder {
+            color: #94a3b8;
+        }
+
+        .newsletter-form .btn-newsletter {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 22px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            font-family: inherit;
+            color: #ffffff;
+            background: #0b6b44;
+            border-radius: 8px;
+            transition: background 0.25s ease, transform 0.15s ease;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .newsletter-form .btn-newsletter:hover {
+            background: #064e3b;
+            transform: translateY(-1px);
+        }
+
+        .newsletter-form .btn-newsletter:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 600px) {
+            .newsletter-form {
+                flex-direction: column;
+                padding: 8px;
+                gap: 8px;
+            }
+            .newsletter-form input[type="email"] {
+                border-radius: 8px;
+                padding: 12px 14px;
+            }
+            .newsletter-form .btn-newsletter {
+                border-radius: 8px;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .rgpd-page { padding: 0 18px; margin: 30px auto 50px auto; }
+            .rgpd-page h2 { font-size: 1.15rem; }
+            .rgpd-page p, .rgpd-page li { font-size: 0.92rem; }
         }
     </style>
-  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-  <script>
-    window.OneSignalDeferred = window.OneSignalDeferred || [];
-    OneSignalDeferred.push(async function (OneSignal) {
-      await OneSignal.init({
-        appId: "1890c9d5-d449-40d9-8946-464ae9bc0aed",
-        safari_web_id: "web.onesignal.auto.3b9e77c1-5852-4edd-a278-c29c156a72b0",
-        notifyButton: { enable: false },
-      });
-    });
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-<div class="container">
-    <span class="badge">Protection des Données &amp; Vie Privée</span>
-    <h1>Politique de Confidentialité (RGPD)</h1>
-    <p><em>Dernière mise à jour : 16 septembre 2026</em></p>
-    <div class="official-declaration">
-        <span class="declaration-icon">🌍</span>
-        <h3>Engagement &amp; Portée Internationale de la Plateforme</h3>
-        <p>
-            <strong>Nous créons et portons cette plateforme :</strong> elle est la plateforme officielle dédiée à Ouèssè qui porte, diffuse et fournit l'ensemble des nouvelles, des événements et du patrimoine de Ouèssè <strong>à la portée des autres continents et de la diaspora internationale</strong>.
-        </p>
-        <p>
-            Nous affirmons en toute indépendance qu'<strong>aucune administration publique ne nous l'a demandée ni commandée</strong> : il s'agit d'une initiative citoyenne libre, autonome et dévouée, portée avec rigueur et passion pour faire rayonner la commune de Ouèssè à travers le monde.
-        </p>
-    </div>
-    <div class="alert-box">
-        <p><strong>Préambule &amp; Engagement de Confiance :</strong> Le portail <strong>Ouèssè Tourisme — WAOUESSE</strong> (accessible via ouesse.com) s'engage résolument pour la transparence, la sécurité et la confidentialité des données personnelles de ses usagers, conformément au <strong>Règlement Général sur la Protection des Données (RGPD – Règlement UE 2016/679)</strong> et à la <strong>loi béninoise n° 2017-20 du 20 avril 2018 portant Code du numérique en République du Bénin</strong>.</p>
-    </div>
-    <div><h2>1. Responsable du Traitement &amp; Partenariat Technique (Narroq &amp; Ezeg)</h2></div>
-    <p>Le traitement des données est opéré par l'administration du portail <strong>Ouèssè Tourisme</strong>, en étroite collaboration avec l'infrastructure logicielle et les solutions techniques des partenaires <strong>Narroq et Ezeg</strong>.</p>
-    <ul>
-        <li><strong>Évolution des règles techniques d'infrastructure :</strong> Dans le cadre de l'optimisation continue du portail, de sa robustesse et de ses fonctionnalités interactives, <em>les règles de gestion, protocoles et conditions d'exploitation de Narroq et Ezeg derrière la plateforme peuvent changer, s'actualiser, évoluer ou augmenter</em>.</li>
-        <li><strong>Garantie absolue du cadre légal :</strong> Malgré toute évolution technologique de ces règles, <strong>les lois de protection des données personnelles en vigueur que nous respectons demeurent inviolables</strong>. Nous prenons et maintenons toutes les mesures organisationnelles, cryptographiques et techniques indispensables pour assurer que vos droits sont scrupuleusement préservés.</li>
-    </ul>
-    <div><h2>2. Garantie Solennelle : Aucune Donnée Nuisible, Abusive ou Détournée</h2></div>
-    <div class="success-box">
-        <p><strong>Notre engagement ferme :</strong> Nous certifions et rassurons chaque utilisateur qu'<strong>aucune information, collecte occulte, traitement nuisible ou visuel préjudiciable n'est partagé ou opéré sur cette plateforme</strong>. Vos données ne sont jamais vendues, cédées, louées ou divulguées à des fins commerciales malveillantes.</p>
-    </div>
-    <p>Toutes les données collectées répondent exclusivement au principe de minimisation et de légitimité publique : informer sur Ouèssè, faciliter vos échanges avec les services touristiques locaux et garantir la fluidité de navigation.</p>
-    <div><h2>3. Photographies, Médias Visuels &amp; Droit à l'Image</h2></div>
-    <p>Dans le cadre de la promotion du territoire et de la couverture des événements phares de Ouèssè (JIJ, Nuit de l'Excellence, SoCAO, cérémonies culturelles) :</p>
-    <ul>
-        <li><strong>Origine transparente des photographies :</strong> Nous rappelons que <strong>toutes les photographies et visuels publiés sur le site ont été capturés par des photographes locaux, des membres d'équipes de la mairie de Ouèssè, ainsi que des collectifs de jeunes engagés</strong>, principalement partagés ou fournis sur les réseaux sociaux officiels et canaux communautaires pour valoriser la commune.</li>
-        <li><strong>Droit de retrait immédiat des personnes photographiées :</strong> Si une personne physique reconnaissable sur l'un de ces clichés d'événements publics souhaite l'effacement, le floutage ou le retrait d'une image la représentant, il lui suffit d'adresser une simple demande à <a href="mailto:neekleiooffice@gmail.com">neekleiooffice@gmail.com</a>. Le traitement est effectué en priorité absolue et sans aucune difficulté.</li>
-    </ul>
-    <div><h2>4. Données Collectées</h2></div>
-    <p>Nous collectons strictement le minimum requis pour le bon fonctionnement du site :</p>
-    <ul>
-        <li><strong>Formulaires &amp; Newsletter :</strong> Votre adresse e-mail lorsque vous vous inscrivez librement aux actualités ou transmettez un message de contact.</li>
-        <li><strong>Données de navigation &amp; Statistiques :</strong> Données techniques anonymisées (adresse IP pseudonymisée, type d'appareil, pages visitées) pour assurer la performance des serveurs et l'amélioration de l'ergonomie.</li>
-    </ul>
-    <div><h2>5. Finalités &amp; Durée de Conservation</h2></div>
-    <ul>
-        <li><strong>Adresses électroniques :</strong> Conservées tant que vous ne vous désinscrivez pas, et effacées au plus tard après 3 ans d'inactivité.</li>
-        <li><strong>Cookies et journaux de session :</strong> Durée de vie maximale conforme aux prescriptions légales (13 mois maximum).</li>
-    </ul>
-    <div><h2>6. Cookies &amp; Traceurs</h2></div>
-    <p>Le site utilise des cookies strictement nécessaires à son fonctionnement technique ainsi que des mesures d'audience respectueuses de la vie privée. Vous disposez du contrôle total via le bandeau de consentement affiché lors de votre première visite pour accepter ou refuser tout dépôt non essentiel.</p>
-    <div><h2>7. Vos Droits &amp; Modalités d'Exercice</h2></div>
-    <p>En vertu de la loi béninoise n° 2017-20 et du RGPD, vous disposez des prérogatives suivantes :</p>
-    <ul>
-        <li>Droit d'accès et de communication de vos données personnelles.</li>
-        <li>Droit de rectification et de mise à jour.</li>
-        <li>Droit à l'effacement (« droit à l'oubli ») et droit au retrait d'un visuel.</li>
-        <li>Droit à la limitation et à l'opposition au traitement.</li>
-        <li>Droit à la portabilité de vos données.</li>
-    </ul>
-    <p>Pour exercer l'un de ces droits, un simple message suffit à : <a href="mailto:neekleiooffice@gmail.com">neekleiooffice@gmail.com</a>.</p>
-    <div><h2>8. Autorité de Contrôle Compétente</h2></div>
-    <p>Pour les résidents du Bénin, l'autorité compétente en matière de protection des données personnelles est l'<strong>Autorité de Protection des Données à caractère Personnel (APDP)</strong> de la République du Bénin (<a href="https://apdp.bj" target="_blank" rel="noopener">apdp.bj</a>).</p>
-    <!-- LOGO NARROQ EN BAS DE PAGE -->
-    <div class="partner-narroq">
-        <img src="/narroq-logo.jpg" alt="Logo Narroq" class="narroq-footer-logo" width="110" height="110" loading="lazy">
-        <p class="narroq-caption">Infrastructure technologique &amp; Architecture propulsées avec <strong>nARROQ</strong></p>
-    </div>
-    
-</div>
-<footer class="pied">
+
+    <header class="site-header">
+        <div class="logo">
+            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_96/v1784319943/logo_copie_kzzyfd.webp"
+                srcset="
+                    https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_48/v1784319943/logo_copie_kzzyfd.webp 1x,
+                    https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_96/v1784319943/logo_copie_kzzyfd.webp 2x
+                "
+                alt="Logo de Ouèssè" width="48" height="48" loading="eager" decoding="async">
+            <div class="logo-text">
+                <span class="logo-title">Ouèssè</span>
+                <span class="logo-subtitle">TOURISME</span>
+            </div>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navigation principale">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/decouvert">Découvrir &amp; Hôtels</a></li>
+                <li class="nav-dropdown">
+                    <a href="/nuit-excellence-2026">Événements</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/nuit-excellence-2026">Nuit de l'Excellence 2026</a></li>
+                        <li><a href="/vacances-explor-actives">Vacances Explor'Actives</a></li>
+                        <li><a href="/jij-ouesse-2026">JIJ Ouèssè 2026</a></li>
+                        <li><a href="/podium-vacances-socao">Podium Vacances SoCAO</a></li>
+                        <li><a href="/details-laureats">Candidats &amp; Lauréats</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="/degla_benoit">Personnalités</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/degla_benoit">Benoît Assouan Comlan Dègla</a></li>
+                        <li><a href="/briceahossa">Brice Ahossa (Mairie)</a></li>
+                        <li><a href="/akpo_firmin_ibidon">Firmin Ibidon Akpo</a></li>
+                        <li><a href="/luc">Luc S. Atrokpo</a></li>
+                    </ul>
+                </li>
+                <li><a href="/a-propos">À propos</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a href="/decouvert" class="btn-explorer">Explorer</a>
+    </header>
+
+    <main class="rgpd-page">
+
+        <span class="badge">Protection des Données &amp; Vie Privée</span>
+        <h1>Politique de Confidentialité (RGPD)</h1>
+        <p class="update-date">Dernière mise à jour : 16 septembre 2026</p>
+
+        <div class="official-declaration">
+            <h3><i class="fa-solid fa-globe" aria-hidden="true"></i> Engagement &amp; Portée Internationale de la Plateforme</h3>
+            <p>
+                <strong>Nous créons et portons cette plateforme :</strong> elle est la plateforme officielle dédiée à Ouèssè qui porte, diffuse et fournit l'ensemble des nouvelles, des événements et du patrimoine de Ouèssè <strong>à la portée des autres continents et de la diaspora internationale</strong>.
+            </p>
+            <p>
+                Nous affirmons en toute indépendance qu'<strong>aucune administration publique ne nous l'a demandée ni commandée</strong> : il s'agit d'une initiative citoyenne libre, autonome et dévouée, portée avec rigueur et passion pour faire rayonner la commune de Ouèssè à travers le monde.
+            </p>
+        </div>
+
+        <div class="alert-box">
+            <p><strong>Préambule &amp; Engagement de Confiance :</strong> Le portail <strong>Ouèssè Tourisme — WAOUESSE</strong> (accessible via ouesse.com) s'engage résolument pour la transparence, la sécurité et la confidentialité des données personnelles de ses usagers, conformément au <strong>Règlement Général sur la Protection des Données (RGPD – Règlement UE 2016/679)</strong> et à la <strong>loi béninoise n° 2017-20 du 20 avril 2018 portant Code du numérique en République du Bénin</strong>.</p>
+        </div>
+
+        <h2>1. Responsable du Traitement &amp; Partenariat Technique (Narroq &amp; Ezeg)</h2>
+        <p>Le traitement des données est opéré par l'administration du portail <strong>Ouèssè Tourisme</strong>, en étroite collaboration avec l'infrastructure logicielle et les solutions techniques des partenaires <strong>Narroq et Ezeg</strong>.</p>
+        <ul>
+            <li><strong>Évolution des règles techniques d'infrastructure :</strong> Dans le cadre de l'optimisation continue du portail, de sa robustesse et de ses fonctionnalités interactives, <em>les règles de gestion, protocoles et conditions d'exploitation de Narroq et Ezeg derrière la plateforme peuvent changer, s'actualiser, évoluer ou augmenter</em>.</li>
+            <li><strong>Garantie absolue du cadre légal :</strong> Malgré toute évolution technologique de ces règles, <strong>les lois de protection des données personnelles en vigueur que nous respectons demeurent inviolables</strong>. Nous prenons et maintenons toutes les mesures organisationnelles, cryptographiques et techniques indispensables pour assurer que vos droits sont scrupuleusement préservés.</li>
+        </ul>
+
+        <h2>2. Garantie Solennelle : Aucune Donnée Nuisible, Abusive ou Détournée</h2>
+        <div class="success-box">
+            <p><strong>Notre engagement ferme :</strong> Nous certifions et rassurons chaque utilisateur qu'<strong>aucune information, collecte occulte, traitement nuisible ou visuel préjudiciable n'est partagé ou opéré sur cette plateforme</strong>. Vos données ne sont jamais vendues, cédées, louées ou divulguées à des fins commerciales malveillantes.</p>
+        </div>
+        <p>Toutes les données collectées répondent exclusivement au principe de minimisation et de légitimité publique : informer sur Ouèssè, faciliter vos échanges avec les services touristiques locaux et garantir la fluidité de navigation.</p>
+
+        <h2>3. Photographies, Médias Visuels &amp; Droit à l'Image</h2>
+        <p>Dans le cadre de la promotion du territoire et de la couverture des événements phares de Ouèssè (JIJ, Nuit de l'Excellence, SoCAO, cérémonies culturelles) :</p>
+        <ul>
+            <li><strong>Origine transparente des photographies :</strong> Nous rappelons que <strong>toutes les photographies et visuels publiés sur le site ont été capturés par des photographes locaux, des membres d'équipes de la mairie de Ouèssè, ainsi que des collectifs de jeunes engagés</strong>, principalement partagés ou fournis sur les réseaux sociaux officiels et canaux communautaires pour valoriser la commune.</li>
+            <li><strong>Droit de retrait immédiat des personnes photographiées :</strong> Si une personne physique reconnaissable sur l'un de ces clichés d'événements publics souhaite l'effacement, le floutage ou le retrait d'une image la représentant, il lui suffit d'adresser une simple demande à <a href="mailto:neekleiooffice@gmail.com">neekleiooffice@gmail.com</a>. Le traitement est effectué en priorité absolue et sans aucune difficulté.</li>
+        </ul>
+
+        <h2>4. Données Collectées</h2>
+        <p>Nous collectons strictement le minimum requis pour le bon fonctionnement du site :</p>
+        <ul>
+            <li><strong>Formulaires &amp; Newsletter :</strong> Votre adresse e-mail lorsque vous vous inscrivez librement aux actualités ou transmettez un message de contact.</li>
+            <li><strong>Données de navigation &amp; Statistiques :</strong> Données techniques anonymisées (adresse IP pseudonymisée, type d'appareil, pages visitées) pour assurer la performance des serveurs et l'amélioration de l'ergonomie.</li>
+        </ul>
+
+        <h2>5. Finalités &amp; Durée de Conservation</h2>
+        <ul>
+            <li><strong>Adresses électroniques :</strong> Conservées tant que vous ne vous désinscrivez pas, et effacées au plus tard après 3 ans d'inactivité.</li>
+            <li><strong>Cookies et journaux de session :</strong> Durée de vie maximale conforme aux prescriptions légales (13 mois maximum).</li>
+        </ul>
+
+        <h2>6. Cookies &amp; Traceurs</h2>
+        <p>Le site utilise des cookies strictement nécessaires à son fonctionnement technique ainsi que des mesures d'audience respectueuses de la vie privée. Vous disposez du contrôle total via le bandeau de consentement affiché lors de votre première visite pour accepter ou refuser tout dépôt non essentiel.</p>
+
+        <h2>7. Vos Droits &amp; Modalités d'Exercice</h2>
+        <p>En vertu de la loi béninoise n° 2017-20 et du RGPD, vous disposez des prérogatives suivantes :</p>
+        <ul>
+            <li>Droit d'accès et de communication de vos données personnelles.</li>
+            <li>Droit de rectification et de mise à jour.</li>
+            <li>Droit à l'effacement (« droit à l'oubli ») et droit au retrait d'un visuel.</li>
+            <li>Droit à la limitation et à l'opposition au traitement.</li>
+            <li>Droit à la portabilité de vos données.</li>
+        </ul>
+        <p>Pour exercer l'un de ces droits, un simple message suffit à : <a href="mailto:neekleiooffice@gmail.com">neekleiooffice@gmail.com</a>.</p>
+
+        <h2>8. Autorité de Contrôle Compétente</h2>
+        <p>Pour les résidents du Bénin, l'autorité compétente en matière de protection des données personnelles est l'<strong>Autorité de Protection des Données à caractère Personnel (APDP)</strong> de la République du Bénin (<a href="https://apdp.bj" target="_blank" rel="noopener">apdp.bj</a>).</p>
+
+        <div class="partner-narroq">
+            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_220/v1784319943/logo_copie_kzzyfd.webp"
+                srcset="
+                    https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_110/v1784319943/logo_copie_kzzyfd.webp 1x,
+                    https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_220/v1784319943/logo_copie_kzzyfd.webp 2x
+                "
+                alt="Logo Narroq" class="narroq-footer-logo" width="110" height="110" loading="lazy" decoding="async">
+            <p class="narroq-caption">Infrastructure technologique &amp; Architecture propulsées avec <strong>nARROQ</strong></p>
+        </div>
+
+    </main>
+
+    <footer class="pied" role="contentinfo">
         <div class="footer-top">
             <div class="footer-brand">
                 <span class="logo-title">Ouèssè Tourisme</span>
                 <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>
-                <p class="footer-desc">Portail officiel de promotion culturelle, touristique, événementielle et des
-                    personnalités de la commune de Ouèssè, Bénin.</p>
+                <p class="footer-desc">Portail officiel de promotion culturelle, touristique, événementielle et des personnalités de la commune de Ouèssè, Bénin.</p>
             </div>
+
             <form class="newsletter-form" action="/newsletter" method="POST" aria-label="Inscription à la newsletter">
-                <input type="email" name="email" placeholder="Votre email pour les actualités" required
-                    aria-label="Adresse email">
-                <button type="submit">S'inscrire</button>
+                <input type="email" name="email" placeholder="Votre email pour les actualités" required aria-label="Adresse email">
+                <button type="submit" class="btn-newsletter">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> S'inscrire
+                </button>
             </form>
         </div>
+
         <div class="footer-grid">
             <div class="footer-col">
                 <h4 class="footer-col-title">Événements &amp; Gala</h4>
@@ -290,6 +438,7 @@
                     <li><a href="/decouvert#fetes">Fêtes &amp; Festivals Traditionnels</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
                 <h4 class="footer-col-title">Personnalités &amp; Politique</h4>
                 <ul class="footer-col-links">
@@ -300,6 +449,7 @@
                     <li><a href="/details-laureats#leaders">Jeunes Leaders d'Impact</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
                 <h4 class="footer-col-title">Artistes &amp; Lauréats</h4>
                 <ul class="footer-col-links">
@@ -310,6 +460,7 @@
                     <li><a href="/details-laureats#graphistes">Candidats Design &amp; Graphisme</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
                 <h4 class="footer-col-title">Hôtels, Guide &amp; Blog</h4>
                 <ul class="footer-col-links">
@@ -320,6 +471,7 @@
                     <li><a href="/decouvert">Découvrir Ouèssè</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
                 <h4 class="footer-col-title">Informations &amp; Légal</h4>
                 <ul class="footer-col-links">
@@ -331,135 +483,109 @@
                 </ul>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p class="copyright">© 2026 Ouèssè Tourisme – Wa (Viens) à Ouèssè | Tous droits réservés.</p>
+            <p class="copyright">&copy; 2026 Ouèssè Tourisme – Wa (Viens) à Ouèssè | Tous droits réservés.</p>
         </div>
     </footer>
 
-<!-- SCRIPTS EXTERNES & BANDEAU COOKIES (CENTRÉ) -->
-<script src="script.js" defer></script>
-<script src="search.js" defer></script>
-<div id="cookie-banner" role="dialog" aria-label="Gestion des cookies" hidden>
-    <p>
-        Nous utilisons des cookies pour améliorer votre expérience, mesurer l’audience et valoriser le contenu de Ouèssè. 
-        En poursuivant votre navigation, vous acceptez notre 
-        <a href="/rgpd">politique de confidentialité</a>.
-    </p>
-    <div class="cookie-buttons">
-        <button type="button" id="cookie-accept">Accepter</button>
-        <button type="button" id="cookie-refuse">Refuser</button>
+    <div id="cookie-banner" role="dialog" aria-label="Gestion des cookies" hidden>
+        <p>Nous utilisons des cookies pour améliorer votre expérience, mesurer l’audience et valoriser le contenu de Ouèssè. En poursuivant votre navigation, vous acceptez notre <a href="/rgpd">politique de confidentialité</a>.</p>
+        <div class="cookie-buttons">
+            <button type="button" id="cookie-accept">Accepter</button>
+            <button type="button" id="cookie-refuse">Refuser</button>
+        </div>
     </div>
-</div>
-<style>
-#cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1a1a2e;
-    color: #fff;
-    padding: 1.25rem 1rem;
-    box-shadow: 0 -6px 20px rgba(0,0,0,0.35);
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 0.9rem;
-    font-size: 0.92rem;
-    box-sizing: border-box;
-}
-#cookie-banner[hidden] {
-    display: none !important;
-}
-#cookie-banner p {
-    margin: 0 auto;
-    max-width: 760px;
-    text-align: center;
-    color: #f1f5f9;
-    line-height: 1.6;
-}
-#cookie-banner a {
-    color: #ffd700;
-    text-decoration: underline;
-    font-weight: 500;
-}
-.cookie-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-.cookie-buttons button {
-    background: #ffd700;
-    color: #1a1a2e;
-    border: none;
-    padding: 0.6rem 1.4rem;
-    border-radius: 9999px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-.cookie-buttons button:hover {
-    background: #e6c200;
-    transform: translateY(-1px);
-}
-.cookie-buttons button#cookie-refuse {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.4);
-    color: #fff;
-}
-.cookie-buttons button#cookie-refuse:hover {
-    background: rgba(255,255,255,0.15);
-}
-@media (max-width: 600px) {
-    #cookie-banner {
-        padding: 1.1rem 0.8rem;
-    }
-    .cookie-buttons {
-        width: 100%;
-        justify-content: center;
-    }
-}
-</style>
-<script>
-(function() {
-    const cookieBanner = document.getElementById('cookie-banner');
-    const cookieAccept = document.getElementById('cookie-accept');
-    const cookieRefuse = document.getElementById('cookie-refuse');
-    function setCookieConsent(choice) {
-        try {
-            localStorage.setItem('cookieConsent', choice);
-        } catch(e) {}
-        if (cookieBanner) {
-            cookieBanner.hidden = true;
-        }
-    }
-    let consent = null;
-    try {
-        consent = localStorage.getItem('cookieConsent');
-    } catch(e) {}
-    if (consent === null) {
-        if (cookieBanner) cookieBanner.hidden = false;
-    } else {
-        if (cookieBanner) cookieBanner.hidden = true;
-    }
-    if (cookieAccept) {
-        cookieAccept.addEventListener('click', function() {
-            setCookieConsent('accepted');
-        });
-    }
-    if (cookieRefuse) {
-        cookieRefuse.addEventListener('click', function() {
-            setCookieConsent('refused');
-        });
-    }
-})();
-</script>
 
-<script src="js/progressive-reveal.js" defer></script>
+    <style>
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0;
+            width: 100%;
+            background-color: #0f172a;
+            color: #fff;
+            padding: 1.25rem 1rem;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 0.9rem;
+            font-size: 0.92rem;
+            box-sizing: border-box;
+        }
+        #cookie-banner[hidden] { display: none !important; }
+        #cookie-banner p {
+            margin: 0 auto;
+            max-width: 760px;
+            text-align: center;
+            color: #f1f5f9;
+            line-height: 1.6;
+        }
+        #cookie-banner a {
+            color: #7ee2b8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .cookie-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .cookie-buttons button {
+            background: #0b6b44;
+            color: #ffffff;
+            border: none;
+            padding: 0.6rem 1.4rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .cookie-buttons button:hover {
+            background: #064e3b;
+            transform: translateY(-1px);
+        }
+        .cookie-buttons button#cookie-refuse {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.4);
+            color: #fff;
+        }
+        .cookie-buttons button#cookie-refuse:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        @media (max-width: 600px) {
+            #cookie-banner { padding: 1.1rem 0.8rem; }
+            .cookie-buttons { width: 100%; justify-content: center; }
+        }
+    </style>
+
+    <script>
+    (function() {
+        const cookieBanner = document.getElementById('cookie-banner');
+        const cookieAccept = document.getElementById('cookie-accept');
+        const cookieRefuse = document.getElementById('cookie-refuse');
+
+        function setCookieConsent(choice) {
+            try { localStorage.setItem('cookieConsent', choice); } catch(e) {}
+            if (cookieBanner) cookieBanner.hidden = true;
+        }
+
+        let consent = null;
+        try { consent = localStorage.getItem('cookieConsent'); } catch(e) {}
+
+        if (cookieBanner && consent === null) cookieBanner.hidden = false;
+        if (cookieAccept) cookieAccept.addEventListener('click', () => setCookieConsent('accepted'));
+        if (cookieRefuse) cookieRefuse.addEventListener('click', () => setCookieConsent('refused'));
+    })();
+    </script>
+
+    <script src="script.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="js/progressive-reveal.js" defer></script>
 </body>
 </html>

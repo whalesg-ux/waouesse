@@ -61,7 +61,6 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 
-/* RÈGLE UNIVERSELLE SÉCURISÉE POUR LES IMAGES */
 img {
     max-width: 100%;
     height: auto;
@@ -69,7 +68,6 @@ img {
     object-fit: cover;
 }
 
-/* Focus visible */
 :focus-visible {
     outline: 3px solid var(--terracotta);
     outline-offset: 2px;
@@ -237,7 +235,7 @@ input:focus-visible {
     margin: 20px 40px;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    background-color: #1a231e; /* Fond de repli immédiat */
+    background-color: #1a231e;
     background-image: url("https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_1920/v1784326466/ouesse_n5pdyh.webp");
     background-size: cover;
     background-position: center;
@@ -374,6 +372,59 @@ input:focus-visible {
 .search-result-item:hover {
     background: #f0f9f4;
 }
+/* ============================================
+   SEARCH — AJUSTEMENT MOBILE
+============================================ */
+@media (max-width: 768px) {
+    .search {
+        max-width: 100%;
+        padding: 6px 6px 6px 14px;
+        gap: 8px;
+        margin-top: 22px;
+        border-radius: var(--radius-pill);
+    }
+
+    .search i {
+        font-size: 0.85rem;
+    }
+
+    .search input {
+        font-size: 0.85rem;
+        padding: 6px 0;
+    }
+
+    .search button[type="submit"] {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .search {
+        padding: 5px 5px 5px 12px;
+        gap: 6px;
+        margin-top: 18px;
+    }
+
+    .search i {
+        font-size: 0.8rem;
+    }
+
+    .search input {
+        font-size: 0.8rem;
+        padding: 5px 0;
+    }
+
+    .search input::placeholder {
+        font-size: 0.8rem;
+    }
+
+    .search button[type="submit"] {
+        padding: 7px 12px;
+        font-size: 0.75rem;
+        border-radius: var(--radius-pill);
+    }
+}
 
 /* ============================================
    WAOUESSE BLOC
@@ -427,7 +478,7 @@ input:focus-visible {
 }
 
 /* ============================================
-   CARROUSEL & MARQUEE
+   CARROUSEL & MARQUEE (accueil)
 ============================================ */
 .categories {
     max-width: 1200px;
@@ -489,7 +540,6 @@ input:focus-visible {
     position: relative;
 }
 
-/* Ratio protégé pour éviter tout écrasement */
 .category-card img {
     width: 100%;
     height: 180px;
@@ -516,7 +566,7 @@ input:focus-visible {
 }
 
 /* ============================================
-   PRÉSENTATION (AVEC CONTENEUR IMAGE STABLE)
+   PRÉSENTATION
 ============================================ */
 .wrapper {
     max-width: 1200px;
@@ -567,7 +617,7 @@ input:focus-visible {
 }
 
 /* ============================================
-   GALERIE
+   GALERIE (grille par défaut)
 ============================================ */
 .gallery {
     max-width: 1200px;
@@ -601,6 +651,93 @@ input:focus-visible {
 
 .gallery-item img:hover {
     transform: scale(1.05);
+}
+
+/* ============================================
+   CARROUSEL MANUEL — 1 SEULE IMAGE VISIBLE
+============================================ */
+.gallery-carousel {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.carousel-shell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.carousel-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    border-radius: 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.carousel-scroll::-webkit-scrollbar { display: none; }
+
+.carousel-scroll .gallery-item {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f0f0f0;
+    scroll-snap-align: center;
+    position: relative;
+    margin: 0;
+    box-shadow: var(--shadow-sm);
+}
+.carousel-scroll .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in;
+    transition: transform var(--transition-base);
+}
+.carousel-scroll .gallery-item img:hover {
+    transform: scale(1.03);
+}
+
+.carousel-nav {
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: #0b6b44;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: background 0.25s ease, transform 0.15s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 2;
+}
+.carousel-nav:hover { background: #064e3b; transform: scale(1.06); }
+.carousel-nav:active { transform: scale(1); }
+
+/* Responsive carrousel */
+@media (max-width: 768px) {
+    .gallery-carousel { padding: 40px 12px; }
+    .carousel-shell { gap: 8px; }
+    .carousel-scroll .gallery-item { aspect-ratio: 4 / 3; border-radius: 12px; }
+    .carousel-nav { width: 38px; height: 38px; font-size: 0.85rem; }
+}
+@media (max-width: 480px) {
+    .carousel-scroll .gallery-item { aspect-ratio: 1 / 1; }
+    .carousel-nav { width: 34px; height: 34px; font-size: 0.75rem; }
 }
 
 /* ============================================
@@ -857,7 +994,7 @@ footer.pied {
 }
 
 /* ============================================
-   RESPONSIVE (COHÉRENT SANS ÉCRASEMENT D'IMAGES)
+   RESPONSIVE
 ============================================ */
 @media (max-width: 1024px) {
     .hero {
@@ -946,7 +1083,7 @@ footer.pied {
         height: 120px;
     }
     .gallery-container {
-        grid-template-columns: 1fr; /* 1 colonne nette sur petit écran */
+        grid-template-columns: 1fr;
         gap: 12px;
     }
     .gallery-item {
@@ -959,8 +1096,6 @@ footer.pied {
 
 /* ============================================
    CHARGEMENT PROGRESSIF (IntersectionObserver)
-   Classes utilitaires : .reveal, .reveal--visible
-   Variantes : --from-left, --from-right, --delay-1…5
 ============================================ */
 .reveal {
     opacity: 0;
@@ -977,14 +1112,12 @@ footer.pied {
     opacity: 1;
     transform: translate(0, 0);
 }
-/* Délais d'entrée en cascade */
 .reveal--delay-1 { transition-delay: 0.10s; }
 .reveal--delay-2 { transition-delay: 0.20s; }
 .reveal--delay-3 { transition-delay: 0.30s; }
 .reveal--delay-4 { transition-delay: 0.40s; }
 .reveal--delay-5 { transition-delay: 0.50s; }
 
-/* Respecter la préférence d'accessibilité */
 @media (prefers-reduced-motion: reduce) {
     .reveal {
         opacity: 1;

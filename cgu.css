@@ -1,0 +1,409 @@
+/* ============================================================
+   cgu.css
+   À charger APRÈS style.css.
+   Ne redéfinit pas : header, nav, footer (déjà dans style.css).
+   ============================================================ */
+
+/* ============================================
+   TOKENS (compléments de style.css)
+============================================ */
+:root {
+    --forest: #0b6b44;
+    --forest-dark: #084d31;
+    --forest-soft: #e7f3ec;
+    --gray-soft: #f8fafc;
+    --gray-text: #5a6b62;
+}
+
+/* ============================================
+   BASE
+============================================ */
+a {
+    text-decoration: none;
+}
+
+body {
+    background: var(--gray-soft);
+}
+
+/* ============================================
+   CARTE JURIDIQUE
+============================================ */
+.container {
+    max-width: 920px;
+    margin: 20px auto 60px;
+    padding: 3rem 2rem;
+    border-radius: var(--radius-lg);
+    background: #ffffff;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.container h1 {
+    margin: 0 0 8px;
+    font-size: 2.2rem;
+    color: var(--ink);
+    text-align: center;
+}
+
+.container h2 {
+    margin-top: 2.4rem;
+    margin-bottom: 8px;
+    font-size: 1.35rem;
+    color: var(--forest-dark);
+    text-align: center;
+}
+
+.container h3 {
+    margin-top: 1.4rem;
+    font-size: 1.1rem;
+    color: var(--forest-dark);
+    text-align: center;
+}
+
+.container p {
+    max-width: 780px;
+    margin: 12px auto;
+    font-size: 0.96rem;
+    line-height: 1.75;
+    color: var(--ink);
+    text-align: center;
+}
+
+.container strong {
+    color: var(--forest-dark);
+}
+
+.container ul {
+    max-width: 780px;
+    margin: 14px auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.container li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--ink);
+    text-align: center;
+}
+
+.container a {
+    font-weight: 600;
+    color: var(--forest);
+    transition: color 0.2s ease;
+}
+
+.container a:hover {
+    color: var(--forest-dark);
+}
+
+/* ============================================
+   BADGE
+============================================ */
+.badge {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 3px 12px;
+    border-radius: var(--radius-pill);
+    background: var(--forest);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   BLOCS D'INFORMATION
+============================================ */
+.official-declaration {
+    max-width: 820px;
+    margin: 24px auto;
+    padding: 22px 24px;
+    border-radius: var(--radius-md);
+    background: var(--forest-soft);
+    text-align: center;
+}
+
+.official-declaration h3 {
+    margin: 6px 0 10px 0;
+    font-size: 1.25rem;
+    color: var(--forest-dark);
+}
+
+.official-declaration p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--ink);
+}
+
+.declaration-icon {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 2rem;
+    color: var(--forest);
+}
+
+.alert-box,
+.success-box {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+.alert-box {
+    background: var(--gray-soft);
+}
+
+.success-box {
+    background: var(--forest-soft);
+}
+
+/* ============================================
+   PARTENAIRE
+============================================ */
+.partner-narroq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem auto 1.5rem auto;
+    text-align: center;
+}
+
+.narroq-footer-logo {
+    width: 110px;
+    height: 110px;
+    padding: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: var(--shadow-sm);
+    object-fit: contain;
+    transition: transform var(--transition-base);
+}
+
+.narroq-footer-logo:hover {
+    transform: scale(1.06);
+}
+
+.container .narroq-caption {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--gray-text);
+}
+
+/* ============================================
+   NEWSLETTER (bloc identique à l'index)
+============================================ */
+.newsletter-form {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    max-width: 440px;
+    padding: 6px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #0f172a;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: #94a3b8;
+}
+
+.newsletter-form .btn-newsletter {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #0b6b44;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.newsletter-form .btn-newsletter:hover {
+    background: #064e3b;
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   BANDEAU COOKIES
+============================================ */
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    width: 100%;
+    padding: 1.25rem 1rem;
+    background: var(--ink);
+    color: #ffffff;
+    font-size: 0.92rem;
+    text-align: center;
+    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.35);
+}
+
+#cookie-banner[hidden] {
+    display: none;
+}
+
+#cookie-banner p {
+    max-width: 760px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #f1f5f9;
+    text-align: center;
+}
+
+#cookie-banner a {
+    font-weight: 600;
+    color: #7ee2b8;
+}
+
+#cookie-banner a:hover {
+    color: #ffffff;
+}
+
+.cookie-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cookie-buttons button {
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: var(--radius-pill);
+    background: var(--forest);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cookie-buttons button:hover {
+    background: var(--forest-dark);
+    transform: translateY(-1px);
+}
+
+.cookie-buttons button#cookie-refuse {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.cookie-buttons button#cookie-refuse:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+/* ============================================
+   RESPONSIVE — 3 BREAKPOINTS
+============================================ */
+
+/* --- TABLETTE (≤ 1024px) --- */
+@media (max-width: 1024px) {
+    .container {
+        margin: 16px 24px 48px;
+        padding: 2.5rem 1.6rem;
+    }
+}
+
+/* --- MOBILE (≤ 768px) --- */
+@media (max-width: 768px) {
+    .container {
+        margin: 12px 16px 40px;
+        padding: 2rem 1.2rem;
+    }
+
+    .container h1 {
+        font-size: 1.8rem;
+    }
+
+    .container h2 {
+        font-size: 1.2rem;
+    }
+
+    .official-declaration {
+        padding: 18px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .newsletter-form {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .newsletter-form input[type="email"] {
+        padding: 12px 14px;
+        border-radius: 8px;
+    }
+
+    .newsletter-form .btn-newsletter {
+        justify-content: center;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    #cookie-banner {
+        padding: 1.1rem 0.8rem;
+    }
+}
+
+/* --- PETIT MOBILE (≤ 480px) --- */
+@media (max-width: 480px) {
+    .container {
+        margin: 8px 8px 32px;
+        padding: 1.6rem 1rem;
+        border-radius: 16px;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .container h2 {
+        font-size: 1.1rem;
+    }
+
+    .container p,
+    .container li {
+        font-size: 0.9rem;
+    }
+
+    .narroq-footer-logo {
+        width: 90px;
+        height: 90px;
+    }
+}

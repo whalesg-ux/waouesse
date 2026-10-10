@@ -1,0 +1,255 @@
+/* ============================================================
+   vacances-explor-actives.css
+   À charger après style.css et components.css.
+   Palette pure : vert, blanc, noir, gris. Aucun trait visible.
+   ============================================================ */
+
+/* ============================================
+   HERO
+============================================ */
+.hero-vacances {
+    min-height: 560px;
+    background-image: url("https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_1600/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-vacances .hero-overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(8, 30, 20, 0.85) 0%,
+        rgba(8, 30, 20, 0.55) 55%,
+        rgba(8, 30, 20, 0.3) 100%
+    );
+}
+
+.hero-vacances .hero-content {
+    max-width: 780px;
+}
+
+.hero-vacances .hero-title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.hero-vacances .hero-text {
+    max-width: 640px;
+    margin-top: 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--forest-soft);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius-pill);
+    background: var(--forest);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.btn-hero:hover {
+    background: var(--forest-dark);
+    transform: translateY(-1px);
+}
+
+.btn-hero-light {
+    background: #ffffff;
+    color: var(--forest-dark);
+}
+
+.btn-hero-light:hover {
+    background: var(--forest-soft);
+}
+
+/* ============================================
+   COMPTE RENDU
+============================================ */
+.texte {
+    margin-top: 40px;
+}
+
+.texte .intro {
+    flex: 1 1 100%;
+}
+
+.texte .intro h2 {
+    text-align: left;
+}
+
+.texte .intro h3 {
+    margin: 2rem 0 1rem;
+    font-size: 1.3rem;
+    color: var(--forest);
+}
+
+.texte .intro a {
+    font-weight: 700;
+    color: var(--forest);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.texte .intro a:hover {
+    color: var(--forest-dark);
+}
+
+.texte .intro ul {
+    margin: 0 0 2rem 2rem;
+    list-style: disc;
+    color: var(--ink);
+}
+
+.texte .intro li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.texte .intro .encart {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+    background: var(--forest-soft);
+}
+
+.texte .intro .encart h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.texte .intro .encart p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ============================================
+   DÉCOUVERTES (grille avec légendes)
+============================================ */
+.gallery h2 {
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+    color: var(--forest-dark);
+}
+
+.gallery .gallery-item {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    aspect-ratio: auto;
+    border-radius: var(--radius-md);
+    background: #ffffff;
+    box-shadow: var(--shadow-md);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery .gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery .gallery-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+.gallery .gallery-item figcaption {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 6px;
+    padding: 1.1rem 1.3rem 1.3rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--gray-text);
+}
+
+.gallery .gallery-item figcaption strong {
+    font-family: "Fraunces", "Georgia", serif;
+    font-size: 1.1rem;
+    color: var(--forest-dark);
+}
+
+/* ============================================
+   FAQ (sans trait)
+============================================ */
+.faq-item {
+    margin-bottom: 12px;
+    border-bottom: none;
+    border-radius: var(--radius-sm);
+    background: var(--gray-soft);
+}
+
+.faq-item summary {
+    padding: 16px 20px;
+}
+
+.faq-item p {
+    padding: 0 20px 14px;
+    line-height: 1.7;
+}
+
+/* ============================================
+   RESPONSIVE — 3 BREAKPOINTS
+============================================ */
+@media (max-width: 1024px) {
+    .hero-vacances .hero-content {
+        max-width: 640px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-vacances {
+        background-image: url("https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_800/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.jpg");
+    }
+
+    .hero-vacances .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-vacances .hero-text {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-vacances {
+        background-image: url("https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_600/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.jpg");
+    }
+
+    .hero-vacances .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-vacances .hero-text {
+        font-size: 0.95rem;
+    }
+
+    .btn-hero {
+        width: 100%;
+    }
+
+    .texte .intro ul {
+        margin-left: 1.2rem;
+    }
+}

@@ -1,5 +1,5 @@
 # robots.txt pour ouesse.com
-# Mis à jour le 19/08/2026
+# Mis à jour le 2026-10-10
 
 Sitemap: https://ouesse.com/sitemap.xml
 
@@ -29,10 +29,6 @@ Disallow: /README.md$
 Disallow: /LICENSE$
 
 Disallow: /app.log$
-
-# Ne PAS bloquer .css/.js/.json : Google doit pouvoir les charger pour
-# rendre correctement les pages (mobile-friendly, Core Web Vitals). Les
-# bloquer est une erreur SEO classique, gardée volontairement de côté ici.
 
 # ============================================
 # ROBOTS IA / GEO (Generative Engine Optimization)

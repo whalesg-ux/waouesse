@@ -16,33 +16,46 @@
     <meta property="og:description" content="Découvrez tous les nominés, lauréats des Awards et figures politiques de la commune de Ouèssè.">
     <meta property="og:url" content="https://ouesse.com/details-laureats">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp">
+    <meta property="og:image"
+        content="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_1200,h_630,c_fill/v1784319943/logo_copie_kzzyfd.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nuit-excellence-2026.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" type="image/webp">
+
+    <!-- FAVICON WebP + fallback PNG -->
+    <link rel="icon" type="image/webp"
+        href="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_64/v1784319943/logo_copie_kzzyfd.webp">
+    <link rel="alternate icon" type="image/png"
+        href="https://res.cloudinary.com/nyke7lhc/image/upload/f_png,q_auto,w_64/v1784319943/logo_copie_kzzyfd.png">
 
     <style>
+        /* ============================================
+           HERO
+           ============================================ */
         .details-hero {
             position: relative;
-            background: #000000 url('/narroq_hero.jpg') center/cover no-repeat;
+            background:
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.85) 100%),
+                url('https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_1600/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.jpg')
+                center/cover no-repeat;
+            background-color: #000000;
             color: #ffffff;
             padding: 70px 20px 50px 20px;
             text-align: center;
-            border: none !important;
         }
         .details-hero-overlay {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.85) 100%);
             z-index: 1;
         }
@@ -54,6 +67,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            text-align: center;
             gap: 18px;
         }
         .details-hero h1 {
@@ -62,6 +77,7 @@
             font-weight: 700;
             color: #ffffff;
             margin: 0;
+            text-align: center;
         }
         .details-hero p {
             max-width: 820px;
@@ -69,6 +85,7 @@
             color: #e2e8f0;
             font-size: 1.05rem;
             line-height: 1.6;
+            text-align: center;
         }
         .category-nav-bar-hero {
             display: flex;
@@ -83,18 +100,23 @@
             color: #0f172a;
             text-decoration: none;
             padding: 9px 18px;
-            border-radius: 4px; /* Non arrondi */
+            border-radius: 4px;
             font-size: 0.88rem;
             font-weight: 700;
-            border: none !important;
-            box-shadow: none !important;
             transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
         .category-nav-bar-hero a:hover {
-            background: #ea580c;
+            background: #0b6b44;
             color: #ffffff;
             transform: translateY(-2px);
         }
+
+        /* ============================================
+           CONTENEUR PRINCIPAL
+           ============================================ */
         .details-container {
             max-width: 1150px;
             margin: 40px auto;
@@ -107,55 +129,55 @@
             background: #ffffff;
             border-radius: 14px;
             padding: 32px;
-            border: none !important;
-            box-shadow: none !important;
+            text-align: center;
             scroll-margin-top: 80px;
         }
         .section-block-title {
             font-family: "Fraunces", serif;
             font-size: 1.6rem;
             color: #0f1c15;
-            margin-bottom: 10px;
+            margin: 0 auto 10px auto;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
-            border-bottom: 2px solid #0b6b44;
+            text-align: center;
             padding-bottom: 10px;
         }
-        .section-block-title i {
-            color: #e05638;
-        }
+        .section-block-title i { color: #0b6b44; }
         .section-block-desc {
             color: #64748b;
             font-size: 0.95rem;
-            margin-bottom: 24px;
+            margin: 0 auto 24px auto;
+            text-align: center;
+            max-width: 720px;
         }
+
+        /* ============================================
+           GRILLE DE CARTES
+           ============================================ */
         .grid-cards {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
         }
-        /* CARTE CANDIDAT - FONDU ORANGE DOUCE (SANS CONTOUR FIN NI FLOU) */
         .candidate-card {
-            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+            background: #f8fafc;
             border-radius: 12px;
             padding: 22px;
-            border: none !important;
-            box-shadow: none !important;
             display: flex;
             flex-direction: column;
             gap: 10px;
             position: relative;
             transition: transform 0.25s ease;
+            min-height: 120px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
-        .candidate-card:hover {
-            transform: translateY(-4px);
-        }
-        /* CARTE LAURÉAT / WINNER - FONDU VERTE DOUCE (SANS CONTOUR FIN NI FLOU) */
+        .candidate-card:hover { transform: translateY(-4px); }
         .candidate-card.winner {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border: none !important;
-            box-shadow: none !important;
+            background: #ecfdf5;
         }
         .badge-winner {
             position: absolute;
@@ -167,76 +189,64 @@
             font-size: 0.75rem;
             padding: 4px 10px;
             border-radius: 20px;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 5px;
-            border: none !important;
-            box-shadow: none !important;
         }
         .candidate-name {
             font-weight: 700;
             font-size: 1.12rem;
             margin: 0;
+            text-align: center;
         }
-        .candidate-card.winner .candidate-name {
-            color: #064e3b;
-        }
-        .candidate-card:not(.winner) .candidate-name {
-            color: #431407;
-        }
+        .candidate-card.winner .candidate-name { color: #064e3b; }
+        .candidate-card:not(.winner) .candidate-name { color: #0f172a; }
         .candidate-sub {
             font-size: 0.85rem;
             font-weight: 600;
+            text-align: center;
         }
-        .candidate-card.winner .candidate-sub {
-            color: #047857;
-        }
-        .candidate-card:not(.winner) .candidate-sub {
-            color: #c2410c;
-        }
-        .candidate-desc {
-            font-size: 0.88rem;
-            color: #475569;
-            line-height: 1.45;
-            margin: 0;
-        }
+        .candidate-card.winner .candidate-sub { color: #047857; }
+        .candidate-card:not(.winner) .candidate-sub { color: #475569; }
         .btn-link-person {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 6px;
             margin-top: auto;
             font-weight: 700;
             font-size: 0.85rem;
             text-decoration: none;
+            text-align: center;
         }
-        .candidate-card.winner .btn-link-person {
-            color: #047857;
-        }
-        .candidate-card:not(.winner) .btn-link-person {
-            color: #ea580c;
-        }
-        .btn-link-person:hover {
-            text-decoration: underline;
-        }
+        .candidate-card.winner .btn-link-person { color: #047857; }
+        .candidate-card:not(.winner) .btn-link-person { color: #0b6b44; }
+        .btn-link-person:hover { color: #064e3b; }
     </style>
-  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-  <script>
-    window.OneSignalDeferred = window.OneSignalDeferred || [];
-    OneSignalDeferred.push(async function (OneSignal) {
-      await OneSignal.init({
-        appId: "1890c9d5-d449-40d9-8946-464ae9bc0aed",
-        safari_web_id: "web.onesignal.auto.3b9e77c1-5852-4edd-a278-c29c156a72b0",
-        notifyButton: { enable: false },
-      });
-    });
-  </script>
 
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function (OneSignal) {
+            await OneSignal.init({
+                appId: "1890c9d5-d449-40d9-8946-464ae9bc0aed",
+                safari_web_id: "web.onesignal.auto.3b9e77c1-5852-4edd-a278-c29c156a72b0",
+                notifyButton: { enable: false },
+            });
+        });
+    </script>
 </head>
 <body>
 
     <header class="site-header">
         <div class="logo">
-            <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp" alt="Logo de Ouèssè" width="48" height="48" loading="eager">
+            <img
+                src="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_96/v1784319943/logo_copie_kzzyfd.webp"
+                srcset="
+                    https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_48/v1784319943/logo_copie_kzzyfd.webp 1x,
+                    https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_96/v1784319943/logo_copie_kzzyfd.webp 2x
+                "
+                alt="Logo de Ouèssè" width="48" height="48" loading="eager" decoding="async">
             <div class="logo-text">
                 <span class="logo-title">Ouessè</span>
                 <span class="logo-subtitle">TOURISME</span>
@@ -248,32 +258,32 @@
         </button>
 
         <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navigation principale">
-        <ul>
-            <li><a href="/" >Accueil</a></li>
-            <li><a href="/decouvert" >Découvrir &amp; Hôtels</a></li>
-            <li class="nav-dropdown">
-                <a href="/nuit-excellence-2026" >Événements</a>
-                <ul class="dropdown-menu">
-                    <li><a href="/nuit-excellence-2026" >Nuit de l'Excellence 2026</a></li>
-                    <li><a href="/vacances-explor-actives" >Vacances Explor'Actives</a></li>
-                    <li><a href="/jij-ouesse-2026" >JIJ Ouèssè 2026</a></li>
-                      <li><a href="/podium-vacances-socao">Podium Vacances SoCAO</a></li>
-                    <li><a href="/details-laureats" class="active">Candidats &amp; Lauréats</a></li>
-                </ul>
-            </li>
-            <li class="nav-dropdown">
-                <a href="/degla_benoit" >Personnalités</a>
-                <ul class="dropdown-menu">
-                    <li><a href="/degla_benoit" >Benoît Assouan Comlan Dègla</a></li>
-                    <li><a href="/briceahossa" >Brice Ahossa (Mairie)</a></li>
-                    <li><a href="/akpo_firmin_ibidon" >Firmin Ibidon Akpo</a></li>
-                    <li><a href="/luc" >Luc S. Cann</a></li>
-                </ul>
-            </li>
-            <li><a href="/a-propos" >À propos</a></li>
-            <li><a href="/contact" >Contact</a></li>
-        </ul>
-    </nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/decouvert">Découvrir &amp; Hôtels</a></li>
+                <li class="nav-dropdown">
+                    <a href="/nuit-excellence-2026">Événements</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/nuit-excellence-2026">Nuit de l'Excellence 2026</a></li>
+                        <li><a href="/vacances-explor-actives">Vacances Explor'Actives</a></li>
+                        <li><a href="/jij-ouesse-2026">JIJ Ouèssè 2026</a></li>
+                        <li><a href="/podium-vacances-socao">Podium Vacances SoCAO</a></li>
+                        <li><a href="/details-laureats" class="active">Candidats &amp; Lauréats</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="/degla_benoit">Personnalités</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/degla_benoit">Benoît Assouan Comlan Dègla</a></li>
+                        <li><a href="/briceahossa">Brice Ahossa (Mairie)</a></li>
+                        <li><a href="/akpo_firmin_ibidon">Firmin Ibidon Akpo</a></li>
+                        <li><a href="/luc">Luc S. Cann</a></li>
+                    </ul>
+                </li>
+                <li><a href="/a-propos">À propos</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
 
         <a href="/decouvert" class="btn-explorer">Explorer</a>
     </header>
@@ -285,16 +295,16 @@
             <p>Retrouvez l'intégralité des nominations, lauréats récompensés lors de La Nuit de l'Excellence 2026 ainsi que les grandes figures politiques et acteurs du développement de la commune de Ouèssè.</p>
 
             <div class="category-nav-bar-hero">
-                <a href="#laureats">Grands Lauréats</a>
-                <a href="#photographes">Photographes</a>
-                <a href="#graphistes">Graphistes</a>
-                <a href="#artistes">Artistes</a>
-                <a href="#humoristes">Humoristes</a>
-                <a href="#footballeurs">Sport</a>
-                <a href="#batisseurs">Bâtisseurs</a>
-                <a href="#leaders">Jeunes Leaders</a>
-                <a href="#evenements">Événements</a>
-                <a href="#politiques">Hommes Politiques</a>
+                <a href="#laureats"><i class="fa-solid fa-trophy"></i> Grands Lauréats</a>
+                <a href="#photographes"><i class="fa-solid fa-camera"></i> Photographes</a>
+                <a href="#graphistes"><i class="fa-solid fa-palette"></i> Graphistes</a>
+                <a href="#artistes"><i class="fa-solid fa-microphone"></i> Artistes</a>
+                <a href="#humoristes"><i class="fa-solid fa-masks-theater"></i> Humoristes</a>
+                <a href="#footballeurs"><i class="fa-solid fa-futbol"></i> Sport</a>
+                <a href="#batisseurs"><i class="fa-solid fa-landmark"></i> Bâtisseurs</a>
+                <a href="#leaders"><i class="fa-solid fa-star"></i> Jeunes Leaders</a>
+                <a href="#evenements"><i class="fa-solid fa-users"></i> Événements</a>
+                <a href="#politiques"><i class="fa-solid fa-user-tie"></i> Hommes Politiques</a>
             </div>
         </div>
     </div>
@@ -307,26 +317,23 @@
             <p class="section-block-desc">Les grands vainqueurs plébiscités lors du Gala de La Nuit de l'Excellence &amp; de l'Élégance du 1er août 2026.</p>
             <div class="grid-cards">
                 <div class="candidate-card winner">
-                    <span class="badge-winner"><i class="fa-solid fa-award"></i> Lauréat 🥇</span>
+                    <span class="badge-winner"><i class="fa-solid fa-award"></i> Lauréat</span>
                     <h3 class="candidate-name">FARY SHOOT</h3>
                     <span class="candidate-sub">Meilleur Photographe 2026</span>
-                    <p class="candidate-desc">Distingué pour ses clichés poignants, sa créativité et son professionnalisme exceptionnel dans la captation des émotions.</p>
                     <a href="/nuit-excellence-2026#laureatFaryGallery" class="btn-link-person">Voir les réalisations <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="candidate-card winner">
-                    <span class="badge-winner"><i class="fa-solid fa-award"></i> Lauréat 🥇</span>
+                    <span class="badge-winner"><i class="fa-solid fa-award"></i> Lauréat</span>
                     <h3 class="candidate-name">TCHOKPONHOUE DAVID "NESDAV"</h3>
                     <span class="candidate-sub">Meilleur Graphiste 2026</span>
-                    <p class="candidate-desc">Récompensé pour son imagination visuelle, la finesse de ses créations graphiques et son impact sur la communication visuelle.</p>
                     <a href="/nuit-excellence-2026#laureatNesdavGallery" class="btn-link-person">Voir les réalisations <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="candidate-card winner">
-                    <span class="badge-winner"><i class="fa-solid fa-award"></i> Lauréat 🥇</span>
+                    <span class="badge-winner"><i class="fa-solid fa-award"></i> Lauréat</span>
                     <h3 class="candidate-name">MATINOU OLABODE</h3>
                     <span class="candidate-sub">Meilleur Footballeur 2026</span>
-                    <p class="candidate-desc">Capitaine emblématique et modèle d'inspiration sportive pour toute la jeunesse de la commune de Ouèssè.</p>
                     <a href="/nuit-excellence-2026#laureatMatinouGallery" class="btn-link-person">Voir le profil <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
@@ -334,7 +341,6 @@
                     <span class="badge-winner"><i class="fa-solid fa-star"></i> Guest Star</span>
                     <h3 class="candidate-name">OLUWA KEMY</h3>
                     <span class="candidate-sub">Artiste Guest Star d'Honneur</span>
-                    <p class="candidate-desc">Prestation musicale spectaculaire qui a électrisé la soirée de Gala à la Maison des Jeunes de Ouèssè.</p>
                     <a href="/nuit-excellence-2026" class="btn-link-person">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -346,40 +352,33 @@
             <p class="section-block-desc">Les artistes de l'objectif qui immortalisent la vie, les événements et le patrimoine de Ouèssè.</p>
             <div class="grid-cards">
                 <div class="candidate-card winner">
-                    <span class="badge-winner"><i class="fa-solid fa-award"></i> Gagnant 🥇</span>
+                    <span class="badge-winner"><i class="fa-solid fa-award"></i> Gagnant</span>
                     <h3 class="candidate-name">FARY SHOOT</h3>
                     <span class="candidate-sub">Photographe Pro</span>
-                    <p class="candidate-desc">Spécialiste du portrait et du reportage événementiel.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Obryane Shoot It</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Photographe créatif et captateur de moments d'exception.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Noé Mahougnon Tchokponhoue</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Reportages visuels et valorisation des paysages locaux.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Gbadebo Prod</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Production audiovisuelle et couverture photographique.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Had Shoot</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Talent montant de la photographie à Ouèssè.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Nago Shoot</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Couverture de cérémonies et événements culturels.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Terminator Shoot</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Photographie urbaine et portraits artistiques.</p>
                 </div>
             </div>
         </section>
@@ -390,30 +389,25 @@
             <p class="section-block-desc">Les designers visuels qui façonnent l'identité et les supports de la commune.</p>
             <div class="grid-cards">
                 <div class="candidate-card winner">
-                    <span class="badge-winner"><i class="fa-solid fa-award"></i> Gagnant 🥇</span>
+                    <span class="badge-winner"><i class="fa-solid fa-award"></i> Gagnant</span>
                     <h3 class="candidate-name">TCHOKPONHOUE DAVID "NESDAV"</h3>
                     <span class="candidate-sub">Designer &amp; Graphiste Pro</span>
-                    <p class="candidate-desc">Concepteur des affiches et identités visuelles phares.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Marc Dossou</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Créateur visuel &amp; design de communication.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Aimé Charlemangne KETENGBE</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Graphiste et illustrateur numérique.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Luc Fadonougbo</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Conception graphique et création publicitaire.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">AKPO Abolias</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Design digital et infographie événementielle.</p>
                 </div>
             </div>
         </section>
@@ -426,27 +420,22 @@
                 <div class="candidate-card">
                     <h3 class="candidate-name">Alpha Oméga</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Artiste engagé valorisant les rythmes et sonorités du terroir.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Sajos</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Composition et prestations musicales envoûtantes.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Wekouin</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Interprète aux sonorités authentiques du patrimoine.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Mandekpo</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Chanteur traditionnel incontournable des cérémonies.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">3S Wèkèzo</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Fusion moderne et musique populaire béninoise.</p>
                 </div>
             </div>
         </section>
@@ -459,32 +448,26 @@
                 <div class="candidate-card">
                     <h3 class="candidate-name">Akouna Matata</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Stand-up et prestations scéniques tordantes.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Osi Comédien</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Comédie de mœurs et sketchs populaires.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">James Descartes</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Humour intellectuel et satires sociales.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Adama</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Performance d'improvisation et spectacles.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Prince Two Love</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Comédie romantique et sketchs festifs.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Mariwol Alodoukpo</h3>
                     <span class="candidate-sub">Candidat Nominé</span>
-                    <p class="candidate-desc">Théâtre humoristique et contes comiques.</p>
                 </div>
             </div>
         </section>
@@ -495,10 +478,9 @@
             <p class="section-block-desc">Reconnaissance de l'excellence sportive et du leadership athlétique.</p>
             <div class="grid-cards">
                 <div class="candidate-card winner">
-                    <span class="badge-winner"><i class="fa-solid fa-award"></i> Lauréat 🥇</span>
+                    <span class="badge-winner"><i class="fa-solid fa-award"></i> Lauréat</span>
                     <h3 class="candidate-name">MATINOU OLABODE</h3>
                     <span class="candidate-sub">Meilleur Footballeur de l'Année</span>
-                    <p class="candidate-desc">Capitaine et milieu de terrain modèle, récompensé pour son fair-play et ses performances de haut niveau lors des tournois locaux.</p>
                 </div>
             </div>
         </section>
@@ -511,22 +493,18 @@
                 <div class="candidate-card winner">
                     <h3 class="candidate-name">Enseignant Émérite</h3>
                     <span class="candidate-sub">40 ans de Service Éducatif</span>
-                    <p class="candidate-desc">Dévouement total à l'éducation de plusieurs générations d'enfants à Ouèssè.</p>
                 </div>
                 <div class="candidate-card winner">
                     <h3 class="candidate-name">Femme d'Affaires &amp; Entrepreneure</h3>
                     <span class="candidate-sub">Création d'Emplois Locaux</span>
-                    <p class="candidate-desc">Investissement dans l'autonomisation économique des femmes et jeunes de la commune.</p>
                 </div>
                 <div class="candidate-card winner">
                     <h3 class="candidate-name">Agriculteur Innovant</h3>
                     <span class="candidate-sub">Modernisation Agricole</span>
-                    <p class="candidate-desc">Introduction de techniques agricoles durables et promotion des produits locaux.</p>
                 </div>
                 <div class="candidate-card winner">
                     <h3 class="candidate-name">Artisan d'Art Traditionnel</h3>
                     <span class="candidate-sub">Patrimoine &amp; Métiers d'Art</span>
-                    <p class="candidate-desc">Perpétuation du savoir-faire ancestral de sculpture et tissage.</p>
                 </div>
             </div>
         </section>
@@ -539,17 +517,14 @@
                 <div class="candidate-card winner">
                     <h3 class="candidate-name">Entrepreneur du Numérique</h3>
                     <span class="candidate-sub">Innovation Tech</span>
-                    <p class="candidate-desc">Développement de solutions technologiques au service des citoyens de Ouèssè.</p>
                 </div>
                 <div class="candidate-card winner">
                     <h3 class="candidate-name">Militante Environnementale</h3>
                     <span class="candidate-sub">Écologie &amp; Reforestation</span>
-                    <p class="candidate-desc">Sensibilisation et actions concrètes pour la préservation des forêts sacrées.</p>
                 </div>
                 <div class="candidate-card winner">
                     <h3 class="candidate-name">Leader Associatif Éducatif</h3>
                     <span class="candidate-sub">Lutte contre le décrochage scolaire</span>
-                    <p class="candidate-desc">Accompagnement scolaire et bourses pour les jeunes démunis.</p>
                 </div>
             </div>
         </section>
@@ -562,27 +537,22 @@
                 <div class="candidate-card">
                     <h3 class="candidate-name">Azizaxwé (UDACO)</h3>
                     <span class="candidate-sub">Festival Culturel</span>
-                    <p class="candidate-desc">Le rendez-vous culturel emblématique célébrant les arts et traditions de Ouèssè.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Festival de Contes (ECAK)</h3>
                     <span class="candidate-sub">Littérature Orale &amp; Contes</span>
-                    <p class="candidate-desc">Soirées de récits traditionnels sous l'arbre à palabres.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Podium Vacances (SoCAO)</h3>
                     <span class="candidate-sub">Divertissement Estival</span>
-                    <p class="candidate-desc">Concours de talents et concerts pour les jeunes en période de vacances.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Pic Nic Tous en Blanc</h3>
                     <span class="candidate-sub">Winner Events</span>
-                    <p class="candidate-desc">Événement de prestige axé sur l'élégance et la convivialité.</p>
                 </div>
                 <div class="candidate-card">
                     <h3 class="candidate-name">Ouessèxwé (UDESCO)</h3>
                     <span class="candidate-sub">Fête Communale</span>
-                    <p class="candidate-desc">Grand rassemblement annuel des fils et filles de la commune de Ouèssè.</p>
                 </div>
             </div>
         </section>
@@ -595,35 +565,30 @@
                 <div class="candidate-card">
                     <h3 class="candidate-name">Benoît Assouan Comlan Dègla</h3>
                     <span class="candidate-sub">Ancien Député &amp; Ministre</span>
-                    <p class="candidate-desc">Homme d'État béninois, originaire de Ouèssè, ayant œuvré pour de nombreuses infrastructures routières, électricités et écoles.</p>
                     <a href="/degla_benoit" class="btn-link-person">Consulter sa biographie <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="candidate-card">
                     <h3 class="candidate-name">Brice Ahossa</h3>
                     <span class="candidate-sub">Maire de Ouèssè</span>
-                    <p class="candidate-desc">Premier magistrat de la commune, engagé dans la décentralisation, la jeunesse et le développement économique.</p>
                     <a href="/briceahossa" class="btn-link-person">Voir le rôle municipal <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="candidate-card">
                     <h3 class="candidate-name">Firmin Ibidon Akpo</h3>
                     <span class="candidate-sub">Personnalité Publique &amp; Culturelle</span>
-                    <p class="candidate-desc">Figure influente engagée dans la promotion culturelle et l'unité de la jeunesse.</p>
                     <a href="/akpo_firmin_ibidon" class="btn-link-person">Voir son parcours <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="candidate-card">
                     <h3 class="candidate-name">Luc S. Cann</h3>
                     <span class="candidate-sub">Acteur du Développement</span>
-                    <p class="candidate-desc">Personnalité investie dans les initiatives communautaires et économiques.</p>
                     <a href="/luc" class="btn-link-person">Voir son profil <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="candidate-card">
                     <h3 class="candidate-name">Sa Majesté TCHINI TONOU</h3>
                     <span class="candidate-sub">Roi de Ouèssè Wogoudo</span>
-                    <p class="candidate-desc">Autorité traditionnelle et garant du patrimoine culturel et spirituel de la royauté de Ouèssè.</p>
                     <a href="/nuit-excellence-2026" class="btn-link-person">Voir sa participation <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -631,7 +596,7 @@
 
     </main>
 
-        <footer class="pied">
+    <footer class="pied">
         <div class="footer-top">
             <div class="footer-brand">
                 <span class="logo-title">Ouessè Tourisme</span>
@@ -643,7 +608,9 @@
             <form class="newsletter-form" action="/newsletter" method="POST" aria-label="Inscription à la newsletter">
                 <input type="email" name="email" placeholder="Votre email pour les actualités" required
                     aria-label="Adresse email">
-                <button type="submit">S'inscrire</button>
+                <button type="submit" class="btn-newsletter">
+                    <i class="fa-solid fa-paper-plane"></i> S'inscrire
+                </button>
             </form>
         </div>
 
@@ -714,4 +681,3 @@
     <script src="js/progressive-reveal.js" defer></script>
 </body>
 </html>
-

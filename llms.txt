@@ -1,6 +1,6 @@
 # WAOUESSE - Plateforme Culturelle du Bénin
 # Site: https://ouesse.com/
-# Dernière mise à jour: 2026-08-28
+# Dernière mise à jour: 2026-10-10
 
 ## SITEMAP DES PAGES ET IMAGES
 
@@ -8,7 +8,7 @@
 
 ## PAGE D'ACCUEIL
 URL: https://ouesse.com/
-Priorité: 1.0 | Fréquence: weekly | Modifié: 2026-08-06
+Priorité: 1.0 | Fréquence: weekly | Modifié: 2026-10-10
 
 ### Images:
 1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784361921/ouessefe_ma0i47.webp
@@ -22,7 +22,7 @@ Priorité: 1.0 | Fréquence: weekly | Modifié: 2026-08-06
 
 ## PAGE DÉCOUVERT
 URL: https://ouesse.com/decouvert.html
-Priorité: 0.9 | Fréquence: weekly | Modifié: 2026-08-06
+Priorité: 0.9 | Fréquence: weekly | Modifié: 2026-10-10
 
 ### Images:
 1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784361863/majou_mkmsns.webp
@@ -35,7 +35,7 @@ Priorité: 0.9 | Fréquence: weekly | Modifié: 2026-08-06
 
 ## PAGE À PROPOS
 URL: https://ouesse.com/a-propos.html
-Priorité: 0.7 | Fréquence: monthly | Modifié: 2026-08-06
+Priorité: 0.7 | Fréquence: monthly | Modifié: 2026-10-10
 
 ### Images:
 1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785260330/sezs_n6qfyy.webp
@@ -45,7 +45,7 @@ Priorité: 0.7 | Fréquence: monthly | Modifié: 2026-08-06
 
 ## PAGE DEGLA BENOIT
 URL: https://ouesse.com/degla_benoit.html
-Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-08-06
+Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-10-10
 
 ### Images:
 1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1786022190/deggl_SS_cj1y0y.webp
@@ -59,7 +59,7 @@ Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-08-06
 
 ## PAGE BRICE AHOSSA
 URL: https://ouesse.com/briceahossa.html
-Priorité: 0.7 | Fréquence: monthly | Modifié: 2026-08-06
+Priorité: 0.7 | Fréquence: monthly | Modifié: 2026-10-10
 
 ### Images:
 1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1786022197/briceSSS_vglwm1.webp
@@ -72,7 +72,7 @@ Priorité: 0.7 | Fréquence: monthly | Modifié: 2026-08-06
 
 ## PAGE AKPO FIRMIN IBIDON
 URL: https://ouesse.com/akpo_firmin_ibidon.html
-Priorité: 0.7 | Fréquence: monthly | Modifié: 2026-08-06
+Priorité: 0.7 | Fréquence: monthly | Modifié: 2026-10-10
 
 ### Images:
 1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784363087/mairesd_rnle9q.webp
@@ -85,7 +85,7 @@ Priorité: 0.7 | Fréquence: monthly | Modifié: 2026-08-06
 
 ## PAGE LUC ATROKPO
 URL: https://ouesse.com/luc.html
-Priorité: 0.6 | Fréquence: monthly | Modifié: 2026-08-06
+Priorité: 0.6 | Fréquence: monthly | Modifié: 2026-10-10
 
 ### Images:
 1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784318002/lucatro/benedc_cwct3r.webp
@@ -95,7 +95,7 @@ Priorité: 0.6 | Fréquence: monthly | Modifié: 2026-08-06
 
 ## PAGE NUIT D'EXCELLENCE 2026
 URL: https://ouesse.com/nuit-excellence-2026.html
-Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-08-06
+Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-10-10
 
 ### Images:
 1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785980426/TRADI_copie_tzuyo6.webp
@@ -113,8 +113,85 @@ Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-08-06
 
 ---
 
+## PAGE VACANCES EXPLOR'ACTIVES
+URL: https://ouesse.com/vacances-explor-actives.html
+Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-10-10
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.webp
+   Titre: Vacances Explor'Actives
+   Description: Programme éducatif et touristique pour la jeunesse
+
+---
+
+## PAGE JIJ-OUÈSSÈ 2026
+URL: https://ouesse.com/jij-ouesse-2026.html
+Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-10-10
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1788559768/jij_2026_7_gdg3pu.webp
+   Titre: JIJ-OUÈSSÈ 2026
+
+---
+
+## PAGE PODIUM VACANCES SOCAO
+URL: https://ouesse.com/podium-vacances-socao.html
+Priorité: 0.9 | Fréquence: weekly | Modifié: 2026-10-10
+Plateforme officielle: https://socao.ouesse.com
+Description: 3ᵉ édition du Concours Podium Vacances par la Solidarité Culturelle et Artistique de Odougba-Ouèssè (SoCAO). Compétition de chorégraphie, concours intellectuel Champion du Savoir, chant, danse traditionnelle, théâtre, et bourses d'études et de formation professionnelle offertes aux jeunes talents.
+
+### Images:
+1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511598/SOCAO_-_PODIUM_VACANCE_2026_1_xo8tiw.webp
+   Titre: Affiche Teaser Podium Vacance Acte 3 SoCAO Odougba-Ouèssè
+   Description: Visuel officiel annonçant la 3ᵉ édition du concours Podium Vacances initié par SoCAO
+
+2. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_4_f3kdfb.webp
+   Titre: Calendrier et étapes de la 3ᵉ édition de Podium Vacance SoCAO
+   Description: Chronogramme officiel : Présélection le 15 août, Demi-finale le 22 août et Grande Finale le 5 septembre 2026 à Odougba
+
+3. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_5_quli3p.webp
+   Titre: Tableau des candidats retenus au concours Podium Vacances SoCAO
+   Description: Liste officielle des qualifiés en interprétation musicale, chorégraphie, danse traditionnelle, théâtre et champion du savoir
+
+4. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_6_ougfr8.webp
+   Titre: Grande Finale Interprétation Masculine
+   Description: Affiche du duel vocal des finalistes BADA Dodji, SOSSOU Mardochée et AKPODE Généreux
+
+5. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_7_figyqx.webp
+   Titre: Grande Finale Théâtre & Comédie
+   Description: Duel théâtral entre Les Anges de Botti et le collectif Rire Doucement de Laminou
+
+6. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_8_mty6hg.webp
+   Titre: Grande Finale Danse Traditionnelle
+   Description: Duel de danses ancestrales Mahi-Idatcha opposant ASSOUKAVI aux danseurs Les Étoiles
+
+7. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511601/SOCAO_-_PODIUM_VACANCE_2026_15_nukra3.webp
+   Titre: Explosion Chorégraphique & Synchronisation
+   Description: Prestation scénique rythmée des danseurs en tenue multicolore
+
+8. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511601/SOCAO_-_PODIUM_VACANCE_2026_16_scjpu0.webp
+   Titre: Figure Acrobatique Collective des Danseurs SoCAO
+   Description: Prestation acrobatique symbolisant l'équilibre, la discipline et la créativité
+
+9. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511598/SOCAO_-_PODIUM_VACANCE_2026_11_cx86xx.webp
+   Titre: Délibérations Attentives du Jury Officiel
+   Description: Évaluation des performances par les jurés professionnels
+
+10. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511602/SOCAO_-_PODIUM_VACANCE_2026_18_vope25.webp
+    Titre: Remise Solennelle du Trophée de Chorégraphie
+    Description: Sacre de la jeune troupe lauréate avec le trophée officiel
+
+11. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_14_bdrqrw.webp
+    Titre: Consécration du Champion en Théâtre
+    Description: Célébration du lauréat en art dramatique et comédie
+
+12. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511599/SOCAO_-_PODIUM_VACANCE_2026_23_fg4uat.webp
+    Titre: Hommage & Gratitude aux Sponsors Partenaires
+    Description: Remerciements officiels aux entreprises, studios et mécènes soutenant la jeunesse
+
+---
+
 ## PAGES ADMINISTRATIVES (sans images)
-- https://ouesse.com/generate.html | Priorité: 0.3 | Fréquence: yearly
 - https://ouesse.com/admin.html | Priorité: 0.2 | Fréquence: yearly
 
 ---
@@ -131,100 +208,19 @@ Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-08-06
 | Akpo Firmin Ibidon | 2 |
 | Luc Atrokpo | 1 |
 | Nuit d'Excellence 2026 | 4 |
-| **TOTAL** | **16 images** |
+| Vacances Explor'Actives | 1 |
+| JIJ-Ouèssè 2026 | 1 |
+| Podium Vacances SoCAO | 12 |
+| **TOTAL** | **28 images** |
 
 ---
 
 ## STATISTIQUES GLOBALES
 
-- **Total pages**: 10
-- **Total images**: 16
-- **Pages avec images**: 8
-- **Pages sans images**: 2 (generate, admin)
+- **Total pages**: 12 (Pages HTML publiques & administration)
+- **Total images**: 28
+- **Pages avec images**: 11
+- **Pages sans images**: 1 (admin)
 - **Hébergement images**: Cloudinary (nyke7lhc)
 - **Format**: WebP optimisé
 - **Optimisation appliquée**: w_1200, q_auto:best, f_webp, c_limit, dpr_auto
-
----
-
-## STRUCTURE DES URLS CLOUDINARY
-
-**Format de base:**
-
----
-
-## PAGE VACANCES EXPLOR'ACTIVES
-URL: https://ouesse.com/vacances-explor-actives.html
-Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-09-04
-
-### Images:
-1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.jpg
-   Titre: Vacances Explor'Actives
-
----
-
-## PAGE JIJ-OUÈSSÈ 2026
-URL: https://ouesse.com/jij-ouesse-2026.html
-Priorité: 0.8 | Fréquence: monthly | Modifié: 2026-09-04
-
-### Images:
-1. https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1788559768/jij_2026_7_gdg3pu.jpg
-   Titre: JIJ-OUÈSSÈ 2026
-
----
-
-## PAGE PODIUM VACANCES SOCAO
-URL: https://ouesse.com/podium-vacances-socao.html
-Priorité: 0.9 | Fréquence: weekly | Modifié: 2026-09-16
-Plateforme officielle: https://socao.ouesse.com
-Description: 3ᵉ édition du Concours Podium Vacances par la Solidarité Culturelle et Artistique de Odougba-Ouèssè (SoCAO). Compétition de chorégraphie, concours intellectuel Champion du Savoir, chant, danse traditionnelle, théâtre, et bourses d'études et de formation professionnelle offertes aux jeunes talents.
-
-### Images:
-1. https://res.cloudinary.com/nyke7lhc/image/upload/v1789511598/SOCAO_-_PODIUM_VACANCE_2026_1_xo8tiw.jpg
-   Titre: Affiche Teaser Podium Vacance Acte 3 SoCAO Odougba-Ouessè
-   Description: Visuel officiel annonçant la 3ᵉ édition du concours Podium Vacances initié par SoCAO
-
-2. https://res.cloudinary.com/nyke7lhc/image/upload/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_4_f3kdfb.jpg
-   Titre: Calendrier et étapes de la 3ᵉ édition de Podium Vacance SoCAO
-   Description: Chronogramme officiel : Présélection le 15 août, Demi-finale le 22 août et Grande Finale le 5 septembre 2026 à Odougba
-
-3. https://res.cloudinary.com/nyke7lhc/image/upload/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_5_quli3p.jpg
-   Titre: Tableau des candidats retenus au concours Podium Vacances SoCAO
-   Description: Liste officielle des qualifiés en interprétation musicale, chorégraphie, danse traditionnelle, théâtre et champion du savoir
-
-4. https://res.cloudinary.com/nyke7lhc/image/upload/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_6_ougfr8.jpg
-   Titre: Grande Finale Interprétation Masculine
-   Description: Affiche du duel vocal des finalistes BADA Dodji, SOSSOU Mardochée et AKPODE Généreux
-
-5. https://res.cloudinary.com/nyke7lhc/image/upload/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_7_figyqx.jpg
-   Titre: Grande Finale Théâtre & Comédie
-   Description: Duel théâtral entre Les Anges de Botti et le collectif Rire Doucement de Laminou
-
-6. https://res.cloudinary.com/nyke7lhc/image/upload/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_8_mty6hg.jpg
-   Titre: Grande Finale Danse Traditionnelle
-   Description: Duel de danses ancestrales Mahi-Idatcha opposant ASSOUKAVI aux danseurs Les Étoiles
-
-7. https://res.cloudinary.com/nyke7lhc/image/upload/v1789511601/SOCAO_-_PODIUM_VACANCE_2026_15_nukra3.jpg
-   Titre: Explosion Chorégraphique & Synchronisation
-   Description: Prestation scénique rythmée des danseurs en tenue multicolore
-
-8. https://res.cloudinary.com/nyke7lhc/image/upload/v1789511601/SOCAO_-_PODIUM_VACANCE_2026_16_scjpu0.jpg
-   Titre: Figure Acrobatique Collective des Danseurs SoCAO
-   Description: Prestation acrobatique symbolisant l'équilibre, la discipline et la créativité
-
-9. https://res.cloudinary.com/nyke7lhc/image/upload/v1789511598/SOCAO_-_PODIUM_VACANCE_2026_11_cx86xx.jpg
-   Titre: Délibérations Attentives du Jury Officiel
-   Description: Évaluation des performances par les jurés professionnels
-
-10. https://res.cloudinary.com/nyke7lhc/image/upload/v1789511602/SOCAO_-_PODIUM_VACANCE_2026_18_vope25.jpg
-    Titre: Remise Solennelle du Trophée de Chorégraphie
-    Description: Sacre de la jeune troupe lauréate avec le trophée officiel
-
-11. https://res.cloudinary.com/nyke7lhc/image/upload/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_14_bdrqrw.jpg
-    Titre: Consécration du Champion en Théâtre
-    Description: Célébration du lauréat en art dramatique et comédie
-
-12. https://res.cloudinary.com/nyke7lhc/image/upload/v1789511599/SOCAO_-_PODIUM_VACANCE_2026_23_fg4uat.jpg
-    Titre: Hommage & Gratitude aux Sponsors Partenaires
-    Description: Remerciements officiels aux entreprises, studios et mécènes soutenant la jeunesse
-

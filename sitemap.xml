@@ -5,18 +5,16 @@
   <!-- Page d'accueil -->
   <url>
     <loc>https://ouesse.com/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <!-- Image principale -->
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784361921/ouessefe_ma0i47.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784361921/ouessefe_ma0i47.webp</image:loc>
       <image:title>Waouesse - Plateforme culturelle béninoise</image:title>
-      <image:caption>Découvrez la richesse culturelle du Bénin VODOUN </image:caption>
+      <image:caption>Découvrez la richesse culturelle du Bénin VODOUN</image:caption>
     </image:image>
-    <!-- Deuxième image -->
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784361878/jouan_edsb2o.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784361878/jouan_edsb2o.webp</image:loc>
       <image:title>ARTISTE A LA FETE DE OUESSEXWE 2025</image:title>
     </image:image>
   </url>
@@ -24,15 +22,15 @@
   <!-- Page Découvert -->
   <url>
     <loc>https://ouesse.com/decouvert</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784361863/majou_mkmsns.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784361863/majou_mkmsns.webp</image:loc>
       <image:title>Découvrir la culture béninoise - Waouesse</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784361908/zamgbe_r7s7vi.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784361908/zamgbe_r7s7vi.webp</image:loc>
       <image:title>Art et traditions du Bénin</image:title>
     </image:image>
   </url>
@@ -40,11 +38,11 @@
   <!-- Page À propos -->
   <url>
     <loc>https://ouesse.com/a-propos</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785260330/sezs_n6qfyy.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785260330/sezs_n6qfyy.webp</image:loc>
       <image:title>Équipe Waouesse - À propos</image:title>
     </image:image>
   </url>
@@ -52,18 +50,16 @@
   <!-- Page Degla Benoit -->
   <url>
     <loc>https://ouesse.com/degla_benoit</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <!-- Portrait principal -->
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1786022190/deggl_SS_cj1y0y.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1786022190/deggl_SS_cj1y0y.webp</image:loc>
       <image:title>Degla Benoit - Portrait</image:title>
       <image:caption>ancien premier ministre du benin Degla Benoit</image:caption>
     </image:image>
-    <!-- Œuvre 1 -->
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1786022191/degga_copie_cbzkco.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1786022191/degga_copie_cbzkco.webp</image:loc>
       <image:title>Degla Benoit - Création 1</image:title>
     </image:image>
   </url>
@@ -71,15 +67,15 @@
   <!-- Page Brice Ahossa -->
   <url>
     <loc>https://ouesse.com/briceahossa</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1786022197/briceSSS_vglwm1.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1786022197/briceSSS_vglwm1.webp</image:loc>
       <image:title>Brice Ahossa - Portrait</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1786022195/briceahos.jpg_2K_4_copie_eaylcy.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1786022195/briceahos.jpg_2K_4_copie_eaylcy.webp</image:loc>
       <image:title>Brice Ahossa à UP</image:title>
     </image:image>
   </url>
@@ -87,27 +83,27 @@
   <!-- Page Akpo Firmin Ibidon -->
   <url>
     <loc>https://ouesse.com/akpo_firmin_ibidon</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784363087/mairesd_rnle9q.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784363087/mairesd_rnle9q.webp</image:loc>
       <image:title>Akpo Firmin Ibidon - au 1er aout 2025</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784363083/aout_1er_b9faic.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784363083/aout_1er_b9faic.webp</image:loc>
       <image:title>Akpo Firmin Ibidon - 1er aout avec le roi ouesse</image:title>
     </image:image>
   </url>
 
-  <!-- Page Luc -->
+  <!-- Page Luc Atrokpo -->
   <url>
     <loc>https://ouesse.com/luc</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784318002/lucatro/benedc_cwct3r.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784318002/lucatro/benedc_cwct3r.webp</image:loc>
       <image:title>Luc ATROKPO A OUESSE - Portrait</image:title>
     </image:image>
   </url>
@@ -115,59 +111,53 @@
   <!-- Page Nuit d'Excellence 2026 -->
   <url>
     <loc>https://ouesse.com/nuit-excellence-2026</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  
-    
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785976375/humour_copie_tjiwin.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785976375/humour_copie_tjiwin.webp</image:loc>
       <image:title>Nuit d'Excellence 2026 - Événement</image:title>
       <image:caption>Soirée culturelle d'excellence à Waouesse</image:caption>
     </image:image>
-    <!-- Galerie de l'événement -->
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785980426/TRADI_copie_tzuyo6.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785980426/TRADI_copie_tzuyo6.webp</image:loc>
       <image:title>Nuit d'Excellence 2026 à Ouesse - Galerie 1</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785972758/troper_czpcot.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785972758/troper_czpcot.webp</image:loc>
       <image:title>Nuit d'Excellence 2026 Ouesse - Galerie 2</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785972752/kemmm_upml8d.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785972752/kemmm_upml8d.webp</image:loc>
       <image:title>Nuit d'Excellence à Ouesse 2026 - Galerie 3</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1785972754/maire_eouk4u.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1785972754/maire_eouk4u.webp</image:loc>
       <image:title>Nuit d'Excellence à Ouesse le maire 2026 - Galerie 4</image:title>
     </image:image>
   </url>
 
-
-
-
-
   <!-- Vacances Explor'Actives -->
   <url>
     <loc>https://ouesse.com/vacances-explor-actives</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.jpg</image:loc>
-      <image:title>Vacances Explor'Actives</image:title>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1788269733/780127105_122142519723082449_9117063047228060958_n_w4f46l.webp</image:loc>
+      <image:title>Vacances Explor'Actives à Ouèssè</image:title>
+      <image:caption>Programme éducatif, touristique et d'immersion pour la jeunesse</image:caption>
     </image:image>
   </url>
 
   <!-- JIJ-OUÈSSÈ 2026 -->
   <url>
     <loc>https://ouesse.com/jij-ouesse-2026</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1788559768/jij_2026_7_gdg3pu.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1788559768/jij_2026_7_gdg3pu.webp</image:loc>
       <image:title>JIJ-OUÈSSÈ 2026</image:title>
     </image:image>
   </url>
@@ -175,67 +165,68 @@
   <!-- Répertoire Candidats, Lauréats & Personnalités -->
   <url>
     <loc>https://ouesse.com/details-laureats</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1784319943/logo_copie_kzzyfd.webp</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1784319943/logo_copie_kzzyfd.webp</image:loc>
       <image:title>Candidats, Lauréats &amp; Personnalités de Ouèssè</image:title>
     </image:image>
   </url>
+
   <!-- Page Podium Vacances SoCAO (Acte 3) -->
   <url>
     <loc>https://ouesse.com/podium-vacances-socao</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1789511598/SOCAO_-_PODIUM_VACANCE_2026_1_xo8tiw.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511598/SOCAO_-_PODIUM_VACANCE_2026_1_xo8tiw.webp</image:loc>
       <image:title>Podium Vacances SoCAO Acte 3 - Affiche Officielle</image:title>
       <image:caption>3e édition du grand concours estival Podium Vacances par SoCAO à Odougba-Ouèssè</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_4_f3kdfb.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_4_f3kdfb.webp</image:loc>
       <image:title>Calendrier et étapes officielles du Concours SoCAO</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_5_quli3p.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_5_quli3p.webp</image:loc>
       <image:title>Tableau des candidats qualifiés par discipline</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_6_ougfr8.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_6_ougfr8.webp</image:loc>
       <image:title>Finale Interprétation Masculine SoCAO</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_7_figyqx.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_7_figyqx.webp</image:loc>
       <image:title>Grande Finale Théâtre Les Anges vs Rire Doucement</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_8_mty6hg.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_8_mty6hg.webp</image:loc>
       <image:title>Grande Finale Danse Traditionnelle Assoukavi vs Les Étoiles</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1789511601/SOCAO_-_PODIUM_VACANCE_2026_15_nukra3.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511601/SOCAO_-_PODIUM_VACANCE_2026_15_nukra3.webp</image:loc>
       <image:title>Explosion chorégraphique et synchronisation sur scène</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1789511601/SOCAO_-_PODIUM_VACANCE_2026_16_scjpu0.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511601/SOCAO_-_PODIUM_VACANCE_2026_16_scjpu0.webp</image:loc>
       <image:title>Figure acrobatique collective des danseurs SoCAO</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1789511598/SOCAO_-_PODIUM_VACANCE_2026_11_cx86xx.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511598/SOCAO_-_PODIUM_VACANCE_2026_11_cx86xx.webp</image:loc>
       <image:title>Délibérations attentives du jury officiel</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1789511602/SOCAO_-_PODIUM_VACANCE_2026_18_vope25.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511602/SOCAO_-_PODIUM_VACANCE_2026_18_vope25.webp</image:loc>
       <image:title>Remise solennelle du trophée de chorégraphie</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_14_bdrqrw.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511600/SOCAO_-_PODIUM_VACANCE_2026_14_bdrqrw.webp</image:loc>
       <image:title>Consécration du champion en Théâtre</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/v1789511599/SOCAO_-_PODIUM_VACANCE_2026_23_fg4uat.jpg</image:loc>
+      <image:loc>https://res.cloudinary.com/nyke7lhc/image/upload/w_1200,q_auto:best,f_webp,c_limit,dpr_auto/v1789511599/SOCAO_-_PODIUM_VACANCE_2026_23_fg4uat.webp</image:loc>
       <image:title>Hommage et gratitude aux sponsors partenaires SoCAO</image:title>
     </image:image>
   </url>
@@ -243,7 +234,7 @@
   <!-- Page Contact -->
   <url>
     <loc>https://ouesse.com/contact</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -251,32 +242,16 @@
   <!-- Page RGPD & Confidentialité -->
   <url>
     <loc>https://ouesse.com/rgpd</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
-  <!-- Page Conditions Générales d'Utilisation -->
+  <!-- Page CGU -->
   <url>
     <loc>https://ouesse.com/cgu</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-
-  <!-- Page Réunion / Visioconférence -->
-  <url>
-    <loc>https://ouesse.com/reunion</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Page Téléchargement App PWA -->
-  <url>
-    <loc>https://ouesse.com/telecharger</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>

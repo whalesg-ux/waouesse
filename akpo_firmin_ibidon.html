@@ -38,12 +38,12 @@
     <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
 
     <!-- Préchargement image critique (hero) -->
-    <link rel="preload" as="image" href="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_1200/v1784363100/mairoi_qvgevk.webp" fetchpriority="high" />
+    <!-- Image de fond du hero (doit correspondre EXACTEMENT à l'URL du CSS) -->
+    <link rel="preload" as="image" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1784363067/maice_dbjwv8.webp" fetchpriority="high" />
 
     <link rel="icon" href="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_64/v1784319943/logo_copie_kzzyfd.webp" type="image/webp" />
 
-    <!-- FEUILLE DE STYLE EXTERNE (nom de fichier inchangé, correspondance CSS préservée) -->
-    <link rel="stylesheet" href="akpo_firmin_ibidon.css" />
+    <!-- FEUILLE DE STYLE DE LA PAGE (chargée en dernier, voir bas du <head>) -->
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap" />
@@ -168,8 +168,10 @@
     }
     </script>
 
-    <link rel="stylesheet" href="search-widget.css" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search-widget.css" />
+    <!-- Feuille de la page TOUJOURS en dernier : elle doit pouvoir écraser style.css -->
+    <link rel="stylesheet" href="akpo_firmin_ibidon.css" />
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
   <script>
     window.OneSignalDeferred = window.OneSignalDeferred || [];
@@ -247,8 +249,6 @@
             <a href="#" class="summary-link" id="summaryLink">Voir plus</a>
         </div>
     </div>
-</div>
-
 </div>
 
 <main class="main-content">
@@ -433,7 +433,7 @@
 <!-- LIGHTBOX -->
 <div class="lightbox-overlay" id="lightbox">
     <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
-    <img id="lightboxImg" src="" alt="" />
+    <img id="lightboxImg" alt="" />
     <p class="lightbox-caption" id="lightboxCaption"></p>
 </div>
 
@@ -446,10 +446,10 @@
                     personnalités de la commune de Ouèssè, Bénin.</p>
             </div>
 
-            <form class="newsletter-form" action="/newsletter" method="POST" aria-label="Inscription à la newsletter">
-                <input type="email" name="email" placeholder="Votre email pour les actualités" required
+            <form class="newsletter-form" id="newsletterForm" action="/newsletter" method="POST" aria-label="Inscription à la newsletter">
+                <input type="email" id="newsletter-email" name="email" placeholder="Votre email pour les actualités" required
                     aria-label="Adresse email">
-                <button type="submit">S'inscrire</button>
+                <button type="submit" class="btn-newsletter">S'inscrire</button>
             </form>
         </div>
 

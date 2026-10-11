@@ -462,35 +462,57 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* ============================================
+           CARROUSELS MANUELS (OUESSEXWE / Excellence)
+           — CSS qui manquait : shell, scroll, flèches
+           ============================================ */
+        .carousel-shell {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .carousel-scroll {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+            padding: 10px 0 20px 0;
+            flex: 1;
+        }
+        .carousel-scroll::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+        .carousel-scroll .gallery-item {
+            flex: 0 0 260px;         /* largeur fixe des tuiles, pas de compression */
+            max-width: 260px;
+            scroll-snap-align: start;
+        }
+        .carousel-nav {
+            flex: 0 0 auto;
+            border: none;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #0b6b44;
+            color: #ffffff;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.25s ease, transform 0.15s ease;
+            z-index: 2;
+        }
+        .carousel-nav:hover { background: #064e3b; transform: scale(1.08); }
+        @media (max-width: 480px) {
+            .carousel-scroll .gallery-item { flex: 0 0 78vw; max-width: 78vw; }
+        }
     </style>
 </head>
-<script>
-(function () {
-    document.querySelectorAll('.carousel-shell').forEach((shell) => {
-        const track = shell.querySelector('[data-carousel]');
-        const prev = shell.querySelector('.carousel-nav.prev');
-        const next = shell.querySelector('.carousel-nav.next');
-        if (!track || !prev || !next) return;
-
-        // Largeur d'une image = largeur du conteneur
-        const step = () => track.clientWidth;
-
-        prev.addEventListener('click', () => {
-            track.scrollBy({ left: -step(), behavior: 'smooth' });
-        });
-        next.addEventListener('click', () => {
-            track.scrollBy({ left: step(), behavior: 'smooth' });
-        });
-
-        // Bonus : navigation clavier
-        track.setAttribute('tabindex', '0');
-        track.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') { e.preventDefault(); track.scrollBy({ left: -step(), behavior: 'smooth' }); }
-            if (e.key === 'ArrowRight') { e.preventDefault(); track.scrollBy({ left: step(), behavior: 'smooth' }); }
-        });
-    });
-})();
-</script>
 <body>
 
     <header class="site-header">
@@ -971,6 +993,36 @@
     <script src="search.js" defer></script>
     <script src="js/register-pwa.js" defer></script>
     <script src="js/progressive-reveal.js" defer></script>
+
+    <!-- ============================================
+         NAVIGATION DES CARROUSELS MANUELS
+         (placé à la fin du body : le DOM existe)
+         ============================================ -->
+    <script>
+        (function () {
+            document.querySelectorAll('.carousel-shell').forEach((shell) => {
+                const track = shell.querySelector('[data-carousel]');
+                const prev = shell.querySelector('.carousel-nav.prev');
+                const next = shell.querySelector('.carousel-nav.next');
+                if (!track || !prev || !next) return;
+
+                // Pas = largeur d'une tuile + gap
+                const step = () => {
+                    const item = track.querySelector('.gallery-item');
+                    return item ? item.getBoundingClientRect().width + 16 : track.clientWidth;
+                };
+
+                prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+                next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+
+                track.setAttribute('tabindex', '0');
+                track.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') { e.preventDefault(); track.scrollBy({ left: -step(), behavior: 'smooth' }); }
+                    if (e.key === 'ArrowRight') { e.preventDefault(); track.scrollBy({ left: step(), behavior: 'smooth' }); }
+                });
+            });
+        })();
+    </script>
 
     <!-- ============================================
          RÉVÉLATION UNE PAR UNE AU SCROLL

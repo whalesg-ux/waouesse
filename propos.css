@@ -8,7 +8,39 @@
     --line: #e1e6e3;
 }
 
+/* ============================================
+   NEWSLETTER (footer) — version de référence
+============================================ */
+.newsletter-form {
+    display: flex; align-items: stretch;
+    background: #ffffff; border-radius: 10px;
+    padding: 6px; max-width: 440px; width: 100%;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+.newsletter-form input[type="email"] {
+    flex: 1; border: none; outline: none;
+    padding: 12px 16px; font-size: 0.95rem;
+    font-family: inherit; color: #0f172a;
+    background: transparent; border-radius: 8px 0 0 8px;
+}
+.newsletter-form input[type="email"]::placeholder { color: #94a3b8; }
+.newsletter-form .btn-newsletter {
+    border: none; outline: none; cursor: pointer;
+    padding: 12px 22px; font-size: 0.92rem; font-weight: 700;
+    font-family: inherit; color: #ffffff;
+    background: var(--terracotta); border-radius: 8px;
+    transition: background 0.25s ease, transform 0.15s ease;
+    white-space: nowrap; display: inline-flex;
+    align-items: center; gap: 8px;
+}
+.newsletter-form .btn-newsletter:hover { background: var(--terracotta-dark); transform: translateY(-1px); }
+@media (max-width: 600px) {
+    .newsletter-form { flex-direction: column; padding: 8px; gap: 8px; }
+    .newsletter-form input[type="email"] { border-radius: 8px; padding: 12px 14px; }
+    .newsletter-form .btn-newsletter { border-radius: 8px; width: 100%; justify-content: center; }
+}
 
+/* ============================================
 
 
 

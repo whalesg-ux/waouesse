@@ -5,10 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- TITRE OPTIMISÉ -->
     <title>Découvrir Ouèssè : jeunes, football, art, musique, technologie et défis routiers</title>
 
-    <!-- META DESCRIPTION -->
     <meta name="description"
         content="Ouèssè : une commune dynamique entre marbre bleu et traditions, où les jeunes s'illustrent dans le football, l'art, la musique, la technologie et la photographie. Découvrez les événements, les réalisations et les défis (routes, ressources) de cette terre du Bénin." />
 
@@ -51,38 +49,28 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
 
-    <!-- Préchargement image hero -->
+    <!-- Préchargement image hero (même URL que le CSS) -->
     <link rel="preload" as="image"
-        href="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_1600/v1784326466/ouesse_n5pdyh.webp" fetchpriority="high" />
+        href="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_1600/v1784326466/ouesse_n5pdyh.webp"
+        fetchpriority="high" />
 
     <link rel="icon" type="image/webp"
         href="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_192/v1784319943/logo_copie_kzzyfd.webp" />
     <link rel="alternate icon" type="image/png"
         href="https://res.cloudinary.com/nyke7lhc/image/upload/f_png,q_auto,w_192/v1784319943/logo_copie_kzzyfd.png" />
 
-    <!-- CANONICAL -->
     <link rel="canonical" href="https://ouesse.com/decouvert" />
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- FEUILLES DE STYLE : global d'abord, puis composants, puis spécifique à la page -->
+    <!-- FEUILLES DE STYLE : global, composants, polices, icônes, puis page -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="search-widget.css" />
-
-    <!-- GOOGLE FONTS -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap" />
-
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        media="print" onload="this.media='all'" />
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    </noscript>
-
-    <!-- CSS SPÉCIFIQUE À LA PAGE (chargé en dernier pour surcharger proprement) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="style-decouvert.css" />
 
-    <!-- DONNÉES STRUCTURÉES JSON-LD -->
+    <!-- DONNÉES STRUCTURÉES : ARTICLE -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -97,11 +85,7 @@
       },
       "datePublished": "2025-07-20",
       "dateModified": "2025-07-20",
-      "author": {
-        "@type": "Organization",
-        "name": "Ouèssè Tourisme",
-        "url": "https://ouesse.com"
-      },
+      "author": { "@type": "Organization", "name": "Ouèssè Tourisme", "url": "https://ouesse.com" },
       "publisher": {
         "@type": "Organization",
         "name": "Ouèssè Tourisme",
@@ -110,14 +94,11 @@
           "url": "https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_200/v1784363157/veiljoa_wdwt1c.webp"
         }
       },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://ouesse.com/decouvert"
-      }
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ouesse.com/decouvert" }
     }
     </script>
 
-    <!-- FAQ STRUCTURÉE -->
+    <!-- DONNÉES STRUCTURÉES : FAQ (identique à la FAQ affichée) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -128,7 +109,7 @@
           "name": "Quels sont les principaux défis de Ouèssè ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Les routes sont en mauvais état, les ressources politiques insuffisantes, et la commune manque d'investissements pour structurer le football, l'art et la musique."
+            "text": "Les routes sont en mauvais état dans des zones comme Laminou Agbalokougoudo et la route allant à N'Gbèhouèdo, de l'école primaire privée SEWE, et d'autres. Les ressources politiques sont insuffisantes et la commune manque de moyens pour structurer le football, l'art et la musique. Le recul de la progression scolaire est également préoccupant."
           }
         },
         {
@@ -144,7 +125,15 @@
           "name": "Y a-t-il des événements culturels à Ouèssè ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui, des festivals de musique, des expositions d'art, des matchs de football, et des soirées photographiques sont organisés régulièrement par les jeunes."
+            "text": "Oui, des festivals de musique, des expositions d'art, des matchs de football et des soirées photographiques sont organisés régulièrement par les jeunes : LTNDR (Le Temps Nous Donnera Raison), une initiative de Gonzario Setondji Adjahoungbo, Winner Event's d'Abraham Bloh, ECAO, JIJ et les GALA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment soutenir le développement de Ouèssè ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En participant aux initiatives locales, en investissant dans des projets d'infrastructures, et en faisant connaître les potentialités de la commune auprès des décideurs."
           }
         }
       ]
@@ -169,14 +158,13 @@
         }, 1500);
       });
     </script>
-
 </head>
 
 <body>
 
-    <!-- Skip to content link for accessibility -->
     <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
+    <!-- ============ HEADER + MENU (identique à l'index) ============ -->
     <header class="site-header">
         <div class="logo">
             <img src="https://res.cloudinary.com/nyke7lhc/image/upload/f_auto,q_auto,w_96/v1784319943/logo_copie_kzzyfd.webp"
@@ -187,8 +175,7 @@
             </div>
         </div>
 
-        <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
-            aria-controls="mainNav">
+        <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
             <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
 
@@ -223,7 +210,7 @@
         <a href="/decouvert" class="btn-explorer">Explorer</a>
     </header>
 
-
+    <!-- RECHERCHE -->
     <div class="search-widget-wrap">
         <form class="search" id="searchForm" role="search" action="/search" method="GET" autocomplete="off">
             <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
@@ -250,7 +237,7 @@
     <main id="main-content">
 
         <!-- ===== HERO ===== -->
-        <div class="hero" role="banner">
+        <section class="hero" aria-label="Présentation de la page">
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1 class="hero-title">Ouèssè : <em>jeunesse, culture et défis</em></h1>
@@ -259,11 +246,11 @@
                     malgré des routes dégradées et un manque criant de ressources politiques.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#jeunesse" class="btn-hero">Jeunesse & événements</a>
-                    <a href="#defis" class="btn-hero btn-outline">Défis & solutions</a>
+                    <a href="#jeunesse" class="btn-hero">Jeunesse &amp; événements</a>
+                    <a href="#defis" class="btn-hero btn-outline">Défis &amp; solutions</a>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- ===== PRÉSENTATION GÉNÉRALE ===== -->
         <section class="intro-section" aria-labelledby="intro-heading">
@@ -271,10 +258,9 @@
                 <h2 id="intro-heading">Bienvenue à Ouèssè</h2>
                 <p>
                     Située au nord du département des Collines, à 327 km de Cotonou, la commune de Ouèssè s'étend sur
-                    plus de 3 200 km².
-                    Elle partage une frontière avec le Nigeria à l'est et compte neuf arrondissements.
-                    Sa population de plus de 150 000 habitants est un creuset de cultures Shabè, Mahi, Adja, Fon, Peul
-                    et bien d'autres.
+                    environ 3 200 km². Elle partage une frontière avec le Nigeria à l'est et compte neuf
+                    arrondissements. Sa population, estimée à 142 017 habitants lors du recensement RGPH-4 (2013), est
+                    un creuset de cultures Shabè, Mahi, Adja, Fon, Peul et bien d'autres.
                 </p>
                 <p>
                     Cependant, Ouèssè demeure un territoire de contrastes. D'un côté, la commune dispose de richesses
@@ -286,54 +272,52 @@
             </div>
         </section>
 
-        <!-- ===== SECTION JEUNESSE, ÉVÉNEMENTS, RÉALISATIONS ===== -->
+        <!-- ===== JEUNESSE, ÉVÉNEMENTS, RÉALISATIONS ===== -->
         <section class="jeunesse-section" id="jeunesse" aria-labelledby="jeunesse-heading">
             <div class="container">
                 <h2 id="jeunesse-heading">La jeunesse de Ouèssè : créativité et dynamisme</h2>
                 <p class="sous-titre">Entre foot, art, musique, technologie et photographie, les jeunes transforment
                     leur quotidien.</p>
 
-                <!-- Événements récents -->
                 <div class="grid-evenements">
                     <article class="card-evenement">
                         <i class="fa-solid fa-futbol" aria-hidden="true"></i>
-                        <h3>Football & tournois</h3>
+                        <h3>Football &amp; tournois</h3>
                         <p>Des compétitions inter-quartiers rythment l'année. Malgré un terrain vétuste, l'engouement
                             est immense. Des jeunes talents rêvent de rejoindre des clubs professionnels.</p>
                     </article>
                     <article class="card-evenement">
                         <i class="fa-solid fa-palette" aria-hidden="true"></i>
-                        <h3>Art & peinture</h3>
+                        <h3>Art &amp; peinture</h3>
                         <p>Des ateliers informels voient naître des fresques murales qui racontent l'histoire de la
                             commune. Les artistes locaux exposent leurs œuvres lors de marchés culturels.</p>
                     </article>
                     <article class="card-evenement">
                         <i class="fa-solid fa-music" aria-hidden="true"></i>
-                        <h3>Musique & concerts</h3>
+                        <h3>Musique &amp; concerts</h3>
                         <p>Des soirées « open mic » et des concerts de rue sont organisés, mêlant rythmes traditionnels
                             et influences modernes (afrobeat, hip-hop).</p>
                     </article>
                     <article class="card-evenement">
                         <i class="fa-solid fa-camera" aria-hidden="true"></i>
-                        <h3>Photographie & vidéo</h3>
+                        <h3>Photographie &amp; vidéo</h3>
                         <p>Des jeunes reporters documentent la vie locale. Des concours photos sont lancés pour
                             valoriser le patrimoine et les moments festifs.</p>
                     </article>
                     <article class="card-evenement">
                         <i class="fa-solid fa-code" aria-hidden="true"></i>
-                        <h3>Technologie & innovation</h3>
+                        <h3>Technologie &amp; innovation</h3>
                         <p>Des ateliers de codage et de montage vidéo émergent, portés par des associations. La jeunesse
                             s'initie au numérique malgré un accès limité à Internet.</p>
                     </article>
                     <article class="card-evenement">
-                        <i class="fa-solid fa-party-horn" aria-hidden="true"></i>
-                        <h3>Parties & événements festifs</h3>
-                        <p>Les « bal populaires » et les soirées dansantes sont des moments de rassemblement
+                        <i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i>
+                        <h3>Parties &amp; événements festifs</h3>
+                        <p>Les « bals populaires » et les soirées dansantes sont des moments de rassemblement
                             intergénérationnel, où la joie de vivre de Ouèssè s'exprime pleinement.</p>
                     </article>
                 </div>
 
-                <!-- Réalisations -->
                 <div class="realisations">
                     <h3>Quelques réalisations marquantes</h3>
                     <ul>
@@ -351,7 +335,7 @@
             </div>
         </section>
 
-        <!-- ===== SECTION DÉFIS (routes, ressources, politiques) ===== -->
+        <!-- ===== DÉFIS ===== -->
         <section class="defis-section" id="defis" aria-labelledby="defis-heading">
             <div class="container">
                 <h2 id="defis-heading">Les défis de Ouèssè : routes, ressources et politiques</h2>
@@ -403,7 +387,7 @@
             </div>
         </section>
 
-        <!-- ===== FOIRE AUX QUESTIONS (FAQ) ===== -->
+        <!-- ===== FAQ ===== -->
         <section class="faq-section" id="faq" aria-labelledby="faq-heading">
             <div class="container">
                 <h2 id="faq-heading">Questions fréquentes sur Ouèssè</h2>
@@ -412,8 +396,8 @@
                     <summary>
                         <h3>Quels sont les principaux défis de Ouèssè ?</h3>
                     </summary>
-                    <p><strong>Les routes sont en mauvais état dans des zones comme LAMINOU AGBALOKOUGOUDO, la route
-                            allant à N'GBEHOUEDO de l'école primaire privée SEWE</strong> et d'autres. Les ressources
+                    <p><strong>Les routes sont en mauvais état dans des zones comme Laminou Agbalokougoudo, la route
+                            allant à N'Gbèhouèdo, de l'école primaire privée SEWE</strong> et d'autres. Les ressources
                         politiques sont insuffisantes et la commune manque de moyens pour structurer le football, l'art
                         et la musique. Le recul de la progression scolaire est également préoccupant.</p>
                 </details>
@@ -431,11 +415,11 @@
                     <summary>
                         <h3>Y a-t-il des événements culturels à Ouèssè ?</h3>
                     </summary>
-                    <p>Oui, des festivals de musique, des expositions d'art, des matchs de football, et des soirées
+                    <p>Oui, des festivals de musique, des expositions d'art, des matchs de football et des soirées
                         photographiques sont organisés régulièrement par les jeunes : <strong>LTNDR (Le Temps Nous
                             Donnera Raison)</strong>, une initiative de <strong>Gonzario Setondji Adjahoungbo</strong>,
-                        <strong>Winner Event's</strong> de <strong>Abraham Bloh</strong>, <strong>ECAO, JIJ</strong> et
-                        les <strong>GALA</strong>, etc.</p>
+                        <strong>Winner Event's</strong> d'<strong>Abraham Bloh</strong>, <strong>ECAO, JIJ</strong> et
+                        les <strong>GALA</strong>.</p>
                 </details>
 
                 <details class="faq-item">
@@ -450,18 +434,17 @@
 
     </main>
 
+    <!-- ============ FOOTER (identique à l'index) ============ -->
     <footer class="pied">
         <div class="footer-top">
             <div class="footer-brand">
                 <span class="logo-title">Ouèssè Tourisme</span>
                 <span class="logo-subtitle">Un projet NarroQ × EzegLabs</span>
-                <p class="footer-desc">Portail officiel de promotion culturelle, touristique, événementielle et des
-                    personnalités de la commune de Ouèssè, Bénin.</p>
+                <p class="footer-desc">Portail officiel de promotion culturelle, touristique, événementielle et des personnalités de la commune de Ouèssè, Bénin.</p>
             </div>
 
             <form class="newsletter-form" action="/newsletter" method="POST" aria-label="Inscription à la newsletter">
-                <input type="email" name="email" placeholder="Votre email pour les actualités" required
-                    aria-label="Adresse email">
+                <input type="email" name="email" placeholder="Votre email pour les actualités" required aria-label="Adresse email">
                 <button type="submit" class="btn-newsletter">
                     <i class="fa-solid fa-paper-plane"></i> S'inscrire
                 </button>
@@ -531,164 +514,22 @@
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
-    <!-- SCRIPTS EXTERNES -->
-    <!-- Bandeau de consentement aux cookies -->
-    <script src="script.js" defer></script>
-    <script src="search.js" defer></script>
+    <!-- BANDEAU COOKIES (style dans style.css, logique dans js/cookie-banner.js) -->
     <div id="cookie-banner" role="dialog" aria-label="Gestion des cookies" hidden>
-        <p>
-            Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic et afficher des publicités
-            personnalisées.
-            En poursuivant votre navigation, vous acceptez notre
-            <a href="/rgpd">politique de confidentialité</a>.
-        </p>
+        <p>Nous utilisons des cookies pour améliorer votre expérience et analyser le trafic. En poursuivant votre
+            navigation, vous acceptez notre <a href="/rgpd">politique de confidentialité</a>.</p>
         <div class="cookie-buttons">
             <button type="button" id="cookie-accept">Accepter</button>
             <button type="button" id="cookie-refuse">Refuser</button>
         </div>
     </div>
 
-    <style>
-        #cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #1a1a2e;
-            color: #fff;
-            padding: 1rem;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-            z-index: 9999;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-            font-size: 0.9rem;
-        }
-
-        #cookie-banner[hidden] {
-            display: none !important;
-        }
-
-        #cookie-banner p {
-            margin: 0;
-            flex: 1 1 60%;
-        }
-
-        #cookie-banner a {
-            color: #ffd700;
-            text-decoration: underline;
-        }
-
-        .cookie-buttons {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .cookie-buttons button {
-            background: #ffd700;
-            color: #1a1a2e;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-
-        .cookie-buttons button:hover {
-            background: #e6c200;
-        }
-
-        .cookie-buttons button#cookie-refuse {
-            background: transparent;
-            border: 1px solid #fff;
-            color: #fff;
-        }
-
-        .cookie-buttons button#cookie-refuse:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        @media (max-width: 600px) {
-            #cookie-banner {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .cookie-buttons {
-                justify-content: flex-end;
-            }
-        }
-    </style>
-
-    <script>
-        (function () {
-            console.log('Script cookie démarré');
-
-            const cookieBanner = document.getElementById('cookie-banner');
-            const cookieAccept = document.getElementById('cookie-accept');
-            const cookieRefuse = document.getElementById('cookie-refuse');
-
-            console.log('Bandeau trouvé:', cookieBanner ? 'OUI' : 'NON');
-            console.log('Bouton Accepter trouvé:', cookieAccept ? 'OUI' : 'NON');
-            console.log('Bouton Refuser trouvé:', cookieRefuse ? 'OUI' : 'NON');
-
-            function setCookieConsent(choice) {
-                console.log('Choix enregistré:', choice);
-                try {
-                    localStorage.setItem('cookieConsent', choice);
-                    console.log('localStorage OK');
-                } catch (e) {
-                    console.error('Erreur localStorage:', e);
-                }
-                if (cookieBanner) {
-                    cookieBanner.hidden = true;
-                    console.log('Bandeau masqué');
-                }
-            }
-
-            // Vérifier si le consentement a déjà été donné
-            let consent = null;
-            try {
-                consent = localStorage.getItem('cookieConsent');
-                console.log('Consentement existant:', consent);
-            } catch (e) {
-                console.error('Erreur lecture localStorage:', e);
-            }
-
-            if (consent === null) {
-                // Aucun choix enregistré -> afficher le bandeau
-                if (cookieBanner) {
-                    cookieBanner.hidden = false;
-                    console.log('Bandeau affiché');
-                }
-            } else {
-                // Choix déjà fait -> masquer
-                if (cookieBanner) {
-                    cookieBanner.hidden = true;
-                    console.log('Bandeau masqué (choix existant)');
-                }
-            }
-
-            if (cookieAccept) {
-                cookieAccept.addEventListener('click', function () {
-                    console.log('Clic sur Accepter');
-                    setCookieConsent('accepted');
-                });
-            }
-
-            if (cookieRefuse) {
-                cookieRefuse.addEventListener('click', function () {
-                    console.log('Clic sur Refuser');
-                    setCookieConsent('refused');
-                });
-            }
-        })();
-    </script>
+    <!-- SCRIPTS (même ordre sur toutes les pages) -->
+    <script src="script.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="js/register-pwa.js" defer></script>
     <script src="js/progressive-reveal.js" defer></script>
+    <script src="js/cookie-banner.js" defer></script>
 </body>
 
 </html>

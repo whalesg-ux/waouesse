@@ -1125,3 +1125,73 @@ footer.pied {
         transition: none;
     }
 }
+/* ============================================
+   NEWSLETTER (footer) — version de référence
+============================================ */
+.newsletter-form {
+    display: flex; align-items: stretch;
+    background: #ffffff; border-radius: 10px;
+    padding: 6px; max-width: 440px; width: 100%;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+.newsletter-form input[type="email"] {
+    flex: 1; border: none; outline: none;
+    padding: 12px 16px; font-size: 0.95rem;
+    font-family: inherit; color: #0f172a;
+    background: transparent; border-radius: 8px 0 0 8px;
+}
+.newsletter-form input[type="email"]::placeholder { color: #94a3b8; }
+.newsletter-form .btn-newsletter {
+    border: none; outline: none; cursor: pointer;
+    padding: 12px 22px; font-size: 0.92rem; font-weight: 700;
+    font-family: inherit; color: #ffffff;
+    background: var(--terracotta); border-radius: 8px;
+    transition: background 0.25s ease, transform 0.15s ease;
+    white-space: nowrap; display: inline-flex;
+    align-items: center; gap: 8px;
+}
+.newsletter-form .btn-newsletter:hover { background: var(--terracotta-dark); transform: translateY(-1px); }
+@media (max-width: 600px) {
+    .newsletter-form { flex-direction: column; padding: 8px; gap: 8px; }
+    .newsletter-form input[type="email"] { border-radius: 8px; padding: 12px 14px; }
+    .newsletter-form .btn-newsletter { border-radius: 8px; width: 100%; justify-content: center; }
+}
+
+/* ============================================
+   LIEN D'ÉVITEMENT (accessibilité)
+============================================ */
+.skip-link {
+    position: absolute; top: -60px; left: 0;
+    background: var(--terracotta); color: #fff;
+    padding: 12px 20px; z-index: 9999;
+    font-weight: 600; border-radius: 0 0 8px 0;
+    transition: top 0.2s ease;
+}
+.skip-link:focus { top: 0; }
+
+/* ============================================
+   BANDEAU COOKIES
+============================================ */
+#cookie-banner {
+    position: fixed; bottom: 0; left: 0; width: 100%;
+    background: #1a1a2e; color: #fff; padding: 1rem;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.3); z-index: 9999;
+    display: flex; flex-wrap: wrap; align-items: center;
+    justify-content: space-between; gap: 1rem; font-size: 0.9rem;
+}
+#cookie-banner[hidden] { display: none !important; }
+#cookie-banner p { margin: 0; flex: 1 1 60%; }
+#cookie-banner a { color: #ffd700; text-decoration: underline; }
+.cookie-buttons { display: flex; gap: 0.5rem; }
+.cookie-buttons button {
+    background: #ffd700; color: #1a1a2e; border: none;
+    padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;
+    font-weight: 600; transition: background 0.3s;
+}
+.cookie-buttons button:hover { background: #e6c200; }
+.cookie-buttons #cookie-refuse { background: transparent; border: 1px solid #fff; color: #fff; }
+.cookie-buttons #cookie-refuse:hover { background: rgba(255,255,255,0.1); }
+@media (max-width: 600px) {
+    #cookie-banner { flex-direction: column; align-items: stretch; }
+    .cookie-buttons { justify-content: flex-end; }
+}
